@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vw/ vh</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        #vh {
+            /* 가변폰트(가변 박스)구하는 공식 */
+            /* (자식-컨텐츠- 크기/부모-기준 화면 높이 크기- 크기) x 100 */
+            font-size: 5vh;
+            /* (5vh x h900)/100 =45px */
+            /* (폰트크기 x 화면 높이)/100 (뷰 포트의 크기) */
+        }
+
+        #vw {
+            font-size: 5vw;
+             /* (5vw x w1280)/100 =64px */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>상대단위</h1>
+    <h2>vw/ vh</h2>
+    <p id="vh">웹브라우저 높이 기준 : vh (viewport-height)</p>
+    <p id="vw">웹브라우저 너비기준 : vw (viewport-width)</p>
+</body>
+
+</html>

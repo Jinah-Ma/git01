@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>해상도 크기에 따라 디자인 다르게 설정하기 </title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 반응형 개발시 꼭 집어넣어야 함 ↑ / viewport : 화면크기/ content="width=device-width : 페이지의 너비를 디바이스{기기}의 너비에 맞추겠다./ initial-scale=1.0 : 화면의 초기배율은 100%로 하겠다.(글자의 표시비율) -->
+	<style>
+		body{background: red; color: #fff}
+        h1{transition:all 1s;}
+        ul{display: none;}
+/* 화면 너비가 0~1280px pc*/
+/* →화면의 분기, 중단점, 브레이크 포인트 : 화면이 변하는 크기, 레이아웃이 변하는 시점// ()일때는 {}하겠다. */
+@media screen and (max-width:1280px) {
+    body{background:blue;}
+    h1{transform: translateX(100px);}
+}
+
+/* 화면 너비가 0~1024px pc*/
+@media screen and (max-width:1024px) {
+    ul{display: flex;}
+}
+
+/* 화면 너비가 0~960px 노트북*/
+@media screen and (max-width:960px) {
+    h1{display: none;}
+}
+
+
+/* 화면 너비가 0~768px 테블릿*/
+@media screen and (max-width:768px) {
+    ul{display: block;}
+}
+
+/* 화면 너비가 0~576px 모바일*/
+@media screen and (max-width:576px) {
+    body{background-color: cadetblue;}
+}
+	</style>
+</head>
+
+<body>
+	<h1>미디어쿼리</h1>
+	<p>미디어 쿼리는 화면 크기에 따른 각각의 속성 값을 지정하여, 여러가지 화면을 구성하는 기술을 말합니다.</p>
+	<p>@media only screen and (조건문) {실행문}</p>
+	<ul>
+		<li>@media : 미디어 쿼리가 시작됨을 표시합니다</li>
+		<li>only : 미디어 쿼리 구문을 해석하라는 명령어입니다.(생략가능)</li>
+		<li>all : 미디어 쿼리를 해석해야 할 대상을 나타냅니다.(생략가능)
+			<ul>
+				<li>all : 모든 미디어 유형에서 사용할 css를 정의합니다.</li>
+				<li>print : 인쇄장치에서 사용할 css를 정의 합니다.</li>
+				<li>screen : 컴퓨터 스크린에서 사용할 css를 정의 합니다.</li>
+			</ul>
+		</li>
+		<li>(조건문) : 해당 크기을 설정할 수 있습니다.</li>
+		<li>{실행문} : 조건에 따른 실행을 설정합니다.</li>
+	</ul>
+</body>
+</html>

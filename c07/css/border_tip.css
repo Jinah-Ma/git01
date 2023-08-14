@@ -1,0 +1,54 @@
+.border{
+    width: 1px;
+    height: 1px;
+    border-top: 10px solid black;
+    /* 보더는 사실 사선으로 잘려져 겹치는 곳 없이 주고 있다. */
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-left: 10px solid transparent;
+    /* 색을 넣었다가 transparent로 바꾼다. */
+    border-bottom: 10px solid red;
+}
+
+.border2{
+    margin-top: 10px;
+    width: 10px;
+    height: 10px;
+    border: 10px solid black;
+    border-right: 10px solid white;
+}
+
+.border_tip{position: relative;
+    left: 50%;
+width: 400px;
+background: #ffa1a1;
+margin-top: 50px;
+margin-left: -200px;
+}
+
+.border_tip::before{
+content: '';
+position: absolute;
+border-top: 10px solid #ff0000;
+border-left: 10px solid transparent;
+border-right: 10px solid transparent;
+bottom: -10px;
+left: 50%;
+margin-left: -20px;
+}
+.border_tip::after{
+content: '';
+position: absolute;
+border-bottom: 10px solid #ff0000;
+border-left: 10px solid transparent;
+border-right: 10px solid transparent;
+top: -10px;
+left: 50%;
+margin-left: -20px;
+}
+
+.right{
+    content: '';
+    position: absolute;
+    border-left: 10px solid #0400ff;
+}

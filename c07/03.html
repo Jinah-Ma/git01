@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        body {
+            width: 100vw;
+            background: ivory
+        }
+
+        span {
+            display: block;
+            color: blueviolet;
+        }
+
+        .per {
+            width: 100%;
+            background: coral;
+        }
+        /* boby가 부모이다. */
+
+        .per p {
+            width: 50%;
+            background: yellow;
+        }
+        /* 부모요소 기준 = 따라서 부모가 80%의 경우 절반이 되어 보여준다. */
+
+        .per span {
+            width: 100%;
+            background: skyblue;
+        }
+        /* .per p가 부모 */
+
+        .vw{
+            width: 50vw; background: pink; height: 300px;
+        }
+
+        .vw p{
+            width: 50vw; background-color: aquamarine;
+        }
+        /* 부모하고 상관없음. 화면 너비가 기준. */
+
+        .vw span{width: 100vw; background-color: blue; color: white;}
+        
+    </style>
+</head>
+
+<body>
+    <div class="per">
+        <p>부모기준 : percent 단위 <span>percent</span></p>
+    </div>
+
+    <div class="vw">
+        <p>브라우저 너비기준 <span>vw</span></p>
+    </div>
+</body>
+
+</html>

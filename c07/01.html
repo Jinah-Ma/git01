@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em/ rem</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        #para1{
+            font-size: 6em;
+            /* 16px x 6em = 96px */
+        }
+        #para1 span{
+            font-size: 2em;
+            /* 16px x 2em = 32px라고 생각할 것이다. 그러나 */
+            /* em 감싸고 있는 부모 기준. 따라서 96px x 2em = 192px이 된다. 그래서 더 커진다. */
+        }
+
+        #para2{
+            font-size: 6rem;
+            /* 16px x 6rem = 96px */
+        }
+
+        #para2 span{font-size: 2rem;
+        /* 16px x 2rem = 32px */
+        /* rem은 root기준(최상위 요소:html)이다. 그래서 위의 사이즈가 맞다. */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>상대단위</h1>
+    <h2>em/ rem</h2>
+    <p id="para1">대문자 M의 너비를 기준으로 한 단위 <br> <span>1em = 약 16px</span></p>
+    <p id="para2">대문자 M의 너비를 기준으로 한 단위 <br> <span>1rem = 약 16px</span></p>
+</body>
+
+</html>
