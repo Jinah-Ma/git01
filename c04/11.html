@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>중심점 변경</title>
+    <style>
+        p {
+            padding: 60px;
+        }
+
+        /* 색상이 어떻게 번질지 */
+        .rg1 {
+            background: radial-gradient(closest-side at 35% 35%, red, yellow, blue);
+        }
+
+        .rg2 {
+            background: radial-gradient(closest-corner at 35% 35%, red, yellow, blue);
+        }
+
+        .rg3 {
+            background: radial-gradient(farthest-side at 35% 35%, red, yellow, blue);
+        }
+
+        .rg4 {
+            background: radial-gradient(farthest-corner at 35% 35%, red, yellow, blue);
+        }
+
+        .rg5 {
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(179, 37, 127, 0.3581661891117478) 35%, rgba(0, 212, 255, 1) 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>radial-gradient(원형 그라디언트)</h1>
+    <p class="rg1"></p>
+    <p class="rg2"></p>
+    <p class="rg3"></p>
+    <p class="rg4"></p>
+    <p class="rg5"></p>
+</body>
+
+</html>

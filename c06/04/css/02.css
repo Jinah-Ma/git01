@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+}
+
+/* 반응형을 할 때는 페이지 창을 넓게 보고 작업한다. */
+
+#opt1 {
+    flex-wrap: nowrap;
+}
+
+#opt2 {
+    flex-wrap: wrap;
+}
+
+/* 박스가 컨테이너의 공간보다 많을때 노랩을 하면 아이템박스를 크기를 줄이며 구겨 집어넣어 쭉 나열시키지만, 랩을 하면 아이템박스의 크기를 고정시킨채로 줄바꿈시켜 정돈시킨다. */
+
+#opt3{
+    flex-wrap: wrap-reverse;
+}
+
+/* 랩리버스를 하면 순서가 바뀐다. 모바일페이지에서 중요한 컨텐츠를 앞으로 배치하고 싶을 때 쓴다. */
+
+#opt4{
+    /* 디렉션과 랩을 한꺼번에 쓸 수 있는 축약어  */
+    /* flex-flow: row wrap; */
+    flex-flow: column wrap;
+}

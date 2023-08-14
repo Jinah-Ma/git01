@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>풀이과정</title>
+    <style>
+        /* 리셋정의 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 공통속성정의 */
+        .cf:after {
+            /* 우선순위로 쓴다. 공통속성 다음에 개별속성을 쓴다. */
+            content: '';
+            /* css를 사용하여 html에 가짜콘텐츠 추가/ css에서 강제로 가짜 콘텐츠를 넣을 수 있는 속성 */
+            /* 컨텐츠는 인라인방식으로 추가 되기 때문에 블럭으로 속성을 바꿔줘야 한다. */
+            display: block;
+            /* float을 해제 */
+            clear: both;
+        }
+
+        .fl {
+            float: left;
+        }
+
+        .fr {
+            float: right;
+        }
+
+        /* 개별속성정의 */
+        .container {
+            width: 700px;
+            height: 400px;
+            margin: auto;
+            background-color: #ccc;
+            padding: 255px 146px;
+            box-sizing: border-box;
+        }
+
+        .container+.container{
+            background:skyblue;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        /* :not() -이 애는 아니라는 선택자/ 2n :두번째 마다 */
+        .box:nth-child(2n):not(:last-child){
+            margin-left: 50px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container cf">
+        <div class="box fl"></div>
+        <div class="box fr"></div>
+    </div>
+    <div class="container cf">
+        <div class="box fl"></div>
+        <div class="box fl"></div>
+        <div class="box fr"></div>
+    </div>
+
+</body>
+
+</html>

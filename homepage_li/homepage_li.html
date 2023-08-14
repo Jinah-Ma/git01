@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=img, initial-scale=1.0">
+    <title>진아의 일기장</title>
+    <!-- 글씨체 바꾸기 -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        body {
+            letter-spacing: -0.5px;
+            font-size: 16px;
+            font-family: '맑은고딕', sans-serif;
+            color: #333;
+        }
+
+        #wrap{
+            margin: auto;
+            padding: 10px;
+        }
+        /* 전체를 감싸는 콘텐츠를 조정한 것으로 반응형에 많이 쓰고, 사이트를 늘리고 줄여도 자동으로 여백(패딩)이 들어가 있으며 중앙정렬(마진)되어 있다. */
+
+        h1{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            /* 패딩을 나눠먹어 중앙정렬시킴 */
+            text-align: center;
+            border: 3px solid salmon;
+            background-image: url(./img/20160721_200959.jpg);
+            background-size: cover;
+            /* 높이는 고정 된 채로 너비만 늘어남 */
+            background-repeat: no-repeat;
+            /* 반복 안 되게 하기 */
+            color: rgb(255, 102, 0);
+        }
+
+        #menu>li{
+            list-style: none;
+            display: inline-block;
+            margin: 5px auto;
+            padding: 10px;
+            background-color: rgb(255, 106, 87);
+            border: 4px double rgb(255, 226, 206);
+            width: 100px;
+            background-attachment: fixed;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        #menu li a{
+            display: block;
+            text-decoration: none;
+        }
+
+        .m1{
+            display: block;
+            width: 70px;
+            padding: 10px;
+            margin: auto;
+            font-weight: normal;
+            font-size: 16px;
+            text-decoration: none;
+            text-align: center;
+            background-color: white;
+            display: none;
+        }
+
+        #menu li:hover .m1{
+            display: block;
+            color: #ff6d6d;
+        }
+
+    </style>
+
+    <!-- 파비콘 링크/ 맨 위 한 줄만 추가-->
+    <link rel="shortcut icon" href="./icon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="./icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icon/favicon-16x16.png">
+    <link rel="manifest" href="./icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- 아이콘 넣기 -->
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <h1>JAM's 노트</h1>
+            <ul id="menu">
+                <li>차은우
+                    <a href="./picture.html"><strong class="m1">불러오기</strong></a>
+                </li>
+                <li>노트</li>
+                <li>과제</li>
+                <li>용어
+                    <a href="./vscode.html"><strong class="m1">VScode</strong></a>
+                </li>
+                <li>단축키</li>
+            </ul>
+        </header>
+        <section>
+            <table>
+                <legend>picture</legend>
+                <fieldset>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </fieldset>
+            </table>
+        </section>
+        <footer>
+        </footer>
+    </div>
+</body>
+
+</html>

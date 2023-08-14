@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자</title>
+    <style>
+        /* 1. 태그선택자 : 태그에 직접 적용 */
+        h1{background-color: blanchedalmond; color: rgb(24, 156, 156);}
+        /* 2. 아이디 선택자 : id는 중복되면 안 된다. */
+        #one{color: crimson;}
+        #two{color: yellowgreen;}
+        /* 3. 클래스선택자 : 중복으로 사용이 가능 */
+        .se1{background-color: yellow;}
+        /* 4. 전체선택자 →여기서 중요한 건 아이디는 선택자보다 점수가 커서 바뀌지 않는다.*/
+        *{color: black;}
+        /* 5. 하위 선택자 : 요소 안의 같은 요소들 전부 */
+        ol li{color: rgb(190, 190, 190);}
+        /* 6. 자식선택자 : 요소의 안에 있는 걸 집어내서 그것에만 적용*/
+        span>strong{background-color: thistle;}
+        /* 7. 인접선택자 : ol밑의 a에만 적용 됨.(동위선상에 있는 것만 적용) 그 밑의 a에는 적용이 안 되는 걸 볼 수 있다. */
+        ol+a{color: rgb(0, 255, 64);}
+        /* 8. 형제선택자 : 요소 아래쪽에 있는 동위선상에 있는 원하는 태그를 바꿔 줌. 절대 위를 선택할 수 없다. */
+        span~#two{background-color: salmon;}
+    </style>
+</head>
+
+<body>
+    <h1>Lorem ipsum</h1>
+    <p>dolor sit amet, consectetuer adipiscing</p>
+    <div>
+        <h2>elit. Aenean commodo ligula eget dolor.</h2>
+        <ul class="se1">
+            <li>
+                Aenean massa. Cum sociis natoque penatibus
+                et magnis dis parturient montes, nascetur ridiculus
+                mus.
+            </li>
+            <li>
+                Donec quam felis, ultricies nec, pellentesque
+                eu,
+                <ol>
+                    <li>
+                        pretium quis, sem. Nulla consequat massa quis
+                        enim.</li>
+                    <li>Donec pede justo, fringilla vel</li>
+                    <li>aliquet nec,
+                        vulputate eget, arcu. In enim justo, rhoncus ut,
+                    </li>
+                </ol>
+                <a href="www.naver.com" alt="네이버">
+                    imperdiet a, venenatis vitae, justo. Nullam dictum
+                    felis eu pede
+                </a>
+                <br>
+                <a href="www.naver.com" alt="네이버">
+                    imperdiet a, venenatis vitae, justo. Nullam dictum
+                    felis eu pede
+                </a>
+            </li>
+            <li>
+                mollis pretium. Integer tincidunt. Cras dapibus.
+                Vivamus elementum <b>semper</b> nisi. Aenean vulputate
+                eleifend tellus. Aenean leo ligula, porttitor eu,
+            </li>
+        </ul>
+        <div class="se1">
+            <p>consequat vitae,</p>
+            <span>
+                <strong>eleifend</strong> ac, enim. Aliquam lorem ante,
+                dapibus in, <strong>viverra quis</strong>, feugiat a,
+            </span>
+            <p id="one">
+                tellus. Phasellus
+                viverra nulla ut metus varius laoreet.
+            </p>
+            <p id="two">
+                Quisque rutrum.
+                Aenean <em>imperdiet.</em> Etiam ultricies nisi vel augue.
+                Curabitur <i>ullamcorper</i> ultricies nisi.
+            </p>
+            <p>sdhlfkahlkjfh</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

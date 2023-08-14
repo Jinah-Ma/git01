@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+`
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inherit_상속</title>
+    <style>
+        *{
+            font-family: "맑음 고딕",바탕,"Times New Roman";
+            /* 맑음고딕이 없으면 바탕으로, 바탕도 없으면 그 다음 글씨체로 적용이 된다.(순위별로 적용) */
+            /* ","를 하고 안 하고의 차이 : 띄어쓰기. 값 없이 문자가 있다라고 생각하게끔, 폰트 이름이라고 생각 할 수 있도록. 또한 되도록이면 폰트들은 영문으로 쓰는 것이 좋다. 적용이 안 될 수 있기 때문에*/
+        }
+        #cook{
+            border: 1px solid blue;
+            color: #d02222;
+            font-size: 12px;
+            /* div한테는 글씨를 적용시킬 수 없기 때문에 상속으로 속해있는 애들에게 적용이 되었다. */
+            
+        }
+        #cook p{
+            font-size: initial;
+            /* 초기화(초기값)/ 어느 값에든 쓸 수 있다. */
+            line-height: 150%;
+            width: inherit;
+            /* 폰트와 글씨에 관련된 것들 이외엔 상속 되는 게 거의 없다. 크기는 상속이 안 됨*/
+            border: inherit;
+        }
+        #cook p span{
+            font-weight: bold;
+            color: blue;
+            color: inherit;
+            /* 부모값을 상속받겠다는 태그(이니셜과 마찬가지로 모든 값에 쓸 수 있다.) */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>속성 값의 상속 관계 알아보기</h1>
+    <hr>
+    <div id="cook">
+        <h2>굴 이야기</h2>
+        <p>일명 <span>석화</span>라고도 하는데 멀리서 보면 따낸 굴조개 껍질이 바위면에 하얗게 붙어있어서 마치 <span>꽃무더기</span>를 연상하게 한다. 굴은 <span>3대 영양소</span>는 물론 비타민, 미네랄에 이르기까지 풍부한 영양분을 함유하고
+            있어서 완전식품인 우유와 별로 다를 바가 없다.</p>
+    </div>
+</body>
+
+</html>

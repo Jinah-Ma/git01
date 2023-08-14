@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>230731_형성평가5</title>
+    <style>
+        #container1 .box {
+            border: 5px solid;
+            color: green;
+            width: 150px;
+            padding-top: 20px;
+        }
+
+        .box img {
+            width: 60px;
+        }
+
+        #container2 .box {
+            border: 5px solid;
+            color: hotpink;
+            width: 150px;
+            padding-top: 20px;
+        }
+
+        img,
+        #container1,
+        #container2 {
+            margin-left: 20px;
+        }
+
+        ul li {
+            color: black;
+            list-style: none;
+        }
+
+        #container1 .box ul li:hover:nth-child(3){color: skyblue;}
+        li[title$="레시피"]{background-color: green; color: white;}
+        li[title="자유 게시판"]{background-color: red; color: white;}
+        li[title^="회원"]{background-color: blue; color: white;}
+    </style>
+</head>
+
+<body>
+    <div id="container1">
+        <div class="box">
+            <img src="./image/Untitled (1).png" alt="카테고리">
+            <hr>
+            <ul>
+                <li>밥/죽/면</li>
+                <li>매일 반찬</li>
+                <li>국/찌게/전골</li>
+                <li>가족/초대요리</li>
+                <li>소스/양념장</li>
+                <li>간식/음료</li>
+                <li>기타</li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <div id="container2">
+        <div class="box">
+            <img src="./image/Untitled.png" alt="게시판">
+            <hr>
+            <ul>
+                <li title="자유 게시판">자유 게시판</li>
+                <li title="회원 장터">회원 장터</li>
+                <li title="나만의 레시피">나만의 레시피</li>
+                <li title="불후의 레시피">불후의 레시피</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

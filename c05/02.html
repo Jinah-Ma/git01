@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>BOX-padding요소의 안 여백</title>
+    <style>
+        
+        body {
+            background: url(img/bg_grid.gif);
+            font: 16px "Malgun Gothic";
+        }
+
+        p{
+            /* 배경색 넣기 */
+            /* 너비를 600px */
+            background-color: rgba(255, 234, 115, 0.484);
+            width: 600px;
+            height: 100px;
+            padding: 50px 70px 100px 20px;
+            /* padding은 박스의 크기에 영향을 미친다. 현재 박스의 너비는 700px/ 한개는 사방방면으로 늘어난다. */
+            /* 축약속성으로 값을 하나만 쓰면 상하좌우 전부. 2개를 쓰면 상하, 좌우로 준다.*/
+            /* 값 3개를 쓰면 상 좌우 하 로 들어간다. */
+            /* 값 4개를 쓰면 상 우 하 좌 로 들어간다.(시계방향), 마진도 같음 */
+
+            margin: 0 auto;
+            /* 상하, 좌우/ auto는 패딩에 적용x */
+
+            padding-top: 50px;
+            padding-right: 70px;
+            padding-bottom: 100px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>BOX-padding</h3>
+    <p>철수가 영희에게 퍼블리셔란 무슨 일을 하는 직업이니? 하고 물었다.</p>
+    <p>그러자 영희는 철수에게 아~ 그건 다 함께 잘 살기 위해 인터넷 선장이 되는 일이야 라고 말했다.</p>
+</body>
+
+</html>

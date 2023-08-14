@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캐스캐이딩(cascading_선택자 우선순위)</title>
+    <style>
+        /* 클래스10, 아이디100, 태그1 (점) */
+        /* 101점 */
+        body#bgPage1 {
+            background-color: pink;
+        }
+
+        /* 공백은 하위 선택자 이므로 공백이 없어야 한다. */
+        /* 111점 */
+        body#bgPage1.bgPage2 {
+            background-color: #eec0ff;
+        }
+
+        #bgPage1 {
+            background-color: skyblue;
+        }
+
+        .bgPage2 {
+            background-color: gray;
+        }
+
+        /* 클래스가 body보다 우선순위가 위이기 때문에 위에서 아래로 읽는 기본적 문법이라도, 클래스가 적용되어 있다.★
+클래스는 점수가 10점이고, body는 1점이기 때문에 점수에 따른 결과이다. */
+        body {
+            background-color: black;
+            color: white;
+            font-family: "맑은 고딕", dotum, "Times New Roman";
+            /* 글씨체 적용 태그 */
+        }
+
+        * {
+            color: red;
+        }
+
+        /* 전체 선택자가 점수가 낮지만(0점), 전체적인 하위요소들을 선택하는 선택자이기 때문에 전체선택자가 적용되어 버린 것. */
+        body * {
+            color: white;
+        }
+
+        /* 바디 밑에 전체선택자를 놓음으로써 바디의 점수를 올려 바디가 이제는 적용이 된다. */
+
+        /* 선택자 우선순위를 이제 적용시킬 것이다.↓(아래에 썼다가 위로 올려 봄. 따라서 얘는 점수로 우선순위가 높은 아이라는 걸 알 수 있다.) */
+        body>h1 {
+            color: red;
+        }
+
+        h1 {
+            color: yellow;
+        }
+
+        /* h1은 작성 순서에 따른 적용이다. 바디가 점수가 높아졌지만, 나중에 h1이란 태그를 썼기 때문에 위에서 아래로 적용이 된 것. */
+
+        /* 선택자 우선순위를 적용하여 파란색으로 변경해보기 */
+       
+        /* span {
+            color: #ff0000 !important;
+        } */
+        /* !important : 제일 우선으로 적용되는 아이로, 제일 나중에 하다하다 정 안 될 때 쓰는 것. */
+
+        /* 1점 */
+        span {
+            color: red;
+        }
+
+        /* 1+10+1+10=22점 */
+        p.bgPage2 span.blueText {
+            color: yellow;
+        }
+        /* 색상을 핑크로 */
+
+        /* 12점/ 관계를 선택해서 점수를 높임(태그는 1점씩, 클래스는 10점씩=1+1+10) */
+        p span.blueText {
+            color: pink;
+        }
+/* 모든 요소요소에 점수가 있어서 쓰고 안쓰고가 점수가 달라진다.★ */
+        /* 11점 */
+        span.blueText {
+            color: blue;
+        }
+    </style>
+
+
+</head>
+
+<body id="bgPage1" class="bgPage2">
+    <h1>선택자별 우선 순위 알아보기</h1>
+    <hr />
+    <div>
+        <h2>굴 이야기</h2>
+        <p class="bgPage2">
+            일명 <span class="blueText">석화</span>라고도 하는데 멀리서 보면 따낸 굴조개 껍질이 바위면에 하얗게 붙어있어서 마치 <span
+                class="blueText">꽃무더기</span>를 연상하게 한다. 굴은 <span class="blueText">3대 영양소</span>는 물론 비타민, 미네랄에 이르기까지 풍부한
+            영양분을 함유하고 있어서 완전식품인 우유와 별로 다를 바가 없다.
+        </p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrap{
+    background-color: pink;
+    height: 500px;
+    
+}
+
+.inner_wrap{
+    width: 1180px;
+    height: 500px;
+    background-color: rgb(143, 143, 143);
+    margin: auto;
+    position: relative;
+}
+
+h1{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(255, 191, 191,.6);
+    padding: 20px;
+    color: white;
+}
+
+h2{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: rgba(255, 191, 191,.6);
+    padding: 20px;
+    color: white;
+}

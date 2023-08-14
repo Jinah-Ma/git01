@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="utf-8">
+<title>배경이미지의 크기</title> 
+<style>
+    .who{
+        height: 150px;
+        margin-bottom: 10px;
+        background: #677582 url('./img/bg_size.png') no-repeat;
+    }
+    
+    .who1{
+        background-size: 100px 200px;
+        background-position: center;
+    }
+    /* 위드, 하이트 값 순서*/
+    .who2 {
+        background-size: 50px;
+    }
+    /* 속성 하나 작성시 위드, 하이트 동시 적용(=> 위드에 50px적용되고, 하이트는 오토로 자동 조정되는 것) */
+    .who3 {
+        background-size: 80% 150%;
+    }
+    .who4 {
+        background-size: cover;
+        /* 요소의 너비에 배경을 맞춤, 높이는 고정 */
+    }
+    .who5 {
+        height: 500px;
+        background-size: contain;
+        /* 요소의 높이에 배경을 맞춤. */
+    }
+</style>
+</head> 
+<body>
+    <h1>background-size</h1>
+    <div class="who who1"></div>
+    <!-- 속성의 값을 여러개 쓸 때는 한칸 띄고 쓴다. 즉 이름 두개이다. -->
+    <div class="who who2"></div>
+    <div class="who who3"></div>
+    <div class="who who4"></div>
+    <div class="who who5"></div>
+</body> 
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>TRANSFORM(포토샵의 ctrl+T)</title>
+    <style>
+        body {
+            margin-left: 100px;
+        }
+
+        p {
+            width: 500px;
+            height: 30px;
+            padding: 15px 15px;
+            background-color: rgba(0, 0, 255, .5);
+            border: 5px solid black;
+            font-size: 21px Times;
+            color: white;
+        }
+
+        body:hover .t1{
+            transition: transform 1s;
+            /* 전이: a에서 b로 바뀌는 걸 보여주는 것/ 30→29→28... 점진적으로 보여주는 걸 1초동안 보여주는 것. 쓰지 않으면 뚝뚝 끊긴다. */
+            transform: translate(0px, 0px);
+        }
+
+        .t1 {
+            transform: translate(30px, 20px);
+        }
+
+        /* x축, y축 : 이동시키기*/
+        .t2 {
+            transform: rotate(-30deg);
+        }
+
+        /* 각도 조절 */
+        .t3 {
+            transform: scale(0.7, 1.3) rotate(45deg);
+        }
+
+        /* 1=100%, 줄이기/ width 70%, height 130% */
+        /* 여러개를 쓸때에는 한칸 띄고 쓴다. 만약 아래쪽에 또 쓴다면 재선언이나 다름없다. 그래서 이어서 써야 한다. */
+        .t4 {
+            transform: skew(15deg, 10deg);
+        }
+
+        /* 비틀기 */
+        .t5 {
+            transform: matrix(1, -0.1, 0, 1, 0, 0);
+        }
+
+        /* scaleX, scaleY, skewX, skewY, translateX, translateY의 축약/ 잘 안쓴다. */
+    </style>
+</head>
+
+<body>
+    <p>Original</p>
+    <p class="t1">translate(30px,20px)</p>
+    <p class="t2">rotate(60deg)</p>
+    <p class="t3">scale(0.7, 1.3)</p>
+    <p class="t4">skew(15deg, 10deg)</p>
+    <p class="t5">matrix(1, -0.1, 0, 1, 0, 0)</p>
+</body>
+
+</html>

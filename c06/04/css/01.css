@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+}
+
+/* ★꼭 부모한테 선언! 그러면 자식들이 배치. */
+
+/* 부모한테 선언하면 자식들이 옆으로 배치된다. / 부모는 컨테이너, 자식은 아이템박스라 부른다. */
+/* 디스플레이는 상속이 되지 않는데, flex는 바로 밑 하위에만 적용이 된다. */
+.container {
+    display: flex;
+}
+
+#opt1 .box:nth-child(1) {
+    display: flex;
+}
+/* 플렉스 방향 설정 가능 */
+
+#opt1 {
+    flex-direction: row;
+    /* 기본값 가로(좌->우) */}
+#opt2 {flex-direction: row-reverse;
+    /* 우-> 좌/ 순서도 바뛴다. 자신의 공간은 남겨 둔 채 맨 뒤로 간다. */
+}
+#opt3{
+    flex-direction: column;
+    /* 상-> 하 */
+}
+#opt4{
+    flex-direction: column-reverse;
+    /* 하-> 상 */
+}
+
+/* 개발자모드에서 바로 보이고, 보라색 빗금으로 나와있다. 그 옆에 격자 무늬가 보이며, 버튼이 있고 그걸 누르면 다양한 걸 해볼 수 있다. 그걸 복사 붙여넣기 해서 편집한다. */

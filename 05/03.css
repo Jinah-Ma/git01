@@ -1,0 +1,24 @@
+body {
+    text-align: center;
+}
+
+/* 부모에게 주면 적용이 된다. */
+a {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    background-color: blueviolet;
+    color: white;
+    font-size: 28px;
+    padding: 10px;
+    /* 보더 대신에 패딩을 주어도 된다. 보더는 테두리를 준다면 패딩은 아래쪽 배경이 커진다. */
+}
+
+h2 {
+    background-color: red;
+    color: white;
+    font-size: 9px;
+    padding: 5px;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: 1px solid;
+        }
+/* tr은 테두리를 줘도 적용이 안 된다. */
+        td {
+            border: 1px solid;
+        }
+
+        th {
+            border: 1px solid;
+        }
+
+        /* .c1은 class의 선택자. 그래서 .을 붙여서 쓴다. */
+        .c1 {
+            background-color: gold;
+        }
+
+        .c2 {
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>수업내용</h1>
+    <table>
+        <!-- caption : table의 제목 -->
+        <caption>마메모의 코딩점수</caption>
+        <!-- column 열/ colgroup 열의 그룹/ col 한칸/ class는 다지안 하려고 넣는 태그 -->
+        <colgroup>
+            <col class="c1">
+            <col class="c2">
+        </colgroup>
+        <!-- 순서가 바뀌어도 알아서 페이지에 수정되어 보여진다. -->
+        <thead>
+            <tr>
+                <th>교과목</th>
+                <th>점수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- th로 써도 되지만 중앙정렬에 굵기가 굵어져 버린다. -->
+                <td>HTML</td>
+                <td>93</td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td>92</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>평균</td>
+                <td>92.5</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

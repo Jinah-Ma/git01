@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>usemap230719복습</title>
+    <style>
+        body {
+            /* text-align-어느 위치에 놓을 것인가.
+            padding-top- 위에서 몇 정도 내려오게 할 것인가. */
+            text-align: center;
+            padding-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div><img src="../05/images/usemap.png" alt="지도맵" usemap="#imegemap"></div>
+    <map name="imegemap">
+        <area shape="rect" coords="0,0,300,150" href="http://naver.com" alt="a관">
+        <area shape="rect" coords="300,0,600,300" href="http://daum.net" alt="b관">
+        <area shape="rect" coords="0,150,300,300" href="http://google.com" alt="c관">
+    </map>
+</body>
+
+</html>

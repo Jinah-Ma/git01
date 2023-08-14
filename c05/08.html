@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>box-sizing(박스의 크기계산 기준 설정)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: url(img/bg_grid.png);
+        }
+
+        p {
+            background-color: rgba(255, 255, 0, .5);
+            border: 10px solid rgba(0, 0, 0, .5);
+            /* 박스가 보더만큼 늘어남 */
+            width: 600px;
+            height: 100px;
+            padding: 30px;
+            margin-bottom: 10px;
+        }
+
+        .sizing {
+            box-sizing: border-box;
+            /* 너비와 높이를 준 값에 전부다 알아서 계산해 집어넣는 것.(패딩은 비율로 따진다.)
+            초기화 코드에 넣어놓고 가는 경우가 많다. */
+            /* box-sizing: content-box; */
+            /* 컨텐츠크기에 맞춰서 넣으라는 얘기 */
+        }
+
+        .sizing_list {
+            width: 500px;
+            margin-top: 20px;
+            margin: auto;
+            /* ↑상위의 마진 속성값이 취소되고 아래 오토가 재 적용된다. 그러므로 순서를 바꿔야 된다. */
+            margin-top: 20px;
+            /* 다시 재 적용된다. */
+
+        }
+
+        li {
+            list-style: none;
+            width: 25%;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            text-align: center;
+            box-sizing: border-box;
+            float: left;
+            /* ★박스를 옆으로 배치하는 속성 중 하나, 디스플레이와 같은 역할을 하는 아이 */
+        }
+
+        ul.sizing_list li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* ul.sizing_list li:nth-child(odd) */
+        ul.sizing_list li:nth-child(even) {
+            background: rgba(219, 95, 95, .5);
+            /* ★odd를 쓰면 홀수번째 애들만 선택이 된다. even을 쓰면 짝수번째 애들/ 2n 두번 건너뛰어서/ 1n 한번 건너뛰어서/ 3n 세번 건너뛰어서 등 표기 법이 많다.*/
+        }
+    </style>
+</head>
+
+<body>
+    <p>It's impossible not only starting good but also keeping it firm!!</p>
+    <p class="sizing">It's impossible not only starting good but also keeping it firm!!</p>
+    <ul class="sizing_list">
+        <li><a href="#">Company</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Custommer</a></li>
+        <li><a href="#">Community</a></li>
+    </ul>
+</body>
+
+</html>

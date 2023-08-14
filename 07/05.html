@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비디오</title>
+</head>
+<body>
+    <h1>video</h1>
+    <video controls poster="./image/sun.jpg" width="800" height="450" autoplay muted loop controls>
+        <!-- 포스터: 썸네일 삽입 -->
+        <!-- 자동재생은 막혀있다. 무트는 음속어 속성. -->
+        <source src="./media/sunrise.mp4">
+
+<!-- 호환성 해본 것 -->
+        <source src="./media/sunrise.mp4">
+        <source src="./media/sunrise.webm">
+        <source src="./media/sunrise.ogg">
+    </video>
+</body>
+</html>

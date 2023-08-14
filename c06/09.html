@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;
+        padding: 0;
+    box-sizing: border-box;}
+
+    .contents {
+        background: url(./img/bg_fixed.png) no-repeat;
+        background-size: cover;
+        height: 500px;
+    }
+    h1{
+        color: white;
+        font-size: 8em;
+        /* 엡솔루트(절대좌표)는 상위요소 중 포지션이 static(기본)이 아니면 기준이 바뀐다.-1 */
+        position: absolute;
+        right: 0%;
+        bottom: 0;
+    }
+
+    .inner{
+        max-width: 1280px;
+        /* 내 콘텐츠의 사이즈 */
+        margin: auto;
+        background-color: rgba(0,255,255,.5);
+        height: 500px;
+        position: relative;
+        /* -1 상위인 이너에 포지션 relative(상대좌표)를 줘야 밖으로 빠져나가지 않는다. */
+        /* 엡솔루트의 절대값이 부모를 만나면 부모의 좌표{렐러티브:상대값}로 인해 절대값 영점이 바뀌어버린다. 이에 부모의 위치가 바뀌면 엡솔루트를 준 곳의 위치도 저절로 바뀌는 것이다. */
+        /* 부모기준으로 해서 부모 안에서 자식들을 제어해야 될때 쓰는 것. 부모 밖에서 쓰면 브라우저에 그대로 잡혀있다. */
+    }
+    /* <!-- ★큰 섹션(컨텐츠를 나누는 상자 마다)안에 이너 하나씩은 계속 들어가야 하고, 그 이너 상자를 중앙정렬시키는 것이다. --> */
+    
+    </style>
+</head>
+
+
+<body>
+    <div class="contents">
+        <div class="inner">
+            <h1>CSS3</h1>
+        </div>
+    </div>
+    <div class="contents">
+        <div class="inner">
+            <h1>CSS3</h1>
+        </div>
+    </div>
+    <div class="contents">
+        <div class="inner">
+            <h1>CSS3</h1>
+        </div>
+    </div>
+</body>
+
+</html>

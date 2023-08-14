@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단락요소</title>
+    <!-- 인터널방식 -->
+    <style>
+        p{color: aquamarine;}
+    </style>
+    <!-- 링크방식 -->
+    <link rel="stylesheet" href="./css/05.css">
+    <!-- inport인포트 방식 -->
+    <link rel="stylesheet" href="./css/import2.css">
+</head>
+
+<body>
+    <p>p요소는 텍스트와 인라인 포함 가능/ 같은 블록요소는 포함 못함.</p>
+    <p>p요소는 텍스트와 인라인 포함 가능<br> 같은 블록요소는 포함 못함.</p>
+    <!-- <br>은 단일 태그로 줄바꿈 가능함. p태그에는 <ul>, <ol>을 안에 못 씀/ br은 문단도 한칸 띄어져 적용된다. -->
+    <!-- inline인라인으로 css를 집어넣음/ 선택자 표↓ -->
+    <div style="width: 200px; height: 200px; background-color: bisque;">box</div>
+    <ul>
+        <!-- inline인라인으로 css를 집어넣음/ 기본 -->
+        <il style="color: blue;">menu1</il>
+        <il>menu2</il>
+    </ul>    
+</body>
+
+</html>

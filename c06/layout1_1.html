@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .wrap {
+            width: 500px;
+        }
+
+        .fl {
+            float: left;
+        }
+
+        .cf::after {
+            content: ' ';
+            display: block;
+            clear: both;
+        }
+
+        header,
+        footer {
+            background-color: gray;
+            height: 100px;
+        }
+
+        .bg_yellow {
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+        }
+
+        .bg_blue {
+            background-color: blue;
+            width: 300px;
+            height: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="h1 bg_red">header</header>
+        <main class="cf">
+            <nav class="fl bg_yellow">nav</nav>
+            <section class="fl bg_blue">section</section>
+            <aside class="fl bg_yellow">aside</aside>
+        </main>
+        <footer class="h1 bg_skyBlue">footer</footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .bg_red {
+            background: red;
+        }
+
+        .bg_gray {
+            background: gray;
+        }
+
+        .bg_green {
+            background: green;
+        }
+
+        .h_100{
+            height: 100px;
+        }
+
+        header,main,footer{
+            width: 500px;
+        }
+
+        nav,aside{
+            width: 100px;
+        }
+        section{
+            width: 300px;
+        }
+
+        .fl {
+            float: left;
+        }
+
+        .cf:after {
+            content: ' ';
+            clear: both;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="h_100 bg_gray">header</header>
+        <main class="cf">
+            <nav class="fl h_100 bg_red">sideBar</nav>
+            <section class="fl h_100 bg_green fl">content</section>
+            <aside class="fl h_100 bg_red fl">sideBar_ad</aside>
+        </main>
+        <footer class="h_100 bg_gray">footer</footer>
+    </div>
+</body>
+
+<!-- ★기본 커다란 구조 틀 잡기★ 무조건 처음!/ 부모들 상자를 넣고 그 안에 자식들을 넣어야 하는 것임. 부모는 무조건 필수! 마감태그에 주석도 필수!
+    <body>
+    <div class="wrap">
+        <header>header</header>
+        <main>
+            <nav>sideBar</nav>
+            <section>content</section>
+            <aside>sideBar_ad</aside>
+        </main>
+        <footer>footer</footer>
+    </div>
+</body> -->
+<!-- 코딩할때 클래스나 아이디의 이름만 참조할 것임. 코드는 각자 알아서 하는 것 -->
+
+</html>

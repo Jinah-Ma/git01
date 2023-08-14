@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>형성평가1 문제풀이</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrap {
+            border: 1px solid #ddd;
+            width: 500px;
+            padding: 10px;
+            margin: 20px auto;
+            /* 상하값 좌우값//중앙정렬_auto:너비, 크기가 있어야 가능함/ margin: 여백, 공간이 있어야 가능함.(=>전체보다 상자가 작아야 한다는 얘기) */
+        }
+
+        h1 {
+            height: 80px;
+            line-height: 80px;
+        }
+        /* 라인하이트:자간// 한 줄일 경우에 40, 40씩 나눠먹어 수직 중앙정렬로 보여진다.} */
+
+        ul {
+            list-style: none;
+            /* 밑줄 */
+            margin-left: 32px;
+            margin-bottom: 10px;
+        }
+
+        ul li {
+            height: 50px;
+        }
+
+        ul li * {
+            display: inline-block;
+        }
+        /* 전체선택자는 띄어서 쓰기 */
+
+        ul li h3{
+            /* 어디에 포함되어 있는 h3인지 구분하기 위해서 이렇게 쓰는 편이 좋다. */
+            color: brown;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>최신 웹 디자인 트렌드</h1>
+        <ul>
+            <li>
+                <h3>반응형 웹 디자인</h3>
+                <span> - 다양한 화면 크기에 최적화하다</span>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h3>플랫 디자인</h3>
+                <span> - 입체에서 평면으로</span>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h3>풀스크린 배경</h3>
+                <span> - 콘텐츠에 집중</span>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h3>원 페이지 사이트</h3>
+                <span> - 한 페이지에 모든 내용을 담다</span>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h3>패럴랙스 스크롤링</h3>
+                <span> - 동적인 효과로 강한 인상을!</span>
+            </li>
+            <li>
+                <h3>웹 폰트</h3>
+                <span> - 웹 타이포그래피를 받쳐주는 기술</span>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

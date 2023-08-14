@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position_복습_01</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .wrap{
+            width: 500px;
+            height: 500px;
+            background-color: red;
+            margin: auto;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        ul li:nth-child(1){
+            width: 50px;
+            height: 50px;
+            background-color: yellow;
+            position: absolute;
+            top: calc(100% /2);
+            left: calc(100% /2);
+            transform: translate(calc(-50px /2), calc(-50px /2));
+            z-index: 1;
+        }
+
+        ul li:nth-child(2){
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            top: calc(100% /2);
+            left: calc(100% /2);
+            transform: translate(calc(-100px /2), calc(-100px /2));
+            z-index: 0;
+        }
+        ul li:nth-child(2)+li{
+            width: 100px;
+            height: 100px;
+            background-color: greenyellow;
+            position: absolute;
+            right: 0px;
+        }
+
+        ul li+li+li+li{
+            width: 100px;
+            height: 100px;
+            background-color: greenyellow;
+            position: absolute;
+            left: 0px;
+        }
+
+        ul li:nth-child(4)+li{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            position: absolute;
+            bottom: 0px;
+        }
+
+        ul li:nth-child(6){
+            width: 150px;
+            height: 100px;
+            background-color: beige;
+            position: absolute;
+            bottom: 0;
+            top: 200px;
+            left: 350px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <ul>
+            <li>box1</li>
+            <li>box2</li>
+            <li>box3</li>
+            <li>box4</li>
+            <li>box5</li>
+            <li>box6</li>
+        </ul>
+    </div>
+</body>
+
+</html>

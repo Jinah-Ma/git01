@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seclector(선택자)</title>
+    <style>
+        /* 태그선택자 */
+        p {
+            color: red;
+        }
+
+        /* 아이디 선택자 */
+        #menu {
+            color: blue;
+        }
+
+        /* 클래스 선택자 */
+        .junsu {
+            color: brown;
+        }
+
+        /* asterisk(에스터리스크): 전체 선택자, 모든 문자 */
+        * {
+            color: darkseagreen;
+            /* margin:모든 여백 초기화 코드, 마진-들여쓰기, 패딩-문장과 문장의 여백 */
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.75;
+            /* 리스트스타일-세부속성들 스타일의 축약어(타입, 포지션, 이미지) */
+            list-style: none;
+        }
+
+        /* 하위(자손) 선택자 */
+        ul li {
+            font-size: 24px;
+        }
+
+        body p {
+            background-color: yellow;
+        }
+        ul li h3{background-color: gray; color: white;}
+    </style>
+</head>
+
+<body>
+    <!-- 태그선택자 -->
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit distinctio maxime iusto repellat deserunt. Iusto
+        itaque magni consectetur cupiditate velit molestiae perferendis facilis quidem? Omnis aperiam voluptatem eum
+        modi at.
+    </p>
+    <!-- ul#menu -->
+    <ul id="menu">
+        <li>아이디는 중복x</li>
+        <li>아이디는 문서에 하나만</li>
+        <li>아이디 선택자</li>
+        <li>복습하기</li>
+        <li>과제하기</li>
+    </ul>
+    <!-- h1.junsu : .()을 그냥 적용하면div로 자동적용된다.-->
+    <h1 class="junsu">
+        클래스 선택자/ 중복사용 된다.
+    </h1>
+    <!-- 전체 선택자, 모든 태그를 선택해 입력 -->
+    <div>
+        Lorem ipsum2 dolor sit amet consectetur adipisicing elit. Maiores sunt eligendi quos tenetur quae, sapiente
+        corrupti, deleniti nam ullam aliquid natus fugiat quas quod tempore voluptate rerum nemo suscipit adipisci.
+    </div>
+    <hr>
+    <ul>
+        <li>
+            <h3>하위(자손) 선택자</h3>
+        </li>
+        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+        <li>Odit reiciendis omnis fugiat fugit voluptates dignissimos quisquam.</li>
+        <li>Nesciunt, praesentium cupiditate molestias inventore sapiente atque pariatur animi doloremque quod eveniet
+            optio odio.</li>
+    </ul>
+    
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+/* ctrl+tab 문서 제목 이동 단축키 */
+/* css의 문자셋 지정/ 안하면 문자가 깨질 수 있다.*/
+@charset "utf-8";
+
+/* 웹브라우저의 기본 여백 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 자식선택자 */
+body>* {
+    width: 900px;
+    padding: 20px;
+    background-color: brown;
+    text-align: center;
+    margin: auto;
+}
+
+/* 감싼 상위 부모를 찾아 그 부모에게 적용하자./ 부모에서 자식으로 순서별로 적용시킨다. */
+header {
+    display: flex;
+    height: 200px;
+    justify-content: space-between;
+    /* 가로 정렬: 양쪽으로 나뉜다.*/
+    align-items: flex-end;
+    /* 세로 정렬: 아래쪽 기준정렬 */
+}
+
+h1 {
+    width: 200px;
+    height: 200px;
+    background-color: chartreuse;
+    line-height: 200px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    width: 600px;
+    justify-content: center;
+}
+
+li {
+    width: 70px;
+    height: 60px;
+    line-height: 60px;
+}
+
+#container {
+    display: flex;
+    justify-content: space-between;
+}
+
+section {
+    background-color: aquamarine;
+    width: 300px;
+    height: 400px;
+    line-height: 400px;
+}
+
+/* 컴퓨터에서는 한쪽방향밖에 없다. 공간 하나에 두가지 명령을 할 수 없다. 위아래이던가, 좌우던가. 이건 html의 구조를 수정해야 한다. 공간을 하나 더 주어야 한다. 그때 쓰는게 div다.*/
+section+div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 틀린게 있다면 페이지에서 코드 보는 단축키를 눌러 찾는다. 세모에 느낌표 있는 오류 아이콘이 있을 것이다. */
+
+section+div>* {
+    /* '>*'자식선택자 */
+    height: 190px;
+    width: 200px;
+    background-color: aquamarine;
+}
+
+footer>*{
+    background-color: bisque;
+    width: 600px;
+    padding: 5px;
+    /* 균등하게 줄때는 한 번 만 */
+    margin-left: 100px;
+    margin-top: 5px;
+    /* 따로 줄때는 각각 따로 값을 줘야 한다. */
+}

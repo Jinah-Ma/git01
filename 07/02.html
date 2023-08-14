@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>span</title>
+    <style>
+        span{background-color: aquamarine;}
+        /* 스판으로 들어간 곳만 적용이 된다. */
+        .s2{background-color:chocolate;}
+        /* 여백값 때문에 위의 색깔이 중첩되어 보인다. */
+    </style>
+</head>
+
+<body>
+    <h1>span</h1>
+    <p>작은 div라고 불린다.<span>인라인 속성으로 의미없는 콘텐츠를 감쌀때 사용</span></p>
+    <div>
+        <a href="#">
+            <span>
+                <img src="./btn_gallery.gif" alt="">
+                <span class="s2">버튼이미지</span>
+            </span>
+            <!-- 스판 안에 스판이 가능하다. 스판 안에 디브 적용 못 함=디브는 블럭이고 스판은 인라인이므로 인라인 안에 블럭인 디브를 넣을 수 없다.* 인라인은 크기를 가지지 못한다. -->
+        </a>
+    </div>
+</body>
+
+</html>

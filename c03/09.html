@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>숨기기</title>
+    <!-- 태그는 있는데 요소를 숨기기 -->
+    <style>
+        .box {
+            margin: 10px;
+            border: 1px solid;
+        }
+
+        .hdd {
+            color: red;
+            display: none;
+            /* 화면에서 숨겨지며 왼쪽 정렬(공간이 빠져서) */
+        }
+
+        .hdd2 {
+            visibility: hidden;
+            /* 투명색상의 관용도를 준것 4번 */
+            
+            /* opacity: 0; */
+            /* 3번 */
+
+            /* visibility: hidden; */
+            /* ↑공간은 있고 요소만 숨겨준다. 2번 */
+
+            /* color: rgba(255, 0, 0, 0); */
+            /* 맨 뒤 알파값인 명도가 불투명해져서 안 보인다.(공간은 그대로 있다.) 1번 */
+        }
+
+        /* color:rgb(255,255,255,0)→하위까지 상속됨(공간 남아있음)
+        visibility, opacity→상속안됨(공간 남아있음)
+        display→공간까지 삭제 */
+
+        .box:nth-child(4):hover .hdd2 {
+            color: red;
+            /* 4번 */
+            
+            /* opacity: 1; */
+            /* 3번 */
+            
+            /* visibility: visible; */
+            /* 2번 */
+            
+            /* color: rgba(255, 0, 0, 1) */
+                /* 마우스를 올려 명도 불투명해진 아이를 보일 수 있게 해주었다. 1번 */
+        }
+
+        .box:nth-child(3):hover .hdd {
+            display: inline;
+            color: rgba(255, 0, 0, 1);
+            /* 마우스를 올려 디스플레이로 숨겨진 아이를 인라인으로 들어내어 보이게 해준다. */
+        }
+
+        /* 위 아래 적용이 다 되어있는 상태로, 위에 걸 지워도 아래건 반영이 된다. */
+
+/* .box:nth-child(2):hover => 두번째 자식요소인 /box에 마우스 올리면 */
+/* ~.box .hdd => 다음형제 요소중 .box하위의 .hdd를 선택함 */
+        .box:nth-child(2):hover~.box .hdd{
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>화면에서 숨기기</h1>
+    <div class="box">
+        <p><strong>이름 :</strong>홍길동</p>
+        <p><strong>연락처 :</strong>서울 종로구 세검정 </p>
+    </div>
+
+    <!-- 공간빼며 숨기기 -->
+    <div class="box">
+        <p><strong class="hdd">이름 :</strong>홍길동</p>
+        <p><strong class="hdd">연락처 :</strong>서울 종로구 세검정 </p>
+    </div>
+
+    <!-- 화면에서 보이지만 않고 존재는 있음 -->
+    <div class="box">
+        <p><strong class="hdd2">이름 :</strong>홍길동</p>
+        <p><strong class="hdd2">연락처 :</strong>서울 종로구 세검정 </p>
+    </div>
+</body>
+
+</html>

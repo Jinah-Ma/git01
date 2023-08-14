@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            margin: auto;
+            background-color: lightgray;
+            width: 700px;
+            height: 400px;
+        }
+
+        .box {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 110px;
+        }
+
+        body div+div {
+            background-color: aqua;
+        }
+
+        body div+div .box{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p class="box">100</p>
+        <p class="box">101</p>
+    </div>
+    <div>
+        <p class="box">100</p>
+        <p class="box">101</p>
+        <p class="box">102</p>
+    </div>
+</body>
+
+</html>

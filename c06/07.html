@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>fixed menu</title>
+    <style>
+        body,
+        header,
+        div,
+        footer,
+        h1,
+        p,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .clear:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        body {
+            font: 14px 'Malgun Gothic', '맑은고딕';
+        }
+
+        a {
+            text-decoration: none;
+            color: #444;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* layout */
+        #wrap {
+            background-color: #5ef8d2;
+        }
+
+        header {
+            background-color: red;
+            position: fixed;
+            /* 1번 방법 : width: 100%; */
+            /* ↓2번째 방법 : right: 0; 어디로 갈지 몰라 늘어난다고. */
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        /* 포지션 픽스드는 탑 레프트에 고정을 해야 제대로 상단에 고정이 된다.★ */
+
+        h1 {
+            float: left;
+            margin-right: 40px;
+        }
+
+        header li {
+            float: left;
+
+        }
+
+        header li a,
+        .lnb li a {
+            display: block;
+            padding: 5px 20px;
+        }
+
+        #container {
+            margin-top: 40px;
+        }
+
+        .lnb {
+            float: left;
+            width: 20%;
+            background-color: #049c76;
+        }
+
+        .content_area {
+            float: left;
+            width: 80%;
+            background-color: #50cfaf;
+        }
+
+        footer{
+            background-color: gray;
+            padding-top: 10px;
+            text-align: center;
+        }
+
+        .top {
+            width: 20px;
+            padding: 10px;
+            background-color: yellow;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="clear">
+            <h1><a href="#">logotype</a></h1>
+            <ul class="gnb clear">
+                <li><a href="#">m1</a></li>
+                <li><a href="#">m2</a></li>
+                <li><a href="#">m3</a></li>
+                <li><a href="#">m4</a></li>
+            </ul>
+        </header>
+        <div id="container" class="clear">
+            <ul class="lnb">
+                <li><a href="#">s1</a></li>
+                <li><a href="#">s2</a></li>
+                <li><a href="#">s3</a></li>
+                <li><a href="#">s4</a></li>
+            </ul>
+            <div class="content_area">
+                <p>내용<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를
+                    상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br>
+                    헤더를 상단에 고정<br> 헤더를 상단에 고정</p>
+                <p>내용<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를
+                    상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br>
+                    헤더를 상단에 고정<br> 헤더를 상단에 고정</p>
+                <p>내용<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를
+                    상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br>
+                    헤더를 상단에 고정<br> 헤더를 상단에 고정</p>
+                <p>내용<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를
+                    상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br>
+                    헤더를 상단에 고정<br> 헤더를 상단에 고정</p>
+                <p>내용<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를
+                    상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br>
+                    헤더를 상단에 고정<br> 헤더를 상단에 고정</p>
+                <p>내용<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를
+                    상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br>
+                    헤더를 상단에 고정<br> 헤더를 상단에 고정</p>
+                <p>내용<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를
+                    상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br>
+                    헤더를 상단에 고정<br> 헤더를 상단에 고정</p>
+                <p>내용<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를
+                    상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br>
+                    헤더를 상단에 고정<br> 헤더를 상단에 고정</p>
+                <p>내용<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를
+                    상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br>
+                    헤더를 상단에 고정<br> 헤더를 상단에 고정</p>
+                <p>내용<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를
+                    상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br>
+                    헤더를 상단에 고정<br> 헤더를 상단에 고정</p>
+                <p>내용<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를
+                    상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br>
+                    헤더를 상단에 고정<br> 헤더를 상단에 고정</p>
+                <p>내용<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를
+                    상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br>
+                    헤더를 상단에 고정<br> 헤더를 상단에 고정</p>
+                <p>내용<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를
+                    상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br> 헤더를 상단에 고정<br>
+                    헤더를 상단에 고정<br> 헤더를 상단에 고정</p>
+                
+            </div>
+        </div>
+        <footer>
+            <p>copyright</p>
+            <p><a href="#wrap" class="top">top</a></p>
+        </footer>
+    </div>
+</body>
+
+</html>

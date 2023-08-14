@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imageMap</title>
+</head>
+
+<body>
+    <!-- 이미지파일 하나를 가지고 사분할해서 구역을 쪼개서{분리는 안 함.} 코드로 링크할 수 있다. -->
+    <h1>이미지맵을 이용한 하이퍼링크 연결</h1>
+    <div><img src="./images/banner_map.gif" alt="" usemap="#bannerImg"></div>
+    <map name="bannerImg">
+        <area shape="rect" coords="0,0,100,100" href="http://naver.com" alt="">
+        <area shape="rect" coords="100,100,200,200" href="http://daum.net" alt="">
+        <area shape="rect" coords="100,0,200,100" href="http://google.com" alt="">
+        <area shape="rect" coords="0,100,100,200" href="http://mamemo.dothome.co.kr/" alt="">
+    </map>
+    <!-- usemap 맵의 이름을 지정/ map→area는 이미지를 분할하고 크기, 모양 등을 지정해주는 태그  -->
+    <!-- 복습 : 웹은 좌측상단이 위치 기준/ 가로 먼저 쓰고 세로를 쓴다. 한 행으로 좌표값을 입력한다.☆ -->
+</body>
+
+</html>

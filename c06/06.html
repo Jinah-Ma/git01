@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>POSITION</title>
+    <style>
+        body,
+        div,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 20px;
+            background: url("img/bg_grid.gif");
+        }
+
+        .box {
+            width: 650px;
+            height: 300px;
+            background: rgba(0, 0, 0, 0.3);
+            position: fixed;
+        }
+/* 엡솔루트는 부모에 따라서 기준점이 바뀐다. 엡솔루트와 픽스드는 화면기준이며 절대값이지만
+엡솔루트는 부모요소의 포지션이 스택틱이 아닌경우(기본값) 부모가 기준이 된다. */
+        p {
+            width: 250px;
+            height: 100px;
+            box-sizing: border-box;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .red {
+            background: crimson;
+        }
+
+        .green {
+            background: lime;
+        }
+
+        .blue {
+            background: dodgerblue;
+        }
+
+        /* position
+        요소에 좌표값을 입력하여 배치하는 속성/ 레이아웃을 배치할때 씀.(트렌스폼으로는 안 씀)
+        -static : 기본(포지션 값을 지정 안 하면 기본으로 되어있는 값/ 문서의 흐름대로 가겠다는 것)
+        -relative : 상대좌표 : 자기 자신의 좌측상단
+        -absolute : 절대좌표 : 브라우저의 좌측상단
+        -fixed : 고정좌표
+        -sticky : 스티키 : 스크롤시 고정(스티커처럼 붙였다 띄었다 하는 것/ 부분고정)
+        
+        */
+
+        .red {
+            position: relative;
+            /* 요소의 현재 위치가 0점이 되기 때문에 겹침현상이 일어나지 않는다.(자신의 위치가 기준이 된다.) */
+            position: absolute;
+            /* 겹쳐지는 현상이 일어난다./ 절대적이라 부모값도 먹히지 않아서 이렇게 된 것.(즉, 다른 것들은 자리가 비었다고 생각해 부모의 좌표로 가버려서 그렇게 된 것-또한 각각의 좌표값을 다르게 줘서 그런 것) */
+            top: 100px;
+            left: 250px;
+            /* transition: all 1s; */
+            /* z-index: -1; */
+            /* 제어하는 기능/ 포지션을 써야 세개를 쓸 수 있음. 레이어 맨 밑으로 간다. */
+        }
+
+        /* .box:hover .red{
+            left: 0;
+        } */
+
+        .green {
+            position: relative;
+            position: absolute;
+            left: 20px;
+            top: 0;
+            z-index: 2;
+            /* 값이 아니라서 단위를 안 쓴다. 없다라는 뜻이다. */
+        }
+
+        .blue {
+            position: absolute;
+            /* 다 주니 부모의 콘텐츠가 다 없어져서 부모의 콘텐츠가 사라짐 */
+            bottom: 0px;
+            right: 0px;
+            /* 엡솔루트한테 버텀과 라이트를 주면 먹힌다. 브라우저 기준이기 때문에 */
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p class="red">박스의 크기와 위치를 잘 살펴보아야 합니다.</p>
+        <p class="green">박스의 포지션 속성을 바꿔가며 테스트해 보아야 합니다.</p>
+        <p class="blue">포지션을 이해하기 위해서는 시험해보고 관찰해 보는 것이 절대적으로 필요합니다.</p>
+    </div>
+</body>
+
+</html>

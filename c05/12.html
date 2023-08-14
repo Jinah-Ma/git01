@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>ANIMATION(노션참조)</title>
+    <style>
+        p {
+            width: 100px;
+            height: 100px;
+            background: brown;
+            /* 이름 */
+            animation-name: mamemo;
+            /* 지속시간 */
+            animation-duration: 4s;
+            /* 종료시 스타일 */
+            animation-fill-mode: forwards;
+            /* 실행횟수 */
+            animation-iteration-count: 3;
+            animation-iteration-count: infinite;
+            /* infinite무한반복 */
+            /* 방향 /왔다갔다하는 거; */
+            animation-direction: alternate;
+            /* 상태 /진행상태; */
+            animation-play-state: running;
+        }
+
+        @keyframes mamemo {
+
+            /* 분기( 4초면 4초를 100%라고 보고) */
+            0% {
+                background-color: green;
+                width: 150px;
+                transform: translate(0%, 0%);
+                color: white;
+
+            }
+
+            50% {
+                background-color: blue;
+                width: 50px;
+                transform: translate(0, 100px) rotate(45deg)
+            }
+
+            75% {
+                background-color: rgb(255, 0, 119);
+                width: 90px;
+                transform: translate(0, 100px) rotate(-45deg)
+            }
+
+
+            100% {
+                background-color: pink;
+                transform: translate(100px, 0px);
+            }
+        }
+
+        .ball {
+            margin-top: 250px;
+            width: 50px;
+            height: 50px;
+            background-color: coral;
+            border-radius: 50px;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: ball 5s ease-in 1s infinite alternate;
+        }
+
+        @keyframes ball {
+            0% {
+                transform: translate(200px, 200px);
+            }
+
+            100% {
+                transform: translate(0px, 0px);
+            }
+        }
+
+        button:hover+p {
+            animation-play-state: paused;
+            /* 버튼 위에 마우스를 올리면 정지한다. */
+        }
+    </style>
+</head>
+
+<body>
+    <button>stop</button>
+    <p>
+        Animation..
+    </p>
+
+    <div class="ball"></div>
+</body>
+
+</html>

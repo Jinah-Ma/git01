@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    width: 900px;
+}
+
+/* 플렉스 안에서는 자동적으로 글자 크기가 줄어든다. 원래는 넘쳐 흐르는게 정상. */
+
+#opt1{
+    justify-content: flex-start;
+}
+/* 기본값/ 주축의 시작점 */
+/* 가로방향이 주축이고, 세로방향이 교차축(반대로 아래로 떨어지는 경우엔 세로방향이 주축이고, 가로방향이 교차축이 된다.) */
+
+#opt2{
+    justify-content: flex-end;
+}
+/* 오른쪽으로 이동함/ 주축의 끝점에 위치함 */
+
+#opt3{
+    justify-content: center;
+}
+/* 주축 중앙 */
+
+#opt4{
+    justify-content: space-between;
+}
+/* 가로축 주축으로 부모의 공간 전체 맞춤으로 간격맞춤(첫번째 위치한 아이 기준으로 끝점까지 균등하게 늘어남./⇒시작점과 끝점 배치 후 중간 박스는 균등배치) */
+
+#opt5{
+    justify-content: space-around;
+}
+/* ⇒모두 균등배치/ 1번의 좌우여백, 2번의 좌우여백이 병합없이 균등하게 배치된다. */
+
+
+#opt6{
+    justify-content: space-evenly;
+}
+/* 1번의 좌우여백과 2번의 좌우여백이 병합되면서 균등하게 배치된다. ⇒전부 균등배치이나 겹치는 부분 병합 */

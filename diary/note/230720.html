@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표 만들기와 병합</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border: 1px solid;
+            width: 150px;
+            height: 30px;
+        }
+
+        caption {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>1행 2열</h2>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+    </table>
+    <hr>
+    <h2>4행 2열_ table>(tr>td*2)*4</h2>
+    <table>
+        <tr>
+            <td>교과목</td>
+            <td>점수</td>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>93</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>92</td>
+        </tr>
+        <tr>
+            <td>평균</td>
+            <td>92.5</td>
+        </tr>
+    </table>
+    <hr>
+    <h2>병합_4행 2열</h2>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">컴퓨터 그래픽스 기능사</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="3">프로그램</th>
+                <td>일러스트</td>
+            </tr>
+            <tr>
+                <td>포토샵</td>
+            </tr>
+            <tr>
+                <td>인디자인</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h2>표 접근성</h2>
+    <table style="text-align: center;">
+        <thead>
+            <caption>상품에 따른 상하반기 판매량</caption>
+            <colgroup>
+                <col>
+                <col>
+                <col>
+            </colgroup>
+            <tr>
+                <th scope="col">구분</th>
+                <th scope="col">데스크탑 pc</th>
+                <th scope="col">스마트폰</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">상반기 판매수</th>
+                <td>2만대</td>
+                <td>5만대</td>
+            </tr>
+            <tr>
+                <th scope="row">하반기 판매수</th>
+                <td>3만대</td>
+                <td>7만대</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

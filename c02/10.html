@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shadow</title>
+    <style>
+        h2{
+            font: 30px "Arial Black";
+        }
+        /* 속성값 순서 x, y, 블러, 색상 순으로./ 영어로 써있고 소괄호로 묶여 값을 쓸 때에만 컴마를 쓴다.(함수) */
+        .shadow1{color: #ebebeb;
+            text-shadow: 4px 4px 5px rgba(37,109,217,0.76)
+        }
+        .shadow2{
+            /* #113355를 축약 */
+            color: #135;
+            /* 블러를 넣기 싫으면 블러값을 생략하면 된다. */
+            text-shadow: 2px 2px #246, 3px 3px #357, 4px 4px #468, 5px 5px #579, 6px 6px #68a, 7px 7px #79b, 8px 8px #8ac;
+            /* 이렇게 여러개를 적용할 수 있다. */
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="shadow1">SHADOW EFFECT</h2>
+    <h2 class="shadow2">TEXT SHADOW</h2>
+    <p>
+        Internet Explorer 9 and earlier
+        do not support the text-shadow property
+    </p>
+</body>
+
+</html>

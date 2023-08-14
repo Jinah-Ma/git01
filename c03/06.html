@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>말줄임 기호</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: darkblue;
+            display: block;
+            /* a를 블럭으로 바꿔줄 수 있다. 그래서 공간을 가질 수 있게 되어 아래 태그를 가질 수 있다. */
+            margin: 10px;
+        }
+        
+        .notice a .h3{
+            border: 1px solid lightgray;
+            /* // */
+            width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            /* 공간보다 자식이 클 경우 값을 지정할 수 있다./ 넘치는 컨텐츠를 어떻게 할 것인가에 대한 속성 ex)스크롤 등*/
+            text-overflow: ellipsis;
+            /* 말줄임표. 위 태그들을 가지고 있어야 가능한 기능.(*너비, 줄바꿈x, 넘치면 숨김, 말줄임표*) */
+        }
+
+        .multi{
+            border: 1px solid lightgray;
+            width: 200px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            /* 몇줄마다 자를 건지 숫자 조정 */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        /* 두줄로 줄이는 경우. 나중에 배운다고 함. */
+    </style>
+</head>
+
+<body>
+    <ul class="notice">
+        <li><a href="#">
+                <h3 class="h3">시간 배분을 위하여 현명한 판단을 바랍니다. </h3>
+            </a></li>
+        <li><a href="#">
+                <h3>욕심껏 내용을 채우는 것도 좋겠습니다. </h3>
+            </a></li>
+        <li><a href="#">
+                <h3 class="multi">결과물을 볼 수 있어야 하는 것이 우선입니다.결과물을 볼 수 있어야 하는 것이 우선입니다.결과물을 볼 수 있어야 하는 것이 우선입니다.</h3>
+            </a></li>
+    </ul>
+</body>
+
+</html>

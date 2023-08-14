@@ -1,0 +1,23 @@
+.container{
+    width: 80%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.box{width: 60px; height: 60px; margin: 5px;}
+
+#box1{flex: 1;}
+/* 속성으로, 자식한테 지정하며 축약속성이다. */
+/* flex-grow:늘릴때 비율(확대)/ flex-shrink:줄일때 비율(축소)/ flex-basis: 기본값(기본크기) */
+
+#box2{flex: 50px;}
+/* 단위를 쓰면 베이시스의 값으로, 단위를 안 쓰면 나머지 둘 값으로 들어간다. */
+/* 쉬링크가 적용되어 있는 애들은 부모가 줄면 같이 준다. */
+
+#box3{flex: 2 2;}
+/* 각각 두배씩 */
+
+#box4{flex:1 40px;}
+
+#box5{flex:2 2 0;}

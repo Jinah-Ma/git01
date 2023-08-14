@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VScode 태그 및 설명_css</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 20px;
+            padding: 10px;
+        }
+
+        h1 {
+            color: rgb(178, 120, 245);
+        }
+
+        ul,
+        ol {
+            margin: 20px;
+        }
+
+        ul .m1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        ol {
+            font-size: 20px;
+            font-weight: normal;
+            padding-left: 20px;
+            padding-top: 10px;
+            line-height: 40px;
+        }
+
+        ol li ul li {
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        ol li ol li {
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        h3 {
+            color: gray;
+            font-weight: lighter;
+        }
+
+        mark {
+            background-color: rgb(255, 240, 152);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>VScode 태그 및 설명_css</h1>
+    <h3>- css는 head의 style에 적용하는 것으로 html을 꾸며준다.</h3>
+    <h3>- 원래는 링크를 만들어 적용하는 방식을 써서 해야 되지만 배우는 입장에서 불편하므로 html에 적용하는 방법을 썼다.</h3>
+    <ul>
+        <li class="m1">&starf; ctrl+f 검색해서 찾기
+            <ol>
+                <li>css 적용시키는 방법
+                    <ul>
+                        <li><b>인터널 방식</b>
+                            <br> head에 style을 만들어 css를 바로 적용
+                        </li>
+                        <li><b>링크 방식</b>
+                            <br> head에 link를 걸어 적용
+                            <br> 주로 사용되는 방법 &star;
+                        </li>
+                        <li><b>인라인 방식</b>
+                            <br> 태그 안에 넣어 바로 적용
+                        </li>
+                        <li><b>인포트 방식('@impot')</b>
+                            <br>링크방식으로 불러온 css문서에 또한번 css파일을 적용시키는 방법
+                        </li>
+                    </ul>
+                </li>
+                <!-- 1 -->
+                <li>Seclector(선택자)
+                    <ol>
+                        <li><strong>태그 선택자</strong>
+                            <ul>
+                                <li>태그를 직접 선택한다.</li>
+                                <li>ex- '<mark>p {}</mark>'</li>
+                            </ul>
+                        </li>
+                        <li><strong>아이디 선택자</strong>
+                            <ul>
+                                <li>태그에 id를 부여하고 선택한다.</li>
+                                <li>ex- <mark>'#menu(부여한 id이름)</mark>'</li>
+                            </ul>
+                        </li>
+                        <li><strong>클래스 선택자</strong>
+                            <ul>
+                                <li>태그에 class를 부여하고 선택한다.</li>
+                                <li>ex- '<mark>.menu(부여한 class이름)</mark>'</li>
+                            </ul>
+                        </li>
+                        <li><strong>전체 선택자</strong>
+                            <ul>
+                                <li>모든 요소를 선택한다.</li>
+                                <li>ex- '<mark>* {}</mark>'</li>
+                                <li>* : asterisk(에스터리스크)</li>
+                            </ul>
+                        </li>
+                        <li><strong>하위 선택자</strong>
+                            <ul>
+                                <li>요소 밑의 요소를 선택</li>
+                                <li>선택한 요소 전체에게 효과가 적용된다.</li>
+                                <li>ex- '<mark>ul li</mark>' : 모든 ul의 밑에 있는 li들에게 적용이 된다.</li>
+                            </ul>
+                        </li>
+                        <li><strong>자식 선택자</strong>
+                            <ul>
+                                <li>요소 밑의 직계자식 하나만 선택</li>
+                                <li>ex- '<mark>.(부여한 이름)>p</mark>' : 선택한 class 밑에 있는 p에만 적용이 된다.</li>
+                                <li>*<mark>tip) 하위선택자는 모든 하위 요소를 선택하고, 자식선택자는 직접적인 자식 요소만 선택한다.</mark></li>
+                            </ul>
+                        </li>
+                        <li><strong>인접 선택자</strong>
+                            <ul>
+                                <li>동위관계에 있는 요소 하나만 선택</li>
+                                <li>ex- '<mark>ul+p</mark>' : 같은 블럭요소로, 동위선상에 있다. ul 바로 밑에 있는 p만 선택해 바꿔준다.</li>
+                            </ul>
+                        </li>
+                        <li><strong>형제 선택자</strong>
+                            <ul>
+                                <li>모든 동위요소를 선택한다.(절대 위쪽을 선택 할 수 없다.)</li>
+                                <li>같은 부모를 가진 형제관계의 동위요소를 선택할 수 있으며, 밑에 있는 형제요소들에게만 적용이 된다.</li>
+                                <li>ex- '<mark>ul~p</mark>' : body라는 부모 밑 동위요소인 ul 밑의 p들이 선택되어 적용된다.</li>
+                                <li>*<mark>tip) 인접선택자와 형제선택자 모두 동위요소에게 적용하지만, 인접은 인접해있는 태그 하나만을 바꿔주고, 형제는 같은 부모 아래 선택된
+                                        형제관계의 요소 모두가 적용을 받는다.</mark></li>
+                            </ul>
+                        </li>
+                        <li><strong>그룹 선택자</strong>
+                            <ul>
+                                <li>여러 요소에 같은 속성을 적용</li>
+                                <li>ex- '<mark>h1,p{}</mark>'</li>
+                            </ul>
+                        </li>
+                        <li><strong>&star;속성 선택자</strong>
+                            <ul>
+                                <li>속성을 선택해 스타일을 지정</li>
+                                <li>(ex) <mark>'a[]' 혹은 '[]'</mark> : a=태그선택자, []=속성선택자
+                                    <ul>
+                                        <li><mark>차이점</mark> : []안에 적힌 글자가 같다는 가정하에서 'a[]'는 속성값에 []안에 적힌 글자를 포함하는 'a'요소의
+                                            것만 선택이 되고, '[]'의 경우엔 []안에 적힌 글자를 포함하는 모든 요소들의 것을 선택하게 된다.</li>
+                                    </ul>
+                                </li>
+                                <li>속성의 종류
+                                    <ol>
+                                        <li><mark>=(이퀄)</mark> : 완전일치 : '[속성=”망고”]'</li>
+                                        <li><mark>^(캐럿)</mark> : 시작단어 일치 : [속성^=”망고”]</li>
+                                        <li><mark>$(달러)</mark> : 끝단어 일치 : [속성$=”망고”]</li>
+                                        <li><mark>*(에스터리스크)</mark> : 특정단어 포함하는 것 : [속성*=”망고”]</li>
+                                        <li>&rArr; 포함만 하고 있으면 적용이 가능하지만, 없으면 타이틀 값이 완전히 일치하는 것만 적용이 된다.</li>
+                                    </ol>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>가상 선택자</strong>
+                            <ul>
+                                <li><mark>':'</mark></li>
+                                <li>하이퍼링크에 스타일을 부여 (둘 이상 사용시 순서가 중요하다./태그의 상태를 선택한다.)</li>
+                                <li>&lt;종류&gt;
+                                    <ol>
+                                        <li><mark>:link</mark> - 링크가 걸린 상태일 때</li>
+                                        <li><mark>:visted</mark> - 방문했던 링크의 상태일 때</li>
+                                        <li><mark>:hover</mark> - 마우스가 올라갔을 때/ 가장 많이 쓰인다.</li>
+                                        <li><mark>:active</mark> - 마우스를 올려 버튼을 계속 누르고 있을 때</li>
+                                        <li><mark>input:focus</mark> - <a href="../c01/08.html">focus</a> -입력상태로 바뀌었을
+                                            때_마우스 이용을 못 할 때 접근성을 위해서</li>
+                                        <li>&starf;</li>
+                                        <li><mark>:before</mark> - 가상선택자 부분(맨 앞)이 선택된다./ 미처 넣지 못한 컨텐츠를 넣고 싶을 때, 태그 안에
+                                            자식으로 추가한다.
+                                            <br>ex- p:before{content: ;}
+                                        </li>
+                                        <li><mark>:after</mark> - 마찬가지지만, 맨 뒤에 넣을 수 있다. (참고-이 두가지로 넣은 콘텐츠는 마우스로 긁히지
+                                            않는다.)</li>
+                                    </ol>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong><a href="../c01/10.html">가상요소 선택자</a></strong>
+                            <ul>
+                                <li><mark>:nth-child(n)</mark>
+                                    <br>&rarr;<mark>부모</mark>의 모든 자식요소(하위요소) 중 n번째
+                                    <ul>
+                                        <li>전체 중 <b>n번째 있는 자식</b>을 선택</li>
+                                        <li>ex- div:nth-child(2) &rarr; div에 속해있는 자식 중 2번째 아이를 선택</li>
+                                        <li>ex- div>p:nth-child(2) &rarr; div에 속해있는 자식 p가 2번째에 있을 때만 선택이 가능. 3번째에 있으면
+                                            적용이 되지 않는다.</li>
+                                        <li>&rArr;<strong><mark>부모에게 적용한다.</mark></strong></li>
+                                    </ul>
+                                </li>
+                                <li><mark>:nth-of-type(n)</mark>
+                                    <br>&rarr;부모의 <mark>자식</mark> 중 <b>특정요소</b>의 n번째
+                                    <ul>
+                                        <li>전체가 아닌 자식을 특정지어서 그 중 순서가 첫번째 인 것</li>
+                                        <li>ex- span:nth-of-type(2) &rarr; span중에 두번째 span을 선택한다.</li>
+                                        <li>&rArr;<strong><mark>자식에게 적용한다.</mark></strong></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    box자식 중 첫번째 p요소에 마우스 호버시 인접한 span의 배경색 변경
+                                    <br>&rarr;.box>p:nth-of-type(1)<mark>:hover+span</mark>{background-color: blue;}
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                </li>
+                <!-- 2 -->
+                <li><mark>우선순위</mark>
+                    <ul>
+                        <li><strong>캐스캐이딩(cascading_적용순서_우선순위)</strong>
+                            <ul>
+                                <li><b>적용 순서 방법</b> : 우선순위가 낮은 것부터 적용시키고, 그 뒤에 순위도를 올리면서 작업을 해야 나중에 값을 수정하기에 용이해진다.</li>
+                                <li>&rarr; 우선 순위가 하위라도 밑에 쓰면 그게 또 적용이 되어 버리는 경우가 있므로(컴퓨터는 위에서 아래로 한 줄씩 읽기 때문에) 웹페이지의
+                                    <b>개발자모드(ctrl+shift+c)</b>를 보면서 하자.
+                                </li>
+                            </ul>
+                        </li>
+                        <ol>
+                            <li>점수 : inline(1000)/ id(100)/ class, 속성, 가상선택자(10)/ 요소선택자-태그-(1)</li>
+                            <li>점수를 올리기 위해 같이 쓰는 방법
+                                <br>ex&rarr; 'body#bgPage1.bgPage2' (<mark>공백을 주면 '하위선택자'를 뜻하게 되므로 공백없이 함께 쓴다.</mark>)
+                            </li>
+                            <li>선언순서에 의해 하위에 쓰는 방법
+                                <br>&rarr; <mark>동일한 중요도와 특정도를 가진 규칙들 중</mark>에서 나중에 선언된 규칙이 우선된다.
+                            </li>
+                            <li><a href="../c01/12.html">참고</a></li>
+                            <li style="color: gray;">!important : 제일 우선으로 적용되는 아이로, 제일 나중에 하다하다 정 안 될 때 쓰는 것.(수정하기 어렵다.)
+                            </li>
+                        </ol>
+                    </ul>
+                </li>
+                <!-- 3 -->
+                <li>inherit_상속
+                    <ul>
+                        <li>부모 요소의 스타일이 자식 요소로 전달되는 개념</li>
+                        <li>ex- border: inherit; -상속제어 태그(활성화 시킨다.)</li>
+                        <li>상속되는 속성 : font-family, font-size, color, line-height 등의 텍스트 관련 속성</li>
+                        <li>상속되지 않는 속성 : border, margin, padding, width, height 등의 박스 모델과 관련된 속성은 기본적으로 상속되지 않습니다. 이러한
+                            속성은 자식 요소에 직접 적용</li>
+                    </ul>
+                </li>
+                <!-- 4 -->
+                <li><b>글자</b>
+                    <ul>
+                        <li id="font"><b>font-family</b> : 글씨체 변경</li>
+                        <li>ex- font-family: "맑음 고딕",바탕,"Times New Roman";
+                            <br>&nbsp;&rarr; 맑음고딕이 없으면 바탕으로, 바탕도 없으면 그 다음 글씨체로 적용이 된다.(순위별로 적용)
+                            <br>&nbsp;&rarr; ","를 하고 안 하고의 차이 : 띄어쓰기. 값 없이 문자가 있다라고 생각하게끔, 폰트 이름이라고 생각 할 수 있도록
+                            하기 위함.
+                            <br>&nbsp;&rarr; 또한 되도록이면 폰트들은 영문으로 쓰는 것이 좋다. 적용이 안 될 수 있기 때문에
+                        </li>
+                        <li><b>"san serif"</b> : 고딕체</li>
+                        <li><b>"serif"</b> : 명조체</li>
+                        <li>&nbsp;&rarr;두가지 체가 폭이 다르고, 맥과 윈도우는 글씨체가 호환이 되지 않아서 레이아웃이 달라질 수 있으므로 주의해야 한다. 꼭 써야 된다.</li>
+                        <li><b>font-style</b>: italic과 normal 등으로 바꿀 수 있다.</li>
+                        <li id="line-height"><b>line-height</b> : 행간
+                            <br>ex) line-height: 1.5;
+                            <br>&nbsp;&rarr;글씨크기의 1.5배(=150%), 혹은 px를 붙여 절대값으로 지정할 수도 있다.
+                            <br>&nbsp;&rarr;포토샵 등은 행간이 맨 아래 있지만, css의 행간은 중간에 있다./ 그래서 만약 행간을 50px 주었을 경우엔 상하로 25씩 나눠 가진다.
+                            <br>&star;블럭의 경우 높이가 있어야 수직정렬이 된다.(행간으로 인해 그렇게 보이는 거지, 막상 줄이 길어지면 밑으로 내려와 밑 컨텐츠와 겹쳐 보여져 버린다. 따라서 한 줄, 적은 단어일 때만 쓴다.)
+                        </li>
+                        <li><b>font-weight</b>: 굵기</li>
+                        <li><b>font-size</b>: 2em;
+                            <br>&nbsp;&rarr;글씨 크기 : <mark>1em=16px{em-상대단위}</mark>
+                            <br>&nbsp;&rarr;1em=16px, 0.5=8px/ 1.5em=24px=>상대단위라 보여지는 크기가 바뀐다. ★em은 부모 글씨 크기 기준으로 바뀐다.
+                            부모ul의 크기가 12px이고, 1em=12px, 0.5em은 6px이 되어, 12+6=18px가 되어 보여진다.
+                            <br>&nbsp;&rarr;
+                        </li>
+                        <li>font-size: 1.5rem;
+                            <br>&nbsp;&rarr;rootem=<mark>rem</mark>/ 루트(뿌리; 최상위)가 기준(즉 html이 기준이 되어 계산되 적용된다./ 24+12=36)
+                        </li>
+                        <li>font-size: 5<mark>vw</mark>; or 5<mark>vh</mark>;
+                            <br>&nbsp;&rarr;브라우저의 "폭"에 맞게 조절이 되어 보여진다.(or 뷰포트의 위드;viewport width)
+                            5vh로 바꾸면 높이에 반응한다.
+                        </li>
+                        <li><b>font-variant</b>: <mark>small-caps</mark>;
+                            <br>&nbsp;&rarr;소문자 크기의 대문자로 만들어준다.(한글은 당연히 안 됨)
+                        </li>
+                        <li>letter-spacing : 글자와 글자 간격/ 자간→한글의 경우 -0.5px를 주는 게 좋지만 절대적인 건 아니다.</li>
+                        <li>word-spacing : 단어와 단어 간격(잘 쓰지 않는다.)/ 어간</li>
+                        <li id="text"><b>text-decoration</b>
+                            <br>&nbsp;&rarr;밑줄 속성
+                            <br>&nbsp;&rarr;underline(아래쪽 줄이 생김), overline(위쪽으로 줄이 생김), line-through(취소선이 생김), none(밑줄
+                            없애기)
+                        </li>
+                        <li><b>text-transform</b>
+                            <br>&nbsp;&rarr;대소문자
+                            <br>&nbsp;&rarr;uppercase(전부 대문자), lowercase(전부 소문자), capitalize(앞글자만 대문자)
+                        </li>
+                        <li><strong>글자의 그림자 지정</strong>
+                            <ul>
+                                <li>ex) <mark>text-shadow</mark>: 1px 1px 2px pink;
+                                    <br>&nbsp;&rarr;순서: x축 y축 blur color
+                                    <br>&nbsp;&rarr;블러를 넣기 싫으면 쓰는 걸 생략하면 된다.
+                                    <br>&nbsp;&rarr;여러개 적용 예시) text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em
+                                    blue;
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                    </ul>
+                </li>
+                <!-- 5 -->
+                <li>폰트 사이트에 적용하기 방법
+                    <ol>
+                        <li><strong>웹사이트 것을 적용시키기</strong>
+                            <br>&nbsp;&lt;구글폰트 적용시키기&gt;
+                            <ol>
+                                <li>구글의 무료 폰트 사이트에 들어가 원하는 폰트를 선택한다.</li>
+                                <li>원하는 폰트 굵기 옆 select'+'버튼을 누르고 나온 창의 소스(위의 것)를 head에 붙여 넣는다.</li>
+                                <li>&nbsp;&rarr;html의 경우 head에 'link'소스를 <a href="/c02/05.html">붙여넣거나</a>
+                                    <br>&nbsp;&rarr;css를 만들어 'link'소스를 붙여넣어 적용한다.
+                                <li>
+                                    문제점 : 호환성으로 인해, 혹은 구글에서 폰트소스를 내려버리는 경우에 내가 적용해둔 폰트를 못 보게 되는 경우가 생긴다.
+                                    </il>
+                            </ol>
+                        </li>
+                        <li><strong>다운로드 받은 폰트를 적용시키기</strong>
+                            <ol>
+                                <li>&nbsp;&lt;일반 방식&gt;
+                                    <br>&nbsp;&rarr;html이나 css에 다운받은 폰트를 적용한다.
+                                    <br>&nbsp;&rarr;ex) body{font-family: 'himayari', sans-serif;}
+                                    <br>문제점: 해당 폰트를 함께 보내주어야 한다.(깔려있지 않을 수 있기 때문에)&rarr;번거로워진다.
+                                </li>
+                                <li>&nbsp;&lt;<a href="/c02/font/font.css">@import(임포트)방식</a>&gt;
+                                    <br>ex) @font-face {font-family: 'himayari';
+                                    <br>src: url('./Fonts_Jikjisoft/J-Bold.otf');
+                                    <br>font-weight: 900;
+                                    <br>&nbsp;&rarr;내 컴퓨터에 설치해 둔 폰트를 적용시켜 웹사이트를 이용한 사람들이 볼 수 있게 하는 방식
+                                    <br>&nbsp;&rarr;다양한 스타일들을 적용시킬 수 있다.
+                                    <br>&nbsp;&rarr;번거롭지 않게 사용자가 적용시킨 폰트를 볼 수 있다.
+                                    <br>&nbsp;&rarr;단, <mark>글꼴이 호환성으로 인해 보이지 않을 경우</mark>가 있으므로 아래 하단에
+                                    <mark>일반방식</mark>으로 윈도우에 일반적으로 들어있는 공용폰트를 여러개 적어 두어야 한다.
+                                </li>
+                                <li>tip*)
+                                    <br>&nbsp;&rarr;ttf파일이 가장 사용하기 좋다.(윈도우와 맥 상관없이 만들어졌기 때문에)
+                                    <br>&nbsp;&rarr;간단한 파일을 만들경우에 만약 사용한 폰트에 제약이 있거나 번거로움을 피하고 싶다면 화면에 구현한 것을 이미지 파일로
+                                    저장하여 건넨다.
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+                <!-- 5-1 -->
+                <li>링크를 통한 무료 <b>아이콘</b> 집어넣기
+                    <ol>
+                        <li>이미지로 내려받아 집어넣을 수도 있지만, 링크로 웹사이트에서 무료로 배포하는 것을 소스로 집어넣을 수 있다.(구글)</li>
+                        <li>원하는 아이콘을 선택하여 나온 페이지에서 세번째 칸에 있는 소스를 head에 복사붙여넣기 한다. 이후 네번째 칸에 있는 것을 body의 적용하고 싶은 곳에
+                            복사붙여넣기를 하고, 'span'과 '/span'사이에 맨 마지막 cord point를 넣는다.
+                        </li>
+                    </ol>
+                </li>
+                <!-- 5-2 -->
+                <li>list-style(리스트 스타일)
+                    <br>- 세부 속성들 스타일의 축약어(타입, 포지션, 이미지)
+                </li>
+                <!-- 6 -->
+                <li>초기화 값
+                    <ul>
+                        <li>font-size: initial; - 폰트사이즈 초기화(initial : 초기화 태그)</li>
+                        <li><a href="#font">font-family - 글씨체</a>
+                            <br>ex - font-family: "맑은 고딕", 돋움, arial;
+                        </li>
+                        <li>list-style:none - ul, ol의 li 땡땡이와 숫자가 사라짐
+                            <br>&nbsp;&rarr;tip*) body색을 바꾸면 땡땡이의 색이 바뀐다.(+'@'는 바뀌지 않는데, 이건 특정을 해서 바꿔줘야 한다.=a 색상을 바꾸려면 a를 특정해서 바꿔야 한다.)
+                        </li>
+                        <li><a href="#text">text-decoration</a>: none; - 링크의 밑줄이 사라짐</li>
+                        <li>margin:0;/ padding:0;/ border: 0;(1)// 폰트셋팅(2)// 땡땡이와 밑줄 없애기(3)//&rArr;기본으로 깔고 가야 하는 리셋&starf;</li>
+                    </ul>
+                </li>
+                <!-- 7 -->
+                <li>컬러
+                    <ol>
+                        <li>background-color: red;</li>
+                        <li>background-color: rgb(52, 27, 133)
+                            <br>&nbsp; &rarr; 맨 위의 것은 정확한 값이 아니기 때문에 오해가 생길 수 있어, 이왕이면 숫자로 쓰는 것이 좋다.
+                        </li>
+                        <li> background-color: hsl(180, 100%, 50%);
+                            <br>&nbsp; &rarr; 각도(0~360), 채도(0~100%), 명도(0~100%)
+                        </li>
+                    </ol>
+                </li>
+                <!-- 8 -->
+                <li><strong>margin</strong>
+                    <ul>
+                        <li>외부 여백/ 박스 바깥쪽 여백/ 콘텐츠의 너비에 포함되지 않는다.</li>
+                        <li>값 순서 : 상 우 하 좌/ 상 좌우 하/ 상하 좌우/ 상하좌우</li>
+                        <li>병합현상 : 마진 10px를 줬을 때, 위아래는 한쪽값밖에 안 들어간다. 아래쪽은 무한대이기 때문에. 그래서 아래방향이 원래는 20px가 되어야 하는데, 10px만
+                            준 것처럼 보여진다.(좌우는 아님. 폭이 정해져 있기 때문에 20px그대로 적용이 된다.)</li>
+                        <li>큰 수로 적용된다. 더해지진 않고 둘 중에 큰 값이 적용(병합) 되는 것</li>
+                    </ul>
+                </li>
+                <!-- 9 -->
+                <li><strong>padding</strong>
+                    <ul>
+                        <li>내부여백/ 문장과 문장의 여백/ 박스 안쪽 여백/ 콘텐츠의 너비가 커진다.</li>
+                    </ul>
+                </li>
+                <!-- 10 -->
+                <li><strong>&lt;문단의 정렬&gt;</strong>
+                    <ul>
+                        <li>&starf;정렬을 주려면 <mark>여백(공간)</mark>부터 주어야 한다.</li>
+                        <li>&starf;문단은 너비가 있어야 되기 때문에 <mark>블럭요소</mark>에 써야 한다. (즉, 공간 조절이 가능할 수 있는 블럭을 이용해 문단을 조절한다.)
+                        </li>
+                        <li>text-align
+                            <br>&nbsp; &rarr;left : 기본/ 좌측정렬
+                            <br>&nbsp; &rarr;right : 우측정렬
+                            <br>&nbsp; &rarr;<mark>center : 중앙정렬</mark>
+                            <br>&nbsp; &rarr;justify : 양쪽정렬
+                        </li>
+                        <li id=vertical><mark>vertical-align</mark>
+                            <br>&nbsp; &rarr;<mark>인라인</mark>한테만 적용가능하다.(이미지는 인라인-블록이라 적용가능)
+                            <br>&nbsp; &rarr;<mark>middle : 수직중앙정렬</mark>
+                        </li>
+                        <li><strong>text-indent</strong>
+                            <br>&nbsp; &rarr;들여쓰기
+                            <br>&nbsp; &rarr;text-indent: -99999999999999999px; (<mark>핵</mark>)
+                            <br> : 화면밖으로 나간다. <mark>글자를 검색엔진(스크린 리더기)을 위해서 안 보이게 심어두는 것</mark>.
+                            <br>&nbsp;&nbsp;&nbsp; &rarr;홈페이지 로고를 넣을 때, 백그라운드로 이미지를 넣고 그 위에 쓰인 글자를 안 보이게 하기 위해서.
+                            <br>&nbsp;&nbsp;&nbsp; &rarr;정상적 숫자를 쓰면 안으로 첫 문장이 들여쓰기가 되어있고, -를 붙이면 밖으로 간다.(부모에 적용하면 인라인인
+                            자식들에 적용이 된다.)
+                        </li>
+                        <li>word :텍스트 줄바꿈
+                            <ol>
+                                <li>word-wrap : 영문 줄바꿈</li>
+                                <li>word-break : 아시아, 비아시아 언어의 줄바꿈</li>
+                                <li>
+                                    <ul>
+                                        <li>normal : 기본값/ CJK(중,일,한) 문자는 글자 기준, 비CJK문자는 단어기준</li>
+                                        <li>break-all : 글자 기준으로 줄 바꿈(모든 언어 줄바꿈으로 주로 많이 쓴다.)</li>
+                                        <li>keep-all : 단어 기준으로 줄 바꿈</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </li>
+                        <li><b>white-space</b> : 공백 처리
+                            <ol>
+                                <li>normal : 기본값/ 자동 줄바꿈/ 상자 안에 갇힌다.</li>
+                                <li id=nowrap>nowrap : 줄바꿈 안 함./ 'br'를 써야 줄바꿈이 됨/ 상자를 빠져나온다.</li>
+                                <li>pre : 태그'pre'처럼 마음대로 공백 등을 넣을 수 있다./ 상자를 빠져나온다.(잘 안 씀)</li>
+                                <li>pre-wrap : 사용자가 이용한 상태로 공백도 보여준다./ 자동 줄바꿈/ 상자 안에 갇힌다.</li>
+                                <li>pre-line : 줄바꿈만 되고 공백은 유지가 된다.</li>
+                                <li style="color: rgb(165, 165, 165);">break-spaces : pre-wrap에 흡수되어 안 씀. </li>
+                            </ol>
+                        </li>
+                        <li><strong>text-overflow</strong> : 말줄임 기호
+                            <br>&starf;아래의 속성이 필요하다.(너비o, 줄바꿈x, 넘치면 숨김, 말줄임표)
+                            <ul>
+                                <li>width - 너비가 있어야 공간(여백)이 생기고 이 안에 넣을 수 있다.</li>
+                                <li><mark>overflow: hidden</mark>; - 공간보다 자식이 클 경우 값을 지정할 수 있다.(넘치는 컨텐츠를 어떻게 할 것인가에 대한 속성 ex-스크롤 등)</li>
+                                <li>white-space: <a href="#nowrap">nowrap</a>;</li>
+                                <li><mark>text-overflow: ellipsis;</mark> - 말줄임표</li>
+                            </ul>
+                            <br>심화
+                            <ul>
+                                <li>display: -webkit-box;
+                                    <br>-webkit-line-clamp: 2; - 몇줄 뒤를 자를 건지 숫자 조정
+                                    <br>-webkit-box-orient: vertical; - 수직(세로방향)
+                                    <br>overflow: hidden;
+                                    <br>text-overflow: ellipsis;
+                                    <br>즉, 위에서 두줄 뒤를 숨기고 말줄임표를 붙인다는 것.
+                            </ul>
+                        </li>
+                        <li><strong><mark><a href="./vscode.html">display(디스플레이)</a></mark></strong>
+                            <ul>
+                                <li><b>block</b> : 인라인요소를 블럭으로 만들어준다.</li>
+                                <li><b>inline</b> : 블럭요소를 인라인으로 만들어준다.</li>
+                                <li><b>inline-block</b> : 이미지처럼 인라인과 블럭의 특징을 가진 아이로 바꿔준다.</li>
+                                <li id="hidden"><b><a href="/c03/07.html">none</a></b> : 안 보이게 됨, 화면에서 사라짐
+                                <br>&nbsp; &rarr; ex) .dep2 li a{display: none;}/ .gnb li a:hover+.dep2 li a{display:block}
+                                &nbsp;&nbsp;&nbsp; &rarr; 투댑스 메뉴가 a에 올리면 보이게 된다.
+                                <li id="table"><b>table-cell</b> : 여러 줄일 경우 수직중앙정렬
+                                <br>&nbsp; &rarr; ex) display: table-cell;/ height: 200px;/ vertical-align: middle;
+                                </li>
+                            </li>
+                            </ul>
+                        </li>
+                        <li>&starf;<strong><a href="/c03/08.html"><mark>수직정렬 태그모음</mark></a></strong>
+                            <ul>
+                                <li><a href="#line-height">line-height</a> : 한 줄 일때만
+                                </li>
+                                <li><a href="#vertical">vertical-align</a>: middle; : 수직중앙정렬, 행이 여러개일때 'table-cell'과 함께 씀</li>
+                                <li><a href="#tadle">display:table-cell</a></li>
+                                <li>padding-bottom: 50px;/ padding-top: 50px; : 여러 줄일때. 위아래 패딩값을 똑같이 줘서 중앙정렬처럼 보이게끔 맞춰준다.(반응형으로 만들때)</li>
+                            </ul>
+                        </li>
+                        <li><strong><a href="/c03/09.html">hidden</a></strong>(숨기기) : 태그가 있는데 요소를 숨기기
+                        <ol>
+                            <li><a href="#hidden">display: none;</a>
+                                <br>&nbsp; &rarr; 화면에서 숨겨지며 왼쪽정렬 (공간이 없어진다.)
+                                <br>&nbsp; &rarr; hover {display: ; color: ;} : 값을 인라인이나 블럭으로 바꾸고 색을 줘서 다시 나오게끔 한다.
+                            </li>
+                            <li>visibility: hidden;
+                                <br>&nbsp; &rarr; 공간은 있고 요소만 숨겨진다.
+                                <br>&nbsp; &rarr; hover {visibility: visible;} 로 바꿔 다시 나오게 하면 된다.
+                            </li>
+                            <li>color: rgba(255, 0, 0, 0);
+                                <br>&nbsp; &rarr;맨 뒤 알파값인 명도가 불투명해져서 안 보인다.(공간은 그대로 있다.)
+                                <br>&nbsp; &rarr;hover {color: rgba(255, 0, 0, 1)} : 마우스를 올려 명도 불투명해진 아이를 보일 수 있게 해주었다.
+                            </li>
+                            <li>opacity: 0;
+                                <br>&nbsp; &rarr; 공간이 남아있음.
+                                <br>&nbsp; &rarr;hover{opacity: 1;}로 보이게끔 한다.
+                            </li>
+                            <li>color: transparent;
+                                <br>&nbsp; &rarr;투명색상의 관용도를 준것
+                                <br>&nbsp; &rarr;hover {color: red;} : 컬러를 주어 보이게끔 한다.
+                            </li>
+                            <li></li>
+                        </ol>
+                        </li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </li>
+                <!-- 11 -->
+                <li>
+
+                </li>
+                <!-- 12 -->
+                <li>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </li>
+                <!-- 13 -->
+                <li>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </li>
+                <!-- 14 -->
+                <li>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </li>
+                <!-- 15 -->
+                <li>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </li>
+                <!-- 16 -->
+                <li>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </li>
+                <!-- 17 -->
+                <li>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </li>
+                <!-- 18 -->
+                <li>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </li>
+                <!-- 19 -->
+                <li>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </li>
+                <!-- 20 -->
+                <li>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </li>
+                <!-- 21 -->
+            </ol>
+        </li>
+    </ul>
+</body>
+
+</html>

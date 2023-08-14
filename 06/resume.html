@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이력서 문제 풀이</title>
+    <style>
+        table {
+            border: 5px double #3f1dff;
+            width: 900px;
+            border-spacing: 0px;
+            margin: auto;
+            /* 마진:오토-레이아웃 중앙정렬 시켜준다. */
+        }
+
+        .h200 {
+            height: 200px;
+        }
+
+        td.center {
+            text-align: center;
+        }
+
+        th,
+        td {
+            border: 1px solid #3f1dff;
+            height: 30px;
+            padding: 5px;
+        }
+
+        .h36 {
+            font-size: 36px;
+        }
+
+        .h80 {
+            height: 80px;
+        }
+
+        .h14 {
+            font-size: 14px;
+        }
+
+        .w140 {
+            width: 140px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th colspan="3" rowspan="4" class="w140"><span class="h14">사진</span></th>
+            <th colspan="4" class="h80"><span class="h36">이&nbsp;&nbsp;력&nbsp;&nbsp;서</span></th>
+            <!-- 스판: 아무 의미도 없는 인라인태그이기에 블럭 안에 들어갈 수 있지만 크기를 가질 수 없다. -->
+        </tr>
+        <!-- tr1 -->
+        <tr>
+            <th rowspan="2">성명</th>
+            <td colspan="2" rowspan="2" class="center"><span>XXX</span><sub>(인)</sub></td>
+            <!-- td.center 로 쓰면 자동으로 위에 처럼 된다. -->
+            <th>주민등록번호</th>
+        </tr>
+        <!-- tr2 -->
+        <tr>
+            <td class="center ">840XXX-*******</td>
+        </tr>
+        <!-- tr3 -->
+        <tr>
+            <th>생년월일</th>
+            <td colspan="3" class="center">19XX년 X월 XX일생 (만 XX세)</td>
+        </tr>
+        <!-- tr4 -->
+        <tr>
+            <th colspan="3">주소</th>
+            <td colspan="4" class="center">경기도 안산시 선부3동 1115-22번지</td>
+        </tr>
+        <!-- tr5 -->
+        <tr>
+            <th colspan="3">호적관계</th>
+            <th>호주와의 관계</th>
+            <td>XXX의 자</td>
+            <th>호주성명</th>
+            <td>XXX</td>
+        </tr>
+        <!-- tr6 -->
+        <tr>
+            <th colspan="3">년&nbsp;월&nbsp;일</th>
+            <th colspan="3">학&nbsp;력&nbsp;및&nbsp;경&nbsp;력&nbsp;사&nbsp;항</th>
+            <th>발&nbsp;령&nbsp;청</th>
+        </tr>
+        <!-- tr7 -->
+        <tr>
+            <td class="center">2002</td>
+            <td class="center">02</td>
+            <td class="center">14</td>
+            <td colspan="3">&nbsp;졸업</td>
+            <td></td>
+        </tr>
+        <!-- tr8 -->
+        <tr>
+            <td class="center">2002</td>
+            <td class="center">05</td>
+            <td class="center">00</td>
+            <td colspan="3">&nbsp;퇴사</td>
+            <td></td>
+        </tr>
+        <!-- tr9 -->
+        <tr>
+            <td class="center">2002</td>
+            <td class="center">05</td>
+            <td class="center">00</td>
+            <td colspan="3">&nbsp;퇴사</td>
+            <td></td>
+        </tr>
+        <!-- tr10 -->
+        <tr>
+            <td class="center">2002</td>
+            <td class="center">08</td>
+            <td class="center">00</td>
+            <td colspan="3">&nbsp;퇴사</td>
+            <td></td>
+        </tr>
+        <!-- tr11 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td colspan="3"></td>
+            <td></td>
+        </tr>
+        <!-- tr12 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <th colspan="3">&diamondsuit;자&nbsp;격&nbsp;사&nbsp;항&diamondsuit;</th>
+            <td></td>
+        </tr>
+        <!-- tr13 -->
+        <tr>
+            <td class="center">2007</td>
+            <td class="center">08</td>
+            <td class="center">00</td>
+            <td colspan="3">&nbsp;기능사 취득</td>
+            <td></td>
+        </tr>
+        <!-- tr14 -->
+        <tr>
+            <td class="center">2009</td>
+            <td class="center">10</td>
+            <td class="center">09</td>
+            <td colspan="3">&nbsp;1차 합격</td>
+            <td></td>
+        </tr>
+        <!-- tr15 -->
+        <tr>
+            <td class="center">2001</td>
+            <td class="center">05</td>
+            <td class="center">17</td>
+            <td colspan="3">&nbsp;2급 취득</td>
+            <td></td>
+        </tr>
+        <!-- tr16 -->
+        <tr>
+            <td class="center">2000</td>
+            <td class="center">01</td>
+            <td class="center">11</td>
+            <td colspan="3">&nbsp;취득</td>
+            <td></td>
+        </tr>
+        <!-- tr17 -->
+        <tr>
+            <td class="center">2000</td>
+            <td class="center">02</td>
+            <td class="center">11</td>
+            <td colspan="3">&nbsp;취득</td>
+            <td></td>
+        </tr>
+        <!-- tr18 -->
+        <tr>
+            <td class="center">2000</td>
+            <td class="center">12</td>
+            <td class="center">29</td>
+            <td colspan="3">&nbsp;취득</td>
+            <td></td>
+        </tr>
+        <!-- tr19 -->
+        <tr>
+            <td class="center">1999</td>
+            <td class="center">08</td>
+            <td class="center">13</td>
+            <td colspan="3">&nbsp;취득</td>
+            <td></td>
+        </tr>
+        <!-- tr20 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td colspan="3">&nbsp;</td>
+            <td></td>
+        </tr>
+        <!-- tr21 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td colspan="3">&nbsp;</td>
+            <td></td>
+        </tr>
+        <!-- tr22 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td colspan="3">&nbsp;</td>
+            <td></td>
+        </tr>
+        <!-- tr23 -->
+        <tr>
+            <td colspan="7" class="h200 center">
+                <!-- 태그는 여러개 넣을 수 있다. 두개의 값이 들어간 것이다. 두개 넣을 때는 한 칸 띄워 넣는다. -->
+                위 사항은 사실과 틀림없음을 증명합니다. <br>XXX인
+            </td>
+        </tr>
+        <!-- tr24 -->
+
+    </table>
+</body>
+
+</html>

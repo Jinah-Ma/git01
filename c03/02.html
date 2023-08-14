@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+         border: 1px solid #000;  
+        }
+        /* 높이는 컨텐츠의 높이에 따라 박스크기가 적용이 된다. */
+        .valign img{
+            vertical-align: middle;
+        }
+        /* 인라인요소에 선언. 인라인한테만 적용./ 이미지에게 준다. */
+    </style>
+</head>
+
+<body>
+    <!-- 수직정렬 -->
+    <p>
+        나는 자유다
+        <img src="./img/imfree.png" width="150" alt="자유">
+    </p>
+    <p class="valign">
+        나는 자유다
+        <img src="./img/imfree.png" width="150" alt="자유">
+    </p>
+</body>
+
+</html>

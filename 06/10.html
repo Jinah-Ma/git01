@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lable</title>
+</head>
+
+<body>
+    <h1>lable 요소</h1>
+    <form action="#" method="post">
+        <table>
+            <caption>회원가입양식</caption>
+            <colgroup>
+                <col>
+                <col>
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="row">
+                        <label for="id">아이디</label>
+                        <!-- 레이블 : 인풋에 무엇을 입력해야 된다고 알려주는 것./ 레이블과 인풋이 연관되어진거라는 걸 알려주는 건 레이블의 폴과 인풋의 아이디이다. -->
+                    </th>
+                    <td>
+                        <input type="text" id="id" title="아이디입력" placeholder="아이디를 입력하세요">
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="pw">비밀번호</label>
+                    </th>
+                    <td>
+                        <input type="text" id="pw" title="비밀번호입력" placeholder="비밀번호를 입력하세요">
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="pw_r">비밀번호재입력</label>
+                    </th>
+                    <td>
+                        <input type="text" id="pw_r" title="비밀번호재입력" placeholder="비밀번호를 재입력하세요">
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="email">이메일</label>
+                    </th>
+                    <td>
+                        <input type="email" id="email" title="이메일입력">@
+                        <input type="text" title="이메일주소 입력">
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="hp">휴대폰번호</label>
+                    </th>
+                    <td>
+                        <select name="hp" id="hp">
+                            <option>선택</option>
+                            <option value="010">010</option>
+                            <option value="011">011</option>
+                        </select>
+                        <input type="text" id="hp2" title="휴대폰 국번입력">
+                        <input type="text" title="휴대폰번호 입력">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <input type="submit" value="회원가입">
+            <input type="reset" value="취소">
+        </div>
+        <div>
+            <!-- <label for="yes">예</label>를 써서 하는 게 아닌 '예'라고 글자를 쓸 경우엔 레이블과 인풋의 라디오가 연결이 안 되어 있다. 그래서 예라는 글자를 누르는 것이 차이가 있다. 글자를 쓰면 글자를 눌러도 눌러지지 않지만, 레이블로 만든 예를 누르면 글자를 눌러도 체크가 된다. -->
+            <label for="yes">예</label>
+            <input type="radio" id="yes" name="receive">
+            <!-- 라디오같은 경우엔 글씨가 없어서 신체가 불편한 분들이 무엇인지 모를 수 있다. 그래서 레이블을 위에 형제요소로 집어 넣는 것이다. -->
+            <label for="no">아니오</label>
+            <input type="radio" id="no" name="receive">
+        </div>
+        <div>
+            <label> 수영 
+                <input type="checkbox" name="hobby1">
+            </label>
+            <label>  스키 
+                <input type="checkbox" name="hobby2">
+            </label>
+            <label>발레 
+                <input type="checkbox" name="hobby3">
+            </label>
+            <!-- 레이블이 아니라 인풋에 네임을 넣어야 체크가 한개로만 할 수 있다. 다중선택의 경우에도 지울 수 있다. -->
+        </div>
+    </form>
+</body>
+
+</html>

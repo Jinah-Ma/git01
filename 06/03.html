@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>셀병합하기</title>
+    <style>
+        /* ,하면 여러개 선택자에 똑같은 모양을 지정하는 축약어 */
+        table,td {
+            border: 1px solid;
+        }
+        /* tr은 배경이나 테두리 속성을 가질 수 없다. */
+
+    </style>
+</head>
+
+<body>
+    <table>
+        <!-- 가로방향 병합 -->
+        <tr>
+            <!-- 열은 column/ colspan 열로 늘어나는 것(나까지 포함해서 4칸을 늘리고, 늘어난 만큼 아래것들은 다 지운다.) -->
+            <td colspan="4">1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+    <hr>
+    <!-- 세로방향 병합 -->
+    <table>
+        <tr>
+            <!-- row 행/ rowspan 행으로 늘어나는 것.(위와 마찬가지. 늘어난 만큼 아래쪽 td의 1은 지워야 한다.) -->
+            <td rowspan="2">1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+</body>
+
+</html>

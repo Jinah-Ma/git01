@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float_복습_03</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .wrap{
+            margin: 20px 0px 0px 20px;
+            width: 800px;
+        }
+
+        .one p{margin-left: 10px;
+        margin-top: 10px;}
+
+        ul li:nth-of-type(1){
+            font-size: 20px;
+            padding: 5px;
+            width: 150px;
+            text-align: center;
+            background-color: rgb(187, 155, 216);
+            margin-bottom: 30px;
+        }
+        ul li:nth-of-type(2){
+            width: 130px;
+            text-align: center;
+            font-size: 14px;
+            padding-left: 15px;
+            color: gray;
+        }
+
+        ul{
+            margin: 10px;
+            float: left;
+        }
+
+        .two ul:nth-of-type(2)>li:nth-child(1) {
+            background-color: rgb(233, 190, 233);
+        }
+
+        .two ul:nth-of-type(3)>li:nth-child(1) {
+            background-color: rgb(243, 184, 184);
+        }
+
+        .two ul:nth-of-type(4)>li:nth-child(1) {
+            background-color: rgb(255, 200, 149);
+        }
+
+        .two{overflow: auto;}
+    </style>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="one">
+            <h1>나의 어여쁜 어항</h1>
+            <p>내 어항 속 귀여운 물고기들 소개</p>
+        </div>
+        <div class="two">
+            <ul>
+                <li>오토싱</li>
+                <li>남미가 원산지인 메기목 로리카리아과에 속하는 어류. 플레코의 한 종류로 입은 흡반으로 되어 있어 돌 등에 달라붙은 이끼를 먹고 사는 초식성 메기이다.</li>
+            </ul>
+            <ul>
+                <li>라스보라</li>
+                <li>라스보라는 잉어목 잉어과 다니오아과에 속하는 어류들을 총칭한다. 다니오속의 종들은 라스보라로 부르기보다는 다니오라고 부르는 것이 일반적이지만, 몇몇 종은 라스보라로 부르기도 한다.
+                </li>
+            </ul>
+            <ul>
+                <li>프리스텔라</li>
+                <li>프리스텔라 리들레이는 카라신과에 속하는 물고기이며, 프리스텔라속의 유일종이다. 속이 투명하게 들여다 보이는 특징 때문에 엑스레이 테트라라고도 불린다.</li>
+            </ul>
+            <ul>
+                <li>테트라</li>
+                <li>카라신목 어류로 크기와 색상은 다양하며 아프리카, 혹은 아메리카 대륙의 열대나 아열대 기후 지역에서 서식한다. 열대어 중에서 관상어로 많이 키우는 종류 중 하나이다.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

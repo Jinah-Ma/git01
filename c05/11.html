@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>TRANSITION</title>
+    <style>
+        ul {
+            list-style: none;
+            
+        }
+
+        ul li a{
+            text-decoration: none;
+            color:#333;
+            display: block;
+            background-color: rgb(151, 205, 255);
+            padding: 10px;
+            margin-bottom: 5px;
+            width: 300px;
+            height: 20px;
+            transform: scale(1);
+            transition: all 1s cubic-bezier(0.25, 0.1, 0.85, 0.4)
+        }
+
+        ul li a:hover{
+            width: 450px;
+            background: #c00;
+            color: aqua;
+            transform: scale(1.5);
+            transition: all 1s cubic-bezier(0.25, 0.1, 0.85, 0.4);
+            /* ★transition은 모양이 바뀌어야지만 적용가능하다./ 속성의 값이 숫자로 변하는 속성값만 인식된다. 디스플레이같은 글자로 바뀌는 것들은 적용되지 않는다. 색상의 경우에는 글자로 써있어도 숫자로 해석이 되므로 바뀐다.(자바스크립트도 숫자로 바뀌는 애들만 건드릴 수 있다. 이름들을 숫자로 바꿔넣을 수 있으므로 가능은 하다.) */
+        }
+
+    /* transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    transition-property: all; 축약속성 */
+
+    /* all은 바뀌는 모양의 모든 속성을 1초동안 보여달라는 것 */
+
+    /* transition-property: transition 대상 속성
+    /* transition-duration: transition 지속시간 ms(1/1000)/ 안쓰면 0초
+    /* transition-timing-function: transition 가속도 ms(1/1000)
+     */
+
+     /* transition: all 1s cubic-bezier(0.25, 0.1, 0.85, 0.4) : 개발자모드에서 곡선을 조정해서 나온 값을 적은 것으로 마우스 올릴때만 바뀌는 거면 가상선택자 있는 곳에만 적용하면 되지만 빠져 나올때도 적용하고 싶으면 가상선택자가 없는 것에다도(변하기 전) 적용하면 된다. */
+
+    </style>
+</head>
+
+<body>
+    <h3>Moving menu</h3>
+    <ul class="menu">
+        <li><a href="#">Company</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Customer Support</a></li>
+        <li><a href="#">Community</a></li>
+    </ul>
+</body>
+
+</html>

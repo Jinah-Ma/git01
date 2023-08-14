@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/* 웹폰트파일을 임포트하는 css */
+/* 서체파일의 임포트 순서는 .eot(ie9이하), .woff, ttf(otf), svg */
+/* 폰트웨이트로 가중치-중요도-를 준다. */
+
+@font-face {
+    font-family: 'dream';
+    src: url('./SCDream5.ttf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'dream';
+    src: url('./SCDream6.ttf');
+    font-weight: 600;
+}
+@font-face {
+    font-family: dream;
+    src: url('./SCDream1.ttf');
+    font-weight: 100;
+}
+body{font-family: 'dream', sans-serif;}

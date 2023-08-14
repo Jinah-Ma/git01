@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>overflow(넘치는 콘텐츠의 처리)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        html {
+            overflow-y: scroll;
+        }
+        /* 스크롤바 생기게 하기 : 짧은 곳에서 긴곳으로 갈 때 레이아웃이 흔들리지 않으므로 "초기화 코드★"에 들어가 있어야 한다.* */
+
+        .agree {
+            width: 500px;
+            height: 80px;
+            border: 1px solid;
+            overflow-x: hidden;
+            /* overflow : 넘칠때 어떻게 처리할 건지/ auto: 자동으로 x,y중 넘치는 쪽으로 스크롤이 생긴다./
+            scroll: 강제 스크롤 생성/ visible: 넘쳐도 보임/ hidden: 넘치면 자르고 축을 지정해서 생성*/
+        }
+    </style>
+</head>
+
+<body>
+    <h3>서비스 이용약관</h3>
+    <p class="agree">
+        제17조 (서비스의 변경 및 내용수정)<br>
+        ① 회원은 회사가 제공하는 서비스를 이 약관 및 운영정책에 따라 이용할 수 있습니다.<br>
+        ② 회사는 서비스를 통하여 회원에게 제공하는 컨텐츠에 대하여 제작, 변경, 유지, 보수에 관한 포괄적인 권한을 가집니다.<br>
+        ③ 회사가 상당한 이유가 있는 경우에 운영상, 기술상의 필요에 따라 서비스를 수정할 수 있으며, 수정하는 경우에는 변경 후 서비스 초기화면이나 공지사항 게시판 등을 통하여 공지합니다.
+    </p>
+</body>
+
+</html>

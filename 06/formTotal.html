@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예약문의_폼정리</title>
+</head>
+
+<body>
+    <h1>예약문의</h1>
+    <form action="#" method="post">
+        <p>
+            <!-- placeholder:입력힌트 -->
+            <!-- required:필수 입력 속성_필수로 입력해야 되는 부분을 입력 안 했을 시에 주의문구가 나오며 못 넘어가게끔 하는 장치 -->
+            작성자: <input type="text" name="userName" placeholder="작성자를 입력하세요." required="required" autocomplete="on">
+            <!-- 오토컴플릿: 자동입력/ 입력했었던 것을 아래쪽에 보여주는 장치 -->
+        </p>
+        <p>비밀번호: <input type="password" name="userPWD" value="userPWD" id="userPWD"></p>
+        <!-- 네임 : 서버에 참조되는 값(데이터 베이스 필드값) -->
+        <!-- 벨류 : 서버에 저장되는 값(데이터베이스에 저장되는 값=데이터) -->
+        <!-- 아이디 : (화면용 디자인용 식별자/ 데이터X) -->
+        <p>
+            주민등록번호: <input type="text" name="userIDNUM1" pattern="\d{6}-\d{7}">
+            <!-- \d는 숫자, {6}은 6자리(자릿수) -->
+            <!-- 정규식-특정한 규칙을 가지는 문자열의 집합 -->
+            <!-- 패턴 : 입력된 값의 규칙을 검사 -->
+        </p>
+        <p>
+            email: <input type="email" name="userEmail" autofocus="autofocus">
+            <!-- 오토포커스 : 새로고침시 제일 중요한 곳에 커서가 위치해 있는 것 -->
+        </p>
+        <p>
+            연락처: <input type="tel" name="userPhone" autocomplete="off">
+        </p>
+        <p>
+            투숙날짜: <input type="date" name="userDate">
+            <!-- 데이트 : 달력(날짜만) -->
+        </p>
+        <p>투숙날짜와 시간: <input type="datetime-local"></p>
+        <!-- 날짜와 시간 입력 -->
+        <p>
+            년월: <input type="month">
+        </p>
+        <p>
+            년월주: <input type="week">
+        </p>
+        <p>
+            시분: <input type="time">
+        </p>
+        <p>
+            color: <input type="color">
+        </p>
+        <p>인원: <input type="number"></p>
+        <p>검색: <input type="search"></p>
+        <p>url: <input type="url"></p>
+        <p>별점(만족도): <input type="range"></p>
+        <p>사진: <input type="file">
+            <!-- 멀티풀 없이 쓰면 한개만 등록가능 -->
+            <input type="file" multiple="multiple">
+        </p>
+        <!-- 멀티풀 : 여러개 등록할 수 있는 파일 -->
+
+        <p>disabled</p>
+        <p>readonly</p>
+        <!-- 디세블드 : 비활성화, 사용불가/ 리돈니 : 읽기 전용(인풋의 텍스트에만 적용가능, 벨류 적용 불가) -->
+        <ul>
+            <li>
+                <label for="seralNum">시리얼번호입력</label>
+                <input type="text" id="seralNum">
+                <input type="button" value="이전">
+                <input type="button" value="다음" disabled>
+            </li>
+            <li><label for="book">선택한 책</label>
+                <input type="text" id="book" value="반응형웹" readonly>
+                <label for="number">수량: </label>
+                <input type="number" id="number" value="1">
+            </li>
+        </ul>
+        <!-- 폴 값과 아이디 속성을 동일하게 입력해야 된다. 시각장애인분들을 위함 -->
+        <!-- 복합문자들(띄어쓰기해서 쓰는 단어들)을 표시하기 위한 작성법들이 여러가지이다.
+        (*띄어쓰기로 하면 안 되기 때문에)/ 현재 쓰고 있는 중간에 대문자를 넣는 방식은 camelcase(카멜케이스)라고 한다. 다른 방법으로 언더스코어로 작성하는 방법도 있다. 이를 snake_case(스네이크 케이스)라고 한다./ 대쉬(-)로도 하는데, 이는 cabab-case(케밥케이스)라고 한다./ 시작단어만 대문자로 쓰는 것은 PascalCase(파스칼케이스)라고 한다.=이러한 표기방법은 코딩하는 사람들의 습관이라 한다. 회사에 가면 선임이 쓰는 걸 따라 하면 될 것이다.(네가지 중 하나를 편한 걸로 쓰기로 하자./ 코딩규칙=코딩컴벤션)-->
+        <hr>
+        <input type="submit">
+    </form>
+</body>
+
+</html>

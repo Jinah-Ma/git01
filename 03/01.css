@@ -1,0 +1,14 @@
+/* 보는 건 html로 본다. */
+body {
+    background-color: azure;
+}
+
+p {
+    color: rgb(216, 35, 35)
+    
+}
+
+h1 {
+    background-color:black;
+    color: aquamarine
+}

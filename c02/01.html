@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상대단위들</title>
+    <style>
+        #box1 h2{
+            /* 글씨체 : 값1, 값2,... (serif : 시스템에 있는 글꼴 중 셰리프체{명조체} 아무거나/ 산셰리프와 셰리프체가 있다. 산셰는 딱딱한 고딕느낌, 셰리프는 명조느낌/ 두가지 체가 폭이 다르고, 맥과 윈도우는 글씨체가 호환이 되지 않아서 레이아웃이 달라질 수 있으므로 주의해야 한다. 꼭 써야 된다.)*/
+            font-family: "Times New Roman", 고딕, "맑은 고딕", serif;
+            /* 글씨 크기 : 1em=16px{em-상대단위}*/
+            font-size: 2em;
+            /* 글씨 두께 (노멀은 기본) */
+            font-weight: normal;
+        }
+        #box1 p{
+            font-family: arial, sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        #box2 h2{
+            font-style: italic;
+            color: red;
+        }
+        #box2 p{
+            /* 소문자 크기의 대문자로 만들어준다.(한글은 당연히 안 됨) */
+            font-variant: small-caps;
+            color: #336633;
+        }
+
+        #box3 h2{
+            /* 축약속성 */
+            font:3em Arial;
+        }
+        #box3 p{
+            font:italic small-caps 30px "Times New Roman";
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1">
+		<h2>font-family, font-size, font-weight</h2>
+		<p>Well done is better than well said.</p>
+	</div>
+	<div id="box2">
+		<h2>font-style, font-variant, color</h2>
+		<p>Seeing much, suffering much, and studying much, are the three pillars of learning. </p>
+	</div>
+	<div id="box3">
+		<h2>font</h2>
+		<p>Education is a progressive discovery of our own ignorance. </p>
+	</div>
+</body>
+
+</html>

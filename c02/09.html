@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>밑줄 속성, 대소문자</title>
+    <style>
+        body {
+            color: red;
+        }
+
+        /* a 색상을 바꾸려면 a를 특정해서 바꿔야 한다. */
+        a {
+            text-decoration: none;
+            color: cornflowerblue;
+        }
+        /* 밑줄 속성: 아래쪽 줄이 없어짐 */
+        a:hover {
+            text-decoration: underline;
+        }
+        /* 아래쪽 줄이 생김 */
+        p{
+            text-decoration: overline;
+             /* 글씨 위쪽으로 줄이 생김 */
+            
+             /* text-decoration: line; : 취소선이 생긴다. */
+           
+            /* text-transform: uppercase; : 전부 대문자 */
+            text-transform: lowercase;
+            /* 전부 소문자 */
+            text-transform: capitalize;
+            /* 앞글자만 대문자로 바뀐다. */
+        }
+       
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="#">현재상영작</a></li>
+        <li><a href="#">상영예정작</a></li>
+    </ul>
+    <p>Happy birth day!</p>
+</body>
+
+</html>

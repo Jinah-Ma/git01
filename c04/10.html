@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>gradient의 표현</title>
+    <style>
+        p {
+            padding: 60px;
+        }
+
+        .g1 {background: red;
+        background: linear-gradient(red, yellow, green)}
+    /* 선형 그라디언트 : 색 공간에 넣을 때 */
+
+        .g2 {background-image: url(./img/bg_checkbox.png);
+        background-image: linear-gradient(to right, red, yellow);}
+        /* 왼쪽에서 오른쪽으로 */
+
+        .g3 {background: linear-gradient(to bottom right, red, rgb(69, 214, 233));}
+        /* 사선으로 */
+
+        .g4 {background: linear-gradient(154deg, red, blue);}
+        /* deg : 각도 단위, 일단 넣고 개발자모드에서 각도를 원하는 각도로 바꿔보고 집어넣는다. */
+
+        .g5 {background: linear-gradient(to right, rgba(0,0,0,.5), rgba(255, 0, 0, 0.5));}
+        /* 불투명도 */
+
+        .g6 {background: repeating-linear-gradient(brown, yellow 15%, green 30%);}
+        /* 패턴처럼 반복할 수 있다./ 몇%만 쓰겠다. */
+
+        .g7 {background: radial-gradient(red, yellow, green);}
+        /* 방사형/ 중앙에서 밖으로 */
+
+        .g8 {background: radial-gradient(red 5%, yellow 15%, green 60%);}
+
+        .g9 {background: radial-gradient(closest-side at 35% 35%, red 5%, yellow 15%, green 60%);}
+        /* 중심점 위치를 옮긴다. 순서: x값, y값/ x값에서 몇 %, y값에서 몇 % 부분에서 시작을 하겠다는 소리. 그 곳에서 색상을 얼마 정도 표현하겠다는 얘기 */
+
+        .g10 {background: radial-gradient(circle, red, rgba(0,0,255,0), rgb(0,0,255,0.8));}
+
+        /* 벤더프리픽스 vender-prefix : 브라우저 개발사의 회사명// 실험적인 기술을 브라우저에서 사용하기 위한 접두어 */
+        /* webkit, o, moz, ms가 있다.
+        -webkit- : 크롬, 사파리, 엣지
+        -o- : 오페라
+        -moz- : 파이어폭스
+        -ms- : 익스플로러
+        */
+        .g11 {
+            /* 그라디언트를 이해하지 못하는 브라우저용 */
+            background: #e52d77;
+            /* 파이어폭스에서만 실행 됨 */
+            background: -moz-linear-gradient(left, #e52d77 0%, #6d4711 30%, #28d330 51%, #e52d77 61%, #6d4711 30%);
+            background: -webkit-linear-gradient(left, #e52d77 0%, #6d4711 30%, #28d330 51%, #e52d77 61%, #6d4711 30%);
+            background: -o-linear-gradient(left, #e52d77 0%, #6d4711 30%, #28d330 51%, #e52d77 61%, #6d4711 30%);
+            background: linear-gradient(left, #e52d77 0%, #6d4711 30%, #28d330 51%, #e52d77 61%, #6d4711 30%);
+            /* 밴더프리픽스의 순서를 지켜서 써야 된다.★(프로젝트마다 몇 부분에 이렇게 넣기!) */
+        }
+        /* ★크로스 브라우징 : 모든 브라우저마다 의도한 대로 동일하게 혹은 대체 방안이라도 보여주기 위한 것(보여지기 위해서 쓴다.) */
+    </style>
+</head>
+
+<body>
+    <h1>gradient</h1>
+
+    <p class="g1">It's impossible not only starting good but also keeping it firm!!</p>
+    <p class="g2">It's impossible not only starting good but also keeping it firm!!</p>
+    <p class="g3">It's impossible not only starting good but also keeping it firm!!</p>
+    <p class="g4">It's impossible not only starting good but also keeping it firm!!</p>
+    <p class="g5">It's impossible not only starting good but also keeping it firm!!</p>
+    <p class="g6">It's impossible not only starting good but also keeping it firm!!</p>
+    <p class="g7">It's impossible not only starting good but also keeping it firm!!</p>
+    <p class="g8">It's impossible not only starting good but also keeping it firm!!</p>
+    <p class="g9">It's impossible not only starting good but also keeping it firm!!</p>
+    <p class="g10">It's impossible not only starting good but also keeping it firm!!</p>
+    <p class="g11">It's impossible not only starting good but also keeping it firm!!</p>
+</body>
+
+</html>

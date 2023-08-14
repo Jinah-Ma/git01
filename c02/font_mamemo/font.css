@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'himayari';
+    src: url('./Fonts_Jikjisoft/J-Bold.otf');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'himayari';
+    src: url('./Fonts_Jikjisoft/J-Medium.otf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'himayari';
+    src: url('./Fonts_Jikjisoft/J-Light.otf');
+    font-weight: 200;
+}
+
+body{font-family: 'himayari', sans-serif;}

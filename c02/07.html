@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경 집어넣기&다양한 컬러의 표현방법</title>
+    <style>
+        body {
+            background: url(./img/bg_grid2.gif);
+        }
+
+        /* 관용색 표현 방법/ 패딩은 상자의 여백(공간)이 커진다. 상자가 잠바를 입었다 생각하자. */
+        p {
+            padding: 5px;
+        }
+
+        .color1 {
+
+            background-color: magenta;
+        }
+
+        /* hex코드(rgb값을 16진수로 표현한 방법) */
+        .color2 {
+
+            background-color: #9999ff;
+        }
+
+        /* rgb괄호 안에 들어가는 걸 인자 혹은 인수라 부른다. */
+        .color3 {
+
+            background-color: rgb(163, 229, 77);
+        }
+
+        /* 각도, 채도, 명도 */
+        .color4 {
+
+            background-color: hsl(180, 50%, 50%);
+        }
+
+        /* 알파채널로 불투명도를 줄 수 있다. (0.5면 불투명도 50%)*/
+        .color5 {
+
+            background: rgba(180, 255, 255, 0.5);
+        }
+
+        /* 앞파채널의 숫자0은 생략할 수 있다. */
+        .color6 {
+
+            background-color: hsla(180, 50%, 50%, .8);
+        }
+
+        /* 16진수 표기 방법으로 불투명도를 준 것 */
+        .color7 {
+
+            background-color: #ff99f882;
+        }
+
+        /* 웹사이트 개발자모드의 백그라운드컬러 네모를 눌러 색상을 알아볼 수 있다. 그걸 복사해서 쓰자. */
+    </style>
+</head>
+
+<body>
+    <p class="color1">시험 일정은 다음과 같습니다.</p>
+    <p class="color2">필기시험 : 5월 10일~15일</p>
+    <p class="color3">필기 합격 발표 : 5월 30일</p>
+    <p class="color4">실기시험 : 6월 12일~17일</p>
+    <p class="color5">실기 합격 발표 : 7월 20일</p>
+    <p class="color6">행운을 빕니다.</p>
+    <p class="color7">행운을 빕니다.</p>
+</body>
+
+</html>

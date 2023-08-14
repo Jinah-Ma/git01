@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오디오audio</title>
+</head>
+
+<body>
+    <!-- <audio src="./media/applause.mp3" controls autoplay loop></audio> -->
+    <!-- 요건 안 되는 것. 컨트롤스: 사용자가 재생 할지 말지 결정하는 것/ 오토플레이: 자동플레이, 루프: 연속재생 - //접근성 위배 -->
+    <audio src="./media/applause.mp3" controls></audio>
+    <audio>
+        <source src="./media/applause.wav">
+        <source src="./media/applause.ogg">
+        <source src="./media/applause.mp3">
+        <!-- 첫번째 것이 호환이 안되면 아래쪽 거를 재생할 것이고, 또 안 되면 그 아래것... //호환성을 위해
+        예비로 해놓는 것.-현재는 다 호환이 되기 때문에 굳이 쓰지 않는 태그가 되었다.- -->
+        
+    </audio>
+</body>
+
+</html>

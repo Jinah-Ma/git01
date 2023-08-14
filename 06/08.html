@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    /* 아이디는 한 개만 */
+    <style>
+        #userText {
+            font-size: 30px;
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- action은 데이터를 전송할 서버주소
+        method - get(입력한 정보를 어떤 값으로 보낼 것인가/ 검색 등 주소창{url}에 나오는 정보. 노출이 되어 있다.), post(우체국, 안에 들어있는 정보를 노출되지 않기 위해 봉투로 싸는 것/ 검색 등 주소창{url}에 나오는 정보가 깔끔하다. 노출이 되어있지 않다.) -->
+    <form action="#" method="post">
+        <fieldset>
+            <legend>다양한 type의 종류</legend>
+            <p>아이디: <input type="text"></p>
+            <p>비밀번호: <input type="password"></p>
+            <p>검색: <input type="search"></p>
+            <!-- 취소버튼이 생긴다. -->
+            <p>이메일: <input type="email" value="이메일을 써주세요"></p>
+            <p>전화번호: <input type="tel" value="010"></p>
+            <p>컬러: <input type="color"></p>
+            <p>수량: <input type="number" min="0" max="10" value="1"></p>
+            <!-- 나오는 버튼을 스피너라고 부른다./ value:사이트에 기본으로 보이고 있는 값 -->
+            <p>만족도: <input type="range" min="1" max="10" value="1"></p>
+            <p>예<input type="radio" name="receive" checked> 아니오<input type="radio" name="receive"></p>
+            <!-- checked가 붙어있는 애가 옵션으로 미리 체크되어 보여진다. 라디오버튼은 여러개 중 택일 하는 태그 -->
+            <p>
+                <!-- 복수응답(선택) -->
+                HTML<input type="checkbox" name="skill1">
+                CSS<input type="checkbox" name="skill2">
+                JABASCRIPT<input type="checkbox" name="skill3">
+                <!-- 네임을 서로 다르게 표기해야 된다. 통계를 내기 위한 태그이기 때문에 -->
+            </p>
+
+            <p><input type="submit" value="전송"></p>
+            <p><input type="reset" value="취소"></p>
+            <!-- 라디오는 선택해제가 되지 않기 때문에 취소 버튼(리셋버튼)을 만드는 것이 좋다. -->
+            <p><input type="button" value="클릭"></p>
+            <p><button>클릭</button></p>
+            <p><input type="image" src="./images/btn_gallery.gif" alt="전송"></p>
+            <!-- 이미지를 클릭하면 전송이 되는 것 -->
+            <p><input type="file"></p>
+            <!-- 입력버튼이 된다. 피드백이 나온다. button:의미없이 클릭하는 것 -->
+        </fieldset>
+        <fieldset>
+            <!-- 가입신청서 만드는 목록 개념, 회원 데이터 수집, 저장 -->
+            <legend>name</legend>
+            <input type="text" value="텍스트를 입력하세요" name="userText" id="userText">
+            <!-- value: 사용자의 데이터 값. 누군가 이용시 이곳에 뭔가 적으면 그걸로 저장이 된다./ name:백단용(백엔드에 전송되어야 하는 식별자) 식별자-처리하기 위해서/ 고객정보 작성란 같은 것. 데이터 베이스 저장하는 곳./ id: 프론트용 식별자/ 디자인용 식별자. 우리의 식별자. 중복허용 안 됨. 네임과 아이디는 달라도 된다.  -->
+            <!-- value="텍스트를 입력하세요" : 사용자의 데이터 값. 누군가 이용시 ""에 뭔가를 적으면 그걸로 저장이 된다. -->
+        </fieldset>
+    </form>
+</body>
+
+</html>

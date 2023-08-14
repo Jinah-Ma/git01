@@ -1,0 +1,20 @@
+.container {
+    width: 450px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
+
+/* 얼라인은 교차축방향의 정렬/ 저스티피는 주축방향 정렬 */
+#box1{
+    align-self: flex-start;
+}
+/* 교차축의 시작지점으로 정렬(얼라인 아이템스와의 차이는 선언을 누구에게 하느냐. 얼라인셀프는 자식-아이템박스에-한테 직접, 아이템스는 부모에게 선언) */
+
+#box3{
+align-self: stretch;
+}
+/* 쭉 늘어나는 아이 */
+
+
+/* //한줄일때 쓰는 아이 */
