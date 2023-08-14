@@ -8,6 +8,7 @@
     border-left: 10px solid transparent;
     /* 색을 넣었다가 transparent로 바꾼다. */
     border-bottom: 10px solid red;
+    display: inline-block;
 }
 
 .border2{
@@ -24,6 +25,7 @@ width: 400px;
 background: #ffa1a1;
 margin-top: 50px;
 margin-left: -200px;
+display: inline-block;
 }
 
 .border_tip::before{
@@ -47,8 +49,24 @@ left: 50%;
 margin-left: -20px;
 }
 
-.right{
+.border::before{
     content: '';
     position: absolute;
     border-left: 10px solid #0400ff;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    left: 50%;
+    margin-left: 200px;
+    margin-top: -50px;
+}
+
+.border::after{
+    content: '';
+    position: absolute;
+    border-right: 10px solid #0400ff;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    left: 50%;
+    margin-left: -210px;
+    margin-top: -50px;
 }
