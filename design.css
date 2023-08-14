@@ -1,0 +1,77 @@
+/* 초기화 코드 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 마진은 보더와 패딩을 감싸고 있다. 마진은 가장 외부, 패딩은 안쪽 내부 마진과 패딩에는 선을 줄 수 없다. */
+
+body {
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: ivory;
+}
+
+.b {
+
+    margin: 10px;
+    border: 2px solid orange;
+    text-align: center;
+    color: brown;
+}
+
+h2 {
+    padding-top: 20px;
+    padding-left: 36px;
+    color: chocolate;
+}
+
+p {
+    color: cadetblue;
+}
+
+.in {
+    padding-top: 10px;
+    padding-left: 70px;
+    color: cadetblue;
+}
+
+.in_in {
+    padding-left: 20px;
+}
+
+/* 가상선택자 */
+a:link {
+    color: cadetblue;
+}
+
+a:hover {
+    color: hotpink;
+}
+
+a:visited {
+    color: cornflowerblue;
+}
+
+a:active {
+    color: pink;
+}
+
+
+img {
+    width: 500px;
+    display: block;
+}
+
+#b {
+    font-weight: 900;
+}
+
+.m {
+    font-weight: 500;
+}
+
+.r,.in_in,.r+.in a {
+    font-weight: 200;
+}

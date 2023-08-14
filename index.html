@@ -3,39 +3,188 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="git.css">
+    <meta name="viewport" content="width=img, initial-scale=1.0">
+    <title>진아의 일기장</title>
+    <!-- 글씨체 바꾸기 -->
+    <link rel="stylesheet" href="./c02/font_mamemo/font.css">
+
+    <style>
+        /* 주석:중괄호{}안에 쓴다. */
+        /* alt+shift+f : 들여쓰기, 줄바꿈 */
+        /* 속성하고 값의 나눔은 :, 마침은 ; */
+        /* 초기화 코드 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 마진은 보더와 패딩을 감싸고 있다. 마진은 가장 외부, 패딩은 안쪽 내부 */
+
+        body {
+            margin: 30px;
+            background-color: ivory;
+        }
+
+        h1 {
+            padding: 15px;
+            border-style: dotted;
+            border-width: 5px;
+            border-color: orange;
+            text-align: center;
+            color: brown;
+            width: 800px;
+            margin: auto;
+        }
+
+        h2 {
+            margin: 10px;
+            color: chocolate;
+        }
+
+        li {
+            margin-left: 30px;
+            padding-bottom: 5px;
+            padding-top: 2px;
+            color: cadetblue;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .t{margin-left: 50px;}
+
+        .in ul li ul {
+            display: block;
+            padding-top: 10px;
+        }
+
+
+        /* 가상선택자 */
+        a:link {
+            color: cadetblue;
+        }
+
+        a:hover {
+            color: hotpink;
+        }
+
+        a:visited {
+            color: cornflowerblue;
+        }
+
+        a:active {
+            color: pink;
+        }
+
+
+        .b {
+            font-weight: 900;
+        }
+
+        .m {
+            font-weight: 500;
+        }
+
+        .r,
+        .in_in,
+        .r+.in a {
+            font-weight: 200;
+        }
+    </style>
+
+    <!-- 파비콘 링크/ 맨 위 한 줄만 추가-->
+    <link rel="shortcut icon" href="./icon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="./icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icon/favicon-16x16.png">
+    <link rel="manifest" href="./icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- 아이콘 넣기 -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
 <body>
-    <h1>git</h1>
-    <p>1. 폴더에서 최초한번 : git init
-        <br>깃 시스템설치하는 것
-    </p>
-    <p>★2. 수정한 파일의 스크린 샷 생성 : git add .
-        <br>스크린샷을 버전으로 생성/ 계속 수정가능
-    </p>
-    <p>★3. git commit -m "커밋메시지"
-        <br>수정 끝 최종단계
-    </p>
-    <p>4. 원격 저장소 생성 (폴더별 최초 한번)
-<br>깃허브로 이동하여 new repository클릭
-    </p>
+    <!-- h1은 큰제목, h2는 두번째 제목 -->
+    <h1>
+        &starf;<span class="material-symbols-outlined">sunny</span>
+        진아의 일기장 <span class="material-symbols-outlined">sunny</span>&starf;
+    </h1>
 
-    <p>5. 로컬 저장소와 원격저장소 연결 : 
-        <br>pc별 최초 한 번 사용자 등록 과정이 필요함.
-        <br>유저의 이메일과 유저의 네임(내 것 복사해서 붙이기_오타 방지를 위해)
-        <br>git remote add orgin 원격저장주소 (폴더별 1회 실행)
-    </p>
-    <p>★6. 원격저장소로 코드 전송
-        <br>git branch -M main (폴더별 1회 실행)
-        <br>git push origin 브랜치명(지금은 main)
-    </p>
-    <p>
-        ★붙여 놓은 것만 반복적으로 하면 됨
-    </p>
-    
+    <div class="t">
+        <h2 class="regular">&bull;차은우 불러오기</h2>
+        <!-- p>a 상위와 하위태그를 감쌀 수 있는 것. 다만 줄바꿈이 힘들다. -->
+        <!-- 속성을 입력하고 또 속성을 입력할 때는 띄워야 한다./ target(타겟) _blank는 새창열기 -->
+        <div class="in">
+            <ul>
+                <li><a href="./src/index.html" target="_blank">오늘부터 1일</a></li>
+            </ul>
+        </div>
+        <h2 class="m">&bull;패스선 따라그리기</h2>
+        <div class="in">
+            <ul>
+                <li><a href="./bear.jpg" target="_blank">곰1</a></li>
+                <li><a href="./dog.jpg" target="_blank">곰2 복습</a></li>
+                <li><a href="./nuguri.jpg" target="_blank">자유주제</a></li>
+            </ul>
+        </div>
+        <h2 class="r">&bull;공부일지</h2>
+        <div class="in">
+            <ul>
+                <li>비주얼코드학습
+                    <ul class="in_in">
+                        <li><a href="./diary/note/230718.html">230718</a></li>
+                        <li><a href="./diary/note/230719.html">230719</a></li>
+                        <li><a href="./diary/note/230720.html">230720</a></li>
+                        <li><a href="./diary/note/230801.html">230801</a></li>
+                        <li><a href="./diary/note/230809_1.html">230809_1</a></li>
+                        <li><a href="./diary/note/230809_2.html">230809_2</a></li>
+                        <li><a href="./diary/note/float_01.html">230813_1</a></li>
+                        <li><a href="./diary/note/float_02.html">230813_2</a></li>
+                        <li><a href="./diary/note/float_03.html">230813_3</a></li>
+                    </ul>
+                </li>
+                <li><a href="./src/vscode.html">용어_html</a></li>
+                <li><a href="./src/vscode_css.html">용어_css</a></li>
+            </ul>
+        </div>
+        <h2 class="r">&bull;과제</h2>
+        <div class="in">
+            <ul>
+                <li><a href="./path_test/path/web/img/index.html">첫번째 패스과제</a></li>
+                <li><a href="./230719_homework/230719.html">두번째 이미지맵과제</a></li>
+                <li><a href="./homework/23072201.html">세번째 문제1</a></li>
+                <li><a href="./homework/23072202.html">네번째 문제2</a></li>
+                <li><a href="./homework/230724_1.html">이력서</a></li>
+                <li><a href="./06/resume.html">이력서 복습</a></li>
+                <li><a href="./homework/230724_2.html">추가문제1</a></li>
+                <li><a href="./homework/230724_3.html">추가문제2</a></li>
+                <li><a href="./homework/230727.html">형성평가2</a></li>
+                <li><a href="./homework/230729.html">프로젝트1 로고 만들기</a></li>
+                <li><a href="./homework/230731_4.html">형성평가4</a></li>
+                <li><a href="./homework/230731_5.html">형성평기5</a></li>
+                <li><a href="./homework/230802_1.html">c02_문자_형성평가1</a></li>
+                <li><a href="./homework/230802_2.html">c02_문자_형성평가2</a></li>
+                <li><a href="./homework/23080301.html">c03_형성퀴즈1</a></li>
+                <li><a href="./homework/230804_1.html">c04_형성퀴즈1</a></li>
+                <li><a href="./fig/01.html">피그마예제 실습</a></li>
+            </ul>
+        </div>
+    </div>
 </body>
 
 </html>
