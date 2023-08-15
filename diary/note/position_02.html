@@ -24,26 +24,57 @@
             height: 50px;
             background-color: blueviolet;
             overflow: auto;
+            position: fixed;
+            z-index: 1;
+        }
+
+        header ul li {
+            float: right;
+            padding-right: 200px;
+            line-height: 50px;
         }
 
         h1 {
             float: left;
         }
 
-        h1+ul>li {
-            float: left;
-            padding-left: 100px;
-            line-height: 50px;
-        }
-
-        h1 a{
+        h1 a {
             color: aqua;
         }
 
-        li a{
+        li a {
             color: white;
         }
 
+section{
+    height: 600px;
+    position: relative;
+}
+
+section h2 {position: absolute;
+top: 50px;}
+
+section p{
+    width: 800px;
+    background-color: aqua;
+    color: black;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    position: fixed;
+}
+
+        footer {
+            height: 50px;
+            background-color: grey;
+        }
+
+        footer p {
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            line-height: 50px;
+        }
     </style>
 </head>
 
@@ -52,16 +83,10 @@
         <header>
             <h1><a href="#">logotype</a></h1>
             <ul>
-                <li><a href="#">m1</a>
-                </li>
-                <li><a href="#">m2</a>
-
-                </li>
-                <li><a href="#">m3</a>
-
-                </li>
-                <li><a href="#">m4</a>
-                </li>
+                <li><a href="#">m1</a></li>
+                <li><a href="#">m2</a></li>
+                <li><a href="#">m3</a></li>
+                <li><a href="#">m4</a></li>
             </ul>
         </header>
 
@@ -70,25 +95,10 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore repellat officiis veniam! Id obcaecati
                 facere odit aspernatur architecto voluptatibus itaque porro? Libero dolor exercitationem vel dicta
                 obcaecati dignissimos. Libero, maiores.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore repellat officiis veniam! Id obcaecati
-                facere odit aspernatur architecto voluptatibus itaque porro? Libero dolor exercitationem vel dicta
-                obcaecati dignissimos. Libero, maiores.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore repellat officiis veniam! Id obcaecati
-                facere odit aspernatur architecto voluptatibus itaque porro? Libero dolor exercitationem vel dicta
-                obcaecati dignissimos. Libero, maiores.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore repellat officiis veniam! Id obcaecati
-                facere odit aspernatur architecto voluptatibus itaque porro? Libero dolor exercitationem vel dicta
-                obcaecati dignissimos. Libero, maiores.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore repellat officiis veniam! Id obcaecati
-                facere odit aspernatur architecto voluptatibus itaque porro? Libero dolor exercitationem vel dicta
-                obcaecati dignissimos. Libero, maiores.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore repellat officiis veniam! Id obcaecati
-                facere odit aspernatur architecto voluptatibus itaque porro? Libero dolor exercitationem vel dicta
-                obcaecati dignissimos. Libero, maiores.</p>
         </section>
 
         <footer>
-            copyright
+            <p>copyright</p>
         </footer>
     </div>
 </body>
