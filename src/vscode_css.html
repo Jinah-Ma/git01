@@ -218,6 +218,7 @@
                     </ol>
                 </li>
                 <!-- 2 -->
+                <hr>
                 <li><mark>우선순위</mark>
                     <ul>
                         <li><strong>캐스캐이딩(cascading_적용순서_우선순위)</strong>
@@ -253,6 +254,7 @@
                     </ul>
                 </li>
                 <!-- 4 -->
+                <hr>
                 <li><b>글자</b>
                     <ul>
                         <li id="font"><b>font-family</b> : 글씨체 변경</li>
@@ -269,8 +271,10 @@
                         <li id="line-height"><b>line-height</b> : 행간
                             <br>ex) line-height: 1.5;
                             <br>&nbsp;&rarr;글씨크기의 1.5배(=150%), 혹은 px를 붙여 절대값으로 지정할 수도 있다.
-                            <br>&nbsp;&rarr;포토샵 등은 행간이 맨 아래 있지만, css의 행간은 중간에 있다./ 그래서 만약 행간을 50px 주었을 경우엔 상하로 25씩 나눠 가진다.
-                            <br>&star;블럭의 경우 높이가 있어야 수직정렬이 된다.(행간으로 인해 그렇게 보이는 거지, 막상 줄이 길어지면 밑으로 내려와 밑 컨텐츠와 겹쳐 보여져 버린다. 따라서 한 줄, 적은 단어일 때만 쓴다.)
+                            <br>&nbsp;&rarr;포토샵 등은 행간이 맨 아래 있지만, css의 행간은 중간에 있다./ 그래서 만약 행간을 50px 주었을 경우엔 상하로 25씩 나눠
+                            가진다.
+                            <br>&star;블럭의 경우 높이가 있어야 수직정렬이 된다.(행간으로 인해 그렇게 보이는 거지, 막상 줄이 길어지면 밑으로 내려와 밑 컨텐츠와 겹쳐 보여져 버린다.
+                            따라서 한 줄, 적은 단어일 때만 쓴다.)
                         </li>
                         <li><b>font-weight</b>: 굵기</li>
                         <li><b>font-size</b>: 2em;
@@ -314,6 +318,7 @@
                     </ul>
                 </li>
                 <!-- 5 -->
+                <hr>
                 <li>폰트 사이트에 적용하기 방법
                     <ol>
                         <li><strong>웹사이트 것을 적용시키기</strong>
@@ -364,6 +369,7 @@
                     </ol>
                 </li>
                 <!-- 5-2 -->
+                <hr>
                 <li>list-style(리스트 스타일)
                     <br>- 세부 속성들 스타일의 축약어(타입, 포지션, 이미지)
                 </li>
@@ -375,10 +381,13 @@
                             <br>ex - font-family: "맑은 고딕", 돋움, arial;
                         </li>
                         <li>list-style:none - ul, ol의 li 땡땡이와 숫자가 사라짐
-                            <br>&nbsp;&rarr;tip*) body색을 바꾸면 땡땡이의 색이 바뀐다.(+'@'는 바뀌지 않는데, 이건 특정을 해서 바꿔줘야 한다.=a 색상을 바꾸려면 a를 특정해서 바꿔야 한다.)
+                            <br>&nbsp;&rarr;tip*) body색을 바꾸면 땡땡이의 색이 바뀐다.(+'@'는 바뀌지 않는데, 이건 특정을 해서 바꿔줘야 한다.=a 색상을 바꾸려면
+                            a를 특정해서 바꿔야 한다.)
                         </li>
                         <li><a href="#text">text-decoration</a>: none; - 링크의 밑줄이 사라짐</li>
-                        <li>margin:0;/ padding:0;/ border: 0;(1)// 폰트셋팅(2)// 땡땡이와 밑줄 없애기(3)//&rArr;기본으로 깔고 가야 하는 리셋&starf;</li>
+                        <li>margin:0;/ padding:0;/ border: 0;(1)// 폰트셋팅(2)// 땡땡이와 밑줄 없애기(3)//&rArr;기본으로 깔고 가야 하는
+                            리셋&starf;</li>
+                        <li>overflow-y: scroll; - 스크롤바 생기게 하기(짧은 곳에서 긴곳으로 갈 때 레이아웃이 흔들리지 않게끔 만든다.)</li>
                     </ul>
                 </li>
                 <!-- 7 -->
@@ -394,22 +403,26 @@
                     </ol>
                 </li>
                 <!-- 8 -->
+                <hr>
                 <li><strong>margin</strong>
                     <ul>
-                        <li>외부 여백/ 박스 바깥쪽 여백/ 콘텐츠의 너비에 포함되지 않는다.</li>
+                        <li>외부 여백/ 박스 바깥쪽 여백(요소의 바깥 여백)/ 콘텐츠의 너비에 포함되지 않는다.</li>
                         <li>값 순서 : 상 우 하 좌/ 상 좌우 하/ 상하 좌우/ 상하좌우</li>
                         <li>병합현상 : 마진 10px를 줬을 때, 위아래는 한쪽값밖에 안 들어간다. 아래쪽은 무한대이기 때문에. 그래서 아래방향이 원래는 20px가 되어야 하는데, 10px만
                             준 것처럼 보여진다.(좌우는 아님. 폭이 정해져 있기 때문에 20px그대로 적용이 된다.)</li>
                         <li>큰 수로 적용된다. 더해지진 않고 둘 중에 큰 값이 적용(병합) 되는 것</li>
+                        <li>전체를 감싼 상위요소에 마진을 오토로 주면 상자안에 감싸진 것들이 <a href="#cen">중앙정렬</a>되어진다.</li>
+                        <li>상자 크기에 영향을 주지 않는다.</li>
                     </ul>
                 </li>
                 <!-- 9 -->
                 <li><strong>padding</strong>
                     <ul>
-                        <li>내부여백/ 문장과 문장의 여백/ 박스 안쪽 여백/ 콘텐츠의 너비가 커진다.</li>
+                        <li>내부여백/ 문장과 문장의 여백/ 박스 안쪽 여백(요소의 안 여백)/ 콘텐츠의 너비가 커진다.(상자크기에 영향을 준다.)</li>
                     </ul>
                 </li>
                 <!-- 10 -->
+                <hr>
                 <li><strong>&lt;문단의 정렬&gt;</strong>
                     <ul>
                         <li>&starf;정렬을 주려면 <mark>여백(공간)</mark>부터 주어야 한다.</li>
@@ -460,7 +473,8 @@
                             <br>&starf;아래의 속성이 필요하다.(너비o, 줄바꿈x, 넘치면 숨김, 말줄임표)
                             <ul>
                                 <li>width - 너비가 있어야 공간(여백)이 생기고 이 안에 넣을 수 있다.</li>
-                                <li><mark>overflow: hidden</mark>; - 공간보다 자식이 클 경우 값을 지정할 수 있다.(넘치는 컨텐츠를 어떻게 할 것인가에 대한 속성 ex-스크롤 등)</li>
+                                <li><mark>overflow: hidden</mark>; - 공간보다 자식이 클 경우 값을 지정할 수 있다.(넘치는 컨텐츠를 어떻게 할 것인가에 대한
+                                    속성 ex-스크롤 등)</li>
                                 <li>white-space: <a href="#nowrap">nowrap</a>;</li>
                                 <li><mark>text-overflow: ellipsis;</mark> - 말줄임표</li>
                             </ul>
@@ -469,7 +483,7 @@
                                 <li>display: -webkit-box;
                                     <br>-webkit-line-clamp: 2; - 몇줄 뒤를 자를 건지 숫자 조정
                                     <br>-webkit-box-orient: vertical; - 수직(세로방향)
-                                    <br>overflow: hidden;
+                                    <br><a href="#over">overflow: hidden;</a>
                                     <br>text-overflow: ellipsis;
                                     <br>즉, 위에서 두줄 뒤를 숨기고 말줄임표를 붙인다는 것.
                             </ul>
@@ -480,92 +494,172 @@
                                 <li><b>inline</b> : 블럭요소를 인라인으로 만들어준다.</li>
                                 <li><b>inline-block</b> : 이미지처럼 인라인과 블럭의 특징을 가진 아이로 바꿔준다.</li>
                                 <li id="hidden"><b><a href="/c03/07.html">none</a></b> : 안 보이게 됨, 화면에서 사라짐
-                                <br>&nbsp; &rarr; ex) .dep2 li a{display: none;}/ .gnb li a:hover+.dep2 li a{display:block}
-                                &nbsp;&nbsp;&nbsp; &rarr; 투댑스 메뉴가 a에 올리면 보이게 된다.
+                                    <br>&nbsp; &rarr; ex) .dep2 li a{display: none;}/ .gnb li a:hover+.dep2 li
+                                    a{display:block}
+                                    &nbsp;&nbsp;&nbsp; &rarr; 투댑스 메뉴가 a에 올리면 보이게 된다.
                                 <li id="table"><b>table-cell</b> : 여러 줄일 경우 수직중앙정렬
-                                <br>&nbsp; &rarr; ex) display: table-cell;/ height: 200px;/ vertical-align: middle;
+                                    <br>&nbsp; &rarr; ex) display: table-cell;/ height: 200px;/ vertical-align: middle;
                                 </li>
-                            </li>
-                            </ul>
                         </li>
-                        <li>&starf;<strong><a href="/c03/08.html"><mark>수직정렬 태그모음</mark></a></strong>
-                            <ul>
-                                <li><a href="#line-height">line-height</a> : 한 줄 일때만
-                                </li>
-                                <li><a href="#vertical">vertical-align</a>: middle; : 수직중앙정렬, 행이 여러개일때 'table-cell'과 함께 씀</li>
-                                <li><a href="#tadle">display:table-cell</a></li>
-                                <li>padding-bottom: 50px;/ padding-top: 50px; : 여러 줄일때. 위아래 패딩값을 똑같이 줘서 중앙정렬처럼 보이게끔 맞춰준다.(반응형으로 만들때)</li>
-                            </ul>
-                        </li>
-                        <li><strong><a href="/c03/09.html">hidden</a></strong>(숨기기) : 태그가 있는데 요소를 숨기기
-                        <ol>
-                            <li><a href="#hidden">display: none;</a>
-                                <br>&nbsp; &rarr; 화면에서 숨겨지며 왼쪽정렬 (공간이 없어진다.)
-                                <br>&nbsp; &rarr; hover {display: ; color: ;} : 값을 인라인이나 블럭으로 바꾸고 색을 줘서 다시 나오게끔 한다.
-                            </li>
-                            <li>visibility: hidden;
-                                <br>&nbsp; &rarr; 공간은 있고 요소만 숨겨진다.
-                                <br>&nbsp; &rarr; hover {visibility: visible;} 로 바꿔 다시 나오게 하면 된다.
-                            </li>
-                            <li>color: rgba(255, 0, 0, 0);
-                                <br>&nbsp; &rarr;맨 뒤 알파값인 명도가 불투명해져서 안 보인다.(공간은 그대로 있다.)
-                                <br>&nbsp; &rarr;hover {color: rgba(255, 0, 0, 1)} : 마우스를 올려 명도 불투명해진 아이를 보일 수 있게 해주었다.
-                            </li>
-                            <li>opacity: 0;
-                                <br>&nbsp; &rarr; 공간이 남아있음.
-                                <br>&nbsp; &rarr;hover{opacity: 1;}로 보이게끔 한다.
-                            </li>
-                            <li>color: transparent;
-                                <br>&nbsp; &rarr;투명색상의 관용도를 준것
-                                <br>&nbsp; &rarr;hover {color: red;} : 컬러를 주어 보이게끔 한다.
-                            </li>
-                            <li></li>
-                        </ol>
-                        </li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
                     </ul>
+                </li>
+                <li>&starf;<strong><a href="/c03/08.html"><mark>수직정렬 태그모음</mark></a></strong>
+                    <ul>
+                        <li><a href="#line-height">line-height</a> : 한 줄 일때만
+                        </li>
+                        <li><a href="#vertical">vertical-align</a>: middle; : 수직중앙정렬, 행이 여러개일때 'table-cell'과 함께 씀</li>
+                        <li><a href="#tadle">display:table-cell</a></li>
+                        <li id="padd">padding-bottom: 50px;/ padding-top: 50px; : 여러 줄일때. 위아래 패딩값을 똑같이 줘서 중앙정렬처럼 보이게끔 맞춰준다.(반응형으로
+                            만들때)</li>
+                    </ul>
+                </li>
+                <hr>
+                <li><strong><a href="/c03/09.html">hidden</a></strong>(숨기기) : 태그가 있는데 요소를 숨기기
+                    <ol>
+                        <li><a href="#hidden">display: none;</a>
+                            <br>&nbsp; &rarr; 화면에서 숨겨지며 왼쪽정렬 (공간이 없어진다.)
+                            <br>&nbsp; &rarr; hover {display: ; color: ;} : 값을 인라인이나 블럭으로 바꾸고 색을 줘서 다시 나오게끔 한다.
+                        </li>
+                        <li>visibility: hidden;
+                            <br>&nbsp; &rarr; 공간은 있고 요소만 숨겨진다.
+                            <br>&nbsp; &rarr; hover {visibility: visible;} 로 바꿔 다시 나오게 하면 된다.
+                        </li>
+                        <li>color: rgba(255, 0, 0, 0);
+                            <br>&nbsp; &rarr;맨 뒤 알파값인 명도가 불투명해져서 안 보인다.(공간은 그대로 있다.)
+                            <br>&nbsp; &rarr;hover {color: rgba(255, 0, 0, 1)} : 마우스를 올려 명도 불투명해진 아이를 보일 수 있게 해주었다.
+                        </li>
+                        <li>opacity: 0;
+                            <br>&nbsp; &rarr; 공간이 남아있음.
+                            <br>&nbsp; &rarr;hover{opacity: 1;}로 보이게끔 한다.
+                        </li>
+                        <li>color: transparent;
+                            <br>&nbsp; &rarr;투명색상의 관용도를 준것
+                            <br>&nbsp; &rarr;hover {color: red;} : 컬러를 주어 보이게끔 한다.
+                        </li>
+                        <li id="over">overflow
+                            <br> : 넘칠때 어떻게 처리할 건지 정하는 것
+                            <ul>
+                                <li>auto: 자동으로 x,y중 넘치는 쪽으로 스크롤이 생긴다.</li>
+                                <li>scroll: 강제 스크롤 생성</li>
+                                <li>visible: 넘쳐도 보임</li>
+                                <li>hidden: 넘치면 자르고 축을 지정해서 생성</li>
+                            </ul>
+                        </li>
+                    </ol>
                 </li>
                 <!-- 11 -->
-                <li>
-
-                </li>
-                <!-- 12 -->
-                <li>
+                <hr>
+                <li>&starf;전체를 감싸는 제일 큰 박스의 이름(id, class)
                     <ul>
-                        <li></li>
+                        <li>wrap</li>
+                        <li>container</li>
                     </ul>
                 </li>
+                <!-- 12 -->
+                <hr>
+                <li><strong>background</strong> : 배경
+                    <ol>
+                        <li><b>배경이미지 넣기</b>
+                            <br>&rarr; 이미지는 태그로 본문(body)에 그냥 넣을 수 있으나, 배경이미지는 무조건 너비를 주어야 그 안에 들여보낼 수 있다.(ex -
+                            background-image:
+                            url(./img/bgimg.png);)
+                            <br>&rarr; 이미지는 스크린 리더기가 읽을 수 있지만, 배경에 깐 건 기계가 못 읽는다. 컨텐츠x
+                        </li>
+                        <li><b>배경이미지의 반복여부</b>
+                            <br>background-repeat: no-repeat; &rarr; 반복 안 함/ repeat : 반복함
+                            <br>background-repeat: repeat-x; &rarr; 가로로만 반복시키는 것
+                            <br> background-repeat: repeat-y; &rarr; 세로로만 반복시키는 것
+                        </li>
+                        <li><b>배경이미지의 위치</b>
+                            <ul>
+                                <li>background-position-y: 50%;/ background-position-x: 0%;</li>
+                                <li>background-position: 0% 50%; &rArr; 위의 것을 축약해서 쓸 수 있다.(x축, y축)</li>
+                                <li>background-position: center; : 높이가 적은 경우 배경이미지의 중앙에 포커스를 맞춘다.</li>
+                            </ul>
+                        </li>
+                        <li><b>배경이미지 고정</b>
+                            <br> <mark>background-attachment: fixed;</mark> &rarr; 이미지 고정(스크롤시 배경이미지 고정여부)
+                            <br> parallax scrolling( 페럴렉스 스크롤링 : 시간차, 공간감을 준다.)이라고 한다.
+                        </li>
+                        <li><b>배경이미지의 크기</b>
+                            <ul>
+                                <li>background-size: 100px 200px; (너비, 높이)</li>
+                                <li>background-size: 100px; (속성 하나 작성시 너비, 높이 동시 적용 &rAarr; 너비가 100px적용되고, 높이는 auto로 자동
+                                    조정되는 것)</li>
+                                <li>height: 500px;/ background-size: contain;
+                                    <br>&rarr; 요소의 높이에 배경을 맞춤.
+                                </li>
+                                <li>background-size: cover;
+                                    <br>&rarr; 요소의 너비에 배경을 맞춤, 높이는 고정
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="/c04/07.html"><b>배경이미지의 원점</b></a>(배경이미지의 시작점을 정하는 속성)
+                            <ul>
+                                <li>background-origin: border-box; &rarr; 보더부분부터</li>
+                                <li>background-origin:padding-box; &rarr; 패딩부분부터</li>
+                                <li>background-origin:content-box; &rarr; 컨텐츠가 시작되는 부분부터</li>
+                            </ul>
+                        </li>
+                        <li><b><a href="/c04/08.html">배경이미지의 영역</a></b>
+                            <ul>
+                                <li>background-clip: border-box; &rarr; 보더영역까지</li>
+                                <li>background-clip: padding-box; &rarr; 패딩을 준 영역까지</li>
+                                <li>background-clip: content-box; &rarr; 콘텐츠 영역만</li>
+                            </ul>
+                        </li>
+                        <li><b><a href="/c04/09.html">sprite image</a>(스프라이트 이미지)</b>
+                            <br> : 페이지의 로딩속도를 고려한 것
+                            <br>&rarr;이미지를 하나에 여러개 집어넣어 만들고 위치를 조정해서 쓰는 것.</li>
+                            <br>&rarr;이렇게 하면 이미지를 하나만 읽으면 되기 때문에 로딩속도가 빨라진다.</li>
+                        <li><b>gradient의 표현</b>
+                        <br> <a href="/c04/10.html">(1)</a> +벤더 프리픽스 적용(실험적인 기술을 브라우저에 적용시키는데, 그렇게 하지 않은 브라우저를 위해 '크로스 브라우징'을 순서대로 집어넣어야 한다.&starf; {크로스 브라우징 : 모든 브라우저마다 의도한 대로 동일하게 혹은 대체 방안이라도 보여주기 위한 것-보여지기 위해서 쓴다.-})
+                        <br> <a href="/c04/11.html">(2)</a>형 그라디언트 중심점 변경
+                        </li>
+                        <li><b><a href="/c04/12.html">다중 배경이미지</a></b>(배경 여러개 중첩 적용하기)
+                        <br>>&rarr; background-image의 값에 ','로 배경이미지를 여러개 집어넣을 수 있다.
+                        </li>
+                    </ol>
+                </li>
                 <!-- 13 -->
-                <li>
+                <hr>
+                <li><b>크기</b>
                     <ul>
-                        <li></li>
+                        <li>min-height : 최소 높이값</li>
+                        <li>max-height : 최대 높이값</li>
+                        <li>min-widht : 최소 너비값</li>
+                        <li>max-widht : 최대 너비값</li>
                     </ul>
                 </li>
                 <!-- 14 -->
-                <li>
-                    <ul>
-                        <li></li>
-                    </ul>
+                <hr>
+                <li><b>박스의 크기</b> : <mark>content box = padding + border</mark> 값/ margin은 외부값이라 안 들어감.
+                    <br>&rarr;박스의 너비와 높이 계산은 파이어폭스로 보면 계산되어 나와있다.
                 </li>
                 <!-- 15 -->
-                <li>
+                <li><b><mark>축약 입력 순서</mark></b>
                     <ul>
-                        <li></li>
+                        <li>1개 : 사방방면</li>
+                        <li>2개 : 상하, 좌우</li>
+                        <li>3개 : 상 좌우 하</li>
+                        <li>4개 : 상 우 하 좌(시계방향)</li>
                     </ul>
                 </li>
                 <!-- 16 -->
-                <li>
-                    <ul>
-                        <li></li>
-                    </ul>
+                <li id="cen"><b>박스의 수평중앙정렬 조건</b>
+                    <br> width: 200px;/ margin: 0 auto;
+                    <ol>
+                        <li>남는 너비가 있어야 auto가 가능. 좌우 마진을 auto로 한다.</li>
+                        <li>컨텐츠가 너비에 꽉 차있으면 남아있는 공간이 없어서 마진 오토가 적용이 안 된다.</li>
+                        <li>무조건 블럭이어야 됨.(너비를 줄 수 있기 때문에. 인라인은 크기를 가질 수 없다.)</li>
+                        <li>수직방향으로는 자꾸만 병합이 되어버리기 때문에 수직으론 오토 적용을 할 수 없다. 그래서 대신 수직병합현상을 피하려면 <a href="#padd">padding 값으로</a> 주는 수밖에 없다.(오토말고)</li>
+                    </ol>
                 </li>
                 <!-- 17 -->
-                <li>
-                    <ul>
-                        <li></li>
-                    </ul>
+                <li><b>테두리(border) 외곽에 아우트라인(<a href="/c05/05.html">outline</a>) 처리하기</b>
+                    <br>outline-width: 10px;/  outline-style: solid;
+                    <br>테두리의 두께, 모양을 꼭 넣어야 한다./ 보더의 바깥에 집어넣어진다.
+                    <br>outline-offset: 15px; &rarr; 보더와 간격을 띄울 수 있는 태그
                 </li>
                 <!-- 18 -->
                 <li>
