@@ -25,5 +25,5 @@
 /* 시작, 끝점 배치 후 중간은 균등배치 */
 #opt5{align-content: space-around;}
 /* 몽땅 균등배치 */
-#opt6{align-content: stretch}
+#opt6{align-content: stretch;}
 /* 늘리기 */
