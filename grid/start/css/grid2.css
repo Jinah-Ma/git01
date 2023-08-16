@@ -29,9 +29,13 @@
     background-color: #ff9019;
     grid-column-start: 2;
     grid-column-end: 4;
+    /* 축약 */
     grid-column: 2/4;
+    grid-row: 2/3;
 }
 .box4{
     background-color: #ffd000;
     grid-column: 3/4;
+    grid-row: 3/4;
 }
+/* 그리드는 컨텐츠가 많이 없는 것에서 쓴다. 적재적소에 이것저것 섞어서 쓴다. */
