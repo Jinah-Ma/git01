@@ -1,0 +1,59 @@
+html {
+    font-size: 62.5%;
+    /* 반응형 가변폰트공식/ 기본 폰트 16px->10px로 맞춤->1rem이 16px이므로 계산이 어려움. 최상위요소의 기본 폰트를 10px로 지정하는 팁. 그러면 rem이 10px로 맞춰진다.★ */
+}
+
+body {
+    font-size: 1.5rem;
+    /* ->15px */
+    line-height: 1.6;
+    font-weight: 400;
+    color: #222;
+}
+
+h1 {
+    border-bottom: 1px solid #ccc;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    grid-template-rows: repeat(auto, 1fr);
+}
+
+
+.image {
+    border-radius: 10px;
+    background-color: #333;
+    padding: 10px;
+    /* 패딩으로 맞추면 컨텐츠박스를 관리하기 쉽다. 그래서 패딩을 주로 쓴다.★ */
+    margin: 5px;
+    color: white;
+    /* 칸으로 지정/ 1번 라인부터 한 칸 */
+    grid-column: 1/span 1;
+    grid-column: span 1;
+    /* 한칸 */
+}
+
+.image.wide {
+    grid-column: span 2;
+}
+
+.image img {
+    border-radius: 5px;
+}
+
+.image figcaption {
+    font-weight: bold;
+    margin-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, .5);
+}
