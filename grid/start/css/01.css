@@ -6,7 +6,7 @@
     grid-template-columns: 200px 200px 200px;
     /* 컬럼을 하나의 값당 한 개씩 만들 수 있다./ 고정폭 200ppx 컬럼 3개 */
     grid-template-rows: 100px 100px;
-    /* 고정높이 100px 행2개 */
+    /* 고정높이 100px 열2개 */
     /* 복수형! */
 }
 
@@ -18,5 +18,5 @@
     grid-template-columns: repeat(3, 1fr);
     /* repeat: 함수/ 1fr을 3번 반복한다는 축약 */
     grid-template-rows: repeat(2, 200px);
-    /* 200px로 2행 반복 */
+    /* 200px로 2열 반복 */
 }

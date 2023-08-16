@@ -3,9 +3,9 @@
     grid-template-columns: repeat(3, 200px);
     grid-template-rows: minmax(100px, auto);
 
-    /* 컬럼간격 */
+    /* 컬럼간격: 행과 행의 간격 */
     grid-column-gap: 30px;
-    /* 로우간격 */
+    /* 로우간격: 열과 열의 간격 */
     grid-row-gap: 20px;
     /* 축약속성(언제나 가로 먼저:row, column) */
     grid-gap:20px 30px

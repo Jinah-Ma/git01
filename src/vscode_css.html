@@ -232,18 +232,22 @@
                                 </li>
                             </ul>
                         </li>
-                        <ol>
-                            <li>점수 : inline(1000)/ id(100)/ class, 속성, 가상선택자(10)/ 요소선택자-태그-(1)</li>
-                            <li>점수를 올리기 위해 같이 쓰는 방법
-                                <br>ex&rarr; 'body#bgPage1.bgPage2' (<mark>공백을 주면 '하위선택자'를 뜻하게 되므로 공백없이 함께 쓴다.</mark>)
-                            </li>
-                            <li>선언순서에 의해 하위에 쓰는 방법
-                                <br>&rarr; <mark>동일한 중요도와 특정도를 가진 규칙들 중</mark>에서 나중에 선언된 규칙이 우선된다.
-                            </li>
-                            <li><a href="../c01/12.html">참고</a></li>
-                            <li style="color: gray;">!important : 제일 우선으로 적용되는 아이로, 제일 나중에 하다하다 정 안 될 때 쓰는 것.(수정하기 어렵다.)
-                            </li>
-                        </ol>
+                        <li>
+                            <ol>
+                                <li>점수 : inline(1000)/ id(100)/ class, 속성, 가상선택자(10)/ 요소선택자-태그-(1)</li>
+                                <li>점수를 올리기 위해 같이 쓰는 방법
+                                    <br>ex&rarr; 'body#bgPage1.bgPage2' (<mark>공백을 주면 '하위선택자'를 뜻하게 되므로 공백없이 함께
+                                        쓴다.</mark>)
+                                </li>
+                                <li>선언순서에 의해 하위에 쓰는 방법
+                                    <br>&rarr; <mark>동일한 중요도와 특정도를 가진 규칙들 중</mark>에서 나중에 선언된 규칙이 우선된다.
+                                </li>
+                                <li><a href="../c01/12.html">참고</a></li>
+                                <li style="color: gray;">!important : 제일 우선으로 적용되는 아이로, 제일 나중에 하다하다 정 안 될 때 쓰는 것.(수정하기
+                                    어렵다.)
+                                </li>
+                            </ol>
+                        </li>
                     </ul>
                 </li>
                 <!-- 3 -->
@@ -482,7 +486,8 @@
                                 <li>white-space: <a href="#nowrap">nowrap</a>;</li>
                                 <li><mark>text-overflow: ellipsis;</mark> - 말줄임표</li>
                             </ul>
-                            <br>심화
+                        </li>
+                        <li>심화
                             <ul>
                                 <li>display: -webkit-box;
                                     <br>-webkit-line-clamp: 2; - 몇줄 뒤를 자를 건지 숫자 조정
@@ -504,53 +509,57 @@
                                 <li id="table"><b>table-cell</b> : 여러 줄일 경우 수직중앙정렬
                                     <br>&nbsp; &rarr; ex) display: table-cell;/ height: 200px;/ vertical-align: middle;
                                 </li>
-                        </li>
-                    </ul>
-                </li>
-                <li id="auto">&starf;<strong><a href="/c03/08.html"><mark>수직정렬 태그모음</mark></a></strong>
-                    <ul>
-                        <li><a href="#line-height">line-height</a> : 한 줄 일때만
-                        </li>
-                        <li><a href="#vertical">vertical-align</a>: middle; : 수직중앙정렬, 행이 여러개일때 'table-cell'과 함께 씀</li>
-                        <li><a href="#tadle">display:table-cell</a></li>
-                        <li id="padd">padding-bottom: 50px;/ padding-top: 50px; : 여러 줄일때. 위아래 패딩값을 똑같이 줘서 중앙정렬처럼 보이게끔
-                            맞춰준다.(반응형으로
-                            만들때)</li>
-                    </ul>
-                </li>
-                <hr>
-                <li><strong><a href="/c03/09.html">hidden</a></strong>(숨기기) : 태그가 있는데 요소를 숨기기
-                    <ol>
-                        <li><a href="#hidden">display: none;</a>
-                            <br>&nbsp; &rarr; 화면에서 숨겨지며 왼쪽정렬 (공간이 없어진다.)
-                            <br>&nbsp; &rarr; hover {display: ; color: ;} : 값을 인라인이나 블럭으로 바꾸고 색을 줘서 다시 나오게끔 한다.
-                        </li>
-                        <li>visibility: hidden;
-                            <br>&nbsp; &rarr; 공간은 있고 요소만 숨겨진다.
-                            <br>&nbsp; &rarr; hover {visibility: visible;} 로 바꿔 다시 나오게 하면 된다.
-                        </li>
-                        <li>color: rgba(255, 0, 0, 0);
-                            <br>&nbsp; &rarr;맨 뒤 알파값인 명도가 불투명해져서 안 보인다.(공간은 그대로 있다.)
-                            <br>&nbsp; &rarr;hover {color: rgba(255, 0, 0, 1)} : 마우스를 올려 명도 불투명해진 아이를 보일 수 있게 해주었다.
-                        </li>
-                        <li>opacity: 0;
-                            <br>&nbsp; &rarr; 공간이 남아있음.
-                            <br>&nbsp; &rarr;hover{opacity: 1;}로 보이게끔 한다.
-                        </li>
-                        <li>color: transparent;
-                            <br>&nbsp; &rarr;투명색상의 관용도를 준것
-                            <br>&nbsp; &rarr;hover {color: red;} : 컬러를 주어 보이게끔 한다.
-                        </li>
-                        <li id="over">overflow
-                            <br> : 넘칠때 어떻게 처리할 건지 정하는 것
-                            <ul>
-                                <li>auto: 자동으로 x,y중 넘치는 쪽으로 스크롤이 생긴다.</li>
-                                <li>scroll: 강제 스크롤 생성</li>
-                                <li>visible: 넘쳐도 보임</li>
-                                <li>hidden: 넘치면 자르고 축을 지정해서 생성</li>
                             </ul>
                         </li>
-                    </ol>
+                        <li id="auto">&starf;<strong><a href="/c03/08.html"><mark>수직정렬 태그모음</mark></a></strong>
+                            <ul>
+                                <li><a href="#line-height">line-height</a> : 한 줄 일때만
+                                </li>
+                                <li><a href="#vertical">vertical-align</a>: middle; : 수직중앙정렬, 행이 여러개일때 'table-cell'과 함께
+                                    씀</li>
+                                <li><a href="#tadle">display:table-cell</a></li>
+                                <li id="padd">padding-bottom: 50px;/ padding-top: 50px; : 여러 줄일때. 위아래 패딩값을 똑같이 줘서 중앙정렬처럼
+                                    보이게끔
+                                    맞춰준다.(반응형으로
+                                    만들때)</li>
+                            </ul>
+                        </li>
+                        <hr>
+                        <li><strong><a href="/c03/09.html">hidden</a></strong>(숨기기) : 태그가 있는데 요소를 숨기기
+                            <ol>
+                                <li><a href="#hidden">display: none;</a>
+                                    <br>&nbsp; &rarr; 화면에서 숨겨지며 왼쪽정렬 (공간이 없어진다.)
+                                    <br>&nbsp; &rarr; hover {display: ; color: ;} : 값을 인라인이나 블럭으로 바꾸고 색을 줘서 다시 나오게끔 한다.
+                                </li>
+                                <li>visibility: hidden;
+                                    <br>&nbsp; &rarr; 공간은 있고 요소만 숨겨진다.
+                                    <br>&nbsp; &rarr; hover {visibility: visible;} 로 바꿔 다시 나오게 하면 된다.
+                                </li>
+                                <li>color: rgba(255, 0, 0, 0);
+                                    <br>&nbsp; &rarr;맨 뒤 알파값인 명도가 불투명해져서 안 보인다.(공간은 그대로 있다.)
+                                    <br>&nbsp; &rarr;hover {color: rgba(255, 0, 0, 1)} : 마우스를 올려 명도 불투명해진 아이를 보일 수 있게
+                                    해주었다.
+                                </li>
+                                <li>opacity: 0;
+                                    <br>&nbsp; &rarr; 공간이 남아있음.
+                                    <br>&nbsp; &rarr;hover{opacity: 1;}로 보이게끔 한다.
+                                </li>
+                                <li>color: transparent;
+                                    <br>&nbsp; &rarr;투명색상의 관용도를 준것
+                                    <br>&nbsp; &rarr;hover {color: red;} : 컬러를 주어 보이게끔 한다.
+                                </li>
+                                <li id="over">overflow
+                                    <br> : 넘칠때 어떻게 처리할 건지 정하는 것
+                                    <ul>
+                                        <li>auto: 자동으로 x,y중 넘치는 쪽으로 스크롤이 생긴다.</li>
+                                        <li>scroll: 강제 스크롤 생성</li>
+                                        <li>visible: 넘쳐도 보임</li>
+                                        <li>hidden: 넘치면 자르고 축을 지정해서 생성</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </li>
+                    </ul>
                 </li>
                 <!-- 11 -->
                 <hr>
@@ -618,6 +627,7 @@
                             <br>&rarr;이미지를 하나에 여러개 집어넣어 만들고 위치를 조정해서 쓰는 것.
                         </li>
                         <br>&rarr;이렇게 하면 이미지를 하나만 읽으면 되기 때문에 로딩속도가 빨라진다.
+                    </ol>
                 </li>
                 <li><b>gradient의 표현</b>
                     <br> <a href="/c04/10.html">(1)</a> +벤더 프리픽스 적용(실험적인 기술을 브라우저에 적용시키는데, 그렇게 하지 않은 브라우저를 위해 '크로스
@@ -627,182 +637,188 @@
                 <li><b><a href="/c04/12.html">다중 배경이미지</a></b>(배경 여러개 중첩 적용하기)
                     <br>>&rarr; background-image의 값에 ','로 배경이미지를 여러개 집어넣을 수 있다.
                 </li>
-            </ol>
-        </li>
-        <!-- 13 -->
-        <hr>
-        <li><b>크기</b>
-            <ul>
-                <li>min-height : 최소 높이값</li>
-                <li>max-height : 최대 높이값</li>
-                <li>min-widht : 최소 너비값</li>
-                <li>max-widht : 최대 너비값</li>
-                <br>
-                <li>max-width: 스크롤이 생기지 않는다./ 그냥 widht를 쓰면 특정 크기에 들어가면 밑에 스크롤이 생긴다.</li>
-            </ul>
-        </li>
-        <!-- 14 -->
-        <hr>
-        <li><b>박스의 크기</b> : <mark>content box = padding + border</mark> 값/ margin은 외부값이라 안 들어감.
-            <br>&rarr;박스의 너비와 높이 계산은 파이어폭스로 보면 계산되어 나와있다.
-        </li>
-        <!-- 15 -->
-        <li><b><mark>축약 입력 순서</mark></b>
-            <ul>
-                <li>1개 : 사방방면</li>
-                <li>2개 : 상하, 좌우</li>
-                <li>3개 : 상 좌우 하</li>
-                <li>4개 : 상 우 하 좌(시계방향)</li>
-            </ul>
-        </li>
-        <!-- 16 -->
-        <li id="cen"><b>박스의 수평중앙정렬 조건</b>
-            <br> width: 200px;/ <mark>margin: 0 auto;</mark>
-            <ol>
-                <li>남는 너비가 있어야 auto가 가능. 좌우 마진을 auto로 한다.</li>
-                <li>컨텐츠가 너비에 꽉 차있으면 남아있는 공간이 없어서 마진 오토가 적용이 안 된다.</li>
-                <li>무조건 블럭이어야 됨.(너비를 줄 수 있기 때문에. 인라인은 크기를 가질 수 없다.)</li>
-                <li>수직방향으로는 자꾸만 병합이 되어버리기 때문에 수직으론 오토 적용을 할 수 없다. 그래서 대신 수직병합현상을 피하려면 <a href="#padd">padding 값으로</a> 주는
-                    수밖에 없다.(오토말고)</li>
-            </ol>
-        </li>
-        <!-- 17 -->
-        <li><b>테두리(border) 외곽에 아우트라인(<a href="/c05/05.html">outline</a>) 처리하기</b>
-            <br>outline-width: 10px;/ outline-style: solid;
-            <br>테두리의 두께, 모양을 꼭 넣어야 한다./ 보더의 바깥에 집어넣어진다.
-            <br>outline-offset: 15px; &rarr; 보더와 간격을 띄울 수 있는 태그
-        </li>
-        <!-- 18 -->
-        <li><b>둥근 테두리(<a href="/c05/06.html">border-radius</a>)</b>
-            <ul>
-                <li>radius : 반지름/ 모양조절, 모서리 둥글게 만드는 것/ 패딩과 같이 축약속성으로 시계방향으로 쓴다.</li>
-                <li>border-radius: 15px 70px 15px 70px/70px 15px 70px 15px
-                    <br>&rarr; xyxy/xyxy(상우좌하/상우좌하)
+                <!-- 13 -->
+                <hr>
+                <li><b>크기</b>
+                    <ul>
+                        <li>min-height : 최소 높이값</li>
+                        <li>max-height : 최대 높이값</li>
+                        <li>min-widht : 최소 너비값</li>
+                        <li>max-widht : 최대 너비값</li>
+                        <br>
+                        <li>max-width: 스크롤이 생기지 않는다./ 그냥 widht를 쓰면 특정 크기에 들어가면 밑에 스크롤이 생긴다.</li>
+                    </ul>
                 </li>
-            </ul>
-        </li>
-        <!-- 19 -->
-        <li><b>테두리 이미지(<a href="/c05/07.html">border-image</a>)</b>
-            <br>&rarr;border-image: url()
-        </li>
-        <!-- 20 -->
-        <li><strong>box-sizing(박스의 크기계산 기준 설정)</strong>
-            <ul>
-                <li><mark>box-sizing: border-box;</mark>
-                    <br>&rarr;너비와 높이를 준 값에 전부다 알아서 계산해 집어넣는 것.(패딩은 비율로 따진다.)
+                <!-- 14 -->
+                <hr>
+                <li><b>박스의 크기</b> : <mark>content box = padding + border</mark> 값/ margin은 외부값이라 안 들어감.
+                    <br>&rarr;박스의 너비와 높이 계산은 파이어폭스로 보면 계산되어 나와있다.
                 </li>
-                <li>box-sizing: content-box;
-                    <br>&rarr;컨텐츠크기에 맞춰서 넣으라는 얘기
+                <!-- 15 -->
+                <li><b><mark>축약 입력 순서</mark></b>
+                    <ul>
+                        <li>1개 : 사방방면</li>
+                        <li>2개 : 상하, 좌우</li>
+                        <li>3개 : 상 좌우 하</li>
+                        <li>4개 : 상 우 하 좌(시계방향)</li>
+                    </ul>
                 </li>
-            </ul>
-        </li>
-        <!-- 21 -->
-        <li><b>box-shadow</b>(<a href="/c05/09.html">박스 그림자</a>)
-            <ul>
-                <li>순서
-                    <br>&rarr;x축 y축 블러값 강도값{숫자 아닌 inset을 넣으면 안쪽으로 그림자가 생긴다.}
-                    <br>&rarr;그림자 여러개 : {box-shadow: -8px -6px 8px 8px darkblue,
-                    13px 9px 20px 9px #ff9409;} ','하고 나열해서 쓰면 된다.
-                </li>
-            </ul>
-        </li>
-        <!-- 22 -->
-        <hr>
-        <li><strong>tranform</strong>(포토샵의 ctrl+T)
-            <ul>
-                <li><mark>transform: translate</mark>(30px, 20px); - x축, y축 이동시키기
-                    <br>&rarr;<mark>translateX, translateY</mark>로 나눠서 쓰기도 한다.
-                </li>
-                <li>transform: rotate(-30deg); - 각도 조절</li>
-                <li>transform: scale(0.7, 1.3) rotate(45deg);
-                    <br>&rarr;1=100%, 줄이기/ width 70%, height 130%
-                    <br>&rarr;여러개를 쓸때에는 한칸 띄고 쓴다. 만약 아래쪽에 또 쓴다면 재선언이나 다름없다. 그래서 이어서 써야 한다.
-                </li>
-                <li>transform: skew(15deg, 10deg); - 비틀기</li>
-                <li></li>
-            </ul>
-        </li>
-        <!-- 23 -->
-        <li><strong><a href="/c05/11.html">transition</a></strong>
-            <br>&rarr;전이: a에서 b로 바뀌는 걸 보여주는 것/ 30→29→28... 점진적으로 보여주는 걸 1초동안 보여주는 것. 쓰지 않으면 뚝뚝 끊긴다.
-            <br>&rarr;<mark>모양이 바뀌어야지만</mark> 적용가능하다./ 속성의 값이 <mark>숫자로 변하는 속성값만</mark> 인식된다. 디스플레이같은 글자로 바뀌는 것들은 적용되지
-            않는다. 색상의 경우에는 글자로 써있어도 숫자로 해석이 되므로 바뀐다.(자바스크립트도 숫자로 바뀌는 애들만 건드릴 수 있다. 이름들을 숫자로 바꿔넣을 수 있으므로 가능은 하다.)
-            <ul>
-                <li>transition-property: transition 대상 속성(all은 바뀌는 모양의 모든 속성을 적은 시간동안 보여달라는 축약어)</li>
-                <li>transition-duration: transition 지속시간 ms(1/1000)/ 안쓰면 0초</li>
-                <li>transition-timing-function: transition 가속도 ms(1/1000)</li>
-                <li>참고) transition: all 1s cubic-bezier(0.25, 0.1, 0.85, 0.4) : 개발자모드에서 곡선을 조정해서 나온 값을 적은 것으로 <mark>마우스
-                        올릴때만 바뀌는 거면 가상선택자 있는 곳에만 적용하면 되지만 빠져 나올때도 적용하고 싶으면 가상선택자가 없는 것에다도(변하기 전) 적용</mark>하면 된다.</li>
-                <li></li>
-            </ul>
-        </li>
-        <!-- 24 -->
-        <li><a href="/c05/12.html">애니메이션</a>
-            <br>13, 14.html도 참고해보기
-        </li>
-        <!-- 25 -->
-        <hr>
-        <li><strong><mark>layout(레이아웃)</mark></strong>
-            <ul>
-                <li><strong>float_플룻</strong>
+                <!-- 16 -->
+                <li id="cen"><b>박스의 수평중앙정렬 조건</b>
+                    <br> width: 200px;/ <mark>margin: 0 auto;</mark>
                     <ol>
-                        <li>float:left; - 화면의 왼쪽으로 배치가 되고, 오른쪽 빈 공간에 다음에 오는 요소가 들어갈 수 있다.(<mark>다음요소가 옆으로 배치</mark> 됨)
+                        <li>남는 너비가 있어야 auto가 가능. 좌우 마진을 auto로 한다.</li>
+                        <li>컨텐츠가 너비에 꽉 차있으면 남아있는 공간이 없어서 마진 오토가 적용이 안 된다.</li>
+                        <li>무조건 블럭이어야 됨.(너비를 줄 수 있기 때문에. 인라인은 크기를 가질 수 없다.)</li>
+                        <li>수직방향으로는 자꾸만 병합이 되어버리기 때문에 수직으론 오토 적용을 할 수 없다. 그래서 대신 수직병합현상을 피하려면 <a href="#padd">padding
+                                값으로</a> 주는
+                            수밖에 없다.(오토말고)</li>
+                    </ol>
+                </li>
+                <!-- 17 -->
+                <li><b>테두리(border) 외곽에 아우트라인(<a href="/c05/05.html">outline</a>) 처리하기</b>
+                    <br>outline-width: 10px;/ outline-style: solid;
+                    <br>테두리의 두께, 모양을 꼭 넣어야 한다./ 보더의 바깥에 집어넣어진다.
+                    <br>outline-offset: 15px; &rarr; 보더와 간격을 띄울 수 있는 태그
+                </li>
+                <!-- 18 -->
+                <li><b>둥근 테두리(<a href="/c05/06.html">border-radius</a>)</b>
+                    <ul>
+                        <li>radius : 반지름/ 모양조절, 모서리 둥글게 만드는 것/ 패딩과 같이 축약속성으로 시계방향으로 쓴다.</li>
+                        <li>border-radius: 15px 70px 15px 70px/70px 15px 70px 15px
+                            <br>&rarr; xyxy/xyxy(상우좌하/상우좌하)
                         </li>
-                        <li>부모 width: 800px;&rarr; 자식 width: 100%;=100%는 800px
-                            <br>&rarr;부모가 width: 75%;면 애들도 같이 좁아진다.
+                    </ul>
+                </li>
+                <!-- 19 -->
+                <li><b>테두리 이미지(<a href="/c05/07.html">border-image</a>)</b>
+                    <br>&rarr;border-image: url()
+                </li>
+                <!-- 20 -->
+                <li><strong>box-sizing(박스의 크기계산 기준 설정)</strong>
+                    <ul>
+                        <li><mark>box-sizing: border-box;</mark>
+                            <br>&rarr;너비와 높이를 준 값에 전부다 알아서 계산해 집어넣는 것.(패딩은 비율로 따진다.)
                         </li>
-                        <li>margin-right: 10px;&rarr;마진을 넣은 만큼 너비에서 빼주어야 한다.</li>
-                        <li><b>&lt;문제상황&gt;</b>
+                        <li>box-sizing: content-box;
+                            <br>&rarr;컨텐츠크기에 맞춰서 넣으라는 얘기
+                        </li>
+                    </ul>
+                </li>
+                <!-- 21 -->
+                <li><b>box-shadow</b>(<a href="/c05/09.html">박스 그림자</a>)
+                    <ul>
+                        <li>순서
+                            <br>&rarr;x축 y축 블러값 강도값{숫자 아닌 inset을 넣으면 안쪽으로 그림자가 생긴다.}
+                            <br>&rarr;그림자 여러개 : {box-shadow: -8px -6px 8px 8px darkblue,
+                            13px 9px 20px 9px #ff9409;} ','하고 나열해서 쓰면 된다.
+                        </li>
+                    </ul>
+                </li>
+                <!-- 22 -->
+                <hr>
+                <li><strong>tranform</strong>(포토샵의 ctrl+T)
+                    <ul>
+                        <li><mark>transform: translate</mark>(30px, 20px); - x축, y축 이동시키기
+                            <br>&rarr;<mark>translateX, translateY</mark>로 나눠서 쓰기도 한다.
+                        </li>
+                        <li>transform: rotate(-30deg); - 각도 조절</li>
+                        <li>transform: scale(0.7, 1.3) rotate(45deg);
+                            <br>&rarr;1=100%, 줄이기/ width 70%, height 130%
+                            <br>&rarr;여러개를 쓸때에는 한칸 띄고 쓴다. 만약 아래쪽에 또 쓴다면 재선언이나 다름없다. 그래서 이어서 써야 한다.
+                        </li>
+                        <li>transform: skew(15deg, 10deg); - 비틀기</li>
+                        <li></li>
+                    </ul>
+                </li>
+                <!-- 23 -->
+                <li><strong><a href="/c05/11.html">transition</a></strong>
+                    <br>&rarr;전이: a에서 b로 바뀌는 걸 보여주는 것/ 30→29→28... 점진적으로 보여주는 걸 1초동안 보여주는 것. 쓰지 않으면 뚝뚝 끊긴다.
+                    <br>&rarr;<mark>모양이 바뀌어야지만</mark> 적용가능하다./ 속성의 값이 <mark>숫자로 변하는 속성값만</mark> 인식된다. 디스플레이같은 글자로 바뀌는
+                    것들은 적용되지
+                    않는다. 색상의 경우에는 글자로 써있어도 숫자로 해석이 되므로 바뀐다.(자바스크립트도 숫자로 바뀌는 애들만 건드릴 수 있다. 이름들을 숫자로 바꿔넣을 수 있으므로 가능은 하다.)
+                    <ul>
+                        <li>transition-property: transition 대상 속성(all은 바뀌는 모양의 모든 속성을 적은 시간동안 보여달라는 축약어)</li>
+                        <li>transition-duration: transition 지속시간 ms(1/1000)/ 안쓰면 0초</li>
+                        <li>transition-timing-function: transition 가속도 ms(1/1000)</li>
+                        <li>참고) transition: all 1s cubic-bezier(0.25, 0.1, 0.85, 0.4) : 개발자모드에서 곡선을 조정해서 나온 값을 적은 것으로
+                            <mark>마우스
+                                올릴때만 바뀌는 거면 가상선택자 있는 곳에만 적용하면 되지만 빠져 나올때도 적용하고 싶으면 가상선택자가 없는 것에다도(변하기 전) 적용</mark>하면 된다.
+                        </li>
+                    </ul>
+                </li>
+                <!-- 24 -->
+                <li><a href="/c05/12.html">애니메이션</a>
+                    <br>13, 14.html도 참고해보기
+                </li>
+                <!-- 25 -->
+                <hr>
+                <li><strong><mark>layout(레이아웃)</mark></strong>
+                    <ul>
+                        <li><strong>float_플룻</strong>
                             <ol>
-                                <li><mark>형제간의 float 이슈해결</mark>
-                                    <br>- float 으로 레이아웃을 배치후 다음 요소에 clear 를 하지 않으면 문제 발생함
-                                    <br>&rarr;문제가 발생한 요소에 clear:both 선언
-                                    <br>&nbsp;&nbsp;&rarr;- clear:left ⇒ float:left 를 사용 했을때 해제
-                                    <br>&nbsp;&nbsp;&rarr;- clear:right ⇒ float:right 를 사용 했을때 해제
-                                    <br>&nbsp;&nbsp;&rarr;- clear:both ⇒ 양쪽방향 모두 해제
+                                <li>float:left; - 화면의 왼쪽으로 배치가 되고, 오른쪽 빈 공간에 다음에 오는 요소가 들어갈 수 있다.(<mark>다음요소가 옆으로
+                                        배치</mark> 됨)
                                 </li>
-                                <li><mark>부모 자식 간 float 해제하기</mark>
+                                <li>부모 width: 800px;&rarr; 자식 width: 100%;=100%는 800px
+                                    <br>&rarr;부모가 width: 75%;면 애들도 같이 좁아진다.
+                                </li>
+                                <li>margin-right: 10px;&rarr;마진을 넣은 만큼 너비에서 빼주어야 한다.</li>
+                                <li><b>&lt;문제상황&gt;</b>
                                     <ol>
-                                        <li><b>부모의 크기 교정</b> (단, 반응형 안 됨)</li>
-                                        <li>float 된 자식 요소의 마지막에 빈 요소를 추가하고 clear:both 를 줌
-                                            <br>(형제요소에 해제를 위해(clear) 일부러 빈요소를 만들기(태그는 꼭 블럭으로!) (부모가 가변크기 가능함/ 코드가 길어져
-                                            복잡해진다.))
+                                        <li><mark>형제간의 float 이슈해결</mark>
+                                            <br>- float 으로 레이아웃을 배치후 다음 요소에 clear 를 하지 않으면 문제 발생함
+                                            <br>&rarr;문제가 발생한 요소에 clear:both 선언
+                                            <br>&nbsp;&nbsp;&rarr;- clear:left ⇒ float:left 를 사용 했을때 해제
+                                            <br>&nbsp;&nbsp;&rarr;- clear:right ⇒ float:right 를 사용 했을때 해제
+                                            <br>&nbsp;&nbsp;&rarr;- clear:both ⇒ 양쪽방향 모두 해제
                                         </li>
-                                        <li><b>부모요소에 :after 를 추가하고 clear 적용</b>
-                                            <br>가상선택자로 없던 콘텐츠를 만들어서 그 애를 클리어 시킴(인라인으로 들어가므로 디스플레이를 꼭 블럭으로 만들어줘야 가능해짐./ 이
-                                            방법을 가장 많이 씀.)
-                                            <br>ex)
-                                            <br>&nbsp;.부모요소::after{
-                                            <br>&nbsp;content:'';
-                                            <br>&nbsp;clear: both;
-                                            <br>&nbsp;display: block;
-                                            }
+                                        <li><mark>부모 자식 간 float 해제하기</mark>
+                                            <ol>
+                                                <li><b>부모의 크기 교정</b> (단, 반응형 안 됨)</li>
+                                                <li>float 된 자식 요소의 마지막에 빈 요소를 추가하고 clear:both 를 줌
+                                                    <br>(형제요소에 해제를 위해(clear) 일부러 빈요소를 만들기(태그는 꼭 블럭으로!) (부모가 가변크기 가능함/
+                                                    코드가 길어져 복잡해진다.)
+                                                </li>
+                                                <li><b>부모요소에 :after 를 추가하고 clear 적용</b>
+                                                    <br>가상선택자로 없던 콘텐츠를 만들어서 그 애를 클리어 시킴(인라인으로 들어가므로 디스플레이를 꼭 블럭으로 만들어줘야
+                                                    가능해짐./ 이
+                                                    방법을 가장 많이 씀.)
+                                                    <br>ex)
+                                                    <br>&nbsp;.부모요소::after{
+                                                    <br>&nbsp;content:'';
+                                                    <br>&nbsp;clear: both;
+                                                    <br>&nbsp;display: block;
+                                                    }
+                                                </li>
+                                                <li><b>clear 속성을 가진 전용 클래스를 선언하고 해당 요소에 적용</b>
+                                                    <br>부모들의 클래스에 clearfix를 추가로 집어 넣어 한번에 조작할 수 있게 함.
+                                                    <br>아니면 아예 부모들 태그 위쪽에 다른 부모태그를 집어넣어 이 클래스를 가지고 있는 부모로 싼다.(*가상선택자
+                                                    필수!)
+                                                    <br>&nbsp;.clearfix:after 쓰거나
+                                                    <br>&nbsp;.cf:after로 쓰거나
+                                                    <br>&nbsp;.cf:before로 쓴다. {
+                                                    <br>&nbsp;content: '';
+                                                    <br>&nbsp;clear: both;
+                                                    <br>&nbsp;display: block;}
+                                                </li>
+                                                <li><b>부모에 overflow 적용</b>
+                                                    <br>넘치면 숨기는 방법(1번 방법의 연장선) *이것도 많이 쓴다.
+                                                    <br> .mydrink{overflow: hidden;}
+                                                </li>
+                                            </ol>
                                         </li>
-                                        <li><b>clear 속성을 가진 전용 클래스를 선언하고 해당 요소에 적용</b>
-                                            <br>부모들의 클래스에 clearfix를 추가로 집어 넣어 한번에 조작할 수 있게 함.
-                                            <br>아니면 아예 부모들 태그 위쪽에 다른 부모태그를 집어넣어 이 클래스를 가지고 있는 부모로 싼다.(*가상선택자 필수!)
-                                            <br>&nbsp;.clearfix:after 쓰거나
-                                            <br>&nbsp;.cf:after로 쓰거나
-                                            <br>&nbsp;.cf:before로 쓴다. {
-                                            <br>&nbsp;content: '';
-                                            <br>&nbsp;clear: both;
-                                            <br>&nbsp;display: block;}
-                                        </li>
-                                        <li><b>부모에 overflow 적용</b>
-                                            <br>넘치면 숨기는 방법(1번 방법의 연장선) *이것도 많이 쓴다.
-                                            <br> .mydrink{overflow: hidden;}
+                                        <li><b>
+                                                <mark>*tip : float, position, flex는 같이 쓰지 않는다.</mark>
+                                            </b>
                                         </li>
                                     </ol>
                                 </li>
-                                <li><b>
-                                        <mark>*tip : float, position, flex는 같이 쓰지 않는다.</mark>
-                                    </b>
-                                </li>
                             </ol>
                         </li>
-                    </ol>
+                    </ul>
+                    <hr>
                 </li>
-                <hr>
                 <li><strong>position_포지션</strong>
                     <ul>
                         <li> : 요소에 좌표값을 입력하여 배치하는 속성(레이아웃을 배치할때 씀.)</li>
@@ -815,206 +831,260 @@
                         <br>&rarr;z-index 로 깊이지정
                         <li>엡솔루트는 부모에 따라서 기준점이 바뀐다.
                             <br>&rarr;엡솔루트와 픽스드는 화면기준이며 절대값이지만 엡솔루트는 부모요소의 포지션이 스택틱이 아닌경우(기본값) 부모가 기준이 된다.
+                            <br>&rarr;엡솔루트를 감싸는 부모요소에 릴렉티브를 주면 부모요소 너비 안에 가둘 수 있다.
+                            <br>&rarr;부모기준으로 해서 부모 안에서 자식들을 제어해야 될때 쓰는 것. 부모 밖에서 쓰면 브라우저에 그대로 잡혀있다.
+                            <br>&rarr;&starf;큰 섹션(컨텐츠를 나누는 상자 마다)안에 이너(.inner) 하나씩은 계속 들어가야 하고, 그 이너 상자를 중앙정렬시키는 것이다.
                         </li>
-                        <br>&rarr;엡솔루트를 감싸는 부모요소에 릴렉티브를 주면 부모요소 너비 안에 가둘 수 있다.
-                        <br>&rarr;부모기준으로 해서 부모 안에서 자식들을 제어해야 될때 쓰는 것. 부모 밖에서 쓰면 브라우저에 그대로 잡혀있다.
-                        <br>&rarr;&starf;큰 섹션(컨텐츠를 나누는 상자 마다)안에 이너(.inner) 하나씩은 계속 들어가야 하고, 그 이너 상자를 중앙정렬시키는 것이다.
+                        <li>포지션 픽스드는 탑 레프트에 고정을 해야 제대로 상단에 고정이 된다.
+                            <br>&rarr;(1) position: fixed; width: 100%;
+                            <br>&rarr;(2) position: fixed; top: 0; left: 0; right: 0;
+                        </li>
+                    </ul>
                 </li>
-                <li>포지션 픽스드는 탑 레프트에 고정을 해야 제대로 상단에 고정이 된다.
-                    <br>&rarr;(1) position: fixed; width: 100%;
-                    <br>&rarr;(2) position: fixed; top: 0; left: 0; right: 0;
+                <li><strong><mark>&starf;<a href="#auto">박스 수직 수평 중앙정렬</a></mark></strong>
+                    <ol>
+                        <li>margin: auto
+                            <br> : 중앙으로 알아서 계산해서 간다./ 그러나 수직은 맞출 수 없다.
+                        </li>
+                        <li>position: / left: 50%;
+                            <br>&rarr;마진(여백을 반으로 나눈것)과 비교해보면 포지션(포인트 좌표로 이동)은 좌측 상단의 점으로 50%이동하는 것이라 <b>진짜 중앙정렬이 된 것은
+                                아니다.</b>
+                            <br>&lt;맞추는 방법&gt; : width: 500px;/ height: 500px; 일때
+                            <br>&rarr;<mark>(1) margin-left:-250px;</mark>
+                            <br>&rarr;<mark>(2) transform: translateX(-250px);</mark>
+                            <br>&rArr;박스 <b>사이즈의 반을 이용해서 이동</b>시켜주는 방법
+                        </li>
+                        <li>position: / left: calc(100% / 2); / width: 50px; height: 50px;
+                            <br>&rarr;left: 50%;을 이렇게 쓸 수도 있다. &starf;답을 쓰면 답을 계속 바꿔줘야 하지만, <b>식을 쓰면 다시 고칠 일은 없다.</b>
+                            알아서 계산해주기
+                            때문에/ <mark>중요점은 공간을 꼭 주어야 한다</mark>는 것!
+                            <br>(&rArr; +, -, *, /)
+                            <br>left: calc(100% / 2);/ top: 50% (1)방법 : <mark>margin-left: -25px;/ margin-top:
+                                -25px;</mark> 하면 중앙정렬
+                            <br>&rarr;(2)방법 : <mark>transform: translate(calc(-50px / 2), calc(-50px / 2));</mark> 계산기
+                            기능으로 나눠 중앙정렬을 할 수 있다.(x축 y축 &rArr; transform: translateX(calc(-50px / 2)),
+                            translateY(calc(-50px / 2))와 같다.)
+                        </li>
+                        <li><b>&starf;'id'로 가게끔 붙여둔 것과 다른 점&starf;</b>
+                            <br> : <mark>id쪽은 글자</mark>를 수직정렬 시켜주는 것이고, <mark>이번 것은 화면의 박스</mark>를 수직중앙시켜주는 방법이다.
+                        </li>
+                    </ol>
                 </li>
-            </ul>
-        <li><strong><mark>&starf;<a href="#auto">박스 수직 수평 중앙정렬</a></mark></strong>
-            <ol>
-                <li>margin: auto
-                    <br> : 중앙으로 알아서 계산해서 간다./ 그러나 수직은 맞출 수 없다.
+                <hr>
+                <li><strong><mark>&lt;레이아웃을 만들 때 중요한 포인트&gt;</mark></strong>
+                    <br>&starf;<b>기본 커다란 구조 틀 잡기</b>&starf;
+                    <br>&rarr;무조건 처음!
+                    <br>&rarr;부모들 상자를 넣고 그 안에 자식들을 넣어야 하는 것임. 부모는 무조건 필수! 마감태그에 주석도 필수!
+                    <br>
+                    <br>&lt;body&gt;
+                    <br>&nbsp;&nbsp;&lt;div class="<b>wrap</b>"&gt;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;header&gt;header&lt;/header&gt;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;main&gt;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nav&gt;sideBar&lt;/nav&gt;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;section&gt;content&lt;/section&gt;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;aside&gt;sideBar_ad&lt;/aside&gt;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/main&gt;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;footer&gt;footer&lt;/footer&gt;
+                    <br>&nbsp;&nbsp;&lt;/div&gt;
+                    <br>&lt;/body&gt;
+                    <br>
+                    <br>&rarr;코딩할때 클래스나 아이디의 이름만 참조할 것임. 코드는 각자 알아서 하는 것
                 </li>
-                <li>position: / left: 50%;
-                    <br>&rarr;마진(여백을 반으로 나눈것)과 비교해보면 포지션(포인트 좌표로 이동)은 좌측 상단의 점으로 50%이동하는 것이라 <b>진짜 중앙정렬이 된 것은 아니다.</b>
-                    <br>&lt;맞추는 방법&gt; : width: 500px;/ height: 500px; 일때
-                    <br>&rarr;<mark>(1) margin-left:-250px;</mark>
-                    <br>&rarr;<mark>(2) transform: translateX(-250px);</mark>
-                    <br>&rArr;박스 <b>사이즈의 반을 이용해서 이동</b>시켜주는 방법
+                <li style><img src="/c06/float_position_1.png"></li>
+                <li><img src="/c06/float_position_2-1.png"></li>
+                <li><img src="/c06/float_position_2-2.png" width="800px"></li>
+                <!-- 26 -->
+                <hr>
+                <li style="font-size: 20px;"><strong><mark>flex</mark></strong>
+                    <ul>
+                        <li><img src="/c06/Untitled.png" width="800px"></li>
+                        <li>&starf;꼭 <mark>부모한테 선언</mark>! 그러면 자식들이 배치.</li>
+                        <li>부모는 컨테이너, 자식은 아이템박스라 부른다.</li>
+                        <li>dispaly는 상속이 되지 않는데, flex는 바로 밑 하위에만 적용이 된다.</li>
+                        <li>(*tip : 반응형을 할 때는 페이지 창을 넓게 보고 작업한다.)</li>
+                        <li>플렉스 안에서는 자동적으로 글자 크기가 줄어든다. 원래는 넘쳐 흐르는게 정상.</li>
+                        <li><b>&lt;flex-direction : 방향설정&gt;</b>
+                            <ul>
+                                <li>flex-direction: row; -기본값 가로(좌->우)</li>
+                                <li>flex-direction: row-reverse; -우-> 좌/ 순서도 바뛴다. 자신의 공간은 남겨 둔 채 맨 뒤로 간다.</li>
+                                <li>flex-direction: column; -상-> 하</li>
+                                <li>flex-direction: column-reverse; -하-> 상</li>
+                            </ul>
+                        </li>
+                        <li><b>&lt;flex-wrap : 컨테이너 안에서 줄바꿈 혹은 정돈&gt;</b>
+                            <ul>
+                                <li>flex-wrap: nowrap; - 박스가 컨테이너의 공간보다 많을때 노랩을 하면 아이템박스를 크기를 줄이며 구겨 집어넣어 쭉 나열</li>
+                                <li>flex-wrap: wrap; -랩을 하면 아이템박스의 크기를 고정시킨채로 줄바꿈시켜 정돈</li>
+                                <li>flex-wrap: wrap-reverse; -랩리버스를 하면 순서가 바뀐다. (모바일페이지에서 중요한 컨텐츠를 앞으로 배치하고 싶을 때 쓴다.)
+                                </li>
+                                <br>
+                                <li>flex-flow: column wrap; &rarr; 디렉션과 랩을 한꺼번에 쓸 수 있는 축약어</li>
+                            </ul>
+                        </li>
+                        <li><b>&lt;<mark>justify</mark>-content : <mark>주축</mark> 정렬&gt;</b>
+                            <ul>
+                                <li>justify-content: flex-start; -기본값/ 주축의 시작점(가로방향이 주축이고, 세로방향이 교차축(반대로 아래로 떨어지는 경우엔
+                                    세로방향이
+                                    주축이고,
+                                    가로방향이 교차축이 된다.))</li>
+                                <li>justify-content: flex-end; -오른쪽으로 이동함/ 주축의 끝점에 위치함</li>
+                                <li>justify-content: center; -주축 중앙</li>
+                                <li>justify-content: space-between; -양쪽 정렬/ 가로축 주축으로 부모의 공간 전체 맞춤으로 간격맞춤(첫번째 위치한 아이 기준으로
+                                    끝점까지
+                                    균등하게
+                                    늘어남./⇒시작점과 끝점 배치 후 중간 박스는 균등배치)</li>
+                                <li>justify-content: space-around; -모두 균등배치/ 1번의 좌우여백, 2번의 좌우여백이 병합없이 균등하게 배치된다.</li>
+                                <li>justify-content: space-evenly; -1번의 좌우여백과 2번의 좌우여백이 병합되면서 균등하게 배치된다. &rArr; 전부
+                                    균등배치이나 겹치는 부분
+                                    병합
+                                </li>
+                            </ul>
+                        </li>
+                        <li><b>&lt;<mark>align</mark>-items : <mark>교차축</mark> 정렬&gt;</b>
+                            <ul>
+                                <li>align-items: flex-start; -교차축 시작점 배치/ y축 위에 붙어있다.</li>
+                                <li>align-items: flex-end; -교차축 끝점 배치/ y축 맨 밑에 붙어있다.</li>
+                                <li>align-items: center; -교차축 중앙정렬/ <mark>수직중앙정렬</mark></li>
+                                <li>align-items: baseline; -문자 기준선에 맞춰 배치/ line-heigth행간이 위로가고 그것에 맞춰 정렬되어 있다.</li>
+                                <li>align-items: stretch; -교차축에 꽉 차게 늘임(기본 속성으로 늘어나 있는 것-height값-)</li>
+                            </ul>
+                        </li>
+                        <li><b>&lt;align-self : <mark>한 줄 일 때</mark> 쓰는 아이/ 교차축&gt;</b>
+                            <ul>
+                                <li>align-self: flex-start; -교차축의 시작지점으로 정렬/ y축 위에 붙어있다.</li>
+                                <li>align-self: stretch; -쭉 늘어나는 아이(기본 속성으로 늘어나 있는 것-height값-)</li>
+                                <li><b>align-items와 차이</b> : 선언을 누구에게 하느냐./ 얼라인셀프는 <mark>자식<mark>-아이템박스에-한테 직접,
+                                            <mark>아이템스는 부모</mark>에게 선언</li>
+                            </ul>
+                        </li>
+                        <li><b>&lt;align-content: <mark>여러 줄 일 때</mark> 쓰는 아이/ 교차축&gt;</b>
+                            <ul>
+                                <li>align-content: flex-start; -시작지점 일치</li>
+                                <li>align-content:flex-end; -끝점 일치</li>
+                                <li>align-content: space-between; -시작, 끝점 배치 후 중간은 균등배치</li>
+                                <li>align-content: space-around; -몽땅 균등배치</li>
+                                <li>align-content: stretch; -늘리기</li>
+                                <br>
+                                <li>justify-content: center;/ align-content: center; -주축과 교차축 모두 센터</li>
+                            </ul>
+                        </li>
+                        <li><b>&lt;축약속성&gt;</b>
+                            <ul>
+                                <li>.box{width: 60px; height: 60px; margin: 5px;}일때</li>
+                                <li>#box1{flex: 1;} -속성으로, <mark>자식</mark>한테 지정&rarr;flex-grow:늘릴때 비율(확대)/
+                                    flex-shrink:줄일때
+                                    비율(축소)/
+                                    flex-basis: 기본값(기본크기) </li>
+                                <li>#box2{flex: 50px;} -단위를 쓰면 베이시스의 값으로, 단위를 안 쓰면 나머지 둘 값으로 들어간다./ 쉬링크가 적용되어 있는 애들은 부모가
+                                    줄면 같이
+                                    준다.
+                                </li>
+                                <li>#box3{flex: 2 2;} -각각 두배씩</li>
+                                <li>#box4{flex:1 40px;}</li>
+                                <li>#box5{flex:2 2 0;}</li>
+                            </ul>
+                        </li>
+                    </ul>
                 </li>
-                <li>position: / left: calc(100% / 2); / width: 50px; height: 50px;
-                    <br>&rarr;left: 50%;을 이렇게 쓸 수도 있다. &starf;답을 쓰면 답을 계속 바꿔줘야 하지만, <b>식을 쓰면 다시 고칠 일은 없다.</b> 알아서 계산해주기
-                    때문에/ <mark>중요점은 공간을 꼭 주어야 한다</mark>는 것!
-                    <br>(&rArr; +, -, *, /)
-                    <br>left: calc(100% / 2);/ top: 50% (1)방법 : <mark>margin-left: -25px;/ margin-top: -25px;</mark> 하면
-                    중앙정렬
-                    <br>&rarr;(2)방법 : <mark>transform: translate(calc(-50px / 2), calc(-50px / 2));</mark> 계산기 기능으로 나눠
-                    중앙정렬을 할 수 있다.(x축 y축 &rArr; transform: translateX(calc(-50px / 2)), translateY(calc(-50px / 2))와 같다.)
+                <!-- 27 -->
+                <hr>
+                <li><mark><b>상대단위</b></mark>
+                    <ol>
+                        <li><b>em/ rem</b> : 대문자 M의 너비를 기준으로 한 단위 (1em/1rem = 약16px)
+                            <ul>
+                                <li>em
+                                    <br> - 부모 : font-size: 6em; (16px x 6em = 96px)
+                                    <br> - 자식 : font-size: 2em; (<mark>em 감싸고 있는 부모 기준</mark>. 따라서 96px x 2em = 192px이
+                                    된다. 그래서 더 커진다.)
+                                </li>
+                                <li>rem
+                                    <br> - 부모 : font-size: 6rem; (16px x 6rem = 96px)
+                                    <br> - 자식 : rem은 <mark>root기준(최상위 요소:html)</mark>이다. 따라서 16px x 2rem = 32px
+                                </li>
+                            </ul>
+                        </li>
+                        <li><b>vw/ vh</b> : 웹브라우저 <b>높이 기준 - vh</b> (viewport-height)/ 웹브라우저 <b>너비기준 -
+                                vw<b>(viewport-width)
+                                    <ul>
+                                        <li>vw
+                                            <br> - font-size: 5vw; &rarr; (5vw x w1280일때)/100 =64px
+                                        </li>
+                                        <li>vh
+                                            <br> - font-size: 5vh; &rarr; (5vh x h900일때)/100 =45px
+                                        </li>
+                                        <li>가변폰트(가변 박스)구하는 공식
+                                            <br>&rarr;<mark>(폰트크기 x 화면 높이)/100 (뷰 포트의 크기)</mark>
+                                            <br>&rarr;(자식{컨텐츠}크기/부모{기준 화면 높이or너비 크기}크기)
+                                        </li>
+                                    </ul>
+                        </li>
+                        <li><b>per</b> : <mark>부모기준/ 부모의 percent 단위</mark>
+                            <br>&rarr; per:50% (부모요소 기준 = 따라서 부모가 80%의 경우 그 절반인 40%로 되어 보여준다.)
+                        </li>
+                    </ol>
                 </li>
-                <li><b>&starf;'id'로 가게끔 붙여둔 것과 다른 점&starf;</b>
-                    <br> : <mark>id쪽은 글자</mark>를 수직정렬 시켜주는 것이고, <mark>이번 것은 화면의 박스</mark>를 수직중앙시켜주는 방법이다.
+                <!-- 28 -->
+                <hr>
+                <li><b><a href="/c07/05.html">border-tip</a></b> : 보더로 세모 만들기
+                    <ul>
+                        <li>보더는 사실 사선으로 잘려져 겹치는 곳 없이 주고 있다.</li>
+                    </ul>
                 </li>
+                <!-- 29 -->
+                <hr>
+                <li><a href="/c07/06.html">미디어쿼리</a>: 화면 크기에 따른 각각의 속성 값을 지정하여, 여러가지 화면을 구성하는 기술</li>
+                <!-- 30 -->
+                <hr>
+                <li>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </li>
+                <!-- 31 -->
+                <li>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </li>
+                <!-- 32 -->
+                <li>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </li>
+                <!-- 33 -->
+                <li>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </li>
+                <!-- 34 -->
+                <li>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </li>
+                <!-- 35 -->
+                <li>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </li>
+                <!-- 36 -->
+                <li>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </li>
+                <!-- 37 -->
+                <li>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </li>
+                <!-- 38 -->
             </ol>
         </li>
-        <hr>
-        <li><strong><mark>&lt;레이아웃을 만들 때 중요한 포인트&gt;</mark></strong>
-            <br>&starf;<b>기본 커다란 구조 틀 잡기</b>&starf;
-            <br>&rarr;무조건 처음!
-            <br>&rarr;부모들 상자를 넣고 그 안에 자식들을 넣어야 하는 것임. 부모는 무조건 필수! 마감태그에 주석도 필수!
-            <br>
-            <br>&lt;body&gt;
-            <br>&nbsp;&nbsp;&lt;div class="<b>wrap</b>"&gt;
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;header&gt;header&lt;/header&gt;
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;main&gt;
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nav&gt;sideBar&lt;/nav&gt;
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;section&gt;content&lt;/section&gt;
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;aside&gt;sideBar_ad&lt;/aside&gt;
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/main&gt;
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;footer&gt;footer&lt;/footer&gt;
-            <br>&nbsp;&nbsp;&lt;/div&gt;
-            <br>&lt;/body&gt;
-            <br>
-            <br>&rarr;코딩할때 클래스나 아이디의 이름만 참조할 것임. 코드는 각자 알아서 하는 것
-        </li>
-        <li style><img src="/c06/float_position_1.png"></li>
-        <li><img src="/c06/float_position_2-1.png"></li>
-        <li><img src="/c06/float_position_2-2.png" width="800px"></li>
-    </ul>
-    <!-- 26 -->
-    <hr>
-    <li style="font-size: 20px;"><strong><mark>flex</mark></strong>
-        <ul>
-            <li><img src="/c06/Untitled.png" width="800px"></li>
-            <li>&starf;꼭 <mark>부모한테 선언</mark>! 그러면 자식들이 배치.</li>
-            <li>부모는 컨테이너, 자식은 아이템박스라 부른다.</li>
-            <li>dispaly는 상속이 되지 않는데, flex는 바로 밑 하위에만 적용이 된다.</li>
-            <li>(*tip : 반응형을 할 때는 페이지 창을 넓게 보고 작업한다.)</li>
-            <li>플렉스 안에서는 자동적으로 글자 크기가 줄어든다. 원래는 넘쳐 흐르는게 정상.</li>
-            <li><b>&lt;flex-direction : 방향설정&gt;</b>
-                <ul>
-                    <li>flex-direction: row; -기본값 가로(좌->우)</li>
-                    <li>flex-direction: row-reverse; -우-> 좌/ 순서도 바뛴다. 자신의 공간은 남겨 둔 채 맨 뒤로 간다.</li>
-                    <li>flex-direction: column; -상-> 하</li>
-                    <li>flex-direction: column-reverse; -하-> 상</li>
-                </ul>
-            </li>
-            <li><b>&lt;flex-wrap : 컨테이너 안에서 줄바꿈 혹은 정돈&gt;</b>
-                <ul>
-                    <li>flex-wrap: nowrap; - 박스가 컨테이너의 공간보다 많을때 노랩을 하면 아이템박스를 크기를 줄이며 구겨 집어넣어 쭉 나열</li>
-                    <li>flex-wrap: wrap; -랩을 하면 아이템박스의 크기를 고정시킨채로 줄바꿈시켜 정돈</li>
-                    <li>flex-wrap: wrap-reverse; -랩리버스를 하면 순서가 바뀐다. (모바일페이지에서 중요한 컨텐츠를 앞으로 배치하고 싶을 때 쓴다.)</li>
-                    <br>
-                    <li>flex-flow: column wrap; &rarr; 디렉션과 랩을 한꺼번에 쓸 수 있는 축약어</li>
-                </ul>
-            </li>
-            <li><b>&lt;<mark>justify</mark>-content : <mark>주축</mark> 정렬&gt;</b>
-                <ul>
-                    <li>justify-content: flex-start; -기본값/ 주축의 시작점(가로방향이 주축이고, 세로방향이 교차축(반대로 아래로 떨어지는 경우엔 세로방향이 주축이고,
-                        가로방향이 교차축이 된다.))</li>
-                    <li>justify-content: flex-end; -오른쪽으로 이동함/ 주축의 끝점에 위치함</li>
-                    <li>justify-content: center; -주축 중앙</li>
-                    <li>justify-content: space-between; -양쪽 정렬/ 가로축 주축으로 부모의 공간 전체 맞춤으로 간격맞춤(첫번째 위치한 아이 기준으로 끝점까지 균등하게
-                        늘어남./⇒시작점과 끝점 배치 후 중간 박스는 균등배치)</li>
-                    <li>justify-content: space-around; -모두 균등배치/ 1번의 좌우여백, 2번의 좌우여백이 병합없이 균등하게 배치된다.</li>
-                    <li>justify-content: space-evenly; -1번의 좌우여백과 2번의 좌우여백이 병합되면서 균등하게 배치된다. &rArr;전부 균등배치이나 겹치는 부분 병합
-                    </li>
-                </ul>
-            </li>
-            <li><b>&lt;<mark>align</mark>-items : <mark>교차축</mark> 정렬&gt;</b>
-                <ul>
-                    <li>align-items: flex-start; -교차축 시작점 배치/ y축 위에 붙어있다.</li>
-                    <li>align-items: flex-end; -교차축 끝점 배치/ y축 맨 밑에 붙어있다.</li>
-                    <li>align-items: center; -교차축 중앙정렬/ <mark>수직중앙정렬</mark></li>
-                    <li>align-items: baseline; -문자 기준선에 맞춰 배치/ line-heigth행간이 위로가고 그것에 맞춰 정렬되어 있다.</li>
-                    <li>align-items: stretch; -교차축에 꽉 차게 늘임(기본 속성으로 늘어나 있는 것-height값-)</li>
-                </ul>
-            </li>
-            <li><b>&lt;align-self : <mark>한 줄 일 때</mark> 쓰는 아이/ 교차축&gt;</b>
-                <ul>
-                    <li>align-self: flex-start; -교차축의 시작지점으로 정렬/ y축 위에 붙어있다.</li>
-                    <li>align-self: stretch; -쭉 늘어나는 아이(기본 속성으로 늘어나 있는 것-height값-)</li>
-                    <li><b>align-items와 차이</b> : 선언을 누구에게 하느냐./ 얼라인셀프는 <mark>자식</mark>-아이템박스에-한테 직접, <mark>아이템스는
-                            부모</mark>에게 선언</li>
-                </ul>
-            </li>
-            <li><b>&lt;align-content: <mark>여러 줄 일 때</mark> 쓰는 아이/ 교차축&gt;</b>
-                <ul>
-                    <li>align-content: flex-start; -시작지점 일치</li>
-                    <li>align-content:flex-end; -끝점 일치</li>
-                    <li>align-content: space-between; -시작, 끝점 배치 후 중간은 균등배치</li>
-                    <li>align-content: space-around; -몽땅 균등배치</li>
-                    <li>align-content: stretch; -늘리기</li>
-                    <br>
-                    <li>justify-content: center;/ align-content: center; -주축과 교차축 모두 센터</li>
-                </ul>
-            </li>
-            <li><b>&lt;축약속성&gt;</b>
-                <ul>
-                    <li>.box{width: 60px; height: 60px; margin: 5px;}일때</li>
-                    <li>#box1{flex: 1;} -속성으로, <mark>자식</mark>한테 지정&rarr;flex-grow:늘릴때 비율(확대)/ flex-shrink:줄일때 비율(축소)/ flex-basis: 기본값(기본크기) </li>
-                    <li>#box2{flex: 50px;} -단위를 쓰면 베이시스의 값으로, 단위를 안 쓰면 나머지 둘 값으로 들어간다./ 쉬링크가 적용되어 있는 애들은 부모가 줄면 같이 준다.</li>
-                    <li>#box3{flex: 2 2;} -각각 두배씩</li>
-                    <li>#box4{flex:1 40px;}</li>
-                    <li>#box5{flex:2 2 0;}</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-    <!-- 27 -->
-    <hr>
-    <li><mark><b>상대단위</b></mark>
-        <ol>
-            <li><b>em/ rem</b> : 대문자 M의 너비를 기준으로 한 단위 (1em/1rem = 약16px)
-                <ul>
-                    <li>em
-                        <br> - 부모 : font-size: 6em; (16px x 6em = 96px)
-                        <br> - 자식 : font-size: 2em; (<mark>em 감싸고 있는 부모 기준</mark>. 따라서 96px x 2em = 192px이 된다. 그래서 더 커진다.)
-                    </li>
-                    <li>rem
-                        <br> - 부모 : font-size: 6rem; (16px x 6rem = 96px)
-                        <br> - 자식 : rem은 <mark>root기준(최상위 요소:html)</mark>이다. 따라서 16px x 2rem = 32px
-                    </li>
-                </ul>
-            </li>
-            <li><b>vw/ vh</b> : 웹브라우저 <b>높이 기준 - vh</b> (viewport-height)/ 웹브라우저 <b>너비기준 - vw</b> (viewport-width)
-                <ul>
-                    <li>vw
-                        <br> - font-size: 5vw; &rarr; (5vw x w1280일때)/100 =64px
-                    </li>
-                    <li>vh
-                        <br> - font-size: 5vh; &rarr; (5vh x h900일때)/100 =45px
-                    </li>
-                    <li>가변폰트(가변 박스)구하는 공식
-                        <br>&rarr;<mark>(폰트크기 x 화면 높이)/100 (뷰 포트의 크기)</mark>
-                        <br>&rarr;(자식{컨텐츠}크기/부모{기준 화면 높이or너비 크기}크기)
-                    </li>
-                </ul>
-            </li>
-            <li><b>per</b> : <mark>부모기준/ 부모의 percent 단위</mark>
-                <br>&rarr; per:50% (부모요소 기준 = 따라서 부모가 80%의 경우 그 절반인 40%로 되어 보여준다.)
-            </li>
-        </ol>
-    </li>
-    <!-- 28 -->
-    <hr>
-    <li><b>border-tip</b> : 보더로 세모 만들기
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </li>
-    <!-- 29 -->
-    <li>
-        <ul>
-            <li></li>
-        </ul>
-    </li>
-    <!-- 30 -->
-    <li>
-        <ul>
-            <li></li>
-        </ul>
-    </li>
-    <!-- 31 -->
-    </ol>
-    </li>
     </ul>
 </body>
 
