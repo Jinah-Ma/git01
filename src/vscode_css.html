@@ -957,14 +957,46 @@
     </li>
     <!-- 27 -->
     <hr>
-    <li>
-        <ul>
-            <li></li>
-        </ul>
+    <li><mark><b>상대단위</b></mark>
+        <ol>
+            <li><b>em/ rem</b> : 대문자 M의 너비를 기준으로 한 단위 (1em/1rem = 약16px)
+                <ul>
+                    <li>em
+                        <br> - 부모 : font-size: 6em; (16px x 6em = 96px)
+                        <br> - 자식 : font-size: 2em; (<mark>em 감싸고 있는 부모 기준</mark>. 따라서 96px x 2em = 192px이 된다. 그래서 더 커진다.)
+                    </li>
+                    <li>rem
+                        <br> - 부모 : font-size: 6rem; (16px x 6rem = 96px)
+                        <br> - 자식 : rem은 <mark>root기준(최상위 요소:html)</mark>이다. 따라서 16px x 2rem = 32px
+                    </li>
+                </ul>
+            </li>
+            <li><b>vw/ vh</b> : 웹브라우저 <b>높이 기준 - vh</b> (viewport-height)/ 웹브라우저 <b>너비기준 - vw</b> (viewport-width)
+                <ul>
+                    <li>vw
+                        <br> - font-size: 5vw; &rarr; (5vw x w1280일때)/100 =64px
+                    </li>
+                    <li>vh
+                        <br> - font-size: 5vh; &rarr; (5vh x h900일때)/100 =45px
+                    </li>
+                    <li>가변폰트(가변 박스)구하는 공식
+                        <br>&rarr;<mark>(폰트크기 x 화면 높이)/100 (뷰 포트의 크기)</mark>
+                        <br>&rarr;(자식{컨텐츠}크기/부모{기준 화면 높이or너비 크기}크기)
+                    </li>
+                </ul>
+            </li>
+            <li><b>per</b> : <mark>부모기준/ 부모의 percent 단위</mark>
+                <br>&rarr; per:50% (부모요소 기준 = 따라서 부모가 80%의 경우 그 절반인 40%로 되어 보여준다.)
+            </li>
+        </ol>
     </li>
     <!-- 28 -->
-    <li>
+    <hr>
+    <li><b>border-tip</b> : 보더로 세모 만들기
         <ul>
+            <li></li>
+            <li></li>
+            <li></li>
             <li></li>
         </ul>
     </li>
