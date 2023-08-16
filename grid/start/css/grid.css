@@ -1,0 +1,16 @@
+#wrapper1{
+    display: grid;
+    /* repeat(반복횟수,반복값 : 인자, 인수라고 부른다.) : 몇번 얼마큼 반복할 것인지. */
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    margin-bottom: 20px;
+}
+/* 화면을 꽉 채운다. 200px무시 */
+#wrapper2{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+}
+/* 지정되어있는 최소너비만 채우고 더이상 안 채움 */
+/* 남는 공간을 어떻게 채울지
+auto-fit : 무조건 꽉 채움
+auto-fill : 칼럼의 최소 너비만큼 채움. 그 후 비움
+*/

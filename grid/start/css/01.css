@@ -1,0 +1,22 @@
+#wrapper {
+    display: grid;
+    /* 컨테이너 내의 요소를 블록레벨로 배치 */
+    display: inline-grid;
+    /* 아이템박스들을 인라인으로 배치한다는 것. 잘 쓰진 않는다./ 컨테이너 내의 요소를 인라인레벨로 배치 */
+    grid-template-columns: 200px 200px 200px;
+    /* 컬럼을 하나의 값당 한 개씩 만들 수 있다./ 고정폭 200ppx 컬럼 3개 */
+    grid-template-rows: 100px 100px;
+    /* 고정높이 100px 행2개 */
+    /* 복수형! */
+}
+
+/* fraction단위 : 분수 : 전체에서 얼마큼을 차지하겠다는 비율로 지정 */
+#wrapper {
+    grid-template-columns: 1fr 2fr 1fr;
+    /* 가변적/ 1:2:1 비율 */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    /* repeat: 함수/ 1fr을 3번 반복한다는 축약 */
+    grid-template-rows: repeat(2, 200px);
+    /* 200px로 2행 반복 */
+}
