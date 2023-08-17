@@ -1,0 +1,21 @@
+.wrap { width: 100%; display: flex; flex-wrap: wrap; } 
+
+header { width: 100%; max-width: 200px; height: 850px; background-color: var(--text1); } 
+
+header .logo { margin-top: 4rem; width: 200px; height: 40px; background-color: var(--background); } 
+
+header .nav {margin-top: 2rem; width: 200px; height: 300px; background-color: var(--background);} 
+
+header .spoatspot {margin-top: 2rem; width: 200px; height: 40px; background-color: var(--background); } 
+
+main { width: 100%; max-width: calc(100% - 200px); background-color: var(--text2); } 
+
+main .slide { width: 100%; height: 400px; background-color: var(--primary); } 
+
+main .banner { width: 100%; height: 200px; background-color: var(--secondary); } 
+
+main .board { width: 100%; height: 250px; background-color: var(--text2); } 
+
+footer { width: 100%; height: 120px; background-color: var(--primary); } 
+
+/* //구조 */

@@ -1,0 +1,15 @@
+.warp { width: 1000px; height: 1100px; display: flex; flex-wrap: wrap; } 
+
+header { width: 1000px; height: 100px; background-color: aqua; } 
+
+main nav { width: 1000px; height: 100px; background-color: rgb(25, 0, 255); } 
+
+main .ct { width: 1000px; height: 800px; background-color: rgb(0, 255, 55); overflow: hidden; display: flex; } 
+
+.ct .side1 { width: 200px; height: 800px; background-color: blueviolet; float: left; } 
+
+.ct .contents { width: 600px; height: 800px; background-color: rgb(43, 116, 226); } 
+
+.ct .side2 { width: 200px; height: 800px; background-color: rgb(43, 205, 226); } 
+
+footer { width: 1000px; height: 100px; background-color: rgb(255, 0, 85); } 
