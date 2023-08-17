@@ -1,0 +1,14 @@
+body{background-color: bisque; text-align: center; color: white;}
+.wrap{width: 100%; max-width: 1000px; margin: auto;}
+header{width: 100%; max-width: 1000px; height: 100px; background-color: brown;}
+.nav{width: 100%; max-width: 1000px; height: 100px; background-color: rgb(206, 93, 93);}
+
+main{display: flex; flex-wrap: wrap;}
+
+.side{width: 300px; height: 700px; background-color: coral;}
+
+.ct{width: 700px;}
+.content1{width: 700px; height: 350px; background-color: rgb(243, 255, 80);}
+.content2{width: 700px; height: 350px; background-color: rgb(208, 255, 80);}
+
+footer{width: 100%; max-width: 1000px; height: 100px; background-color: brown;}

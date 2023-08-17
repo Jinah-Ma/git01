@@ -1,0 +1,14 @@
+.wrap{width: 100%; text-align: center; color: rgb(0, 0, 0);}
+.h_top{height: 50px; background-color: rgb(167, 234, 255);}
+.h_nav{height: 50px; background-color: rgb(125, 225, 255);}
+
+.banner{height: 300px; background-image: url(../img/24764839536073D93A.jpeg);}
+
+.container{max-width: 1000px; width: 100%; margin: auto; background: rgba(255, 255, 255, 0.5); height: inherit;}
+
+.content1{height: 100px; background-color: rgb(192, 255, 236);}
+.content2{height: 500px; background-color: rgb(106, 255, 210);}
+.content3{height: 300px; background-color: rgb(25, 189, 140);}
+
+.f_nav{height: 50px; background-color: rgb(255, 138, 138);}
+.f_info{height: 150px; background-color: rgb(158, 57, 57);}
