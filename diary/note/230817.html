@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid 연습</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #wrap {
+            margin: auto;
+            width: 1280px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 300px);
+            grid-template-areas: 
+            "box1 box1 box2"
+            "box3 box4 box5"
+            "box3 box6 box7"
+            ;
+        }
+
+        img{grid-template-columns: ;}
+
+        .box1 {
+            background-color: blue;
+            grid-area: box1;
+        }
+
+        .box2 {
+            background-color: rgb(119, 119, 255);
+            grid-area: box2;
+        }
+
+        .box3 {
+            background-color: rgb(255, 0, 200);
+            grid-area: box3;
+        }
+
+        .box4 {
+            background-color: rgb(255, 159, 188);
+            grid-area: box4;
+        }
+
+        .box5 {
+            background-color: rgb(255, 116, 116);
+            grid-area: box5;
+        }
+
+        .box6 {
+            background-color: rgb(0, 255, 76);
+            grid-area: box6;
+        }
+
+        .box7 {
+            background-color: rgb(251, 255, 0);
+            grid-area: box7;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="box box1">box1</div>
+        <div class="box box2">box2</div>
+        <div class="box box3">box3</div>
+        <div class="box box4">box4</div>
+        <div class="box box5">box5</div>
+        <div class="box box6">box6</div>
+        <div class="box box7">box7</div>
+    </div>
+</body>
+
+</html>
