@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex_01</title>
+
+<style>
+.wrap{width: 1000px; height: auto; background-color: antiquewhite; margin: 10px;}
+p{padding-bottom: 10px; background-color: rgb(255,255,255);}
+.container {display: flex;}
+.container1 {flex-wrap:nowrap;}
+.container2 {flex-wrap: wrap;}
+.container3 {flex-wrap: wrap-reverse;}
+.container4 {flex-wrap: column wrap;}
+.box{width: auto; height: 50px; background-color: black; color: aliceblue; margin: 5px;}
+
+</style>
+</head>
+<body>
+    <div class="wrap">
+        <p>flex : 기본이 많아지면 부모박스 안에 폭이 좁게 집어넣어진다.</p>
+        <div class="container container1">
+            <div class="box box1">flex-wrap: nowrap</div>
+            <div class="box box2">줄바꿈이 없이 한 줄에 전부 배치된다.</div>
+            <div class="box box3">display: flex는 부모 요소를 flex 컨테이너로 설정하는 속성</div>
+            <div class="box box3">flex-wrap: nowrap는 flex 컨테이너 내부의 아이템들이 한 줄에 나란히 배치되도록 설정하는 속성</div>
+            <div class="box box3">3</div>
+            <div class="box box3">3</div>
+            <div class="box box3">3</div>
+            <div class="box box3">3</div>
+            <div class="box box3">3</div>
+            <div class="box box3">3</div>
+            <div class="box box3">3</div>
+
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="container container2">
+            <div class="box box1" style="width: 300px;">flex-wrap: wrap</div>
+            <div class="box box2" style="width: 300px;">item box 크기가 고정된 채 줄바꿈 시켜 정돈시킨다.</div>
+            <div class="box box3" style="width: 300px;">(일부러 div에 style을 줘 너비를 주었다.)</div>
+            <div class="box box3" style="width: 300px;">4</div>
+            <div class="box box3" style="width: 300px;">5</div>
+            <div class="box box3" style="width: 300px;">6</div>
+            <div class="box box3" style="width: 300px;">7</div>
+            <div class="box box3" style="width: 300px;">8</div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="container container3">
+            <div class="box box1">1_Lorem ipsum dolor sit amet</div>
+            <div class="box box2">2_Lorem ipsum dolor sit amet</div>
+            <div class="box box3">3_Lorem ipsum dolor sit amet</div>
+            <div class="box box3">4_Lorem ipsum dolor sit amet</div>
+            <div class="box box3">5_Lorem ipsum dolor sit amet</div>
+            <div class="box box3">6_Lorem ipsum dolor sit amet</div>
+            <div class="box box3">7_Lorem ipsum dolor sit amet</div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="container container4">
+            <div class="box box1">Lorem/div>
+            <div class="box box2">Lorem/div>
+            <div class="box box3">Lorem</div>
+            <div class="box box3">Lorem</div>
+            <div class="box box3">Lorem</div>
+            <div class="box box3">Lorem</div>
+            <div class="box box3">Lorem</div>
+        </div>
+    </div>
+</body>
+</html>

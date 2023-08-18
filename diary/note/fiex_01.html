@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex_01</title>
+
+<style>
+.wrap{width: 1000px; height: auto; background-color: antiquewhite; margin: 10px;}
+p{padding-bottom: 10px; background-color: rgb(255,255,255);}
+.container { display: flex;}
+.container1 {flex-direction:row;}
+.container2 {flex-direction:row-reverse;}
+.container3 {flex-direction:column;}
+.container4 {flex-direction:column-reverse;}
+.box{width: 200px; height: 50px; background-color: black; color: aliceblue; margin: 5px;}
+
+</style>
+</head>
+<body>
+    <div class="wrap">
+        <p>flex : 블럭을 인라인처럼 정렬시킨다.</p>
+        <div class="container container1">
+            <div class="box box1">flex_row</div>
+            <div class="box box2">숫자가 많아지면 부모상자 안에서 폭이 좁아진다.</div>
+            <div class="box box3">기본이 좌측정렬</div>
+            <div class="box box3">3</div>
+
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="container container2">
+            <div class="box box1">flex_row-reverse(역방향)</div>
+            <div class="box box2">자신의 자리를 남기는 게 아니라,</div>
+            <div class="box box3"> 거꾸로 순으로 우측으로 정렬되는 것이다.</div>
+            <div class="box box3">그래서 자신의 자리가 남겨진 듯 이동한 것처럼 보인다.</div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="container container3">
+            <div class="box box1">flex_column</div>
+            <div class="box box2">기본 좌측정렬에</div>
+            <div class="box box3">블럭 그대로 내려가 있다.</div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="container container4">
+            <div class="box box1">flex_column-reverse(역방향)</div>
+            <div class="box box2">밑에서 위로 정렬된다.</div>
+            <div class="box box3">3</div>
+        </div>
+    </div>
+</body>
+</html>
