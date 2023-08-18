@@ -147,6 +147,8 @@ table {
     --text1: #333;
     --text2: #666;
     --background: #fff;
+    --pointcolor1: #7EBA00;
+    --pointcolor2: #F3BD1D;
 }
 
 /* 최상위 콘텐츠 선택자/ 이것만 바꾸고 아래 변수로 적용하면 언제든 쉽게 바꿀 수 있다. */
@@ -170,5 +172,15 @@ body {
 /* var : 변수 */
 
 a {
-    text-decoration: none;
+    text-decoration: none; color: var(--text1);
 }
+
+a:hover{text-decoration: underline; }
+
+h1,.h1{font-size: 3.1rem; font-weight: 700;}
+h2,.h2{font-size: 2.5rem; font-weight: 600;}
+h3,.h3{font-size: 2rem; font-weight: 500;}
+.body{font-size: 1.6rem; font-weight: 400;}
+.link{font-size: 1.6rem; font-weight: 500;}
+.caption{font-size: 0.3rem; font-weight: 400;}
+

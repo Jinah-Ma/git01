@@ -1,4 +1,4 @@
-.border{
+.border {
     width: 1px;
     height: 1px;
     border-top: 10px solid black;
@@ -10,7 +10,7 @@
     border-bottom: 10px solid red;
 }
 
-.border2{
+.border2 {
     margin-top: 10px;
     width: 10px;
     height: 10px;
@@ -18,54 +18,113 @@
     border-right: 10px solid white;
 }
 
-.border_tip{position: relative;
+.border_tip {
+    position: relative;
     left: 50%;
-width: 400px;
-background: #ffa1a1;
-margin-top: 50px;
-margin-left: -200px;
-display: inline-block;
+    width: 400px;
+    background: #ffa1a1;
+    margin-top: 50px;
+    margin-left: -200px;
+    display: inline-block;
 }
 
-.border_tip::before{
-content: '';
-position: absolute;
-border-top: 10px solid #ff0000;
-border-left: 10px solid transparent;
-border-right: 10px solid transparent;
-bottom: -10px;
-left: 50%;
-margin-left: -20px;
-}
-.border_tip::after{
-content: '';
-position: absolute;
-border-bottom: 10px solid #ff0000;
-border-left: 10px solid transparent;
-border-right: 10px solid transparent;
-top: -10px;
-left: 50%;
-margin-left: -20px;
-}
-
-.border::before{
+.border_tip::before {
     content: '';
     position: absolute;
-    border-left: 10px solid #0400ff;
-    border-bottom: 10px solid transparent;
-    border-top: 10px solid transparent;
+    border-top: 10px solid #ff0000;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    bottom: -10px;
     left: 50%;
-    margin-left: 200px;
-    margin-top: -75px;
+    margin-left: -20px;
 }
 
-.border::after{
+.border_tip::after {
     content: '';
     position: absolute;
-    border-right: 10px solid #0400ff;
+    border-bottom: 10px solid #ff0000;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    top: -10px;
+    left: 50%;
+    margin-left: -20px;
+}
+
+.left {
+    position: absolute;
+    border-right: 10px solid black;
     border-bottom: 10px solid transparent;
     border-top: 10px solid transparent;
-    left: 50%;
-    margin-left: -210px;
-    margin-top: -75px;
+    top: 50%;
+    margin-top: -10px;
+    left: -10px;
 }
+
+.right {
+    position: absolute;
+    border-left: 10px solid black;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    top: 50%;
+    margin-top: -10px;
+    right: -10px;
+}
+
+/* 말풍선 */
+.border3 {
+    background-color: #ebebeb;
+    width: 500px;
+    margin: auto;
+    padding: 80px;
+    position: relative;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.border::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-right: 40px solid #ebebeb;
+    border-left: 40px solid transparent;
+    border-radius: 50%;
+    right: 50%;
+    margin-right: -25px;
+    top: 375px
+}
+
+/* 하트 */
+.border4 {
+    background-color: black;
+    width: 50px;
+    height: 90px;
+    margin: auto;
+    transform: rotate(45deg);
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    position: relative;
+    top: 50px;
+}
+
+.border4::before {
+    content: '';
+    background-color: black;
+    width: 50px;
+    height: 90px;
+    position: absolute;
+    left: -25px;
+    top: 20px;
+    transform: rotate(-90deg);
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+}
+
+
+
+
+/* 
+내가 한 것
+.border::before { content: ''; position: absolute; border-left: 10px solid #0400ff; border-bottom: 10px solid transparent; border-top: 10px solid transparent; left: 50%; margin-left: 200px; margin-top: -75px; } 
+
+.border::after { content: ''; position: absolute; border-right: 10px solid #0400ff; border-bottom: 10px solid transparent; border-top: 10px solid transparent; left: 50%; margin-left: -210px; margin-top: -75px; } */
