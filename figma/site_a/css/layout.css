@@ -1,13 +1,37 @@
+@charset "utf-8";
+
 .wrap { width: 100%; display: flex; flex-wrap: wrap; } 
 
-header { width: 100%; max-width: 200px; height: 850px; background-color: var(--text1); } 
+/* header */
+header { width: 100%; max-width: 200px; height: 850px; } 
 
-header .logo { margin-top: 4rem; width: 200px; height: 40px; background-color: var(--background); } 
+header .logo { margin-top: 4rem; width: 200px; height: 40px; line-height: 4rem; text-align: center; } 
 
-header .nav {margin-top: 2rem; width: 200px; height: 300px; background-color: var(--background);} 
+header .logo a { color: var(--primary); } 
 
-header .spoatspot {margin-top: 2rem; width: 200px; height: 40px; background-color: var(--background); } 
+header .nav {margin-top: 1.8rem;} 
+header .nav ul.depth1 li{position: relative;}
+header .nav ul li a{display: block; padding: 1rem; padding-left: 4rem; color: var(--text1); transition: all 300ms;}
+header .nav ul li a:hover{background-color: var(--secondary); color: var(--background);}
 
+header .nav ul.depth2 li a:hover{background:none; color: var(--pointcolor1); text-decoration: none;}
+
+/* header .nav ul.depth2{position: absolute; top: 0; left: 200px; width: 600px; background-color: white;} */
+header .nav ul.depth2{position: absolute; top: 0; right: -600px; width: 600px;
+display: none;}/* 꽉찬 배경일때/ 배경색이 바뀌지 않는 사이트의 경우에 */
+
+header .nav ul.depth2 li{display: inline;}
+/* display: none;은 블럭에는 못 쓴다. 애니메이션을 넣어야 된다. 그래서 배경색을 안 준 것 */
+header .nav ul.depth2 li a{display: inline-block; width: 20%; padding-left: 1rem; width: 12.5rem; height: 3rem; padding: 0.63rem 2.5rem;}
+
+header::before{content:''; display: block; position: absolute; width: 0%; height: 30rem; background: #ffffff8a; left: 200px; top: 9rem; transition: all 0.3s;}
+
+header.on:before{width: 100%;}
+
+.spoatspot {margin-top: 6.3rem; padding: 1.1rem 2.5rem; display: flex; justify-content: space-around;}
+.spoatspot a{display: block; color: var(--primary);}
+
+/* main */
 main { width: 100%; max-width: calc(100% - 200px); background-color: var(--text2); } 
 
 main .slide { width: 100%; height: 400px; background-color: var(--primary); } 
@@ -17,5 +41,3 @@ main .banner { width: 100%; height: 200px; background-color: var(--secondary); }
 main .board { width: 100%; height: 250px; background-color: var(--text2); } 
 
 footer { width: 100%; height: 120px; background-color: var(--primary); } 
-
-/* //구조 */

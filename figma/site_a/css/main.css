@@ -1,0 +1,5 @@
+@charset "utf-8";
+
+/* header */
+header .logo {line-height: 4rem; text-align: center;}
+header .logo a{color: var(--primary);}
