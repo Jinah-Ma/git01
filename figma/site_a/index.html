@@ -62,20 +62,11 @@
         <footer></footer>
     </div>
     <!-- //.wrap -->
-    <script>
-        // 자바 쓰는 곳
-        const depth1=document.querySelector('.depth1');
-        depth1.addEventListener('mouseover',function(){
-        depth1.querySelectorAll('.depth2').forEach((o)=>{o.style.display='block'})
-        document.querySelector('header').classList.add('on');
-        });
-
-        depth1.addEventListener('mouseout',function(){
-        depth1.querySelectorAll('.depth2').forEach((o)=>{o.style.display='none'})
-        document.querySelector('header').classList.remove('on');
-        });
-        
-    </script>
+    <!-- <script src="js/vanilla.js"></script> -->
+    <!-- 자바스크립트를 쉽게 사용하기 위해서 만든 라이브러리가 제이쿼리. -->
+    <!-- jquery core -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="js/jquery.js"></script>
 </body>
 
 </html>
