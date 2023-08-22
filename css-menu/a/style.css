@@ -1,19 +1,33 @@
 * { margin: 0; padding: 0; box-sizing: border-box; list-style: none; }
 
-.df { display: flex; } 
-
-.dn { display: none; } 
+/* .df { display: flex;} */
+.df { display: flex;  flex-direction: column;}
+/* 이렇게 하면 세로 방향으로 탭이 된다. */
 
 .db { display: block; } 
 
-.inner { width: 100%; max-width: 1400px; margin: auto; }
+/* .inner { width: 100%; max-width: 1400px; margin: auto; } */
 
 /* gnb */
 /* nav{position: relative; width: 100%; max-width: 1400px; margin: auto;} */
 /* 코드가 지저분해지고 이너 값이랑 똑같은 걸 적어 넣어야 되므로 굳이 적용해야 될 이유가 없다. */
 .gnb{
-    justify-content: space-between; position: absolute; background-color: pink;
+    justify-content: space-between; position: absolute; background-color: rgb(208, 255, 0);/*  left: 0; right: 0;  */text-align: center;
+    /* 2- left: 0; right: 0; 오도가도 못하고 중앙으로 가게 된다. 그러면서 마진이 먹힌다. 반응형이 된다. */
 }
+/* 그래서 절대값을 주어야 아래가 적용이 된다. 1- 그러나 반응형이 되지 않는다. */
+
+.gnb li{flex: 1 1 25%;}
+/* 상대값이라 엡솔루트에는 적용이 되지 않는다. */
+.gnb li a{display: block; padding: 1rem; background-color: pink;}
+
+.gnb li .depth2{display: none;}
+.gnb li:hover .depth2{display: block;}
+/* 방법 첫번째. a에 주게 되면 메뉴가 금방금방 사라지는 에러가 난다. */
+.gnb li:hover .depth2 a{background-color: aquamarine;}
+
+.gnb li:hover .depth2 li:hover a{background-color: beige;}
+/* a에다 올리면 색깔이 하나씩 변하게 할 수 있다. */
 
 /* main */
 main{background: ivory; height: 100vh;}
