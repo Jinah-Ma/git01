@@ -1,0 +1,19 @@
+* { margin: 0; padding: 0; box-sizing: border-box; list-style: none; }
+
+.df { display: flex; } 
+
+.dn { display: none; } 
+
+.db { display: block; } 
+
+.inner { width: 100%; max-width: 1400px; margin: auto; }
+
+/* gnb */
+/* nav{position: relative; width: 100%; max-width: 1400px; margin: auto;} */
+/* 코드가 지저분해지고 이너 값이랑 똑같은 걸 적어 넣어야 되므로 굳이 적용해야 될 이유가 없다. */
+.gnb{
+    justify-content: space-between; position: absolute; background-color: pink;
+}
+
+/* main */
+main{background: ivory; height: 100vh;}

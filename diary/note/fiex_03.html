@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex_03_justify-content</title>
+
+<style>
+.wrap{ background-color: antiquewhite; }
+p{padding-bottom: 10px; background-color: rgb(255,255,255);}
+.container {display: flex; width: 1800px; height: auto; margin: 10px;}
+.container1 {justify-content:flex-start;}
+.container2 {justify-content:flex-end;}
+.container3 {justify-content: center;}
+.container4 {justify-content: space-between;}
+.container5 {justify-content: space-around;}
+.container6 {justify-content: space-evenly;}
+.box{width: 100px; height: 50px; background-color: black; color: aliceblue; margin: 5px;}
+
+</style>
+</head>
+<body>
+    <h2>justify-content는 정렬을 하는 개념이다.</h2>
+    <p>text-align: justify;는 텍스트의 양쪽 정렬을 맞춰주는 태그다. 그것과 유사한 기능으로 블럭의 정렬을 맞추는데 쓰인다.</p>
+    <p>*복습 : flex는 인라인처럼 블럭을 옆으로 정렬시켜주는 태그.</p>
+    <p><mark>*단, 주축에 맞춰 정렬되는 것으로, 지금은 기본 flex라 주축이 x방향이지만(y축이 교차축)/ 만일 flex-direction:column을 쓰면 아래로 정렬이 되기에 주축은 y축으로 바뀐다.(x축이 교차축)</mark></p>
+    <div class="wrap">
+        <p>
+        <br><b>justify-content:flex-start;</b></p>
+        <div class="container container1">
+            <div class="box box1" style="width: 300px;">박스크기 그대로 좌측정렬</div>
+            <div class="box box2">2</div>
+            <div class="box box3">3</div>
+            <div class="box box3">4</div>
+            <div class="box box3">5</div>
+            <div class="box box3">6</div>
+            <div class="box box3">7</div>
+            <div class="box box3">8</div>
+            <div class="box box3">9</div>
+            <div class="box box3">10</div>
+            <div class="box box3">11</div>
+
+        </div>
+    </div>
+    <div class="wrap">
+        <p>
+        <br><b>justify-content:flex-end</b></p>
+        <div class="container container2">
+            <div class="box box1" style="width: 300px;">박스와 순서(거꾸로x)그대로 우측정렬</div>
+            <div class="box box2">2</div>
+            <div class="box box3">3</div>
+            <div class="box box3">4</div>
+            <div class="box box3">5</div>
+            <div class="box box3">6</div>
+            <div class="box box3">7</div>
+            <div class="box box3">8</div>
+            <div class="box box3">9</div>
+            <div class="box box3">10</div>
+            <div class="box box3">11</div>
+
+        </div>
+    </div>
+    <div class="wrap">
+        <p>
+        <br><b>justify-content: center;</b></p>
+        <div class="container container3">
+            <div class="box box1" style="width: 300px;">박스크기 그대로 중앙정렬</div>
+            <div class="box box2">2</div>
+            <div class="box box3">3</div>
+            <div class="box box3">4</div>
+            <div class="box box3">5</div>
+            <div class="box box3">6</div>
+            <div class="box box3">7</div>
+            <div class="box box3">8</div>
+            <div class="box box3">9</div>
+            <div class="box box3">10</div>
+            <div class="box box3">11</div>
+
+        </div>
+    </div>
+    <div class="wrap">
+        <p><br><b>justify-content: space-between;</b></p>
+        <div class="container container4">
+            <div class="box box1" style="width: 300px;">박스크기는 같으나, 부모박스에 맞춰 양쪽정렬</div>
+            <div class="box box2">2</div>
+            <div class="box box3">3</div>
+            <div class="box box3">4</div>
+            <div class="box box3">5</div>
+            <div class="box box3">6</div>
+            <div class="box box3">7</div>
+            <div class="box box3">8</div>
+            <div class="box box3">9</div>
+            <div class="box box3">10</div>
+            <div class="box box3">11</div>
+
+        </div>
+    </div>
+    <div class="wrap">
+        <p><br><b>justify-content: space-around;</b></p>
+        <div class="container container5">
+            <div class="box box1" style="width: 300px;">좌우 여백을 절반씩 균등하게 맞춰 정렬(박스크기는 변하지 않는다.)</div>
+            <div class="box box2">2</div>
+            <div class="box box3">3</div>
+            <div class="box box3">4</div>
+            <div class="box box3">5</div>
+            <div class="box box3">6</div>
+            <div class="box box3">7</div>
+            <div class="box box3">8</div>
+            <div class="box box3">9</div>
+            <div class="box box3">10</div>
+            <div class="box box3">11</div>
+
+        </div>
+    </div>
+    <div class="wrap">
+        <p><br><b>justify-content: space-evenly;</b></p>
+        <div class="container container6">
+            <div class="box box1" style="width: 300px;">모든 여백이 균등하게 분배되어 정렬(박스크기는 변하지 않는다.)</div>
+            <div class="box box2">2</div>
+            <div class="box box3">3</div>
+            <div class="box box3">4</div>
+            <div class="box box3">5</div>
+            <div class="box box3">6</div>
+            <div class="box box3">7</div>
+            <div class="box box3">8</div>
+            <div class="box box3">9</div>
+            <div class="box box3">10</div>
+            <div class="box box3">11</div>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -4,7 +4,7 @@
     width: 100%;
 }
 /* 교차축 정렬 설정 */
-#opt1{align-items: flex-start;}
+#opt1{align-items: flex-end;}
 /* 교차축 시작점 배치 */
 #opt2{align-items: flex-end;}
 /* 교차축 끝점 배치 */

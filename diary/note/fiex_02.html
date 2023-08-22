@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>flex_01</title>
+    <title>flex_02</title>
 
 <style>
-.wrap{width: 1000px; height: auto; background-color: antiquewhite; margin: 10px;}
+.wrap{ background-color: antiquewhite; }
 p{padding-bottom: 10px; background-color: rgb(255,255,255);}
-.container {display: flex;}
+.container {display: flex; width: 1000px; height: auto; margin: 10px;}
 .container1 {flex-wrap:nowrap;}
-.container2 {flex-wrap: wrap;}
+.container2 {flex-wrap: wrap; align-items: center;}
 .container3 {flex-wrap: wrap-reverse;}
-.container4 {flex-wrap: column wrap;}
 .box{width: auto; height: 50px; background-color: black; color: aliceblue; margin: 5px;}
 
 </style>
@@ -24,7 +23,7 @@ p{padding-bottom: 10px; background-color: rgb(255,255,255);}
             <div class="box box1">flex-wrap: nowrap</div>
             <div class="box box2">줄바꿈이 없이 한 줄에 전부 배치된다.</div>
             <div class="box box3">display: flex는 부모 요소를 flex 컨테이너로 설정하는 속성</div>
-            <div class="box box3">flex-wrap: nowrap는 flex 컨테이너 내부의 아이템들이 한 줄에 나란히 배치되도록 설정하는 속성</div>
+            <div class="box box3">flex-wrap: nowrap는 flex 컨테이너 내부에 아이템들이 한 줄에 나란히 배치되도록 설정하는 속성</div>
             <div class="box box3">3</div>
             <div class="box box3">3</div>
             <div class="box box3">3</div>
@@ -49,24 +48,24 @@ p{padding-bottom: 10px; background-color: rgb(255,255,255);}
     </div>
     <div class="wrap">
         <div class="container container3">
-            <div class="box box1">1_Lorem ipsum dolor sit amet</div>
-            <div class="box box2">2_Lorem ipsum dolor sit amet</div>
-            <div class="box box3">3_Lorem ipsum dolor sit amet</div>
-            <div class="box box3">4_Lorem ipsum dolor sit amet</div>
-            <div class="box box3">5_Lorem ipsum dolor sit amet</div>
-            <div class="box box3">6_Lorem ipsum dolor sit amet</div>
-            <div class="box box3">7_Lorem ipsum dolor sit amet</div>
-        </div>
-    </div>
-    <div class="wrap">
-        <div class="container container4">
-            <div class="box box1">Lorem/div>
-            <div class="box box2">Lorem/div>
-            <div class="box box3">Lorem</div>
-            <div class="box box3">Lorem</div>
-            <div class="box box3">Lorem</div>
-            <div class="box box3">Lorem</div>
-            <div class="box box3">Lorem</div>
+            <div class="box box1">flex-wrap: wrap-reverse</div>
+            <div class="box box2">1번- wrap과 유사하지만</div>
+            <div class="box box3">2번- 좌측 아래쪽부터 번호가 시작되어</div>
+            <div class="box box3">3번- 맨 아래 번호가 위쪽으로 가게끔</div>
+            <div class="box box3">4번- 반대로 부모 안에서 정돈 정렬이 된다.</div>
+            <div class="box box3">5번- 단 열의 제일 작은 번호가 좌측에 온다.</div>
+            <div class="box box3">6번- Lorem ipsum dolor sit amet</div>
+            <div class="box box3">7번_Lorem ipsum dolor sit amet</div>
+            <div class="box box3">8번_Lorem ipsum dolor sit amet</div>
+            <div class="box box3">9번_Lorem ipsum dolor sit amet</div>
+            <div class="box box3">10번_Lorem ipsum dolor sit amet</div>
+            <div class="box box3">11번_Lorem ipsum dolor sit amet</div>
+            <div class="box box3">12번_Lorem ipsum dolor sit amet</div>
+            <div class="box box3">13번_Lorem ipsum dolor sit amet</div>
+            <div class="box box3">14번_Lorem ipsum dolor sit amet</div>
+            <div class="box box3">15번_Lorem ipsum dolor sit amet</div>
+            <div class="box box3">16번_Lorem ipsum dolor sit amet</div>
+            <div class="box box3">17번_Lorem ipsum dolor sit amet</div>
         </div>
     </div>
 </body>

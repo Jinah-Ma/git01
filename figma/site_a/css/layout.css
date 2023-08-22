@@ -11,7 +11,7 @@ header .logo a { color: var(--primary); }
 
 header .nav {margin-top: 1.8rem;} 
 header .nav ul.depth1 li{position: relative;}
-header .nav ul li a{display: block; padding: 1rem; padding-left: 4rem; color: var(--text1); transition: all 300ms;}
+header .nav ul.depth1>li>a{display: block; padding: 1rem; padding-left: 4rem; color: var(--text1); transition: all 300ms;}
 header .nav ul li a:hover{background-color: var(--secondary); color: var(--background);}
 
 header .nav ul.depth2 li a:hover{background:none; color: var(--pointcolor1); text-decoration: none;}
@@ -20,9 +20,11 @@ header .nav ul.depth2 li a:hover{background:none; color: var(--pointcolor1); tex
 header .nav ul.depth2{position: absolute; top: 0; right: -600px; width: 600px;
 display: none;}/* 꽉찬 배경일때/ 배경색이 바뀌지 않는 사이트의 경우에 */
 
-header .nav ul.depth2 li{display: inline;}
+header .nav ul.depth2 li{display: inline-block; width: 20%; height: 100%;}
 /* display: none;은 블럭에는 못 쓴다. 애니메이션을 넣어야 된다. 그래서 배경색을 안 준 것 */
-header .nav ul.depth2 li a{display: inline-block; width: 20%; padding-left: 1rem; width: 12.5rem; height: 3rem; padding: 0.63rem 2.5rem;}
+header .nav ul.depth2>li>a{display: block; padding: 1rem; padding-left: 4rem;}
+/* li가 인라인이고, a가 인라인블럭이기 때문에 a가 크기를 제대로 못 가져서 자꾸 조금만 벗어나면 메뉴가 사라지는 에러가 생기는 것이다.=>li를 인라인블럭으로 바꾼다. a는 블럭으로 바꾼다. 그뒤 a의 크기를 다 없애고 li에 크기를 준다.(a는 li{부모}값을 상속받는다.)*/
+
 
 header::before{content:''; display: block; position: absolute; width: 0%; height: 30rem; background: #ffffff8a; left: 200px; top: 9rem; transition: all 0.3s;}
 
