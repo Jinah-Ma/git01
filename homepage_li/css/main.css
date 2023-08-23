@@ -1,0 +1,15 @@
+body { width: 100%; text-align: center; margin: auto; background-color: lightgray; } 
+
+/* heder */
+header { width: 100%; margin: auto; background-color: antiquewhite; } 
+
+.main_banner { width: inherit; background-image: url(../img/20160721_200959.jpg); background-repeat: no-repeat; background-size: cover; padding: 30px; color: rgb(179, 74, 56); } 
+
+ul.depth1 { display: flex; justify-content: space-evenly; padding: 2rem; }
+
+
+/* main */
+main { width: 100%; max-width: 130rem; margin: auto; background-color: beige; } 
+
+/* footer */
+footer { width: 100%; max-width: 130rem; margin: auto; background-color: rgb(90, 90, 90); color: white; } 

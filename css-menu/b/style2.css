@@ -3,8 +3,6 @@
 .df { display: flex;}
 
 
-.db { display: block; } 
-
 .inner { width: 100%; max-width: 1400px; margin: auto; }
 
 /* .gnb{

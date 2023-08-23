@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        /* header, footer */
+        header,
+        footer {
+            height: 50px;
+            background: #bbb;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        /* 컨텐츠를 넣을 때는 빼야 한다. 단지 확인을 해보려고 하는 것이라서, 나중에는 값을 지워야 한다.*/
+
+        /* main, nav */
+        main,
+        nav {
+            height: calc(100%-100px);
+            margin: 0 auto;
+            background-color: bisque;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            
+        }
+
+        /* 높이 100%에서 헤더와 푸터에서 50px씩 뺀 것 */
+        nav {
+            width: 100vw;
+            background-color: blue;
+            color: #fff;
+            align-items:stretch;
+            padding: 10px;
+           
+        }
+    </style>
+</head>
+
+<body>
+    <header>header</header>
+    <nav>nav</nav>
+    <main>
+        <section>section</section>
+        <aside>aside</aside>
+    </main>
+    <footer>footer</footer>
+</body>
+
+</html>
