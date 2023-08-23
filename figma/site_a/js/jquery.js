@@ -16,6 +16,24 @@ depth1.hover(
 )
 // 한번에 두가지 일을 한다./ 1-마우스 올라갔을때, 2-마우스 내려갔을때
 
+// slide
+const slides=$('.slide_wrap li');
+// 변수/ =: 할당연산자, 좌항에 우항의 값을 할당하다.
+let n=0;
+// 변수/ n에 숫자 0을 할당했다.
+
+function slide() {
+    slides.removeClass('on');
+    slides.eq(n).addClass('on');
+n++; /* 변수+1 계속 더하기 1을 한다. */
+if(n>=slides.length){n=0} /* 제한을 걸어줘야 한다./ .length : 알아서 몇개인지 세준다. */
+}
+setInterval(() => {
+slide();
+}, 2000);
+
+slides.eq(n).addClass('on');
+
 // depth1.addEventListener('mouseover', function () {
 //     depth1.querySelectorAll('.depth2').forEach((o) => { o.style.display = 'block' })
 //     document.querySelector('header').classList.add('on');

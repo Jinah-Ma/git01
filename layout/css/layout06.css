@@ -2,6 +2,7 @@
 header{height: 100px; background-color: rgb(255, 167, 167);}
 
 .container{max-width: 1000px; width: 100%; margin: auto; background: rgba(0, 0, 0, 0.5); height: inherit;}
+/* max-width를 쓰는 이유는 가둬놓고 관리하고 싶어서 쓰는 것이다. 또 마진을 주기 위해서도 있다. 마진은 여백이 있어야 쓸 수 있기 때문이다. */
 .banner_wrap{height: 300px; background-color: rgb(98, 170, 64);}
 .content_wrap{height: 1000px; background-color: rgb(105, 180, 230);}
 
