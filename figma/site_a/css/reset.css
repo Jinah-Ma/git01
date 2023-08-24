@@ -159,7 +159,7 @@ html {
     /* 시험이라서 하는 것/실제 프로젝트에서는 하지 말기(x축) */
     font-size: 62.5%;
     /* 기본 폰트 10px/ rem을 쓸 것임. */
-    line-height: 1.75;
+    
     font-weight: 400;
 }
 
@@ -167,6 +167,7 @@ body {
     font-family: 'Pretendard', sans-serif;
     color: var(--text1);
     font-size: 1.6rem;
+    line-height: 1.75;
 }
 
 /* var : 변수 */

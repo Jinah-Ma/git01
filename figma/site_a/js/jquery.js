@@ -34,6 +34,22 @@ slide();
 
 slides.eq(n).addClass('on');
 
+// tab
+const tabBtn=$('.board .bottons li');
+const panels=$('.panels>div');
+tabBtn.on('click', function (e) {
+    e.preventDefault();
+    let tg = $(this).index();
+    panels.hide();
+    // 다 숨기라는 의미
+    panels.eq(tg).show();
+    // 이 부분을 보여주라는 의미
+    tabBtn.removeClass('on');
+    tabBtn.eq(tg).addClass('on');
+});
+
+
+
 // depth1.addEventListener('mouseover', function () {
 //     depth1.querySelectorAll('.depth2').forEach((o) => { o.style.display = 'block' })
 //     document.querySelector('header').classList.add('on');
