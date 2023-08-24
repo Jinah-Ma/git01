@@ -13,6 +13,7 @@
 
 <body>
     <div class="wrap">
+        <div class="overlay"></div>
         <header>
             <h1 class="logo h2"><a href="index.html">The Blue Market</a></h1>
             <div class="nav">
@@ -56,9 +57,9 @@
         <!-- //header -->
         <main>
             <ul class="quick">
-                <li><a href="#"><span class="icon1"></span></a></li>
-                <li><a href="#"><span class="icon2"></span></a></li>
-                <li><a href="#"><span class="icon3"></span></a></li>
+                <li><a href="#"><span class="icon">장바구니</span></a></li>
+                <li><a href="#"><span class="icon">채팅상담</span></a></li>
+                <li><a href="#"><span class="icon">문의하기</span></a></li>
             </ul><!-- //quick -->
             <div class="slide">
                 <ul class="slide_wrap">
@@ -97,6 +98,14 @@
                 </div>
             </div><!-- //banner -->
             <div class="board">
+                <div class="popup">
+                    <div class="textbox">
+                        <div class="h1">유기농 곡물바 출시</div>
+                        <div class="h3">다이어트용 간식 와삭바삭 곡물바</div>
+                        <div class="h3">유기농으로 즐기세요</div>
+                    </div>
+                    <a href="#" class="close"><img src="./img/close-icon.svg" alt=""></a>
+                </div> <!-- //popup -->
                 <div class="inner">
                     <ul class="bottons row">
                         <li class="on"><a href="#">공지사항</a></li>
@@ -104,7 +113,8 @@
                     </ul>
                     <div class="panels">
                         <div class="panel1">
-                            <div class="row">
+                            <h2>공지사항</h2>
+                            <div class="row open">
                                 <div class="left">- 푸른마을 제품 후기 작성 EVENT -</div>
                                 <div class="rigth caption">2021-01-18</div>
                             </div>
@@ -122,6 +132,7 @@
                             </div>
                         </div>
                         <div class="panel2">
+                            <h2>갤러리</h2>
                             <ul class="row">
                                 <li><a href="#"><img src="./img/gallery_1.png" alt="채소"></a></li>
                                 <li><a href="#"><img src="./img/gallery_2.jpg" alt="채소"></a></li>
@@ -133,7 +144,18 @@
             </div><!-- //board -->
         </main>
         <!-- //main -->
-        <footer></footer>
+        <footer>
+            <div class="logo">
+                <h4>The Blue Market</h4>
+            </div>
+            <div class="right">
+                <div class="inner">
+                    <ul class="top"></ul>
+                    <div class="mid"></div>
+                    <div class="bot"></div>
+                </div>
+            </div>
+        </footer>
         <!-- //footer -->
     </div>
     <!-- //.wrap -->

@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-.wrap { width: 100%; display: flex; flex-wrap: wrap; } 
+.wrap { width: 100%; display: flex; flex-wrap: wrap;} 
 
 /* header */
 header { width: 100%; max-width: 200px; height: 850px; } 
@@ -36,7 +36,16 @@ header.on:before{width: 100%;}
 /* main */
 main { width: 100%; max-width: calc(100% - 200px); background-color: var(--text2); } 
 
-main .quick{position: fixed; right: 2rem; top: 2rem; width: 8.5rem; height: 22.5rem; background: var(--background); z-index: 99;}
+main .quick{position: fixed; right: 2rem; top: 2rem; width: 10rem; height: 24.5rem; background: #ebebeb; z-index: 99; padding: 1rem 2.5rem 2.5rem; display: flex; flex-direction: column; justify-content: space-evenly; font-size: 1.4rem;}
+
+main .quick span{padding-top: 4rem;}
+
+main .quick li a{display: block; text-align: center;}
+main .quick li a *{display: block;}
+main .quick li a .icon{display: block; width: 5rem; height: 3.2rem;}
+main .quick li:nth-child(1) a{background:url(../img/icon_1.png) no-repeat center center;}
+main .quick li:nth-child(2) a{background:url(../img/icon_2.png) no-repeat center center;}
+main .quick li:nth-child(3) a{background:url(../img/icon_3.png) no-repeat center center;}
 
 main .slide { width: 100%; height: 400px; } 
 main .slide_wrap{ width: 100%; height: 400px; position: relative;} 
@@ -45,17 +54,17 @@ main .slide_wrap li.on {opacity: 1;}
 
 /* main_slide1 */
 main .slide_wrap li.slide1{background-image: url(../img/banner_1.png);}
-main .slide_wrap li.slide1 .text_box span{display: block; padding: 1rem;}
+main .slide_wrap li.slide1 .text_box span{display: block; padding: 1rem; background: rgba(0,0,0,.5)}
 main .slide_wrap li.slide1 .text_box{max-width: 50%; text-align: center; color:var(--background); position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); padding: 3rem;}
 
 /* main_slide2 */
 main .slide_wrap li.slide2{background-image: url(../img/banner_2.jpg);}
-main .slide_wrap li.slide2 .text_box span{display: block; padding: 1rem;}
+main .slide_wrap li.slide2 .text_box span{display: block; padding: 1rem; background: rgba(0,0,0,.5)}
 main .slide_wrap li.slide2 .text_box{max-width: 50%; text-align: center; color:var(--background); position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);  padding: 3rem;}
 
 /* main_slide3 */
 main .slide_wrap li.slide3{background-image: url(../img/banner_3.jpg);}
-main .slide_wrap li.slide3 .text_box span{display: block; padding: 1rem;}
+main .slide_wrap li.slide3 .text_box span{display: block; padding: 1rem; background: rgba(0,0,0,.5)}
 main .slide_wrap li.slide3 .text_box{max-width: 50%; text-align: center; color:var(--background); position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);  padding: 3rem;}
 
 
@@ -81,6 +90,11 @@ main .board .panels{height: 18rem; max-width: 60rem; flex-direction: column; pos
 
 main .board .panels .row {justify-content: space-between;}
 main .board .panels .row div{padding: 0.6rem 2rem;}
+main .board .panels .row .left{cursor: pointer;}
+/* ★마우스 포인터 손가락모양으로 바꾸는 것 */
+main .board .panels .row .left:hover{text-decoration: underline;}
+
+main .board h2{position: absolute; right: 60rem; top: 7rem; width: 20rem; text-align: center; line-height: 1.25; color: #bcbcbc; padding: 1rem; font-size: 3.5rem;}
 
 .panel1,panel2 {position: absolute; height: 14rem; width: 100%;}
 .panel2 .row{padding: 2rem 4rem;}
@@ -88,6 +102,15 @@ main .board .panels .row div{padding: 0.6rem 2rem;}
 
 main .board .panels::before {content: ''; position: absolute; width: calc(100% - 17.6rem); height: 2px; background-color: var(--primary); top: -2px; right: -2px;}
 
+main .board .popup {position: fixed; z-index: 9999; width: 38rem; height: 30rem; background: #ffdbb9 url(../img/Rectangle\ 13.png) no-repeat; top:0; right: 0; display: none;}
+
+.popup .textbox{position: absolute; top:8rem; left: 4rem;}
+.popup .textbox .h1{position: static; width: 100%; color: var(--primary);}
+.popup .close{position: absolute; top:1rem; right: 1rem;}
+
+.overlay{position: fixed; background: rgba(0,0,0,.5); left:0; right: 0; top: 0; bottom: 0; z-index: 99; display: none;}
+
+.overlay.open{display: block;}
 
 /* footer */
 
