@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* 초기화코드 */
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ul,li,lo,dt,dd,dl{list-style: none;}
+a{text-decoration: none; color: #333; font-size: 1.6rem;}
+a:link, a:visited{color: #333;}
+img{border: 0; vertical-align: top;}
+
+
+html{overflow-y: scroll; font-size: 62.5%;}
+
+/* 폰트 */
+body{font-family: 'Noto Sans KR', sans-serif; font-size: 1.6rem; line-height: 1.75;}
+
+/* 공통 */
+.inner{max-width: 140rem; margin: 0 auto;}
+
+/* 상단메뉴바 */
+nav{position: relative; width: 100%; height: 9.4rem; background-color: #fff;}
+nav>.gnb{display: flex;}
+nav>.gnb li{margin: 0 3.8rem;}
+nav>.gnb li.logo {width: 18rem; margin: 0 0 0 2.5rem; }
+nav>.gnb li.logo a{display: block; background: url(../img/freesamLogo.jpg) no-repeat center center/18rem; text-indent: -99999999px; overflow: hidden; font-size: 0px;}
+
+nav>.gnb li>a{display: block; line-height: 9.4rem; font-size: 2.2rem; font-weight:bold;}
+nav>.gnb li a:hover{color: #e95a65;}
+
+.menu_title img{width: 135px;} /* ★이미지 사이즈 조정 */
+
+/* 투뎁스 레이아웃 */
+.gnb .depth1 ul{display: flex;} 
+.gnb .depth1 li{flex: 0 1 20rem; margin: 0; border-left: 1px solid #e9e9e9; padding-left: 2rem;}
+.gnb .depth1 li h2{font-size: 1.5rem; font-weight: blod; text-align: center; color: #e95a65; padding-top: 0.2rem;}
+.gnb .depth1 li dl dt a{font-size: 1em; font-weight: bold; line-height: 1.8;}
+.gnb .depth1 li h3 a{color: #097a87; font-weight: bold; line-height: 2; margin-bottom: 0.3rem;}
+.gnb .depth1 li dd a{color: #777;font-size: 0.8em; font-weight: 700; line-height: 1.7;}
+
+
+/* 투뎁스 배경 */
+nav .gnb_bg {position:absolute; background: #fbfbff; top:9.4rem; left: 0; width: 100%; padding: 0 0; transition: all 0.5s; height: 0; overflow: hidden; z-index: 9;}
+
+/* hover */
+.gnb .depth1:hover .gnb_bg{padding: 2rem 0; height: auto;}
+
+/* main */
+main{}
+main .main_banner{height: 100vh; background: url(https://images.unsplash.com/photo-1580475805491-3b1b70c4ef86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80) no-repeat; background-size: cover; position: relative;}
+.main_banner ul{display: flex; position:absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
