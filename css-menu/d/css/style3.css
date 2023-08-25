@@ -11,4 +11,9 @@ ul.gnb li{height: 100%;}
 
 
 .w100{overflow: hidden; height: 0;} 
-nav ul.gnb>li>a {color: white;} /* 원뎁스 색 바꾸기 */
+ul.gnb>li>a {color: white;} /* 원뎁스 색 바꾸기 */
+.depth1:hover .w100{height: auto;}
+
+/* 투뎁스 100%로 드롭다운 */
+nav{position: relative;}
+nav>.gnb>.depth1>.w100{position: absolute; left: 0;} /* 배경은 100%지만 .inner에 붙은 max-width값이 있어서 자식들은 가둬져 있다. */
