@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		#wrap {
+			width: 90%; /* 960px */
+			height: 500px;
+			margin: auto;
+			border: 4px solid #000;
+		}
+
+		
+
+		#wrap div {
+			width: 300px; /* 가변너비 */
+			width: 31%;
+			display: inline-block;
+		}
+
+		#wrap div:first-child {
+			padding: 50px 5%; /* 좌우패딩 가변 */
+			background: #1f518b;
+		}
+
+		#wrap div:first-child+div {
+			padding: 130px 13%; /* 좌우패딩 가변 */
+			background: #1f518b;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="wrap">
+		<div></div>
+		<div></div>
+	</div>
+</body>
+
+</html>

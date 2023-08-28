@@ -47,5 +47,12 @@ nav .gnb_bg {position:absolute; background: #fbfbff; top:9.4rem; left: 0; width:
 /* main */
 main{}
 main .main_banner{height: 100vh; background: url(https://images.unsplash.com/photo-1580475805491-3b1b70c4ef86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80) no-repeat; background-size: cover; position: relative;}
-.main_banner ul{display: flex; position:absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
-.depth1.
+.main_banner ul{display: flex; position:absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); gap: 1rem;}
+
+/* flex: flex-grow(늘릴건지)/ flex-shrink(줄일건지)/ flex-basis(기본값) */
+.main_banner li{position:relative; flex: 1 1 30%; height: 200px; background: rgba(255,255,255,.5); color: rgb(60, 226, 255); text-align: center; font-size: 4em; line-height: 200px; transition: margin 0.5s; padding: 0 60px;}
+.main_banner li:hover{margin-top: -10px; }
+.main_banner li:after{content:'😀'; position: absolute; left: 54px; top: -105px; opacity: 0; transition: all 0.5s;}
+.main_banner li:hover::after{opacity: 1;}
+.main_banner li:before{content: ''; width: 100%; position: absolute; height: 12px; background-color: #e95a65; bottom: 0; left: 50%; transform: translate(-50%); width: 0; transition:width 0.5s;}
+.main_banner li:hover::before{width: 100%;} /* 가운데가 기준이다. transform때문에 */

@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<title>48p</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		/* 고정값을 가변값으로 변경하기
+(부분/전체)*100 = {자식/부모}*100
+*/
+
+/* 마진, 패딩 => 부분/전체*100 */
+
+		#wrap {
+			/* 960px */
+			width: 90%;
+			height: 500px;
+			border: 2px solid #000;
+			margin: auto;
+		}
+
+
+		.container {
+			width: 900px;
+			/* 가변 크기인 90%에 고정값을 주었다. */
+			/*부모는 상대단위고 자식은 고정값이기 때문에 부모의 크기는 화면 크기에 따라 변하지만,
+		고정크기는 변하지 않아, 부모를 빠져나온다. */
+			width: 93.75%;
+			height: 492px;
+			margin: auto;
+			border: 4px solid #ff0000;
+		}
+
+		.box {
+			display: inline-block;
+			height: 100%;
+			/* width: 300px;
+			width: 31.25%; /* 가변크기로 변경 (300/960)*100
+			height: 300px; */
+		}
+
+		.container>div:nth-of-type(1) {
+			background-color: red;
+			width: 300px;
+			width: 33%
+		}
+
+		.container>div:nth-of-type(2) {
+			background-color: yellow;
+			width: 600px;
+			width: 66%;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="wrap">
+		<div class="container">
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+
+
+	</div>
+</body>
+
+</html>
