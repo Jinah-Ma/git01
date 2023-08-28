@@ -45,7 +45,6 @@ nav .gnb_bg {position:absolute; background: #fbfbff; top:9.4rem; left: 0; width:
 .gnb .depth1:hover .gnb_bg{padding: 2rem 0; height: auto;}
 
 /* main */
-main{}
 main .main_banner{height: 100vh; background: url(https://images.unsplash.com/photo-1580475805491-3b1b70c4ef86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80) no-repeat; background-size: cover; position: relative;}
 .main_banner ul{display: flex; position:absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); gap: 1rem;}
 

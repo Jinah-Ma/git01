@@ -15,11 +15,29 @@ width:100%;
 max-width:100%;
 }
 
+/* 가변비디오 */
+#wrap{position: relative;
+height: 0;
+overflow: hidden;
+
+/* 핵심. html문서 위아래 방향은 무한정이다. 상대값을 구할때의 기준은 너비이다. */
+/* 위 아래 패딩은 부모의 가로 너비 기준으로 계산 됨. */
+padding-bottom: 56.25%;
+}
+
+iframe,video{
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+}
+/* 부모 기준으로 높이를 꽉 채울 수 있다.★ */
 </style>
 </head>
 <body>
     <div id="wrap">
         <iframe src="https://player.vimeo.com/video/192526798?byline=0&badge=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <!-- 아이프레임은 절대크기를 가질 수 없다. 이때 가변크기로 바꾸는 법 -->
+        <!-- 동영상의 비율 16:9/ TV, 모니터 국제 표준 16:9 -->
     </div>
 </body>
 </html>
