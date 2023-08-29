@@ -1,17 +1,68 @@
 @charset 'utf-8';
 /* 모바일용 css */
 /* 기본 css */
+@media all and (min-width:320px) {
+#wrap { display: flex; flex-flow: column nowrap; width: 80%; margin: 0 auto; max-width: 1200px; } 
 
-#wrap{display: flex; flex-flow: column nowrap; width: 80%; margin: 0 auto; max-width: 1200px;}
+#wrap section { box-sizing: border-box; } 
 
-#wrap section{box-sizing: border-box;}
+section h2:not(.title) { text-indent: -999999px; overflow: hidden; font-size: 0; line-height: 0; width: 0; height: 0;} 
 
-/* 태블릿 css */
-@media all and (min-width:768px) {
-    #wrap{flex-flow: row wrap;}
+/* 인포메이션 영역 */
+.info_section{
+    /* 아이템 박스의 배치 순서를 바꿀 수 있는 것 order/ 부모에게 flex선언이 되어있고, 하위 자식에게 쓴다./오름차순 */
+    order: 1;
+    width: 100%; background: #2ecc71; border-bottom: 1px solid #39d67c;
+}
+.info_list{display: flex;}
+.info_list li{width: 25%; text-align: center;}
+.info_list li a{display: block; padding: 15px 0; padding: 0.938rem 0; /* 브라우저 호환성 폴백기법/ 지금은 필요가 없다. */}
 }
 
+/* 헤더영역 */
+.header{
+    display: flex;
+    order: 2;
+flex-direction: column;
+position: relative;
+width: 100%;
+}
+.logo{
+    order: 1;
+    padding: 1.875rem 0;
+    font-size: 1.188rem;
+    line-height: 1.313rem;
+    text-align: center;
+    background: #2ecc71;
+    text-shadow: 0px 1px 1px #25ab5e;
+}
+.nav{
+    order: 2; width: 100%;
+}
+.gnb li{display: flex; background: #2c3e50;}
+.gnb li a{width: 80%; padding: 1.25rem 0; font-size: 0.938rem; text-indent: 1.25rem; font-weight: bold; text-transform: uppercase;}
+
+.sub_manu_toggle_btn{
+    /* 접근성,seo를 고려한 마크업 요소 */
+    width: 20%;
+    text-indent: -99999px;
+    background: url(../images/s_images/sub_menu_toggle_btn.png) center center no-repeat; cursor: pointer;
+}
+
+/* 태블릿 css */
+@media all and (min-width:768px){
+ #wrap { flex-flow: row wrap; } 
+ }
+
+
+
+
+
 /* pc css */
-@media all and (min-width:960px) {
-    #wrap{position: relative; width: 90%;}
+@media all and (min-width:960px){
+ #wrap { position: relative; width: 90%; } 
+
+.info_section{order: 0; position: absolute; top: 1.875rem;right: 1.875rem; z-index: 30; width: auto; border-bottom:0;}
+
+
 }
