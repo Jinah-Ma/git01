@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input-form</title>
+    <style>
+        /* .checkbox1{display: none;} */
+        /* 보이지 않아도 label과 연결 되어 있어서 글씨를 클릭하면 체크가 된다. */
+        /* .checkbox1{/* width: 50px;
+        height: 100px; */ */
+        /* 너비는 커져도 높이로는 커지지 않는다. */
+        /* 체크박스가 웹에서 기본으로 속성을 가지는데, 인라인 블럭 */
+        /* .para{height: 50px;} */
+        /* .checkbox1:checked~.para{background-color: pink;} */
+
+        .checkbox{margin: 2em 0;}
+        input.checkbox1{
+            font-size: 1em;
+            width: 1.25em;
+            height: 1.25em;
+            vertical-align: middle;
+        }
+        input.checkbox1+label{
+            font-size: 1.125em;
+            vertical-align: middle;
+        }
+
+        /* 폰트 사이즈로 조절하거나, 높이로 조절하면 체크 박스가 커진다. 주로 폰트 사이즈로 조절한다.(높이로 하려면 너비와의 비율이 같아야만 가능하기 때문에.) */
+
+        input.radio2{
+            font-size: 2em;
+            width: 1.25em;
+            height: 1.25em;
+            vertical-align: middle;
+        }
+        /* 높이와 너비 값을 줘야 폰트 사이즈를 이용해 버튼 크기를 조정할 수 있다. 즉, 크기를 가지고 있어야만 가능하다. */
+
+    </style>
+</head>
+
+<body>
+    <form action="#" method="get">
+        <div class="checkbox">
+            <input type="checkbox" name="check1" id="check1" value="1" class="checkbox1">
+            <!-- <p class="para"></p> -->
+            <label for="check1">큰체크박스</label>
+            <!-- for과 id가 연결되어 있다. id는 디자인을 하려고 붙여놓은 게 아니라 레이블과 연결하려고 붙여놓은 것. 디자인을 하기 위해서 클래스를 붙였다.(개인적으로...) -->
+
+            <input type="radio" id="radio1" name="radio1" value="1" class="radio2">
+            <!-- name:데이터 베이스 필드 값/ value:저장되는 데이터 값 =네임항목{카테고리} 안에 벨류{값}가 저장되는 것 -->
+            <label for="radio1">큰라디오버튼</label>
+        </div>
+    </form>
+
+</body>
+
+</html>

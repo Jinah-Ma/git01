@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>토글스위치</title>
+    <style>
+        .toggle {
+            position: relative;
+            display: inline-block;
+        }
+
+        .toggle input {
+            display: none;
+        }
+
+        .toggle label {
+            display: block;
+            width: 48px;
+            height: 24px;
+            text-indent: -250%; /* 레이블 안 보이게 하는 것(글자만 밀어낸 것.) */
+            user-select: none; /* 선택 차단시키는 것 */
+        }
+
+        /* 디자인 */
+        .toggle label::before, .toggle label::after{
+            content: '';
+            display: block;
+            position: absolute;
+            cursor: pointer;
+        }
+
+        /* 배경 */
+        .toggle label::before{
+            width: 100%;
+            height: 100%;
+            background-color: #dedede;
+            border-radius: 1em;
+            transition: background-color 0.25s ease;
+        }
+
+        /* 버튼 */
+        .toggle label::after{
+            width: 24px;
+            height: 24px;
+            background-color: cadetblue;
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+            box-shadow: 1px 1px 2px rgba(0,0,0,.5);
+            transition: left 0.25s ease;
+        }
+
+        .toggle input:checked+label::before{
+            background-color: rgba(0,0,0,.5);
+        }
+        .toggle input:checked+label::after{
+            left: 24px;
+            background-color: burlywood;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form action="#" method="post">
+        <div class="toggle">
+            <input type="checkbox" name="toggle" id="toggle" value="ok">
+            <label for="toggle">스위치</label>
+        </div>
+    </form>
+</body>
+
+</html>

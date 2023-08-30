@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색창</title>
+
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <style>
+        .search_wrap {
+            width: 300px;
+            vertical-align: middle;
+            white-space: nowrap;
+            position: relative;
+            line-height: 50px;
+            height: 50px;
+        }
+
+        .search_wrap input#search {
+            width: 300px;
+            height: 50px;
+            background: #2b303b;
+            border: 0;
+            /* 기본값으로 보더가 들어가 있는 것을 뺀 것 */
+            font-size: 10pt;
+            color: #79bcff;
+            /* 입력할 때 적용되는 색 */
+            padding-left: 45px;
+            border-radius: 5px;
+            transition: background 0.2s;
+        }
+
+        input#search::-webkit-input-placeholder {
+            color: white;
+        }
+
+        /* 크롬에서만이다. 다른 브라우저는 위쪽의 컬러가 적용되어 있다. */
+        input#search::-moz-placeholder {
+            color: white;
+        }
+
+        /* 파이어폭스용 19버전 이상 */
+        input#search:-webkit-input-placeholder {
+            color: white;
+        }
+
+        /* 파이어폭스용 19버전 미만 */
+
+        .search_wrap .icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: white;
+            margin-left: 16px;
+        } /* 아이콘 옮기기★ */
+
+        .search_wrap input#search:hover,
+        .search_wrap input#search:focus,
+        .search_wrap input#search:active{
+            outline: none;
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="get">
+        <div class="search_wrap">
+            <span class="icon">
+                <i class="fa fa-search"></i> <!-- 서치 아이콘의 클래스 이름/ 돋보기가 나온다. -->
+            </span>
+            <input type="search" id="search" placeholder="검색어를 입력하세요">
+        </div>
+    </form>
+</body>
+
+</html>
