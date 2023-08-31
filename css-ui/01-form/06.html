@@ -62,7 +62,15 @@
     <script src="js/jquery.js"></script>
     <script>
         $(function () {
-            
+            // .selectbox 요소 하위의 select태그를 변수 selectTarget에 할당
+            var selectTarget=$('.selectbox select');
+            // 변수 selectTarget 의 벨류(값) 변경시 할 일
+            selectTarget.change(function(){
+                var selectName=$(this).children('option:selected').text();
+                $(this).siblings('label').text(selectName);
+                /* alert(selectName)  알림창을 띄워준다 */
+            })
+            /* .change: input에만 사용가능한 함수 */
         })
     </script>
 </head>
