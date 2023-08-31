@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       /* seo, 접근성 */
+        .blind {
+            position: absolute;
+            clip:rect(0 0 0 0) ; /* 마스크 적용하는 것과 같음/ 컨텐츠의 일부만 보여줄 수 있는 것 */
+
+            /* 혹시 몰라서 집어넣는 것들 */
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+
+            /* display:none은 기계가 읽지 않고 지나가는 경우가 있어서 되도록 쓰지 말자. */
+        }
+
+        .selectbox{
+            position: relative;
+            width: 200px;
+            border: 1px solid #999;
+            z-index: 1;
+        }
+
+        .selectbox::before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            width: 0;
+            height: 0;
+            margin-top: -1px;
+            border-top: 5px solid #333;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 5px solid transparent;
+        }
+
+        select {
+            appearance: none;
+            /* 네이티브 외형 숨김 */
+            width: 100%;
+            padding: 0.8em 0.5em;
+            height: auto;
+            opacity: 0;
+        }
+
+        label{
+            position: absolute;
+            top: 1px;
+            left: 5px;
+            padding: .8em .5em;
+            color: #ff0000;
+        }
+    </style>
+    
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            
+        })
+    </script>
+</head>
+
+<body>
+    <form action="#" method="get">
+        <fieldset class="selectbox">
+            <legend class="blind">색상을 선택하세요</legend>
+            <label for="select">옵션</label>
+            <select id="select">
+                <option selected>색상</option>
+                <option>빨강</option>
+                <option>노랑</option>
+                <option>파랑</option>
+            </select>
+        </fieldset>
+    </form>
+
+    
+</body>
+
+</html>
