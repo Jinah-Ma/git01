@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .coloring {
+            background-image: linear-gradient(45deg,
+                    hsl(240deg 100% 20%) 0%,
+                    hsl(346deg 83% 51%) 50%,
+                    hsl(55deg 100% 50%) 100%);
+            width: 600px;
+            height: 200px;
+            margin: auto;
+            transition: background-image 1s ease;
+            position: relative;
+        }
+
+        .coloring:hover {
+            background-image: linear-gradient(90deg,
+                    hsl(240deg 100% 20%) 0%,
+                    hsl(346deg 83% 51%) 50%,
+                    hsl(55deg 100% 50%) 100%);
+        }
+
+        .box {
+            position: absolute;
+            left: 70px;
+            top: 70px;
+            width: 60px;
+            height: 60px;
+            background: #a00;
+            border: 5px solid pink;
+            box-shadow: 0 0 15px -5px rgba(0, 0, 0, .4);
+            border-radius: 35px;
+            animation: move 3s infinite alternate ease;
+        offset: path('M2 117C2 104.693 10.1266 90.9585 16.6667 80.8889C22.773 71.487 30.0399 62.7202 37 53.9444C46.3744 42.1245 55.0867 27.7274 67.1667 18.5555C87.2229 3.32765 113.148 1.42415 137.333 1.99999C150.802 2.32069 161.158 7.46798 172.889 13.3333C181.359 17.5684 189.448 20.0582 196.778 26.2778C210.374 37.8142 224.367 48.575 238.778 59C252.015 68.5755 267.132 74.8455 280.056 85C293.52 95.579 310.141 100.362 326.111 105.222C333.861 107.581 341.716 109.225 349.5 111.5C359.846 114.524 369.851 114 380.556 114C400.014 114 420.652 116.196 439.944 113.833C454.374 112.066 471.325 104.609 483.222 96.2222C495.602 87.4955 505.033 78.9258 511.222 65C513.259 60.4165 513.147 55.4061 514 50.5C515.029 44.586 516.768 39.8074 517 33.7778C517.137 30.2232 518.209 23.8573 519.5 20.5C521.092 16.3607 520 10.4248 520 5.99999');
+        }
+
+        .box::before{
+            content: url(../img/Group_1.png);
+            display: block;
+        }
+
+        
+        @keyframes move{
+            0%{offset-distance: 0%;}
+            100%{offset-distance: 100%;}
+        }
+    </style>
+</head>
+
+<body>
+    <div class="coloring">
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
