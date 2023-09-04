@@ -1,0 +1,33 @@
+/* 서브 헤더 영역 */
+.sub_header_section { order: 3; padding: 3rem; text-align: center; background: #219af7; width: 100%; } 
+.sub_header_section h2 {margin-bottom: 0.75rem; font-size: 1.313rem; color: #fff;} 
+.sub_header_section li {display: inline-block; padding: 20px;} 
+
+/* 콘텐츠 영역 */
+.content_section {
+    order: 4;
+    padding: 1.28rem;
+    background: #fff;
+}
+
+/* ====== 태블릿 ======== */
+@media screen and (min-width : 768px) {
+    /* 콘텐츠 영역 */
+    .content_section{
+        padding: 2.5rem;
+    }
+}
+
+/* ====== pc ======== */
+@media screen and (min-width : 960px) {
+    /* 서브헤더 영역 */
+    .sub_header_section{
+        order: 2;
+    }
+    /* 콘텐츠 영역 */
+    .content_section{
+        padding: 2.5rem;
+        order: 3;
+        padding: 3.75rem;
+    }
+}

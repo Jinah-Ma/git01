@@ -1,0 +1,64 @@
+/* 콘텐츠영역 */
+.content_section{
+    order: 4;
+    padding: 1.25rem;
+    background: #fff;
+}
+.content_section>div{
+    margin-top: 3.75rem;
+}
+.content_section>div:first-child{
+    margin-top: 0;
+}
+.content_row_1{text-align: center;}
+.content_row_1 img{max-width: 100%;}
+.content_row_1 h3{margin: 1.625rem 0 0.875rem 0; font-size: 1.626rem; color: #333;}
+.content_row_1 p{font-size: 0.938rem; color: #444; line-height: 1.625rem;}
+
+.content_row_2>article{margin-top: 2.5rem; text-align: center;}
+.content_row_2>article:first-child{margin-top: 0;}
+.content_row_2 img{max-width: 100%;}
+.content_row_2 h4{margin: 1.625rem 0 0.875rem 0; font-size: 1.188rem; color: #333;}
+.content_row_2 p{font-size: 0.813rem; color: #444; line-height: 1.313rem;}
+
+.content_row_3 h4{margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 3px solid #2ecc71; font-size: 1.188rem; color: #333;}
+.para p:first-child{margin-bottom: 1.875rem;}
+.para p{font-size: 0.813rem; line-height: 1.313rem; color: #444;}
+
+/* ====== 태블릿 ======== */
+@media screen and (min-width : 768px) {
+/* 콘텐츠 영역 */
+.content_section{
+    padding: 2.5rem;
+}
+.content_section>div{
+margin-top: 7.5rem;
+}
+
+}
+
+/* ====== pc ======== */
+@media screen and (min-width : 960px) {
+/* 콘텐츠 영역 */
+.content_section{
+    order: 3;
+    padding: 3.75rem;
+}
+.content_row_2{
+    display: flex;
+    justify-content: space-between;
+}
+.content_row_2 article{
+    width: 30%;
+    margin: 0;
+}
+.para{
+    display: flex;
+    justify-content: space-between;
+}
+.para p{
+    width: 47.619047%;
+    margin: 0;
+}
+
+}
