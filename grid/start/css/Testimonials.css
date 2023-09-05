@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.Testimonials {
+    background: #ecf2f7;
+    padding: 4rem 0;
+}
+
+.container {
+    width: 95%;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "item1 item1 item2 item3"
+        "item4 item5 item5 item3";
+
+    gap: 1.5rem;
+    margin: auto;
+}
+
+.items {
+    background-color: red;
+    padding: 10rem;
+    /* 높이 때문에 item3가 내려가지 않는 것을, 높이를 빼고 패딩을 넣어 해결을 본다. ★ */
+}
+
+.item1 {
+    background: #733fc7;
+    grid-area: item1;
+}
+
+.item2 {
+    background: #49556c;
+    grid-area: item2;
+}
+
+.item3 {
+    background: #fefefe;
+    grid-area: item3;
+}
+
+.item4 {
+    background: #fefefe;
+    grid-area: item4;
+}
+
+.item5 {
+    background: #181f2c;
+    grid-area: item5;
+}
+
+@media screen and (max-widh:991px) {
+    html {
+        font-size: 56.25%;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+        "item1 item1 item2"
+        "item4 item5 item5"
+        "item3 item3 item3";
+    }
+}
+
+@media screen and (max-widh:767px) {
+    html {
+        font-size: 50%;
+    }
+}
