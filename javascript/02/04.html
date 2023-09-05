@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>참조형</title>
+</head>
+
+<body>
+    <script>
+        // Object => 객체 {}
+        let person = {
+            name: 'mimi', /* 속성 */
+            age: 20, /* 속성 */
+            city: 'seoul', /* 속성 */
+        }
+        console.log(person.name); /* person안에 있는 name의 값을 꺼내기 위해 쓰는 법 */
+        console.log(person); /* 전체 값을 볼 수 있는 방법 */
+
+        // Array => 배열 [] /* 슬라이드 만들 때 쓴다. ul의 li로 생각하면 쉽다. ★ */
+        let zoo = [
+            'koala', 'cat', 'dog🐕'
+        ];
+        console.log(zoo, typeof zoo); /* 일련 번호가 0번부터 붙는다. 숫자 합계는 제대로 계산 되어 나온다. */
+        console.log(zoo[0]);
+        console.log(zoo[1]);
+        console.log(zoo[2]);
+        document.write(`<h1 style="font-size:500px;">${zoo[2]}</h1>`);
+
+        // function => 함수
+        function addNums(num1,num2){
+            return num1 + num2; /* return => 호출한 지점으로 값을 반환(전달)해준다./ 명령어 */
+        } /* 함수의 선언부 */
+        console.log(addNums(5,10)); /* 함수의 호출부 */
+    </script>
+</body>
+
+</html>

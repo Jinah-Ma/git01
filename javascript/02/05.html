@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자</title>
+</head>
+<body>
+    <h1>산술연산자</h1>
+    <script>
+        console.log(100 + 200); /* 숫자일 경우 덧셈 */
+        console.log(200 - 80); /* 뺄셈 */
+        console.log(100 * 3); /* 곱셈 */
+        console.log(400 / 5); /* 나눗셈 */
+        console.log(402 % 5); /* 나누고 남은 나머지 계산 */
+        console.log(2 ** 3); /* 제곱 (2의 3제곱) */
+        console.log(); /*  */
+
+        var t1 = "망고는"; /* 문자를 쓸 때 ''로 써도 되고 ""로 써도 된다. */
+        var t2 = 5; 
+        var t3 = '살';
+        var t6 = true;
+        var t4 = t1 + t2; /* 문자+숫자=문자 */
+        /* t4 = t2 + t2; */ /* 재할당 */  /* 숫자+숫자=숫자 */
+        /* t4 = t1 + t3; */ /* 문자+문자=문자 */
+        t4 = t1 + t6; /* 문자 */
+
+        // 자료형 변환 함수는 앞글자를 대문자로 바꾼다. String(), Number()
+
+        document.write(`<h1>${t4}-${typeof t4}</h1>`);
+    </script>
+</body>
+</html>

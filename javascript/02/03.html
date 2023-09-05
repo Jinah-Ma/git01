@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>원시형</title>
+</head>
+
+<body>
+    <h1>원시형</h1>
+    <script>
+        // 숫자 number
+        let num1 = 1; /* 변수에 식별자를 선언하고 값을 할당하면 변수가 초기화된다.★ */
+        let num2 = 2;
+        let sum = num1 + num2;
+        console.log(`sum: ${sum} 자료형은? ${typeof sum}`); /* 콘솔창에 보여준다. */
+
+        // 글자 string
+        let str1 = '1'; /* ''안에 작성하면 문자, ''없이 쓰면 숫자 */
+        let str2 = '2';
+        let para = str1 + str2;
+        document.write(`str1: ${str1} str2: ${str2} para: ${para} 자료형은? ${typeof para}`); /* ``안에 쓰면 글자와 함께 쓸 수 있다. */
+        document.write(`<hr> num1: ${num1} num2: ${num2} sum: ${sum} 자료형은? ${typeof sum}`); /* 웹문서로 보여준다. */
+
+        // 논리 자료 형 boolean
+        let fact = true;
+        let lie = false;
+
+        console.log(typeof fact);
+
+        // 특수형 null
+        let temp=null; /* null => 없음. 비어있음 */ /* 나중에 할당을 하겠다고 넣는 것. */
+        console.log('temp:' + temp + typeof temp); /* 더할 수 없으면 연결되어 옆으로 그냥 나온다. */
+
+        // 특수형 undefined => 정의 안 되어 있음. 값이 할당되지 않았다. 메시지를 임의로 집어넣어 초기화 시킨 것으로 오류는 아니다.
+        let noName;
+        console.log('noName', noName, typeof noName);
+    </script>
+</body>
+
+</html>
