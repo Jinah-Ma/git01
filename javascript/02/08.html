@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>증가연산자예제</title>
+</head>
+
+<body>
+    <script>
+        let x = 1;
+        document.write(x++); /* x<=x+1 */
+        document.write('<br>'); /* x<=x+1 x= (1) */
+        document.write(x); /* x= (2)/ 값을 저장하고 있다가 후에 x를 부르면 결과값을 반환한다. (후위연산자) */
+        document.write(`<br>${x++}<br>`); /* x<=x+1 x=2(3) */
+        document.write(`${x++}<br>`); /* x<=x+1 x=3(4) */
+        document.write(`${x++}<br>`); /* x<=x+1 x=4(5) */
+        document.write(x); /* x= (5) */
+        document.write('<br>');
+        x = 1; /* 다시 초기화  */
+        document.write('<br>');
+        document.write(`${++x}<br>`); /* 숫자 2가 나온다. (전위연산자) : 더한 값을 x에 다시 넣는다. */
+        document.write(`${++x}<br>`); /* 3 */
+        document.write(`${++x}<br>`); /* 4 */
+        document.write(`${++x}<br>`); /* 5/ 전위연산자는 '2'가 먼저 보이기 때문에 '1'을 보여주려면 후위연산자를 쓰는 것이 옳다.★ */ 
+    </script>
+
+    <script>
+        let number = 10;
+        alert(number++); /* 10 + 1 = 10(11) */
+        alert(++number); /* (11+1) = 12 */
+
+        alert(number--); /* 12(11) */
+        alert(--number); /* (11-1) = 10 */ 
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리연산자</title>
+</head>
+<body>
+    <script>
+        const x = 7 > 6 && 1 > 8; /* 엔드 연산자 '~랑 ~'/ 두개의 식이 참이어야 참이다. 하나라도 거짓이 있으면 false */
+        document.write(7 > 6 && 1 > 8);
+        document.write(`<br> ${7 > 6 && 1 > 8}`);
+        document.write('<br>' + x);
+        document.write(`<br> ${x}`);
+
+        const y = 7 > 6 || 1 > 8; /* or연산자 '또는'/ 두개의 식 중에 하나라도 맞으면 true/ '|'는 '\'+shift */
+
+        document.write(`<hr> <br> ${y}`);
+
+        const z = !(7 > 6); /* not연산자(부정연산자) / 안 같아?(달라?) Is not true? -> false (no) 같아. */
+        document.write(`<hr> <br> ${z}`);
+    </script>
+</body>
+</html>

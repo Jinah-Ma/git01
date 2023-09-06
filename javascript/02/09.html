@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비교연산자</title>
+</head>
+<body>
+    <script>
+        const x = 10;
+        const y = 20;
+        const z = '10'; /* 문자 자료형 */
+
+        document.write(x + '>=' + y + ':');
+        document.write(x>=y);
+        document.write('<br>');
+        document.write(x + '<=' + y + ':');
+        document.write(x<=y);
+
+        document.write(`<br> ${x} >= ${y} : ${x >= y}`); //(false)  /* ``(백팁)안에서는 ${자바스크립트 명령어(함수)} 바깥은 글자로 인식한다. */
+
+        document.write(`<br> ${x <= y}`); /* (ture) */
+        document.write(`<br> ${x != y}`); /* (같지 않다. 부정연산자. ture) */
+        
+        document.write(`<br> ${x != z}`); /* (false , 값이 같기 때문에.-같지 않냐?-) */
+        document.write(`<br> ${x == z}`); /* (같냐? ture) */
+        document.write(`<br> ${x === z}`); /* (진짜 같냐? false-자료형까지는 같지 않기 때문에-) */
+        document.write(`<br> ${x !== z}`); /* (진짜 달라? ture -자료형은 다르기 때문에-) */
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>할당연산자 ★</title>
+    <style>
+        .para {
+            border: 1px solid black;
+        }
+        .para1 img {width: 300px;}
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <p>첫번째 단락</p>
+    </div>
+
+    <script>
+        let val = 10;  /* 할당연산자(할당 할 때마다 값이 바뀐다.) */
+        // val = 1;
+        val += 1; /* += : 값이 재할당 된다. 11 */
+        val += 5; /* += : 값이 재할당 된다. 16 (장바구니 개념) */
+        document.write(val);
+
+    </script>
+    <script>
+        // 복합대입연산자
+        const container = document.getElementById('container'); /* 아이디 이름을 가져와라는 태그 */
+        console.log(container);
+        container.innerHTML += '<p class="para">두번째 단락</p>'; /* innerHTML : 컨테이너에 자식으로 html을 추가할 수 있다. */ /* 동적요소 생성 */ /* 바깥을 ''로 했으면 안에 따옴표는 ""를 한다.(반대로도 묶어도 된다.) */
+        container.innerHTML += '<p class="para1"><img src="../../icon/android-icon-144x144.png" alt=""></p>';
+    </script>
+    <script>
+        let list = '';
+        list += '<ul>';
+        list += '<li>Javascript</li>';
+        list += '<li>Javascript</li>';
+        list += '<li>Javascript</li>';
+        list += '<li>Javascript</li>';
+        list += '<li>Javascript</li>';
+        list += '</ul>';
+        console.log(list);
+        document.write(list);
+    </script>
+</body>
+
+</html>
