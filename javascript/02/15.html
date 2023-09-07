@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*         let key = prompt('당신의 신장은?');
+        let kg = prompt('당신의 몸무게는?');
+
+        let total = (key*1 - 100)*0.9;
+        document.write(total);
+        
+        let result = (total >= kg) ? "적정 몸무게 미달" : "적정 몸무게 초과";
+        document.write(result); */
+
+        let user_height = parseInt(prompt ("키를 입력하세요"));
+        let user_weight = parseInt(prompt ("몸무게를 입력하세요"));
+        
+        let nomal_weight = (user_height - 100) * 0.9;
+
+        let result = user_weight > nomal_weight ? "🐷" : "🦴";
+        document.write('<h1>' + result + '</h1>');
+    </script>
+</body>
+</html>

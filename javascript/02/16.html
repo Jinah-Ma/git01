@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* if (조건) {실행문} : 조건에는 true나 false가 나올 수 있는 식을 써야 한다. 트루가 나와야 실행이 된다. */
+        let your_sex = '남자';
+        your_sex = '여자';
+        document.write(`당신은 ${your_sex}이므로`);
+        if(your_sex == '남자'){document.write('👨')};
+        if(your_sex == '여자'){document.write('👩‍🦰')};
+    </script>
+    <script>
+        // 현재 시간을 알아내서 오전이면 배경색 흰색, 오후면 배경색 블랙으로 변경
+        const date = new Date();
+        const hour = date.getHours();
+        /* 조건문 */
+        if (hour < 12) {
+            document.querySelector('body').style.backgroundColor = "yellow"
+            document.querySelector('body').style.color = "red"
+        };
+        if(hour >= 12){
+            document.querySelector('body').style.backgroundColor = "black"
+            document.querySelector('body').style.color = "white"
+        };
+    </script>
+</body>
+</html>
