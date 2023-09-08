@@ -5,9 +5,9 @@
 
 .inner { width: 100%; max-width: 1400px; margin: auto; }
 
-/* .gnb{
+.gnb{
     justify-content: space-between; position: absolute; background-color: rgb(208, 255, 0); left: 0; right: 0; text-align: center;
-} */
+}
 
 nav{background-color: brown;}
 /* main과 색을 같게 쓰면 된다. */

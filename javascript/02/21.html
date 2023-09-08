@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--     <script>
+        /* 3의 배수인지 알려주는 조건문 작성 */
+        let number = prompt('숫자를 입력해주세요')
+        // console.log(number);
+        /*  if(number === null){document.write('취소합니다')}
+ 
+         else if(number % 3 === 0){document.write('3의 배수 입니다.')}
+         else if(number % 3 !== 0){document.write('3의 배수가 아닙니다.')} */
+
+        if (number !== null) {
+            if (number % 3 === 0) {document.write('3의 배수 입니다.')}
+            else if(number % 3 !== 0){document.write('3의 배수가 아닙니다.')}
+        }
+        else { document.write('입력취소') } /* 안 속의 {}는 한줄의 경우 생략 가능. 지금은 써 두었다. */
+
+        // !true -> false 면 true 토글만들때 쓴다.
+    </script>
+ -->
+    <script><!-- 삼항연산자로 바꾸기 -->
+        const num = prompt('숫자를 입력해주세요.');
+        if (num !== null){
+            (num % 3 === 0) ? (alert('3의 배수 입니다.')) : (alert('3의 배수가 아닙니다.'));
+        }
+        else{
+            alert('취소합니다.')
+        }
+    </script>
+</body>
+
+</html>
