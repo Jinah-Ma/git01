@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--     <script>
+        // 무한 루프
+        for(let i = 0; true;i++){
+            alert(i+'번째 반복');
+            const isCuntinue = confirm('계속하시겠습니까?'); /* 사용자로부터 확인이나 취소를 받을 수 있는 알림창 */
+            if(!isCuntinue){break;} /* 반복문의 중지 */
+        }
+        document.write('END')
+    </script> -->
+    <script>
+        let x = 0;
+        let total = 0;
+        while (x < 10){
+            x++;
+            if(x == 3){continue;}
+            total = total + x;
+            document.write(x);
+            if(x!=10){document.write('+')}
+        }
+        document.write('=' + total)
+    </script>
+</body>
+</html>

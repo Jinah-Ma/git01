@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중첩 for</title>
+    <style>
+        table{
+            margin: 20px;
+            float: left;
+        }
+        table,th{
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+        th, td{
+            padding: 10px 15px;
+        }
+        th{
+            background: #eee;
+        }
+        td {border: 1px dotted #222;}
+    </style>
+</head>
+<body>
+    <h1>구구단</h1>
+    <script>
+        let i, j; /* 전역변수 : 문서 내에 다 쓸 수 있다./ for()안에 선언한 것은 '지역변수' : for문 안에서만 유효함. 밖으로 나갈 수 없다. */
+        for (i = 1; i <= 9; i++){
+            document.write("<table>");
+            document.write(`<tr><th>${i}단</th></tr>`)
+            for (j = 1; j <= 9; j++){
+                document.write(`<tr><td>${i} X ${j} = ${i * j}</td></tr>`)
+            }
+            document.write("</table>");
+        }
+
+        /* 중첩문 : 외부와 내부가 있고, 외부가 한 번 실행한 뒤, 내부가 실행되면(외부의 반복문 내용 중 하나이므로), 내부 안에서 false가 나올 때까지 쭉 실행이 된다.
+        그 뒤 내부가 끝나면 외부가 다시 실행이 되는 식으로 외부값이 false가 나올 때까지 반복으로 진행이 된다. */
+    </script>
+</body>
+</html>

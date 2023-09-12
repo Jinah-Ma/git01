@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM 조작</title>
+</head>
+
+<body>
+    <h1>반복문</h1>
+
+    <h2>for</h2>
+    <ul class="menu1">
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li>list item 3</li>
+        <li>list item 4</li>
+    </ul>
+    <hr />
+    <h2>foreach</h2>
+    <ul class="menu2">
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li>list item 3</li>
+        <li>list item 4</li>
+    </ul>
+    <hr />
+    <h2>for of</h2>
+    <ul class="menu3">
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li>list item 3</li>
+        <li>list item 4</li>
+    </ul>
+    <hr />
+    <h2>do / while</h2>
+    <ul class="menu4">
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li>list item 3</li>
+        <li>list item 4</li>
+    </ul>
+    <hr />
+
+    <script>
+        //css선택자를 사용해서 선택할 수 있는 메서드
+        const menu = document.querySelector('.menu1 li')
+        const menu1 = document.querySelectorAll('.menu1 li')
+        // querySelectorAll : 배열, 여러개를 가지고 온다. 반복문을 써야 된다./ querySelector : 하나만 가져 온다.
+        for (let i = 0; i < menu1.length; i++) {
+            // console.log(menu1.length);
+            console.log(i);
+            menu1[i].style.color = 'blue';
+            menu1[i].addEventListener('mouseover', function () {
+                this.style.color = 'red'; /* this : 여기에서는 마우스 올라간 객체 */
+            }) //이벤트(모든 행위들) 감지해 작성하는 함수를 처리해준다.
+            menu1[i].addEventListener('mouseout', function () {
+                this.style.color = 'blue';
+                this.style.backgroundColor = 'black';
+            })
+        }
+        // menu.style.color = 'red'; 배열이 아니기 때문에 위처럼 쓸 수 없다.
+
+        const menu3 = document.querySelectorAll('.menu3 li')
+        for (let k of menu3) {
+            k.addEventListener('mouseover', function () {
+                this.style.color = 'red';
+            })
+            k.addEventListener('mouseout', function () {
+                this.style.color = 'blue';
+                this.style.backgroundColor = 'black';
+            })
+        }
+
+        const menu2 = document.querySelectorAll('.menu2 li')
+        menu2.forEach(function (element, index) {
+            menu2[index].addEventListener('mouseover', function () {
+                this.style.color = 'red';
+            })
+            menu2[index].addEventListener('mouseout', function () {
+                this.style.color = 'blue';
+                this.style.backgroundColor = 'black';
+            })
+        })
+
+        const menu4 = document.querySelectorAll('.menu4 li')
+        let z = 0;
+        do{
+            
+            menu4[z].addEventListener('mouseover', function () {
+                this.style.color = 'red';
+            })
+            menu4[z].addEventListener('mouseout', function () {
+                this.style.color = 'blue';
+                this.style.backgroundColor = 'black';
+            })
+            z++
+        } while (z , menu4.length)
+    </script>
+</body>
+
+</html>

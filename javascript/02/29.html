@@ -28,10 +28,37 @@
         }
         document.write(`1부터 5까지 더하면 ${num}`)
     </script>
+    <!-- num의 값은 1씩 늘어난 i의 값이 할당되어 들어가기 때문에 15라는 숫자가 나오게 되는 것이다. 1+2+3+4+5 -->
+
+
+<!-- i 값이 왜 1씩 증가하는지를 보여주기 위한 식 -->
     <script>
         for(let x = 1; x < 4; x++){
             document.write(`<h1>${x}</h1>`)
         }
+    </script>
+    <script>
+        for(let i = 6; i >= 1; i--){
+            document.write(`<h${i}>꿀잼 자바스크립트</h${i}>`)
+        }
+    </script>
+
+    <!-- ++와 +=는 다른 것이다. -->
+
+    <script>
+        for(let q = 1; q <= 6; q++){
+            document.write(`<h${q}>꿀잼 자바스크립트</h${q}>`)
+        }
+    </script>
+    <script>
+/*       for (시작값; 최종값; 증가식) {
+            반복할 일
+        } */
+        let total = 0;
+        for (let i = 1; i < 101; i++) {
+            total += i;
+        }
+        document.write('1부터 100까지 더하면' + total)
     </script>
 </body>
 </html>

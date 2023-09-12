@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문 종합</title>
+</head>
+
+<body>
+    <h1>반복문</h1>
+    <h2>for</h2>
+    <div id="for"></div>
+    <hr>
+    <h2>forEach</h2>
+    <div id="foreach"></div>
+    <hr>
+    <h2>for of</h2>
+    <div id="forof"></div>
+    <hr>
+    <h2>for in</h2>
+    <div id="forin"></div>
+    <hr>
+    <h2>do / while</h2>
+    <div id="dowhile"></div>
+
+    <script>
+        let foods = ["떡볶이", "순대", "오뎅"];
+        // for
+        for (let i = 0; i < foods.length; i++) {
+            document.getElementById("for").innerHTML += foods[i] /* innerHTML : 하위태그 포함 명령어 */
+                + "<br>"
+            // document.getElementById("for").innerHTML = foods[0] + foods[1]
+            // foods.lenght = 3
+            document.getElementById("for").innerHTML += i + ":" + foods[i] + "<br>"
+        }
+
+        // foreach
+        // array.forEach(function(){}); <-조건식을 안 써도 됨./ 배열에만 사용/ 하나씩 빼질 못 함.
+        // foods.forEach(function(item(값), index(번호)){
+        foods.forEach(function (item, index) {
+            document.getElementById("foreach").innerHTML += `${index} : ${item} <br>`
+        })
+
+        let zoo = ['호랑이', '사자', '코끼리'];
+        zoo.forEach(function (item, num) {
+            document.getElementById("foreach").innerHTML += `${num} : ${item} <br>`
+        })
+
+        // for of : for ( 변수 of 배열){반복 실행문} / 값을 출력
+        for (let x of foods) {
+            document.getElementById("forof").innerHTML += `${x} <br>`
+        }
+
+        // for in : for ( 변수 in 배열){반복 실행문} / 번호를 출력
+        for (let j in foods) {
+            document.getElementById("forin").innerHTML += `${j} <br>`
+            document.getElementById("forin").innerHTML += `${j} : ${foods[j]} <br>` //값 출력하기
+        }
+
+        // do while
+        let d = 0;
+        do{
+            //한번 먼저 실행한다.
+            document.getElementById("dowhile").innerHTML += `${foods[d]} <br>` //떡볶이, 순대, 오뎅
+            d++ //(1)0=0+1
+        }
+        while(d<foods.length);
+    </script>
+    <script src="array.js"></script>
+</body>
+
+</html>

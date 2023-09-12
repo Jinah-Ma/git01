@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이해의 용이성(Understandable)</title>
+    <style>
+        .notice {
+            position: relative;
+        }
+
+        .notice ul+a {
+            position: absolute;
+            top: -23%;
+            left: 0%;
+        }
+
+        /* 이런 식으로 옮겨주면 된다. 그럼 스크린리더기가 읽는 순서가 올바르게 읽힌다. */
+    </style>
+</head>
+
+<body>
+    <h1>이해의 용이성(Understandable)</h1>
+    <a href="" class="skip_to_content">Skip to Content</a>
+    <pre>
+        3.1.1	(기본 언어 표시) 주로 사용하는 언어를 명시해야 한다.
+        3.2.1	(사용자 요구에 따른 실행) 사용자가 의도하지 않은 기능 (새 창, 초점 변화 등)은 실행되지 않아야 한다.
+        3.3.1	(콘텐츠의 선형화) 콘텐츠는 논리적인 순서로 제공해야 한다.
+        3.3.2	(표의 구성) 표는 이해하기 쉽게 구성해야 한다.
+        3.4.1	(레이블 제공) 사용자 입력에는 대응하는 레이블을 제공해야 한다.
+        3.4.2	(오류 정정) 입력 오류를 정정할 수 있는 방법을 제공해야 한다.
+    </pre>
+    <hr>
+    <h2>기본 언어 표시</h2>
+    <p>중국어로는 "안녕하세요"라고 인사할 때 <span lang="zh">你好</span>라고 말합니다.</p>
+    <hr>
+    <h2>컨텐츠의 선형화</h2>
+    <div class="notice">
+        <ul class="notice_list">
+            <li><a href="">news 1</a></li>
+            <li><a href="">news 1</a></li>
+            <li><a href="">news 1</a></li>
+            <li><a href="">news 1</a></li>
+        </ul>
+        <a href="#">더보기</a> <!-- 마크업을 할 때 순서도 논리적으로 따져서 해봐야 한다. 중요한 것이 위쪽에 위치해야 스크린리더기가 중요한 것을 먼저 읽을 수 있다. -->
+    </div>
+    <hr>
+    <h2>표의 구성</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">번호</th> <!-- 표의 헤딩부분. scope="col"을 설정해 가로로 읽힌다. 이렇게 해두면 다음 열도 가로로 읽힌다. -->
+                <th scope="col">상품</th>
+                <th scope="col">수량</th>
+                <th scope="col">금액</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</td> <!-- 단 내려오게끔 해야 된다. -->
+                <td>커피</td>
+                <td>1</td>
+                <td>2,000</td>
+            </tr>
+            <tr>
+                <th scope="row">2</td>
+                <td>스무디</td>
+                <td>2</td>
+                <td>4,000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">total1</td>
+                <td>total2</td>
+                <td>total3</td>
+                <td>total4</td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+    <hr>
+    <h2>레이블 제공</h2>
+    <form action="register.php">
+        <fieldset>
+            <legend>회원가입양식</legend>
+            <label for="userName">이름:</label>
+            <input type="text" id="userName">
+            <label for="userEmail">이메일:</label>
+            <input type="email" id="userEmail">
+            <p>
+                <label for="married">기혼</label>
+                <input type="radio" name="marry" id="married" value="기혼">
+                <label for="unmarried">미혼</label>
+                <input type="radio" name="marry" id="unmarried" value="미혼">
+            </p>
+            <label for="message">메시지:</label>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <button>send</button>
+        </fieldset>
+    </form>
+    <hr>
+    <h2>원칙 4 견고성(Robust)</h2>
+    <pre>
+        4.1.1	(마크업 오류 방지) 마크업 언어의 요소는 열고 닫음, 중첩 관계 및 속성 선언에 오류가 없어야 한다.
+        4.2.1	(웹 애플리케이션 접근성 준수) 콘텐츠에 포함된 웹 애플리케이션은 접근성이 있어야 한다.  
+    </pre>
+</body>
+
+</html>
