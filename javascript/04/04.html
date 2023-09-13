@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var에러2</title>
+</head>
+
+<body>
+    <script>
+        function addNum(num1, num2) { /* (,) 들어온 것은 매개변수(인수{재료}의 투입구/ 인수는 함수를 호출하면서 ()에 넣고 그것이 매개변수로 들어온다. 그럼 함수의 {,}가 실행한다.) */
+            return num1 + num2 /* 실행하는 결과물 */
+        }
+        var sum = addNum(1, 2);
+        console.log(sum);
+
+        var sum = 100;
+        console.log(sum); /* 또다른 sum이 된다. */
+
+        // 디버깅 : 오류를 해결하는 것 ★
+    </script>
+</body>
+
+</html>

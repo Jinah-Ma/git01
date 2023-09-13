@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const people = prompt('총 몇 명입니까?')
+        const sit = prompt('한 줄에 몇 명씩 앉습니까?')
+
+        // 나누어서 떨어지는 경우
+        if (people % sit === 0) {rowNum = (people / sit)}
+        else{rowNum =/*  parseInt( */(people / sit) + 1/* ) */}
+
+/*         if (people / sit) {
+            document.write(`총 인원 ${people}명이고, 한 줄에 ${sit}명씩, ${rowNum}줄이 필요합니다.`)
+        } */
+
+        let i, j
+        document.write('<table>');
+            for(i = 1; i <= people; i++){
+
+            }
+		document.write('</table>');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gallery</title>
+</head>
+
+<body>
+    <div id="galleryWrap">
+        <h1>이미지 넘기기</h1>
+        <p>
+            <a href="#" onclick="prevGallery();">◀️</a> <!-- onmouseover=마우스를 올렸을 때 -->
+            <img src="./img/img1.jpg" alt="" id="gallery" width="300" height="200">
+            <a href="#" onclick="nextGallery();">▶️</a> <!-- 인라인 자바스크립트 태그를 넣을 수 있다./ 1)함수를 호출해둔 뒤 -->
+        </p>
+    </div>
+    <script>
+        // 사건 : 클릭 -> 사진 넘기기 + 1
+        let num = 1; /* 변수 선언과 초기화 */
+        function nextGallery() { /* 2)함수를 선언한다. */
+            num++; /* num = num + 1/ num += 1 (재할당) */
+            if(num >= 8){num = 1;}
+            // ./img/img1.jpg /* 숫자 1(고정값)을 num(변수)으로 */
+            /* console.log(document.getElementById('gallery')); */ /* 클릭을 해야 나온다. 위에 호출부에 클릭을 해야 호출된다고 해뒀기 때문에 */
+            document.getElementById('gallery').src = `./img/img${num}.jpg`
+            console.log(num); 
+        }
+        function prevGallery(){
+            num--;
+            if(num <= 0){num = 7;}
+            document.getElementById('gallery').src = `./img/img${num}.jpg`
+        }
+// 클래스도 이런 식으로 바꿀 수 있다. 다만 수정할 때 번거롭다.★
+
+    </script>
+</body>
+
+</html>

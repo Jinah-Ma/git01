@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let</title>
+</head>
+
+<body>
+    <script>
+        function calcSum(n){
+            /* 블록변수 선언, 초기화 */
+            let sum = 0;
+            /* 전역변수 선언 초기화 */
+            sum2 = 0;
+            for(let i = 1; i < n + 1; i++){
+                sum += i;
+            }
+            console.log(`블록변수 sum : ${sum}`);
+            sum = 100;
+            console.log(sum); /* let은 값을 재할당 할 수 있다.(재선언x) */
+            let sum = 100; /* 재선언 불가! */
+        }
+        calcSum(10);
+    </script>
+</body>
+
+</html>

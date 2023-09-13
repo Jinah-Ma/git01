@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* literal : 리터럴 -> 기능을 표시하는 문자 */
+        // 두 수를 더하는 함수 = addNum -> 함수 이름(이름은 내용을 알 수 있는 의미있는 이름을 정해 적는다.)
+        // {} -> 기능 실행문
+        function addNum (){
+            const sum = a + b;
+            alert(sum);
+        } /* addNum을 선언함 */
+
+        
+    </script>
+    <script>
+        function addNumber(){
+            const num1 = 2;
+            const num2 = 3;
+            const sum = num1 + num2;
+            alert(`결과는? : ${sum}`)
+        }
+        // 함수는 선언만으로 동작하지 않는다. 자주 할 동작에 예약을 해 놓은 것으로 동작을 하려면 함수를 불러줘야 한다. -> 함수를 호출(실행)해야 한다. ★
+
+        addNumber()
+        /* 호출을 하면 바로 alert이 실행이 된다. */
+
+        // 웹브라우저에서 자바스크립트 소스를 해석할 때 함수 선언부분을 가장 먼저 한다.{함수의 호이스팅이라 부른다.} 이 때문에 함수의 선언위치는 프로그램 흐름에 영향을 주지 않는다.★
+        // -> 파일 내에 여러 함수 선언시 스크립트 소스의 앞부분이나 뒷부분에 함수 선언 부분을 모아놓고 필요할 때마다 호출해서 사용한다. ★
+        // -
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자리배치도</title>
+    <style>
+        table,
+        td {
+            border: 1px solid #ccc;
+        }
+
+        td {
+            padding: 5px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>자리배치도</h1>
+    <script>
+        const people = prompt('총 몇 명입니까?') /* 총인원 */
+        const sit = prompt('한 줄에 몇 명씩 앉습니까?') /* 한 줄에 앉을 인원 */
+
+        // 나누어서 떨어지는 경우
+        if (people % sit === 0) { rowNum = (people / sit) }
+        else { rowNum = parseInt((people / sit) + 1) } /* 총 인원 / 한 줄 */
+
+        /* if (people / sit) {
+            document.write(`총 인원 ${people}명이고, 한 줄에 ${sit}명씩, ${rowNum}줄이 필요합니다.`)
+        } */
+
+        let i, j;
+        document.write('<table>');
+        for (i = 1; i <= rowNum; i++) {
+
+            document.write('<tr>')
+            for (j = 1; j <= sit; j++) {
+                seatNo = i * sit + j //좌석번호
+                if (seatNo > people) break; //실행문이 한 줄일때는 중괄호를 안 해도 됨
+                document.write(`<td>좌석 ${seatNo}</td>`);
+            }
+            document.write('</tr>')
+        }
+        document.write('</table>');
+    </script>
+</body>
+
+</html>
