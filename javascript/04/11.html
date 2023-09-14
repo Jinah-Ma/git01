@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콜백함수</title>
+</head>
+
+<body>
+    <h1>콜백함수 : 다른 함수에 매개변수로 들어가는 함수</h1>
+    <script>
+        const me = "어묵꼬치🍢"
+        function menu(){
+            console.log("떡볶이🍽️");
+        }
+        function lunch(callback){
+            callback();
+        }
+        lunch(menu); //펑션 런치에서 menu를 실행한다./ menu는 함수지만 런치의 매개변수로 작용한다.
+        lunch(me); //함수를 받아야만 움직인다. 변수를 주면 (오류) ★
+    </script>
+</body>
+
+</html>

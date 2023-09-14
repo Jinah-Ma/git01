@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            /* 화면 전체로 높이가 조절된다. ★ */
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+
+        .display {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <p>현재시각
+            <span id="current" class="display"></span>
+        </p>
+    </div>
+    <script>
+        setInterval(display, 1000)
+
+        function display() {
+            let now = new Date(); //Date = 객체
+            let currentTime = now.toLocaleTimeString();
+            document.querySelector("#current").innerHTML = currentTime;
+        }
+    </script>
+
+</body>
+
+</html>

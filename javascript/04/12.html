@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콜백함수 2</title>
+</head>
+
+<body>
+    <h1>일정시간이후 나옴.</h1>
+<script>
+    // setTimeout(할일-함수-, 시간) //내장함수
+    const stop1 = setTimeout(()=>{document.write("밥")}, 500)
+    setTimeout(()=>{document.write("주세요")}, 1000)
+    clearTimeout(stop1)
+</script>
+</body>
+
+</html>

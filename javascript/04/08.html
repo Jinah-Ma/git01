@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>매개변수의 기본값 지정하기</h1>
+    <script>
+        function multiple(a, b = 5, c = 10 ) { //= 값/ 디폴트 값을 지정하는 것. 다음에 호출할때 값을 넣지 않아도 이 값이 출력된다.
+            return a * b + c;
+         }
+         const result1 = multiple(5, 10, 20); //70
+         document.write(result1);
+
+         function doc (a){
+            document.write(a);
+         }
+         doc(result1); /* 콜백함수 */
+
+         doc("<hr>")
+         const result2 = multiple(10, 20); //중간에 비는 것 없다. 순차적으로 값이 들어간다. 위의 b값이 20으로 바뀐다. c의 값에 디폴트 값 10이 들어간다.
+         doc(result2);
+         doc("<hr>")
+
+         const result3 = multiple(30);
+         doc(result3);
+
+    </script>
+</body>
+
+</html>
