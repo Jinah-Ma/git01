@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부트스트랩 프로젝트</title>
+    <!-- 파비콘 -->
+    <link rel="title icon" href="./img/title-img.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md fixed-top px-5 bg-dark">
+        <div class="container-fluid"> <!-- 이너 없는 화면전체를 쓴다. 100% -->
+            <a class="navbar-brand mb-0 h1"><i class="bi bi-amd text-warning"></i></a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- navbar-collapse 햄버거메뉴로 내려오는 구성요소 -->
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">Skills</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" data-bs-toggle="dropdown">
+                            Projects
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-light">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-light">Contact</a>
+                    </li>
+                </ul>
+                <form action="#" method="get">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <button type="button" class="btn bg-light">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </form>
+            </div> <!-- // #nav.navbar-collapse -->
+        </div>
+    </nav>
+    <!-- //navbar -->
+
+    <!-- banner -->
+    <section>
+        <div class="container-fluid ps-0" style="overflow: hidden;">
+            <div id="carousel" class="carousel slide carousel-fade" style="height: 100vh; width: 100vw;"
+                data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="2000">
+                        <img src="https://placedog.net/640/480?id=1" alt="" class="d-block w-100">
+                        <div class="carousel-caption d-none d-md-block bottom-50">
+                            <h5>First Lorem ipsum</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur</p>
+                            <a href="#" class="btn btn-warning btn-lg px-4 m-3">More</a>
+                            <a href="#" class="btn btn-danger btn-lg px-4 m-3">Click</a>
+                        </div>
+                    </div><!-- //carousel-item1 -->
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="https://placedog.net/640/480?id=21" alt="" class="d-block w-100">
+                        <div class="carousel-caption d-none d-md-block bottom-50">
+                            <h5>First Lorem ipsum</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur</p>
+                            <a href="#" class="btn btn-warning btn-lg px-4 m-3">More</a>
+                            <a href="#" class="btn btn-danger btn-lg px-4 m-3">Click</a>
+                        </div>
+                    </div><!-- //carousel-item 2-->
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="https://placedog.net/640/480?id=32" alt="" class="d-block w-100">
+                        <div class="carousel-caption d-none d-md-block bottom-50">
+                            <h5>First Lorem ipsum</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur</p>
+                            <a href="#" class="btn btn-warning btn-lg px-4 m-3">More</a>
+                            <a href="#" class="btn btn-danger btn-lg px-4 m-3">Click</a>
+                        </div>
+                    </div><!-- //carousel-item3 -->
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- //banner -->
+
+    <!-- skills -->
+    <section class="bg-light p-5">
+        <div class="container-fluid">
+            <!-- title -->
+            <div class="row">
+                <div class="col text-center mb-3">
+                    <h2 class="text-warning display-2">Skills</h2>
+                    <p class="lead text-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                </div>
+                <!-- //title -->
+                <div class="row text-center">
+                    <div class="col-lg-4 col-sm-10 mx-auto mb-5">
+                        <i class="bi bi-body-text display-1 text-warning mb-3 fw-blod"></i>
+                        <h3 class="text-secondary fs-1 fw-blod">Development</h3>
+                        <p class="text-muted my-4">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur illo ut, fugiat
+                            incidunt quis corporis
+                        </p>
+                        <a href="#" class="btn btn-outline-warning">Learn More</a>
+                    </div>
+                    <div class="col-lg-4 col-sm-10 mx-auto mb-5">
+                        <i class="bi bi-body-text display-1 text-warning mb-3 fw-blod"></i>
+                        <h3 class="text-secondary fs-1 fw-blod">Development</h3>
+                        <p class="text-muted my-4">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur illo ut, fugiat
+                            incidunt quis corporis
+                        </p>
+                        <a href="#" class="btn btn-outline-warning">Learn More</a>
+                    </div>
+                    <div class="col-lg-4 col-sm-10 mx-auto mb-5">
+                        <i class="bi bi-body-text display-1 text-warning mb-3 fw-blod"></i>
+                        <h3 class="text-secondary fs-1 fw-blod">Development</h3>
+                        <p class="text-muted my-4">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur illo ut, fugiat
+                            incidunt quis corporis
+                        </p>
+                        <a href="#" class="btn btn-outline-warning">Learn More</a>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- //skills -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+</body>
+
+</html>
