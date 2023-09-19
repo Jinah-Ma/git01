@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+#wrap {
+    width: 100%;
+    height: 970px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* ====== header ========= */
+header{
+    width: 200px; height: 850px;
+}
+header .inner {width: 100%; height: inherit; position: relative;}
+
+/* logo */
+header h1 {width: 100%; height: 100px; margin-bottom: 2.5rem;}
+
+/* mainMenu */
+header .mainMenu{margin-left: 3rem;}
+
+/* depth1 */
+.depth1{display: flex; flex-direction: row; margin-bottom: 2.5rem;}
+.depth1:last-child{margin-bottom: 6rem;}
+
+.depth1>li>a:hover{color: var(--secondary);}
+
+/* depth2 */
+.depth2{position: absolute; left: 200px; width: calc(100vw - 200px); display: flex; flex-direction: row; gap: 3rem; margin-left: 3rem; margin-top: -2.5rem;}
+
+.depth2>li>a{display: block; z-index: 9999;}
+.depth2>li>a:hover{color: var(--primary);}
+
+
+header::before{content: ''; position: absolute; left: 200px; width: calc(100vw - 200px); background-color: rgba(255, 255, 255, 0.8); height: 250px; top: 10rem; backdrop-filter: blur(20px); transition: all 0.3s;}
+
+.depth2{display: none;}
+header::before{width: 0;}
+
+
+/* spotMenu */
+header .spotMenu{display: flex; flex-direction: row; gap: 2rem; margin-left: 2.5rem;}
+.spotMenu li a{ color: #888;}
+
+.spotMenu li:first-child{border-right: 1px solid rgba(0, 0, 0, .2); padding-right: 2rem;}
+
+/* //header */
+
+/* ====== main ========= */
+main{width: calc(100% - 200px); height: 850px; background-color: beige;}
+
+.slideText{display: none;}
+/* //main */
+
+/* ====== footer ========= */
+footer{width: 100%; height: 120px; background-color: var(--text2);}
+/* //footer */

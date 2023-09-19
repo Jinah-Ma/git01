@@ -45,6 +45,8 @@ main .baaner{width: 100%; height: 200px; background-color: rgb(94, 53, 0);}
 .inner .row {display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 15px 0;}
 
 .row .gift img{width: 150px;}
+
+.row 
 /* //banner */
 
 /* //main */
