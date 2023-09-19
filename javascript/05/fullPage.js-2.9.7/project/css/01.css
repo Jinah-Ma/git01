@@ -1,0 +1,26 @@
+header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+header ul a {
+    color: white;
+    padding: 0 20px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+#wrap {
+    text-align: center;
+    font-size: 2em;
+}
