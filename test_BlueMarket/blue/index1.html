@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- #wrap>.flexbox>header+.flexbox -->
+  <div id="wrap">
+    <div class="flexbox row">
+      <header>
+        <h1><img src="./image/logo.svg" alt="로고"></h1>
+        <nav>
+          <ul class="main_menu">
+            <li><a href="#">OnSale</a>
+              <ul class="sub_menu">
+                <li class="flexbox">
+                  <a href="#">할인행사</a>
+                  <a href="#">덤증정</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#">기획전</a>
+              <ul class="sub_menu">
+                <li class="flexbox">
+                  <a href="#">봄 먹거리</a>
+                  <a href="#">여름 먹거리</a>
+                  <a href="#">가을 먹거리</a>
+                  <a href="#">겨울 먹거리</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#">푸른마을 레시피</a>
+              <ul class="sub_menu">
+                <li class="flexbox">
+                  <a href="#">메인요리</a>
+                  <a href="#">밑반찬</a>
+                  <a href="#">간식</a>
+                  <a href="#">브런치</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#">매장안내</a>
+              <ul class="sub_menu">
+                <li class="flexbox">
+                  <a href="#">신규매장</a>
+                  <a href="#">추천매장</a>
+                  <a href="#">공지사항</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <ul class="spot_menu flexbox">
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">회원가입</a></li>
+        </ul>
+      </header>
+      <div class="flexbox col">
+        <ul class="link">
+          <li><a href="#"><img src="./image/icon01.png" alt="장바구니"><span>장바구니</span></a></li>
+          <li><a href="#"><img src="./image/icon02.png" alt="마이페이지"><span>마이페이지</span></a></li>
+          <li><a href="#"><img src="./image/icon03.png" alt="고객센터"><span>고객센터</span></a></li>
+        </ul>
+        <div class="slide">
+          <ul class="slide_wrap">
+            <li><img src="./image/banner1.png" alt="새벽배송">
+              <div class="text_warp">
+                <h3>fresh!fruit!flash!</h3>
+                <p>유기농 과일도시락 새벽배송 서비스</p>
+              </div>
+            </li>
+            <li><img src="./image/banner2.png" alt="픽업 서비스">
+              <div class="text_warp">
+                <h3>블루마켓 오프라인 픽업 서비스</h3>
+                <p>가까운 편의점에서 블루마켓의 건강식을 바로 받아보세요</p>
+              </div>
+            </li>
+            <li><img src="./image/banner3.png" alt="금쪽이">
+              <div class="text_warp">
+                <h3>탕후루보다 채소를 밝히는 금쪽이</h3>
+                <p>블루마켓의 채후루 솔루션을 받은후 금쪽이가 달라졌어요!</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="banner flexbox">
+            <div class="thumb"><img src="./image/banner.jpg" alt="생생배송"></div>
+            <div class="textbox">
+              <h3>싱싱한 유기농 채소를 신선할 때 생생배송</h3>
+              <p>검증된 친환경 자재만을 사용하여 정성껏 길러내는무농약 농산물, gap(우수농산물관리) 기준에 부합하는 건강하고 안전한 농산물을 신선하게 생생 배송 해드리고 있습니다. </p>
+            </div>
+            <div class="icon"> <img src="./image/arrow.png" alt="more"> </div>
+          </div>
+          <div class="board">
+            <h2>게시판</h2>
+            <ul class="btn flexbox col">
+              <li class="active"><a href="#">공지사항</a></li>
+              <li><a href="#">갤러리</a></li>
+            </ul>
+            <div class="notice">
+              <div class="flexbox">
+                <span>제목 </span>
+                <span>작성일 </span>
+              </div>
+              <div class="flexbox">
+                <span>- 푸른마을 제품 후기 작성 EVENT - </span>
+                <span> 2021-01-18 </span>
+              </div>
+              <div class="flexbox">
+                <span>적립금 이용 안내 </span>
+                <span>2021-01-18 </span>
+              </div>
+              <div class="flexbox">
+                <span>입금자를 찾습니다. </span>
+                <span>2021-01-18 </span>
+              </div>
+              <div class="flexbox">
+                <span>1월 11일 ~ 1월 15일 생산예정상품안내 </span>
+                <span>2021-01-18 </span>
+              </div>
+            </div>
+            <div class="gallery">
+              <img src="./image/banner.jpg" alt="gallery">
+              <img src="./image/banner.jpg" alt="gallery">
+              <img src="./image/banner.jpg" alt="gallery">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="flexbox">
+      <h2 class="logo"><img src="./source/Header/logo.txt" alt=""></h2>
+      <div class="footer_right flexbox col">
+        <p class="footer_menu flexbox">
+          <a href="#">HOME</a>
+          <a href="#">CAMPANY</a>
+          <a href="#">AGREEMENT</a>
+          <a href="#">PRIVACY</a>
+          <a href="#">POLICY</a>
+          <a href="#"> GUIDE</a>
+        </p>
+        <p class="copy flexbox col"><span>푸른마을대표이사 : 김푸른 / 고객센터: 123-123-7405 / 팩스 : 123-835-7405</span>
+          <span>주소 : 충청남도 부산군 대방면 강남로 81 푸른마을</span>
+          <span>Copyright © TheBluemarket All rights reserved</span>
+        </p>
+      </div>
+    </footer>
+  </div>
+
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bxslider.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
