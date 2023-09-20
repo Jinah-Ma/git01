@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="./css/reset.css">
-
 
  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
@@ -34,10 +32,6 @@ OnSale
 
 
 ----------------------------------
-
-푸른마을과 함께하는 20% 쿠폰 할인행사
-양봉조합과 함께하는 천연 프로폴리스 50%
-제주농민과 함께하는 한라봉 최대 50%
 ==========Contents===================================================
 싱싱한 유기농 채소를 신선할 때 생생배송
 
