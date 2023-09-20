@@ -45,6 +45,7 @@ header .subMenu {
     display: flex;
     position: absolute;
     left: 200px;
+    transition: all 0.3s;
 }
 
 header .subMenu>li>a {
@@ -88,10 +89,13 @@ header .subMenu {
 }
 
 header::before {
-    width: 0;
-    overflow: hidden;
-    transition: all 0.3s;
+width: 0;
+overflow: hidden;
 }
+
+.mainMenu ul.depdh1:hover .subMenu{display: flex;}
+.mainMenu ul.depdh1:hover header::before{width: 100%; overflow: visible;}
+
 
 /* spotMenu */
 header .spotMenu {

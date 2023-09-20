@@ -1,16 +1,4 @@
 
-const depdh1 = $('.depdh1');
-depdh1.hover(
-    function(){
-    $('.subMenu').css('display', 'block');
-    $('header::before').css('width', '100%', 'overflow', 'visible');
-},
-function(){
-    $('.subMenu').css('display', 'none',);
-    $('header::before').css('width', '0');
-});
-
-
 $('.slide .inner').bxSlider({
     mode : 'fade',
     auto : 'true',
