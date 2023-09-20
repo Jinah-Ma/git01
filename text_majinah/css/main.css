@@ -256,6 +256,8 @@ h3.btn2 {
 /* gallery */
 .gallery{position: absolute;}
 .gallery img {margin-right: 5rem; margin-top: 3rem;}
+.gallery{display: none;}
+
 /* //main */
 
 /* ============= footer ================= */
