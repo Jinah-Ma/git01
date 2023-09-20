@@ -262,6 +262,10 @@ h3.btn2 {
 .gallery img {margin-right: 5rem; margin-top: 3rem;}
 .gallery{display: none;}
 
+/* popup */
+.popup{display: none;}
+
+
 /* //main */
 
 /* ============= footer ================= */
