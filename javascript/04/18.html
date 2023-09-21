@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자바스크립트 이벤트</title>
+    <style>
+        a:link,
+        a:visited {
+            color: black;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+            width: 500px;
+            margin: 10px auto;
+            padding: 0;
+        }
+
+        li {
+            display: inline-block;
+            width: 120px;
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        #result {
+            width: 500px;
+            height: 300px;
+            margin: 30px auto;
+            border: 2px solid #ccc;
+            border-radius: 15px;
+        }
+
+        p {
+            width: 80%;
+            padding: 10px;
+            line-height: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>dom을 이용한 방식 세가지</h1>
+    <button id="change">change</button>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut corporis iste rerum consequuntur pariatur commodi,
+        ab dicta explicabo. Laudantium accusamus eos doloribus repellendus molestias saepe praesentium delectus. Itaque,
+        quasi labore.</p>
+
+    <script>
+        // 1. 요소를 변수로 지정 후 미리 만든 함수 사용(모듈화, 재사용)
+        /* 변수 선언하고 할당하여 초기화 */
+        /* const changeBttn = document.querySelector('#change'); */
+
+        // changBttn값을 참조한다는 얘기
+
+        /* changeBttn.onclick = changeColor; */
+        
+        /* ()를 하면 호출한 것이 되어서 바로 실행이 된다. */
+
+        function changeColor (){
+            document.querySelector('p').style.color = '#f00';
+        }
+
+        // 2. 요소를 바로 선택하고 미리 만든 함수 사용
+        /* document.querySelector("#change").onclick = changeColor; */
+
+        // 3. 요소를 선택하고 함수를 작성(한 번 만 사용)
+        document.querySelector("#change").onclick = function(){
+            document.querySelector('p').style.color = ('blue')
+        }
+    </script>
+</body>
+
+</html>

@@ -1,4 +1,3 @@
-
 $('.slide .inner').bxSlider({
     mode : 'fade',
     auto : 'true',

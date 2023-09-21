@@ -57,7 +57,7 @@ header .subMenu>li>a {
 
 header::before {
     content: '';
-    width: calc(100% - 200px);
+    width: 0;
     height: 28rem;
     position: absolute;
     left: 200px;
@@ -66,6 +66,7 @@ header::before {
     backdrop-filter: blur(20px);
     transition: all 0.3s;
     z-index: 9999999;
+    display: block;
 }
 
 /* hover */
@@ -88,13 +89,11 @@ header .subMenu {
     display: none;
 }
 
-header::before {
-width: 0;
-overflow: hidden;
+header.on::before {
+    width: 100%;
 }
 
 .mainMenu ul.depdh1:hover .subMenu{display: flex;}
-.mainMenu ul.depdh1:hover header::before{width: 100%; overflow: visible;}
 
 
 /* spotMenu */

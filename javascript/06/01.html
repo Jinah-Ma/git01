@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+</head>
+
+<body>
+    <h1>객체의 생성</h1>
+    <script>
+        let dog = new Object(); /* 생성자 함수 (인스턴스) - 객체를 만들때 쓰는 함수 - {}를 쓴다. 이름 */
+        let cat = new Array(); /*  new Array로 쓰면 배열이 되버린다. - []를 쓴다. 숫자 */
+        console.log(dog);
+        console.log(cat);
+
+        dog = { name: '모찌', weight: '3kg', age: '0살' } /* key: value -> 속성(property) */
+
+        document.write(`<h1>${dog.name}</h1>`); /* '.' 배열의 [번호숫자]와 같은 개념으로 하위에 있는 걸 불러낼때 쓴다. */
+
+        cat = ['모니', '10kg', '8살'];  /* 배열 */
+
+        document.write(`<h1>${cat[0]}</h1>`);
+    </script>
+    <script>
+        // 리터럴 : 프로그래밍 언어에서 약속한 특수문자
+        const dev = {
+            name: '마진아', skill: ['javascript', 'html', 'css'], /* 안에 배열도 넣을 수 있다. */
+        }
+
+        document.write(`<h1>${dev.skill[0]}</h1>`); /* 객체안의 배열을 부르는 법 */
+    </script>
+    <script>
+        const moni = {
+            name: '모니', eat: function (food, age) { /* 매소드 : 객체 안에 함수 */
+                alert(`${this.name}는 ${food}(을/를) 먹어요`), /* this는 키워드/ 지시대명사같은 역할/ 현재는 'moni'를 가리킨다.-> 객체내에서의 this는 객체 자신 */
+                document.write(`${this.name}는 ${age}살이에요.`);
+            }
+        }
+
+        moni.eat("츄르", "8"); /* moni안의(.) eat함수를 호출(this.name = 모니) */ /* (인자) */
+    </script>
+</body>
+
+</html>

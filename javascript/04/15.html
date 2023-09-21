@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트★</title>
+</head>
+
+<body>
+    <button onclick="console.log('버튼 누름');">클릭</button> <!-- 'onclick' html속성으로 이벤트처리기(이벤트리스너) 넣기 -->
+
+    <button class="dom">dom으로 넣기</button>
+
+<button class="methed">메서드로 넣기</button>
+
+    <script>
+        document.querySelector('.dom').onclick=function(){console.log('버튼 누름2');}; /* dom 프로퍼티로 설정 */
+
+        document.querySelector('.methed').addEventListener('click', function(){
+            console.log('버튼 누름3'); /* addEventListener 매서드로 작성 */
+        });
+    </script>
+</body>
+
+</html>

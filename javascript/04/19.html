@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{user-select: none;} /* 드래그 되지 않는다. */
+    </style>
+</head>
+
+<body>
+    <h1>addEventListener ✅</h1>
+    <h2>클릭횟수</h2>
+
+    <script>
+        let counter = 0;
+        document.querySelector('h2').addEventListener('click', function(){
+            counter++;
+            document.querySelector('h2').textContent = `클릭 : ${counter}` /* 글자를 바꿀 수 있게끔 해주는 것. */
+        });
+    </script>
+</body>
+
+</html>
