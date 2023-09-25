@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+
+<body>
+    <h1>치킨 (리미와감자)</h1>
+
+    <ul>
+        <li id="one">I like 치킨 (치킨시켜)</li>
+        <li class="highlight">Everybody likes 치킨 (치킨시켜)</li>
+        <li>Let's eat 치킨 (치킨시켜)</li>
+    </ul>
+
+    <p class="highlight">양념 치킨 후라이드 치킨 치킨 치킨 (치킨시켜) (치킨시켜) x2 반은 양념 치킨 반은 후라이드 치킨 무는 많이 줘요 아줌마 부위는 날개는 세게 다리는 네게 목은 빼주세요
+        아줌마 고도비만 치킨 알이 꽉 찬 치킨 두 마리 같은 걸로 아줌마 구이는 날개는 미듐 가슴도 미듐 다린 웰던으로 아줌마</p>
+
+    <ul>
+        <li class="highlight">Edge 있게 물티슈, (아줌마)</li>
+        <li>콜란 서비스 (아줌마)</li>
+        <li id="two">할인카드... 되죠? (아줌마)</li>
+    </ul>
+
+    <script>
+        // document : dom이다. 객체
+        //console.log(document); //html을 전부 가지고 있다. (dom의 반환값들.)
+        document.getElementById('one').style.background = 'yellow';
+        document.getElementById('two').style.background = 'yellow';
+
+        let el3 = document.getElementsByClassName('highlight'); /* 여러개일 경우엔 할당해서 가져오면 적용이 된다. 여러개이기 때문에 's'가 붙어 있는 걸 확인 할 수 있다. */
+        console.log(el3); //배열로 들어가 있다.
+        el3[0].style.background = 'skyblue';
+        el3[1].style.background = 'skyblue';
+        el3[2].style.background = 'skyblue'; //배열[숫자 혹은 객체]로 선택해서 바꿔주면 된다.
+        
+        for(i = 0; i<el3.length; i++){
+            el3[i].style.background = 'pink';
+        } //전체를 바꿀땐 반복문인 for문을 쓰면 된다. ★
+        
+        el3[0].style.background = 'green';
+
+        const el2 = document.getElementsByTagName('li'); //li는 태그이므로 가져오는 것도 태그로.
+        el2[1].style.backgroundImage = 'url("https://qwerew.cafe24.com/images/icon/02.png")';
+        el2[1].style.backgroundSize = '24px'; /* 한번에 하나씩 해야만 한다. */
+        el2[1].style.backgroundRepeat = 'no-repeat';
+        el2[1].style.marginBottom = '24px';
+
+        // querySelector - 하나, querySelectorAll - 여러개 ->위의 것 최신 기능
+        const el4 = document.querySelector('.highlight'); //모든 걸 쓸 수 있다. //맨 위의 첫번째 것만 적용이 된다.
+        el4.style.backgroundColor = "purple";
+        const el5 = document.querySelectorAll('.highlight'); // 전부 들어가 있다.
+        console.log('el4', el4);
+        console.log('el5', el5);
+        el5[2].style.backgroundColor = "red";
+
+        el5.forEach((el, idx) => {
+            el.style.color = 'orange';
+        }); /* forEach : 반복문-()안에 함수를 넣어야 함. (요소의 값, 요소의 번호 ->그릇의 이름들) => {} */ //옛날 것(get~)과 호환이 되지 않는다.
+    </script>
+</body>
+
+</html>

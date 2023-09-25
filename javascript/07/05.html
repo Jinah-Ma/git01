@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{width: 300px; margin: 50px auto;}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="./images_2/pet-3.jpg" alt="" id="img">
+    </div>
+
+    <script>
+        const img = document.querySelector('#img');
+        img.onclick = function(e){
+            console.log(e.pageX);
+        }
+    </script>
+</body>
+</html>

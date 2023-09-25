@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>해상도 확인하기</title>
+    <style>
+        .container,
+        .js {
+            width: 500px;
+            height: 333px;
+            background: url(./images/image.jpg) no-repeat;
+            background-size: 100% 100%;
+        }
+
+        @media screen and (-webkit-min-device-pixel-ratio:2) {
+            .container {
+                background: url(./images/image2x.jpg) no-repeat;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<!-- 디바이스에따라 해상도가 다르다는 것/ 해상도별로 좋은 이미지를 제공하는 것 -->
+
+    <div class="container">
+        <p>container</p>
+    </div>
+    <div class="js">
+        <p>js</p>
+    </div>
+
+    <!-- 'data-' 사용자 정의 속성 -->
+    <img src="./images/image.jpg" alt="" data-at2x="./images/image2x.jpg">
+
+
+    <script>
+        const dpr = window.devicePixelRatio;
+        if (dpr >= 2) {
+            document.querySelector('.js').style.background = 'url("./images/image2x.jpg")';
+        }
+    </script>
+
+<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+<script src="./js/retina.min.js"></script>
+</body>
+
+</html>

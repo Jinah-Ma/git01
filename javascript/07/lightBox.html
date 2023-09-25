@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라이트박스</title>
+    <style>
+        html.on{overflow-y: hidden; user-select: none;}
+        ul{list-style: none; margin: 0; padding: 0;}
+        .row{width: 420px; margin: auto; height: 200vh;}
+        .row ul li{display: inline-table;}
+
+        #lightbox{position: fixed; width: 100%; height: 100%; background-color: rgba(0,0,0,.7); top: 0; left: 0; display: none;}
+        #lightbox img{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border: 5px solid #eee;}
+
+    </style>
+</head>
+<body>
+    <div class="row">
+        <ul>
+            <li><img src="./images/tree-1-thumb.jpg" data-src="./images/tree-1.jpg" alt="" class="pic"></li>
+            <li><img src="./images/tree-2-thumb.jpg" data-src="./images/tree-2.jpg" alt="" class="pic"></li>
+            <li><img src="./images/tree-3-thumb.jpg" data-src="./images/tree-3.jpg" alt="" class="pic"></li>
+            <li><img src="./images/tree-4-thumb.jpg" data-src="./images/tree-4.jpg" alt="" class="pic"></li>
+            <li><img src="./images/tree-5-thumb.jpg" data-src="./images/tree-5.jpg" alt="" class="pic"></li>
+            <li><img src="./images/tree-6-thumb.jpg" data-src="./images/tree-6.jpg" alt="" class="pic"></li>
+        </ul>
+    </div>
+    <div id="lightbox"><img src="./images/tree-1.jpg" alt="" id="lightboximg"></div>
+
+    <!-- <script src="lightbox-js.js"></script> -->
+    <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
+    <script src="lightbox-jq.js"></script>
+</body>
+</html>

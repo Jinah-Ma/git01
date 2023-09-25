@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style>
+        #container {
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        #prod-pic,
+        #desc {
+            float: left;
+        }
+
+        #prod-pic {
+            margin: 20px 20px auto 10px;
+            padding: 0;
+        }
+
+        #large {
+            box-shadow: 1px 1px 2px #eee;
+            outline: 1px dashed #ccc;
+            outline-offset: -7px;
+        }
+
+        #small-pic {
+            margin-top: 20px;
+            list-style: none;
+            padding: 0;
+        }
+
+        #small-pic>li {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .small {
+            width: 60px;
+            height: 60px;
+        }
+
+        #small-pic img:hover {
+            cursor: pointer;
+        }
+
+        #desc {
+            width: 300px;
+            padding-top: 20px;
+            margin-bottom: 50px;
+        }
+
+        .bluetext {
+            color: #4343ff;
+            font-weight: bold;
+        }
+
+        #desc button {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 100%;
+            padding: 10px;
+        }
+
+        #desc ul {
+            list-style: none;
+        }
+
+        #desc li {
+            font-size: 0.9em;
+            line-height: 1.8;
+        }
+
+        #desc a {
+            text-decoration: none;
+            font-size: 0.9em;
+            color: blue;
+            padding-left: 40px;
+        }
+
+        hr {
+            clear: both;
+            border: 1px dashed #f5f5f5;
+        }
+
+        #detail {
+            padding-top: 20px;
+            display: none;
+        }
+
+        #detail li {
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: #bebebe;
+            font-weight: normal;
+        }
+
+        h3 {
+            font-size: 1.1em;
+            color: #222;
+        }
+
+        p {
+            font-size: 0.9em;
+            line-height: 1.4;
+            text-align: justify;
+        }
+    </style>
+    <script src="./04.js" defer></script> <!-- defer : 지연 속성으로 헤드태그 사이에 스크립트를 작성해도 작동하게 된다. -->
+</head>
+
+<body>
+    <div id="container">
+        <h1 id="heading">라탄 바구니</h1>
+        <div id="prod-pic">
+            <img src="images_2/pet-1.jpg" alt="망치" id="large" width="200" height="200" onclick="displaySrc()">
+            <div id="small-pic">
+                <img src="images_2/pet-1.jpg" class="small">
+                <img src="images_2/pet-2.jpg" class="small">
+                <img src="images_2/pet-3.jpg" class="small">
+            </div>
+        </div>
+        <div id="desc">
+            <ul>
+                <li>상품명 : 라탄 바구니</li>
+                <li class="bluetext">판매가 : 9,000원</li>
+                <li>배송비 : 3,000원<br>(50,000원 이상 구매시 무료)</li>
+                <li>적립금 : 180원(2%)</li>
+                <li>등록일 : 2019.06.17</li>
+                <button>장바구니 담기</button>
+            </ul>
+            <a href="#" id="view">상세 설명 보기</a>
+        </div>
+        <div id="detail">
+            <hr>
+            <h2>상품 상세 정보</h2>
+            <ul>
+                <li>원산지 : 대한민국</li>
+                <li>소 재 : 라탄</li>
+                <li>사이즈 : 30 x 50</li>
+                <li>무 게 : 100g </li>
+            </ul>
+            <h3>Information</h3>
+            <p>천연 등나무로 만든 원형 라탄 바구니 입니다. 천연 재료로 만들어 환경 호르몬 유해물질 화학 성분 걱정 없는 자연 그대로의 수공예품 이예요.</p>
+            <h3>Usage Note</h3>
+            <p>촬영된 강아지 망치는 모델로 비매품 입니다. 발송되지 않습니다.</p>
+        </div>
+    </div>
+</body>
+
+</html>

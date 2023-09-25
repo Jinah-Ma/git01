@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #four span {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page">
+        <h1 id="header">textContent/innerText</h1>
+        <h2>망고의 쇼핑목록</h2>
+        <ul>
+            <li id="one" class="hot">
+                <em>삑삑공</em>
+            </li>
+            <li id="two" class="hot">연어간식</li>
+            <li id="three" class="hot">치즈껌</li>
+            <li id="four"><span>😀😀😀😀😀</span></li>
+        </ul>
+        <div id="scriptResults"></div>
+    </div>
+
+    <script>
+        //상수(변수) firstItem을 선언하고, #one 엘리먼트 노드를 쿼리셀렉터로 할당
+        const firstItem = document.querySelector('#one');
+        const showTextContent = firstItem.textContent; // 선택된 돔 요소의 텍스트(글자)를 반환할 수 있다.
+        console.log(showTextContent); //삑삑공이 반환되어 나와진다.
+        const showInnerText = firstItem.innerText;
+        console.log(showInnerText);
+
+
+        //동적요소 추가
+        let msg = `<p>TextContent: ${showTextContent}</p>` //할당
+        msg += `<p>innerText: ${showInnerText}</p>` //재할당
+
+        //추가할 기준 요소 선택
+        let el = document.querySelector('#scriptResults');
+
+        el.innerHTML = msg;
+    </script>
+    <script>
+        /* innerText - display:none 된 텍스트는 안읽음. /textContent - display:none 된 텍스트 읽음 */
+        const text4 = document.querySelector('#four');
+        const text4Content = text4.textContent;
+        const text4Inner = text4.innerText;
+        console.log(text4Content); //숨겨진 것 반환됨
+        console.log(text4Inner); //숨겨진 것 반환 안 됨
+
+        el.innerHTML += text4Content; //재할당
+        /* 보여주기 위함 */
+
+
+        /* 응용 */
+        document.querySelector('#two').textContent = '공주드레스'
+    </script>
+</body>
+
+</html>

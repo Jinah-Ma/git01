@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			#four span {
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="page">
+			<h1 id="header">textContent/innerText</h1>
+			<h2>망고의 쇼핑목록</h2>
+			<ul>
+				<li id="one" class="hot">
+					<em>삑삑공</em>
+				</li>
+				<li id="two" class="hot">연어간식</li>
+				<li id="three" class="hot">치즈껌</li>
+				<li id="four"><span>😀😀😀😀😀</span></li>
+			</ul>
+			<div id="scriptResults"></div>
+		</div>
+
+        <script>
+            document.querySelector('#one').textContent = '모니';
+            document.querySelector('h2').textContent = '우리반 고양이';
+            
+            let text = document.querySelector('#one').textContent;
+            console.log(text);
+            
+            text += `, 하양이`;
+            console.log(text);
+            
+            text += `, 모찌`;
+            console.log(text);
+            
+            let h3 = `<h3>${text}</h3>`;
+            console.log(h3);
+
+            document.querySelector('#scriptResults').innerHTML = h3;
+        </script>
+	</body>
+</html>
