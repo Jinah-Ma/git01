@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리, 자바스크립트 클래스</title>
+
+    <style>
+        .addClass {
+            background: red;
+        }
+
+        .cls1 {
+            color: blue;
+        }
+
+        .cls2 {
+            margin-left: 20px;
+            border-bottom: 2px solid;
+        }
+
+        div {
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>addClass</div>
+    <div>removeClass</div>
+    <div>toggleClass</div> <!-- 클래스가 있으면 삭제하고 있으면 추가하는 것/ 클릭버튼 -->
+    <div>hasClass</div> <!-- 애니메이션에 많이 쓴다./클래스가 있는지 없는지 확인. 있으면 트루, 없으면 펄스가 되므로 조건문에 쓴다.  -->
+
+    <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
+    <!-- <script>
+        let divs = $('div');
+        divs.addClass('addClass');
+        console.log(divs);
+        divs.eq(1).removeClass('addClass'); /* 복습! 선택하는 것/ $('div:nth-child(2)')로도 선택 가능! */
+        divs.eq(2).on('click', function(){
+            $(this).toggleClass('addClass');
+        })
+        /* .on은 이벤트를 여러개 넣을때 사용한다. */
+        divs.addClass("cls1 cls2"); /* 클래스를 여러개 추가할 수 있다. */
+        divs.removeClass("cls1 cls2"); /* 클래스를 여러개 삭제할 수 있다. */
+
+        divs.eq(3).on('click', function(){
+            console.log($(this).hasClass('addClass'));
+            if($(this).hasClass('addClass')){
+                $(this).animate({fontSize: '200%'}, 500); /* 트랜지션 모든 걸 다 쓸 수 있다. */
+                $(this).removeClass('addClass') /* 애니메이트 실행되고나서 삭제가 되므로 이제 펄스로 바뀐다. */
+            }else{
+                $(this).animate({fontSize: '100%'}, 500);
+                $(this).addClass('addClass')
+            } /* 펄스값이 나올 경우에 값을 입력 */
+        })
+    </script> -->
+    <!-- 제이쿼리 -->
+
+    <!-- 자바스크립트 -->
+    <script>
+        let divs = document.querySelectorAll('div');
+        divs.forEach((el) => {
+            el.classList.add('addClass');
+        })
+
+        /* 요소를 특정해서 다중클래스 추가 */
+        divs[1].classList.add("cls1", "cls2", "addClass") /* 제이쿼리는 ','가 없지만, 자바스는 있다. */
+
+        /* 클래스 삭제 */
+        divs[1].classList.remove("addClass")
+
+        /* 토글클래스 */
+        divs[2].addEventListener('click', function () {
+            this.classList.toggle('addClass')
+        })
+
+        /* hasClass */
+        divs[3].addEventListener('click', function () {
+            if (this.classList.contains('addClass')) {
+                this.style.transition = 'all 0.5s';
+                this.style.fontSize = '200%';
+                this.classList.remove('addClass');
+            } else {
+                this.style.transition = 'all 0.5s';
+                this.style.fontSize = '100%';
+                this.classList.add('addClass');
+            }
+        })
+    </script>
+</body>
+
+</html>

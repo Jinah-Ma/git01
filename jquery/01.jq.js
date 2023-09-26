@@ -11,8 +11,8 @@ $(function () {
     let list1 = $('#list1 li'); /* 제이쿼리는 알아서 돌려줌 */
     /* 제이쿼리에서 반복문을 돌릴때에는 위치가 다르고 떨어져 있는 것들에 쓰는 것이 좋다.(부모가 같은 애들은 알아서 돈다.) */
     list1.each((idx, el) => { /* 자바와 반대다. */
-        const newText = oriText + idx + 'text()로 추가';
         let oriText = $(el).text();
+        const newText = oriText + idx + 'text()로 추가';
         $(el).text(newText);
 
         //3
@@ -40,7 +40,7 @@ $(function () {
 
 
     const list3Lis = $('#list3 li');
-    list3Lis.eq(4).befor(`네 앞에${li}`);
+    list3Lis.eq(4).before(`네 앞에${li}`);
     list3Lis.eq(4).after(`네 뒤에${li}`);
 })
 

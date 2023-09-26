@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        body {
+            font: 12px/1.5 '굴림', Gulim;
+            margin: 10px;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        a {
+            color: #333;
+        }
+
+        #textZone {
+            width: 700px;
+        }
+
+        #listWrap {
+            background: #cfcfcf;
+            width: 110px;
+            padding: 10px;
+        }
+
+        .list1 {
+            display: none;
+        }
+    </style>
+
+    <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
+    <script>
+        //window.onload = function(){ }/* 다 읽고 실행하라는 자바스크립트 용어1 */
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn1 = document.querySelector('#btn1');
+            btn1.addEventListener('click', function () {
+                this.style.color = 'red'; /* ()=>{}안에 this를 쓰게 되면 윈도우를 가르키게 된다. 그래서 펑션으로 바꿔주면 실행이 된다. */
+            })
+
+            document.querySelector('#btn2').onmouseover = function () {
+                document.querySelector('#textZone').style.fontSize = "2em";
+            }
+        }) /* 2 */
+        /* 이벤트 함수를 화살표함수로 작성시 this는 윈도우를 반환함. */
+
+
+    </script>
+
+
+    <script>
+        /* #btn클릭시 #textzone글씨색 변경 */
+        $(() => {
+            const btn1 = $('#btn1');
+            btn1.on('click', function () {
+                $('#textZone').css('color', 'red');
+            })
+
+            const btn2 = $('#btn2');
+            btn2.on('mouseover', function () {
+                $('#textZone').css('backgroundColor', 'yellow');
+            })
+
+            /* 이벤트 두개 연결하기 -> 이벤트를 바인딩한다. */
+
+            const btn3 = $('#btn3');
+            function textZone4() {
+                $('#textZone').css('color', 'green');
+                $('#textZone').css('fontWeight', 'bold');
+            }
+            btn3.on(
+                {
+                    mouseenter: function () { textZone4(); }, /* 객체 하나 */ /* mouseenter : 마우스커서가 요소 영역 안으로 진입할 때 발생. */
+                    click: function () { textZone4(); alert("안녕")} /* 객체 둘 */
+                } 
+            )
+
+        })
+
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>이벤트 연습</h1>
+        <p id="textZone">웹 브라우저에서 버튼을 클릭한다거나 mouse를 움직이거나 하는 모든 행위를 ‘이벤트’라고 합니다. 그리고 이벤트발생 시 함수의 실행문이 수행되도록 이벤트를 지정하는 것을
+            이벤트 핸들러라고 합니다.</p>
+        <h2>click 메서드</h2>
+        <p><button id="btn1">click</button></p>
+        <h2>mouseover 메서드</h2>
+        <p><button id="btn2" tabindex="1">mouseover</button></p>
+        <h2>bind 메서드</h2>
+        <p><button id="btn3">bind</button></p>
+        <h2>mouseleave 메서드</h2>
+        <div id="listWrap">
+            <h3>관련 사이트</h3>
+            <ul class="list1">
+                <li><a href="#">list1</a></li>
+                <li><a href="#">list2</a></li>
+                <li><a href="#">list3</a></li>
+                <li><a href="#">list3</a></li>
+            </ul>
+        </div>
+        <h2>hover 메서드</h2>
+        <h3><a href="#" class="hover">hover</a></h3>
+    </div>
+
+
+</body>
+
+</html>
