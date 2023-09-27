@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소의 위치 얻기</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            margin: 200px 0 0 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Hello</p>
+    <p>2nd Paragraph</p>
+
+    <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
+    <script>
+        const p = $('p:last');
+        let offset = p.offset(); /* 기준점으로부터 떨어져있는 값 */
+        console.log(offset);
+        console.log(offset.left);
+        console.log(offset.top); /* 혹은 위쪽에 p.offset().top이라 써도 같다. */
+        p.text('top'+offset.top); /* 값 출력 */
+    </script>
+</body>
+
+</html>

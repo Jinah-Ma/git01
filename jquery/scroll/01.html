@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{margin: 10px; padding: 5px; border: 2px solid; height: 800px;}
+    </style>
+</head>
+<body>
+    <h1>스크롤양 얻어내기</h1>
+    <p>Hello</p>
+    <p></p>
+
+    <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
+    <script>
+        $(window).scroll(function(){
+            let winSCT = $(window).scrollTop();
+          $('p:last').text('scrollTop'+$(window).scrollTop()); /* 스크롤 탑 값 얻기 */  
+        if(winSCT>500){$('p:last').css('background', 'red')} /* ★ */
+        });
+    </script>
+</body>
+</html>
