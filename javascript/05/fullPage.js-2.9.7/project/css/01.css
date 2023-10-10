@@ -20,7 +20,21 @@ header ul a {
     text-decoration: none;
 }
 
+header ul li.active a{
+    background-color: white;
+    color: black;
+}
+
 #wrap {
     text-align: center;
     font-size: 2em;
+}
+
+#fp-nav.active span {
+    background-color: #fff !important;
+}
+
+.fp-tooltip {
+    color: #333 !important;
+    overflow:initial !important;
 }

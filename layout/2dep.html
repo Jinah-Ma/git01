@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        nav>ul {
+            justify-content: center;
+            display: flex;
+            width: 100%;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        nav {
+            width: 100%;
+            position: relative;
+            background-color: beige;
+        }
+
+
+        nav>ul {
+            background-color: beige;
+        }
+
+        nav>ul a {
+            display: block;
+            padding: 10px;
+        }
+        
+        nav ul.sub {
+            background-color: beige;
+            display: none;
+        }
+
+
+        .bg {
+            position: absolute;
+            background-color: beige;
+            height: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">menu1</a>
+                <ul class="sub">
+                    <li><a href="#">menu1-1</a></li>
+                    <li><a href="#">menu1-2</a></li>
+                    <li><a href="#">menu1-3</a></li>
+                    <li><a href="#">menu1-4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">menu2</a>
+                <ul class="sub">
+                    <li><a href="#">menu2-1</a></li>
+                    <li><a href="#">menu2-2</a></li>
+                    <li><a href="#">menu2-3</a></li>
+                    <li><a href="#">menu2-4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">menu3</a>
+                <ul class="sub">
+                    <li><a href="#">menu3-1</a></li>
+                    <li><a href="#">menu3-2</a></li>
+                    <li><a href="#">menu3-3</a></li>
+                    <li><a href="#">menu3-4</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="bg"></div>
+    </nav>
+
+    <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
+    <script>
+        $(() => {
+            $('.bg').css('transition', 'all 0.5s')
+            $('nav>ul>li').on({
+                mouseenter : function () {
+                    $('.bg').height($('.sub').innerHeight() + $('nav').innerHeight());
+                    $('.sub').css('display', 'block');
+                },
+                mouseleave : function(){
+                    $('.bg').height(0);
+                    $('.sub').css('display', 'none');
+
+                },
+            })
+            
+        })
+    </script>
+</body>
+
+</html>
