@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
+    <script> //비포 에프터 같은 메서드
+        $(() => {
+            $('h1').append('<span>😄</span>');
+            $('<span>😄</span>').appendTo('h1');
+            //에프터 자리에 요소 추가
+
+            $('h2').prepend('<span>😊</span>');
+            $('<span>😊</span>').prependTo('h2');
+            //비포 자리에 요소 추가
+        })
+
+    </script>
+</head>
+
+<body>
+    <h1>기준</h1>
+    <h2>기준</h2>
+</body>
+
+</html>
