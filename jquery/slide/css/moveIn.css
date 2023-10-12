@@ -59,4 +59,24 @@
     text-indent: -999999px;
 }
 
-.btnlist li.on{background-position-y: 0;}
+.btnlist li.on {
+    background-position-y: 0;
+}
+
+/* 좌우버튼 구현 */
+.btnImg {
+    position: relative;
+    top: -250px;
+    width: 100%;
+    user-select: none;
+    cursor: pointer;
+}
+
+.btnImg .left{
+    position: absolute;
+    left: 100px;
+}
+.btnImg .right{
+    position: absolute;
+    right: 100px;
+}

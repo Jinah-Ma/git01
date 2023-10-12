@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            cursor: none;
+            cursor: default;
+            cursor: pointer;
+        }
+
+        .cursor {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            /* 애니메이션을 할 때에는 다른 요소를 밀어내지 않게 공중에 플로팅 해줘야 함. */
+            top: 0;
+            left: 0;
+            cursor: url(./img/3.png), auto;
+        }
+
+        .m1,
+        .m2,
+        .m3 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+        }
+
+        .m1 {
+            top: 50px;
+            left: 30px;
+        }
+
+        .m2 {
+            top: 100px;
+            right: 100px;
+        }
+
+        .m3 {
+            bottom: 80px;
+            left: 150px;
+        }
+    </style>
+
+    <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
+    <script>
+        $(() => {
+            $(window).on('mousemove', function (e) {
+                let x = e.clientX;
+                let y = e.clientY;
+
+                $(".m1").css({ top: y, left: x });
+                $(".m2").css({ right: x });
+                $(".m3").css({top: y, left: x/5 });
+                $(".cursor").css({top: y, left : x});
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="m1"><img src="./img/1.png" alt="1"></div>
+    <div class="m2"><img src="./img/2.png" alt="2"></div>
+    <div class="m3"><img src="./img/3.png" alt="3"></div>
+    <div class="cursor"></div>
+    <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio nobis libero quasi repellat minima ullam
+        dignissimos sed inventore, similique iste suscipit voluptatibus sit, voluptate odit accusamus iusto, commodi
+        voluptatem consequuntur.</h1>
+</body>
+
+</html>

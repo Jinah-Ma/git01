@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --size: 15px;
+        }
+
+        html {
+            cursor: none;
+            user-select: none;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(60deg, #1a1f26 0%, #313b44 100%);
+            overflow: hidden;
+        }
+
+        .cursor {
+            height: var(--size);
+            width: var(--size);
+            border-radius: 50%;
+            position: absolute;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+
+        .cursor.cursor-dot {
+            background: #fff;
+            transition: width 0.25s, height 0.25s;
+        }
+
+        .cursor.cursor-follower {
+            background: rgb(150, 100, 200);
+            transition: top 0.25s, left 0.25s, width 0.5s, height 0.5s;
+            transition-timing-function: ease-out;
+        }
+
+        h1 {
+            color: #fff;
+            padding: 50px;
+        }
+
+        .cursor.cursor-follower.focus {
+            --size: 100px;
+            /* 변수를 쓰고 있는 것들의 값을 바꾸게 된다. */
+        }
+
+        .cursor.cursor-dot.focus {
+            --size: 0px;
+        }
+    </style>
+    <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
+    <script>
+        $(()=>{
+            $(window).on('mousemove', function (e) {
+                $('.cursor').css({
+                    left: e.pageX,
+                    top: e.pageY,
+                    /* 클라이언트와 페이지의 차이
+                    클라이언트 : 스크롤바를 뺀 것
+                    페이지 : 스크롤바를 더한 것
+                    */
+                })
+            })
+            $('h1').on({
+                mouseenter: function () {
+                    $('.cursor').addClass('focus');
+                },
+                mouseleave: function () {
+                    $('.cursor').removeClass('focus');
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="cursor cursor-follower"></div>
+    <div class="cursor cursor-dot"></div>
+    <h1>Hover Me</h1>
+</body>
+
+</html>

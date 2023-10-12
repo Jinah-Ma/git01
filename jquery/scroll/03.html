@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            font-size: 10em;
+            height: 400vh;
+            width: 100%;
+        }
+
+        .progress {
+            position: fixed;
+            width: 70%;
+            left: 50%;
+            top: 150px;
+            height: 100px;
+            transform: translateX(-50%);
+            text-align: center;
+            line-height: 1;
+            border: 1px solid #222;
+        }
+
+        .bar {
+            position: absolute;
+            width: 100%;
+            width: 0;
+            height: 100%;
+            background-color: #222;
+            left: 0;
+        }
+
+        .txt {
+            font-size: 30px;
+        }
+    </style>
+    <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+    <script>
+        $(() => {
+            let txt = $('.txt');
+            let bar = $('.bar');
+
+            //스크롤진행율 계산함수
+            function getPercent(sct) {
+
+                const scrollHeight = $('section').height();
+                const scrollRealHeight = scrollHeight - $(window).height();
+                let scrollPercent = Math.floor((sct / scrollRealHeight) * 100); //퍼센트로 바꾸기 위함.
+                render(scrollPercent);
+            }
+            //스크롤바 애니메이트 함수(화면에 표시)
+            function render(scrollPercent) {
+                if (scrollPercent >= 100) {
+                    scrollPercent = 100
+                }
+                txt.text(scrollPercent)
+                /* bar.css('width', scrollPercent+"%") */
+                bar.css(`width`, `${scrollPercent}%`)
+            }
+
+            //윈도우의 스크롤양을 얻어오는 함수
+            $(window).on('scroll', () => {
+                let sct = $(this).scrollTop();
+                getPercent(sct);
+            })
+        })
+
+    </script>
+</head>
+
+<body>
+    <section>
+        <div class="progress">
+            <span class="bar"></span>
+            <span class="txt"></span>
+        </div> 가<br>나<br>다<br>라<br>마<br>바<br>사<br>아<br>자<br>차<br>카<br>타<br>파<br>하<br>
+    </section>
+</body>
+
+</html>
