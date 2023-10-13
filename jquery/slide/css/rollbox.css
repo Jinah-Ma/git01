@@ -1,0 +1,30 @@
+.box {
+    margin: 2rem auto;
+    width: 50%;
+    transition: all 0.5s;
+}
+
+.box li {
+    background: rgba(255, 255, 0, 0.5);
+    border: 1px solid;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+}
+
+.box:nth-of-type(1) li:nth-child(2):hover {
+    margin-left: 50px;
+}
+
+.box:nth-of-type(2) {
+    position: relative;
+}
+
+.box:nth-of-type(2) li:nth-child(2):hover {
+    transform-origin: 0 0;
+    /* 기준점이 원래는 중간에 있는데, 이걸 초기화 시킨것 */
+    transform: translateX(50px);
+}
+
+.transform li{transition: all 0.5s; transform: scale(1);}
+.transform li:last-child{transform: scale(2);}

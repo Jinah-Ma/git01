@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialosed;
+    /* 폰트 가장자리 계단현상 완화시켜주는 것 */
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.tad-wrapper {
+    max-width: 960px;
+    margin: 5rem auto;
+}
+
+.tab-menu {
+    padding-left: 0;
+}
+
+.tab-menu li {
+    display: inline-block;
+    list-style: none;
+    background: #ebebeb;
+    margin-right: 10px;
+}
+
+.tab-menu li a {
+    color: black;
+    text-decoration: underline;
+    font-weight: bold;
+    line-height: 27px;
+    text-decoration: none;
+    display: block;
+    padding: 0 20px;
+}
+
+.tab-menu li a.active {
+    background: #000;
+    color: #fff;
+}
+
+.tab-content {
+    position: relative;
+    min-height: 300px;
+    max-width: 500px;
+}
+
+.tab-content>div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    background: #e7b36e27;
+    padding: 1em;
+}
+
+.tab-content>div.active {
+    display: block;
+}
