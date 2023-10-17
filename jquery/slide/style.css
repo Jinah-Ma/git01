@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    width: 660px;
+    margin: auto;
+}
+
+.slide_wrapper {
+    width: 660px;
+    position: relative;
+    padding-top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+
+.slides {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 200px;
+    width: 100%;
+}
+
+.slides.animate{transition: 0.5s ease-out;}
+
+.slides li{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background: #ccc;
+}
+
+.slides li.clone{
+    background-color: aqua;
+}

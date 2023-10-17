@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+/* 스크롤바 */
+body::-webkit-scrollbar {
+    width: 3em;
+    background: linear-gradient(300deg, #1f005c, #5b0060, #870160, #ac255e, #ca485c, #e16b5c, #f39060, #ffb56b);
+}
+
+body::-webkit-scrollbar-thumb {
+    width: 3em;
+    height: 10em;
+    background: rgb(38, 184, 184);
+    border-radius: 3rem 0 0 3rem;
+}
+
+body::-webkit-scrollbar-button {
+    width: 3em;
+    height: 3em;
+    box-shadow: 1px 1px 3px #000;
+    background-color: aquamarine;
+}
+
+/* 레이아웃 */
+section {
+    min-height: 100vh;
+    line-height: 100vh;
+    text-align: center;
+    background-color: yellow;
+}
+
+section::selection {
+    color: red;
+    background-color: #00eeff;
+}
+
+/* ::selection => 컨텐츠가 선택됐을때 */
+
+/* 상단 네비게이션 */
+nav {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 1em 1.4em;
+    width: 100%;
+}
+
+nav.sticky {
+    background: rgba(255, 0, 100, 0.6);
+    position: fixed;
+    z-index: 222;
+}
+
+nav .gnb {
+    display: flex;
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+}
+
+nav .gnb li {
+    flex: 1 1 200px;
+}
+
+nav .gnb li a {
+    color: #fff;
+    display: inline-block;
+    padding: 0.2rem;
+    text-align: center;
+    line-height: 2rem;
+    height: 2rem;
+    position: relative;
+}
+
+nav .gnb li a:before,
+nav .gnb li a:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    transform: scaleX(0);
+    transition: all 0.5s;
+}
+
+nav .gnb li a:before {
+    top: 0;
+    transform-origin: left;
+}
+
+.gnb li a:after {
+    bottom: 0;
+    transform-origin: right;
+}
+
+nav .gnb li.on a:before,
+nav .gnb li a:hover:before,
+nav .gnb li.on a:after,
+nav .gnb li a:hover:after {
+    transform: scaleX(1);
+}
+
+/* 사이드 네비 */
+.sideNav {
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    z-index: 999;
+}
+
+.sideNav a {
+    display: inline-block;
+    padding: 1em;
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
+    margin-bottom: 1em;
+}
+
+
+.sideNav li.on a::before{
+content: "😺";
+
+}
