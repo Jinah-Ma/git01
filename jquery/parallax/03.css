@@ -1,0 +1,67 @@
+section {
+	position: relative;
+	display: flex;
+	color: #333;
+	gap: 2rem;
+  padding-top:10em;
+}
+section .item:nth-child(1) {
+	flex-basis: 60%;
+}
+section .item:nth-child(2) {
+	flex-basis: 40%;
+}
+section h2 {
+	position: absolute;
+	z-index: 9999;
+	mix-blend-mode: difference;
+	font-size: 4rem;
+	filter: drop-shadow(1px 1px 5px rgb(255, 0, 247));
+}
+section figure {
+	position: relative;
+	box-shadow: -1rem 1rem 3rem -2rem rgba(0, 0, 0, 0.5);
+}
+section figure img {
+	width: 100%;
+	display: block;
+	clip-path: inset(0 100% 0 0);
+	transition: clip-path 0.6s 0.3s cubic-bezier(1, 0.47, 0.06, 1.5);
+}
+section figure figcaption {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	padding: 10px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 2rem;
+	background-color: var(--bg1);
+	mix-blend-mode: color-dodge;
+	clip-path: inset(0 0 0 100%);
+	transition: clip-path 0.6s 0.6s cubic-bezier(1, 0.47, 0.06, 1.5);
+}
+
+section figure:before {
+  z-index: 99999;
+  content:'';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: var(--bg5);
+	transition: clip-path 0.3s cubic-bezier(1, 0.47, 0.06, 1.5);
+  clip-path:inset(0 0 0 100%);
+}
+
+
+section.is-animated figure:before,
+section.is-animated figure img,
+section.is-animated figure figcaption{
+  clip-path:inset(0) ;
+}
+section.is-animated figure:before{
+  z-index: 0;
+}

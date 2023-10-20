@@ -1,0 +1,54 @@
+.charts {
+    width: 80%;
+    margin: 3rem auto;
+    display: flex;
+    justify-content: center;
+}
+
+.charts .chart {
+    margin: 0 20px;
+    position: relative;
+}
+
+.charts .chart h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.charts .chart svg {
+    width: 220px;
+    height: 220px;
+}
+
+/* 스톡값까지 계산해서 쓴다. */
+.charts .chart svg circle {
+    fill: #efefef;
+    stroke-width: 20; /* 바깥쪽 안쪽으로 반반씩 */
+    stroke-linecap: round;
+    stroke: #ffc114;
+
+    stroke-dasharray: 628;
+    stroke-dashoffset: 628;
+    transform:rotate(-90deg);
+    transform-origin: 50% 50%; /* 여러개를 할 경우 꼭 써줘야 함, 중심축 */
+
+    /* animation: line 4s infinite; */
+}
+
+@keyframes line{
+    from{
+        stroke-dashoffset: 628;
+    }
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+.charts .chart:nth-child(2) circle{ stroke: #ff5248;}
+.charts .chart:nth-child(3) circle{ stroke: #48ffb9;}
+.charts .chart:nth-child(4) circle{ stroke: #f048ff;}
+
+.content{height: 100vh;}

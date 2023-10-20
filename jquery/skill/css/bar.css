@@ -1,0 +1,33 @@
+.progress-bar{
+    position: relative;
+    width: 45vw;
+    height: 30px;
+    margin: 3em auto;
+    border: 1px solid green;
+}
+
+.progress-bar .bar{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: green;
+    width: 0;
+}
+
+.rate{
+    position: absolute;
+    top: 0;
+    right: 15px;
+    bottom: 0;
+    line-height: 30px;
+    font-size: 1.2em;
+    color: green;
+    /* 위쪽에다 쓸 경우엔 값을 변경하자. */
+}
+
+.content {
+    height: 800px;
+    font-size: 3em;
+}

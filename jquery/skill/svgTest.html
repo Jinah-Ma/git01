@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .svg {
+            width: 300px;
+            height: 300px;
+            background: url(./svg1.svg) no-repeat;
+            /* //두번째 방법 */
+        }
+
+        .line path {
+            /* fill : green; */
+            /* css가 우선 적용된다. 원래는 인라인방식이 우선적용이 기본이다. */
+            stroke-dasharray: 486;
+            /* 선길이 */
+            stroke-dashoffset: 486;
+            /* 갭 */
+            /* 같은 값을 주면 선이 안 보이게 된다. */
+            /* 애니메이션을 할 경우엔 패스 하나로만 해야 된다. */
+            animation: dash 1s infinite;
+        }
+
+        @keyframes dash {
+            from {
+                stroke-dashoffset: 486;
+            }
+
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        .line2 path {
+            stroke-width: 6px;
+            stroke-linecap: round; /* 끝모양 둥글게 */
+            stroke-dasharray: 701;
+            /* 선길이 */
+            stroke-dashoffset: 701;
+            /* 갭 */
+            animation: dash2 3s infinite;
+        }
+
+        @keyframes dash2 {
+            from {
+                stroke-dashoffset: 701;
+            }
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>img</h1>
+    <img src="./svg1.svg" alt=""> <!-- //첫번째 방법 -->
+    <h2>background</h2>
+    <div class="svg"></div>
+    <h2>svg</h2>
+    <div><svg class="line" viewbox="0 0 432 116" fill="#ccc" xmlns="http://www.w3.org/2000/svg">
+            <!-- xmlns : 버전을 알려주는 것 -->
+            <path d="M4 58C36 18.6667 124 -36.4 220 58C316 152.4 398 97.3333 427 58" stroke="black" stroke-width="10" />
+            <!-- 좌표값 -->
+        </svg>
+    </div> <!-- //세번째 방법 -->
+
+
+    <div>
+        <svg class="line2" viewBox="0 0 213 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M1.49709 97.6402C4.9594 99.256 10.0246 96.9809 13.1137 95.7041C28.3407 89.4103 42.2894 79.3419 52.1381 66.0576C61.1727 53.8715 65.7134 39.4755 70.1075 25.1576C72.3919 17.7142 74.0938 9.29715 78.1544 2.52947C80.4004 -1.21379 81.5963 8.29375 81.6031 8.33776C84.2835 25.8011 83.1882 43.5633 86.6248 60.9754C87.0462 63.1105 90.6393 85.3242 95.7608 82.6355C102.792 78.9438 107.811 69.4865 111.552 62.972C116.568 54.2376 120.322 44.854 125.407 36.1692C131.224 26.2355 138.878 18.6566 147.309 10.9999C151.559 7.14037 151.787 6.8214 151.787 12.815C151.787 18.7443 151.787 24.6736 151.787 30.6029C151.787 46.1008 153.286 59.8485 157.716 74.7701C161.472 87.4217 169.038 98.7609 174.415 110.709C178.115 118.931 196.144 105.324 199.16 102.48C210.228 92.0457 208.717 81.8375 210.596 67.7517C212.142 56.1535 212.653 51.3717 199.644 50.8714C188.374 50.4379 177.415 48.6162 166.186 47.5437C142.593 45.2905 118.764 47.19 95.1558 44.8816C66.5842 42.0879 39.0928 32.297 10.2095 32.297"
+                stroke="black" stroke-width="3" stroke-linecap="round" />
+        </svg>
+    </div>
+
+    <script>
+        const svg = document.querySelector('.line2 path');
+        console.log(svg.getTotalLength()); //총 길이를 얻어오는 함수
+
+        const svg2 = document.querySelector('.line2 path');
+        console.log(svg2.getTotalLength());
+    </script>
+</body>
+
+</html>

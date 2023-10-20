@@ -118,7 +118,26 @@ nav .gnb li a:hover:after {
 }
 
 
-.sideNav li.on a::before{
-content: "😺";
+.sideNav li.on a::before {
+    content: "😺";
 
+}
+
+/* 섹션에 도달했을때 애니메이션 */
+section {
+    overflow-x: hidden;
+    position: relative;
+}
+
+section .ball{
+    position: absolute;
+    background-color: skyblue;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    left: -450px;
+    transition: all 500ms cubic-bezier(.93,.15,.57,.91);
+}
+section.on .ball{
+    left: 30%;
 }

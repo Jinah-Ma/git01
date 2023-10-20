@@ -19,6 +19,22 @@ let maxSlides = 3; //반응형
 let responsiveGap = 20; //간격값
 let responseWidth; //계산된 슬라이드 너비
 
+responseWidth = slideWidth;
+
+//페이저 버튼
+
+slide.each(function (i) {
+    pagerHTML += `<a href="#">${i + 1}</a>`;
+});
+pager.html(pagerHTML);
+
+pager.find('a').on('click', function (e) {
+    e.preventDefault();
+    let i = $(this).index(); //인덱스 번호를 찾는 것 //eq는 선택하는 것
+    moveSlideCb(i - 1);
+    console.log(i);
+});
+
 // li 클론 생성
 cloneSlide();
 function cloneSlide() {
@@ -94,12 +110,18 @@ function moveSlideCb(n) {
     slides.stop().animate({
         left: moveAmt * -n
     }, 650, function () {
-        if (currentIdx > slideCount /* || currentIdx < -slideCount */) {
+        if (currentIdx > slideCount) {
             slides.css('left', 0);
             currentIdx = 0;
-        } //콜백함수 -> 애니메이트 한 다음 또다른 함수를 실행하는 것
+            //콜백함수 -> 애니메이트 한 다음 또다른 함수를 실행하는 것
+        } else if (currentIdx < -(slideCount - 1)) {
+            slides.css('left', -moveAmt * slideCount);
+            currentIdx = slideCount;
+        }
     });
     currentIdx = n;
+    console.log(currentIdx);
+    console.log(slideCount);
 }
 
 //이벤트 핸들러 작성
@@ -116,29 +138,17 @@ prevBtn.on('click', function () {
     console.log(currentIdx);
 });
 
-//페이저 버튼
-
-slide.each(function (i) {
-    pagerHTML += `<a href="#">${i + 1}</a>`;
-});
-pager.html(pagerHTML);
-
-pager.find('a').on('click', function (e) {
-    e.preventDefault();
-    let i = $(this).index(); //인덱스 번호를 찾는 것 //eq는 선택하는 것
-    moveSlideCb(i);
-});
-
 $(window).resize(function () { //.resize 크기가 변경되면 실행할 것
     let winWidth = $(this).width();
     if (winWidth < 900) {
         responsiveGap = 10;
         responseWidth = ((slides.width() - (responsiveGap * (maxSlides - 1))) / maxSlides);
-    console.log(responseWidth);    }else{
+        console.log(responseWidth);
+    } else {
         responseWidth = slideWidth;
-        responsiveGap =slideGap;
+        responsiveGap = slideGap;
     }
-    if(winWidth <= 500){
+    if (winWidth <= 500) {
         responseWidth = slides.width();
         responsiveGap = 0;
     }
