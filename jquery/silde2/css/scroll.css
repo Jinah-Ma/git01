@@ -1,0 +1,117 @@
+/* section1 */
+.section1 { padding-top: 15vw; } 
+
+.section1 .box { display: inline-block; width: clamp(100px, 30%, 100%); /* 최소 기본값 최대 */
+ height: 300px; transition: all 2s; } 
+
+.section1 .box1 { transform: translate(-1000px); transition-delay: 0; } 
+
+.section1 .box2 { transform: translate(1000px); transition-delay: 3s; } 
+
+/* section2 */
+.section2 { position: relative; } 
+
+.section2 .gallery { position: relative; height: 100%; width: 100%; overflow: hidden; } 
+
+.section2 .gallery .box { position: absolute; width: 15vw; height: 200px; top: 100%; opacity: 0; } 
+
+.section2 .bg3 { left: 10%; } 
+
+/* .bg4 { left: 40%; }  */
+
+/* .bg5 { right: 10%; } */
+
+/* section3 */
+/* 마스크 사용 */
+.section3 { position: relative; display: flex; color: #333; gap: 2rem; } 
+
+.section3 .item { padding-top: 10rem; } 
+
+.section3 .item:first-child { flex-basis: 60%; } 
+
+.section3 .item:nth-child(2) { flex-basis: 40%; align-self: center; } 
+
+.section3 figure { position: relative; box-shadow: -1rem 1rem 3rem -2rem rgba(0, 0, 0, 0.5); } 
+
+.section3 figure::before { position: absolute; content: ''; top: 0; right: 0; left: 0; bottom: 0; background: var(--bg1); transition: clip-path 0.3s cubic-bezier(0, 1.71, .39, -0.26); opacity: 0; clip-path: inset(0 0 0 100%); } 
+
+.section3 figure img { width: 100%; display: block; clip-path: inset(0 100% 0 0); /* 사각형 모양의 마스크 */
+ transition: clip-path 0.6s 0.3s cubic-bezier(0, 1.71, .39, -0.26); /* 0.6초간 보여주고 0.3초후에 볼거야. */}
+
+.section3 figure figcaption { position: absolute; top: 20px; right: 20px; font-size: 40px; padding: 20px; font-weight: bold; background-color: var(--bg1); color: white; mix-blend-mode: overlay; /* 포토샵의 레이어 효과 같은 것 */
+ clip-path: inset(0 0 0 100%); transition: clip-path 0.3s 0.9s cubic-bezier(0, 1.71, .39, -0.26); } 
+
+.section3.is-animated figure::before,
+.section3.is-animated figure img,
+.section3.is-animated figure figcaption { clip-path: inset(0); } 
+
+/* projects */
+.projects { position: relative; } 
+.projects .container { position: relative; width: 100%; height: 100%; } 
+.item { position: absolute; top: 0; height: 30vw; } 
+.item.left{ width: 60vw; transition: left 1s ease-in-out; left: -100%;} 
+.item.right{ width: 40vw; right: 0; background-color: var(--bg1);}
+.projects.section4.is-animated .left{left: 0;}
+
+/* pip화면 올리는 것 */
+.left .mockup img,
+.left .mockup .mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.left .mockup.pc{
+    margin-left: clamp(5%, 100px, 10%);
+    position: relative;
+    width: 60%;
+    height: 100%;
+}
+
+/* pc */
+.left .mockup .mask{
+    z-index: 3;
+    width: 32.3vw;
+    height: 61.8%;
+    overflow: hidden;
+    top: 6%;
+    left: 5.2%;
+}
+.left .mockup.pc img.screen{
+    z-index: 1;
+    width: 100%;
+}
+
+.left .mockup.pc img.device{
+    z-index: 2;
+    width: 100%;
+}
+
+/* mobile */
+.left .mockup.mobile{
+    z-index: 99;
+    position: relative;
+    top: -76%;
+    left: 58%;
+    width: 20%;
+    height: 60%;
+} /* 위치조절은 부모를 움직이는 게 좋다. */
+
+.left .mockup.mobile .mask{
+    z-index: 999;
+    width: 10.5vw;
+    height: 100%;
+    overflow: hidden;
+    top: 10.8%;
+    left: 7%;
+    border-radius: 16px 16px 0 0;
+}
+
+.left .mockup.mobile img.screen{
+    z-index: 3;
+    width: 100%;
+}
+.left .mockup.mobile img.device{
+    z-index: 4;
+    width: 100%;
+}

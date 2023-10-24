@@ -6,43 +6,36 @@ console.log(len); //628
 $(function () {
     const progressWrap = $('.charts .chart');
     const animationOST = $('.charts').offset().top - 600;
-    let isAni = false;
 
     $(window).on('scroll', function () {
-        if ($(window).scrollTop() >= animationOST && !isAni) {
-            progressAnimation();
+        if ($(window).scrollTop() >= animationOST) {
+            if (!$('.charts').hasClass('active')) {
+                animationChart();
+                $('.charts').addClass('active');
+            }
         }
     });
 
     //막대 채우기
-    function progressAnimation() {
-        progressWrap.each(function (i, o) {
-            const $this = $(this);
-            const progressBar = $this.find('circle');
-            const progressText = $this.find('h2');
-            const progressRate = progressText.attr('data-num');
+    function animationChart() {
+        progressWrap.each(function () {
+            const item = $(this);
+            const title = item.find('h2');
+            const targetNum = title.attr('data-num');
+            const circle = item.find('circle');
 
-
-            progressBar.stop().animate({ width: progressRate + '%' }, 2500);
-
-            const textFn = function () {
-                $({ rate: 0 }).stop().animate(
-                    { rate: progressRate },
-                    {
-                        duration: 2000,
-                        progress: function () {
-                            let now = this.rate;
-                            // console.log(now);
-                            progressText.text(Math.floor(now) + '%');
-                        },
-                        complete: function () {
-                            isAni = true;
-                        }
+            $({ rate: 0 }).animate(
+                { rate: targetNum },
+                {
+                    duration: 1500,
+                    progress: function () {
+                        let now = this.rate;
+                        let amount = 630 - (630 * now) / 100;
+                        title.text(Math.floor(now));
+                        circle.css({ strokeDashoffset: amount });
                     }
-                );
-            };
-            textFn();
+                }
+            )
         })
     }
-
 })
