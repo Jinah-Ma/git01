@@ -115,3 +115,59 @@
     z-index: 4;
     width: 100%;
 }
+
+
+
+/* .skill */
+.charts{
+    width: 80%;
+    margin: 3rem auto;
+    display: flex;
+    justify-content: center;
+}
+.charts .chart{
+    margin: 0 20px;
+    position: relative;
+}
+.charts .chart h2{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.charts .chart svg{
+    width: 220px;
+    height: 220px;
+}
+
+.charts .chart svg circle{
+    fill:url(#bg1);
+    stroke-width: 20;
+    stroke-dasharray: 628; /* 값을 넣는다.+1 */
+    stroke-dashoffset: 628; /* 값을 넣는다.+1 라운드는 패딩값이 들어가 있으므로 */
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+.charts .chart:nth-child(1) svg circle,
+.charts .chart:nth-child(1) svg line{
+    stroke: #ffc114;
+}
+.charts .chart:nth-child(2) svg circle,
+.charts .chart:nth-child(2) svg line{
+    stroke: #14ffc4;
+}
+.charts .chart:nth-child(3) svg circle,
+.charts .chart:nth-child(3) svg line{
+    stroke: #6e14ff;
+}
+
+/* bar */
+.section6 .charts .chart svg line{
+    stroke-width: 30;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    transform-origin: 0% 0%;
+}

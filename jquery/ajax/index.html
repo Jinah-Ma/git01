@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>에이젝스</title>
+
+    <!-- 상태를 똑같이 하는 게 동기화이다./ 실시간 -->
+    <!-- 비동기 방식은 연결이 서로 되지 않는 것./ 실시간x/ 네트워크 통신에서 사용하는 용어들 -->
+    <!-- 동기방식은 요청이 들어가면 응답이 돌아오는 것. 자바스크립트는 동기방식 -->
+    <!-- 동기방식으로 비동기를 만들어 사용한다. -->
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+<div class="row">
+<ul>
+    <li><img src="http://qwerew.cafe24.com/images/1.jpg" alt="" data-scr="gallery/1.html" class="pic"></li>
+    <li><img src="http://qwerew.cafe24.com/images/2.jpg" alt="" data-scr="gallery/2.html" class="pic"></li>
+    <li><img src="http://qwerew.cafe24.com/images/3.jpg" alt="" data-scr="gallery/3.html" class="pic"></li>
+</ul>
+</div>
+<div id="lightbox">
+    <div id="lightImage"></div>
+</div>
+
+
+
+<!--     <script>
+        console.log("a");
+        console.log("b");
+        setTimeout(() => {
+           //지정된 시간 이후에 할 일 
+           //비동기. c를 먼저 출력하고 이걸 출력한다. c가 더 빨라서.
+           console.log("0.5초 지남");
+        }, 500);
+        console.log("c");
+    </script>
+ -->
+</body>
+
+</html>

@@ -23,7 +23,6 @@ win.on('scroll', () => {
     winSCT = win.scrollTop();
     if (winSCT > topArr[0]) {
         sections.eq(0).find('.box').css('transform', 'translateX(0%)');
-
     }
     if (winSCT > topArr[1] - speed) {
         sections.eq(1).find('.bg3').stop().delay(0).animate({ top: '50%', opacity: 1 }, 500, 'swing');
@@ -43,6 +42,21 @@ win.on('scroll', () => {
         pipScroll();
     }
     /* 복사하고 if문도 복사해 수정하면 된다. */
+
+    //circle
+    if (winSCT > topArr[5] - speed) {
+        if (!sections.eq(5).hasClass('is-animated')) {
+            circleChart();
+            sections.eq(5).addClass('is-animated');
+        }
+    }
+    if (winSCT > topArr[6] - speed) {
+        if (!sections.eq(6).hasClass('is-animated')) {
+            barChart();
+            sections.eq(6).addClass('is-animated');
+        }
+
+    }
 })
 
 /* sections.each(function(i, section) {
@@ -60,28 +74,73 @@ win.on('scroll', () => {
 
 function pipScroll() {
     /* 목업이 추가 되면 디바이스에 할당 */
-    const devices = ['.mockup.pc', '.mockup.mobile'];
-    /* 자바스크립트 문법의 아이를 이치를 쓰기위해 제이쿼리문법으로 바꾼 것↓ */
-    $.each(devices, function (i, el) {
-        //console.log(el);
-        let device = $(el);
-        //console.log(devices);
+    const devices = $('.mockup.pc, .mockup.mobile');
+    devices.each(function (i, deviceEl) {
+        let device = $(this);
         let screen = device.find('.mask>img');
         let mask = device.find('.mask');
         let heightDifference = screen.innerHeight() - mask.innerHeight();
-        // console.log(heightDifference);
         device.data('heightDifference', heightDifference);
         device.on({
-            mouseenter : function(){
-                screen.stop().animate({top:-heightDifference},1000)
+            mouseenter: function () {
+                screen.stop().animate({ top: -heightDifference }, 1000)
             },
-            mouseleave : function(){
-                screen.stop().animate({top:0},1000)
+            mouseleave: function () {
+                screen.stop().animate({ top: 0 }, 1000)
             }
         })
     })
 }
-win.on('resize', function(){
+win.on('resize', function () {
     pipScroll();
 })
 /* 사이즈가 바뀔때 한번더 호출하면 새로 초기화가 되어 적용된다. */
+
+
+function circleChart() {
+    /* 선 길이 알아내는 함수 */
+    let path = Math.floor(document.querySelector('circle').getTotalLength());
+
+
+    const chart = $('.chart');
+    chart.each(function () {
+        const item = $(this);
+        const title = item.find('h2');
+        const tgNum = title.attr('data-num');
+        const circle = item.find('circle');
+
+        $({ rate: 0 }).stop().animate({ rate: tgNum }, {
+            duration: 1500, //지속시간
+            progress: function () {
+                let now = this.rate;
+                let amount = path - (path * now / 100);
+                title.text(Math.floor(now));
+                circle.css({ strokeDashoffset: amount });
+            }
+        });
+    })
+}
+
+/* bar */
+function barChart() {
+    let path = Math.floor(document.querySelector('line').getTotalLength());
+
+
+    const bar = $('.bar');
+    bar.each(function () {
+        const item = $(this);
+        const title = item.find('h2');
+        const tgNum = title.attr('data-num');
+        const line = item.find('line');
+
+        $({ rate: 0 }).stop().animate({ rate: tgNum }, {
+            duration: 1500, //지속시간
+            progress: function () {
+                let now = this.rate;
+                let amount = path - (path * now / 100);
+                title.text(Math.floor(now));
+                line.css({ strokeDashoffset: amount });
+            }
+        });
+    })
+}

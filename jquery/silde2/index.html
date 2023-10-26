@@ -11,9 +11,17 @@
     <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
     <script src='https://code.jquery.com/ui/1.13.2/jquery-ui.js'></script>
     <script src="js/scroll.js" defer></script>
+
 </head>
 
 <body>
+    <svg>
+        <linearGradient id="bg1">
+<stop offset="0%" stop-color="yellow"/>
+<stop offset="50%" stop-color="green"/>
+<stop offset="100%" stop-color="blue"/>
+        </linearGradient>
+    </svg>
     <section class="section1">
         <div class="container">
             <div class="box box1 bg2"></div>
@@ -40,6 +48,7 @@
             explicabo.
         </div>
     </section>
+
     <section class="section4 projects">
         <div class="container">
             <div class="item left">
@@ -47,7 +56,6 @@
                     <div class="mask">
                         <img class="screen" src="./image/project1_pc.png" alt="">
                     </div>
-
                     <img class="device" src="./image/desktop.png" alt="">
                 </div>
                 <!-- //1 -->
@@ -83,14 +91,59 @@
                     </div>
                     <img class="device" src="./image/mobile.png" alt="">
                 </div>
-
-
+                <!-- //2 -->
             </div>
-            <!-- //2 -->
             <div class="item right"></div>
         </div>
     </section>
-    <section class="section5"></section>
+    <!-- 복사하고 if문도 복사해 수정하면 된다. -->
+
+    <section class="section5">
+        <div class="charts">
+            <div class="chart">
+                <h2 data-num="60">0</h2>
+                <svg>
+                    <circle cx="110px" cy="110px" r="100">
+                </svg>
+            </div>
+            <div class="chart">
+                <h2 data-num="20">0</h2>
+                <svg>
+                    <circle cx="110px" cy="110px" r="100"></circle>
+                </svg>
+            </div>
+            <div class="chart">
+                <h2 data-num="80">0</h2>
+                <svg>
+                    <circle cx="110px" cy="110px" r="100"></circle>
+                </svg>
+            </div>
+        </div>
+    </section>
+    <section class="section6">
+        <div class="charts">
+            <div class="chart bar">
+                <h2 data-num="60">0</h2>
+                <svg>
+                    <defs>  
+                    </defs>
+                    <line x1="0" y1="0" x2="500" y2="0"></line>
+                </svg>
+            </div>
+            <div class="chart bar">
+                <h2 data-num="40">0</h2>
+                <svg>
+                    <line x1="0" y1="0" x2="500" y2="0"></line>
+                </svg>
+            </div>
+            <div class="chart bar">
+                <h2 data-num="70">0</h2>
+                <svg>
+                    <line x1="0" y1="0" x2="500" y2="0"></line>
+                </svg>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
