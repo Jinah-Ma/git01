@@ -1,0 +1,43 @@
+.transform_container {
+    width: 800px;
+    margin: 200px auto;
+}
+
+.origin {
+    width: 100px;
+    height: 100px;
+    margin: 40px;
+    border: 1px solid;
+    display: inline-block;
+    /* 프레임 */
+
+    perspective: 1000px;
+    /* 깊이 */
+    perspective-origin: 0 0;
+    /* 축을 바꿈, 0을 주면 0점에서, 100%씩 주면 프레임의 우측에서 붙어서 튀어나온다. */
+}
+
+.origin>div {
+    width: 100px;
+    height: 100px;
+    background: orange;
+    transition: transform 3s;
+}
+
+.origin .rotatex:hover {
+    transform: translateZ(200px) rotateX(55deg);
+}
+
+.origin .rotatey:hover {
+    transform: translateZ(200px) rotatey(55deg);
+}
+
+.origin .rotatez:hover {
+    transform: translateZ(200px) rotatez(55deg);
+}
+
+/* 기존의 x축, y축의 방향이 아니라 저 프레임을 기준으로 x축의 변, y축의 변이 깊이로 움직인다.  */
+
+.origin .rotatexyz:hover {
+    transform: translateZ(200px) rotate3d(0, 0, -1.5, 55deg); /* x, y, z 각각 55deg회전한다는 얘기로 변하는 비율을 작성한 것 */
+}

@@ -1,0 +1,30 @@
+.transform_container {
+    width: 200px;
+    margin: 200px auto;
+}
+
+.img {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    box-shadow: 5px 5px 63px 2px #000040;
+    animation: rotateAni 2.5s infinite alternate;
+    animation-play-state: paused; /* 멈춰있게 하는 것 */
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotateAni{
+    from {transform: perspective(200px) rotateY(0deg);}
+    50% {transform: perspective(200px) rotateY(-180deg);}
+    to {transform: perspective(200px) rotateY(-360deg);}
+}
+
+.img:hover{animation-play-state: running;}
+
+.img img {
+    width: 100%;
+}
+
+/*  perspective 부모말고 요소에 직접 넣는 경우도 있다. 그러나 결과값은 똑같다. */
+
+/* backface-visibility : 요소의 뒷쪽에서 앞면이 보이게 할지 정하는 속성 */

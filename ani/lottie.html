@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로티</title>
+    <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
+    <style>
+        .lottie{
+            width: 5rem;
+        }
+    </style>
+</head>
+
+<body>
+<div id="lottie" class="lottie"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+    <script>
+        var animation = bodymovin.loadAnimation({
+            container: document.getElementById('lottie'), // Required(필수)
+            path: './ani.json', // Required
+            renderer: 'svg', // Required
+            loop: true, // Optional
+            autoplay: true, // Optional
+            /* name: "Hello World", */ // Name for future reference. Optional(선택사항)
+        })
+    </script>
+</body>
+
+</html>

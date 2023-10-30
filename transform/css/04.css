@@ -1,0 +1,72 @@
+body {
+    font-family: sans-serif;
+    font-size: 200%;
+    margin: 100px;
+    color: #eee;
+    background: #fafafa;
+}
+
+.card {
+    width: 176px;
+    height: 246px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.card div {
+    width: 160px;
+    line-height: 230px;
+    position: absolute;
+    color: #c00;
+    background-color: #fff;
+    font-size: 2em;
+    text-align: center;
+    border: 8px solid #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5), 2px 2px 35px rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    transition: all 1s ease;
+    /* backface-visibility: visible; 기본값 */
+    backface-visibility: hidden; /* 이걸 쓰려면 미리 앞 뒤를 만들어 놓고 쓰면 된다. */
+}
+
+.card div span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.5em;
+    width: auto;
+    line-height: 1em;
+}
+
+.card div span:last-child {
+    left: auto;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    transform: rotate(180deg);
+}
+
+.card .back {
+    font-size: 0.8em;
+    color: #fff;
+    background-color: #36c;
+}
+
+.card .back {
+    transform: perspective(400px) rotateY(0deg);
+}
+
+.card .front {
+    transform: perspective(400px) rotateY(-179.9deg);
+}
+
+/* 너무 얇게 보여서 살짝 덜 준다 */
+
+.card:hover .back {
+    transform: perspective(400px) rotateY(179.9deg);
+    /* backface-visibility 기본값이 들어가 있다. */
+}
+
+.card:hover .front {
+    transform: perspective(400px) rotateY(0deg);
+}

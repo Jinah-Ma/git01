@@ -1,0 +1,25 @@
+.transformContainer {
+    width: 50%;
+    margin: 200px auto;
+    border: 1px solid;
+
+    perspective: 1000px; /* 원근감을 위해 깊이를 주는 것. 부모한테 준다. 기준이 될 깊이의 값 */
+    perspective-origin: 100% 50%; /* 바라보는 각도를 제어 할 수 있는 옵션 */
+}
+
+.transformContainer img {
+    width: 100%;
+    transition: transform 0.35s;
+    transform: scaleZ(1);
+}
+
+.transformContainer:hover img {
+    /* transform: scale(2); //2d로 효과를 준 것 */
+
+    /* transform: translate3d(100px, 100px, 200px); */
+    /* //3d로 효과를 준 것. 부모에게 perspective값을 줘야만 z축으로 움직인다. */
+   /*  transform:translateZ(200px) scaleZ(5); */ /* 둘은 꼭 같이 써야 한다. z의 깊이 값을 줘야 크기를 조정할 수 있으니까. */
+
+   transform: translateZ(200px) rotateZ(180deg);
+/* translateZ(200px), 부모에겐 perspective: 1000px; 를 꼭 쓰고 z축으로 움직이는 값을 바꿔야 된다.☆ */
+}
