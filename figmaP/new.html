@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .figma {
+            position: relative;
+            width: 360px;
+            height: 712px;
+            background: url(./phone.png) no-repeat;
+            background-size: 100% 100%;
+            overflow: hidden;
+        }
+
+        .crop {
+            position: absolute;
+            overflow: hidden;
+            width: 320px;
+            height: 560px;
+            top: 70px;
+            left: 21px;
+        }
+
+        iframe {
+            display: block;
+            position: absolute;
+            width: 319px;
+            height: 610px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="figma">
+        <div class="crop">
+            <iframe
+                src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FQ9OzgGJC1w9O7Tub9An4D8%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25AA%25A9%25EC%25A0%2581-%25EC%25A0%2595%25EC%259D%2598%3Fpage-id%3D87%253A180%26type%3Ddesign%26node-id%3D321-1292%26viewport%3D-1417%252C-59%252C0.41%26t%3DE093lHnG4JOqpoPT-1%26scaling%3Dscale-down-width%26starting-point-node-id%3D321%253A1292%26mode%3Ddesign&hide-ui=1"
+                allowfullscreen></iframe>
+        </div>
+<!-- &hide-ui=1를 url맨 끝에 붙이면 밑에 있는 게 사라진다. -->
+    </div>
+</body>
+
+</html>
